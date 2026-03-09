@@ -17,19 +17,23 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             padding: ".5rem 1rem",
             position: "relative",
+            borderBottom: "2px solid #5a9a5c",
           }}
         >
           <Title>JuQa</Title>
         </header>
-        <main
-          style={{
-            background: "#222",
-            minHeight: "calc(100dvh - 5.625rem)",
-            padding: "1rem",
-          }}
-        >
-          {children}
-        </main>
+        <div style={{ backgroundColor: "#1e1e1e" }}>
+          <main
+            style={{
+              padding: "1rem",
+              maxWidth: "64rem",
+              margin: "0 auto",
+              width: "100%",
+            }}
+          >
+            {children}
+          </main>
+        </div>
         <footer
           style={{
             backgroundColor: "#333",
