@@ -49,6 +49,7 @@ const PlantsPage: FC = () => {
           display: "flex",
           flexWrap: "wrap",
           gap: "1rem",
+          justifyContent: "center",
         }}
       >
         {filteredPlants.map((plant) => {
@@ -59,7 +60,7 @@ const PlantsPage: FC = () => {
               href={`/plants/${plant.id}`}
               style={{
                 textDecoration: "none",
-                maxWidth: "30.5rem",
+                maxWidth: "22rem",
                 width: "100%",
               }}
             >
@@ -73,7 +74,7 @@ const PlantsPage: FC = () => {
               >
                 <div
                   style={{
-                    height: "140px",
+                    height: "240px",
                     background: "#2a3d2b",
                     overflow: "hidden",
                   }}
@@ -82,7 +83,11 @@ const PlantsPage: FC = () => {
                     <img
                       src={plant.image_url}
                       alt={plant.japanese_name}
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
                     />
                   ) : (
                     <div

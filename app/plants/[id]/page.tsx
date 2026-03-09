@@ -37,7 +37,7 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
       <div
         style={{
           borderRadius: "8px",
-          height: "260px",
+          height: "50dvh",
           marginBottom: "1rem",
           overflow: "hidden",
           background: "#2a3d2b",

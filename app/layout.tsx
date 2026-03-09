@@ -28,7 +28,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <main
             style={{
               padding: "1rem",
-              maxWidth: "64rem",
+              maxWidth: "72rem",
               margin: "0 auto",
               width: "100%",
             }}
