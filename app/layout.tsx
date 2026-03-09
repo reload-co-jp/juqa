@@ -1,4 +1,5 @@
 import { Title } from "components/elements/layout"
+import Link from "next/link"
 import "./reset.css"
 
 export const metadata = {
@@ -13,14 +14,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <header
           style={{
-            backgroundColor: "#333",
+            backgroundColor: "#7cbe8c",
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             padding: ".5rem 1rem",
             position: "relative",
-            borderBottom: "2px solid #5a9a5c",
           }}
         >
-          <Title>JuQa</Title>
+          <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
+            <Title>JuQa</Title>
+          </Link>
         </header>
         <div style={{ backgroundColor: "#1e1e1e" }}>
           <main
