@@ -67,31 +67,61 @@ const PlantsPage: FC = () => {
                 style={{
                   background: "#2d2d2d",
                   borderRadius: "8px",
-                  padding: "1rem",
+                  overflow: "hidden",
                   borderLeft: "3px solid #5a9a5c",
                 }}
               >
                 <div
                   style={{
-                    color: "#7cbe8c",
-                    fontWeight: "bold",
-                    fontSize: "1rem",
-                    marginBottom: "0.25rem",
+                    height: "140px",
+                    background: "#2a3d2b",
+                    overflow: "hidden",
                   }}
                 >
-                  {plant.japanese_name}
+                  {plant.image_url ? (
+                    <img
+                      src={plant.image_url}
+                      alt={plant.japanese_name}
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "2rem",
+                      }}
+                    >
+                      🌿
+                    </div>
+                  )}
                 </div>
-                <div
-                  style={{
-                    color: "#999",
-                    fontSize: "0.8rem",
-                    fontStyle: "italic",
-                    marginBottom: "0.25rem",
-                  }}
-                >
-                  {plant.scientific_name}
+                <div style={{ padding: "0.75rem" }}>
+                  <div
+                    style={{
+                      color: "#7cbe8c",
+                      fontWeight: "bold",
+                      fontSize: "1rem",
+                      marginBottom: "0.25rem",
+                    }}
+                  >
+                    {plant.japanese_name}
+                  </div>
+                  <div
+                    style={{
+                      color: "#999",
+                      fontSize: "0.8rem",
+                      fontStyle: "italic",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {plant.scientific_name}
+                  </div>
+                  <Tag>{family?.name ?? "—"}</Tag>
                 </div>
-                <Tag>{family?.name ?? "—"}</Tag>
               </div>
             </Link>
           )

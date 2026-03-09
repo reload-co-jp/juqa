@@ -33,22 +33,53 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
       <PageHeader backHref="/plants" backLabel="植物一覧" />
 
-      {/* Image placeholder */}
+      {/* Image */}
       <div
         style={{
-          background: "#3a5c3b",
           borderRadius: "8px",
-          height: "180px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          height: "260px",
           marginBottom: "1rem",
-          fontSize: "1.5rem",
-          color: "#a0d0a2",
-          fontWeight: "bold",
+          overflow: "hidden",
+          background: "#2a3d2b",
+          position: "relative",
         }}
       >
-        🌿 {plant.japanese_name}
+        {plant.image_url ? (
+          <img
+            src={plant.image_url}
+            alt={plant.japanese_name}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: "1.5rem",
+              color: "#a0d0a2",
+              fontWeight: "bold",
+            }}
+          >
+            🌿 {plant.japanese_name}
+          </div>
+        )}
+        <div
+          style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "60px",
+            background: "linear-gradient(transparent, rgba(0,0,0,0.6))",
+          }}
+        />
       </div>
 
       {/* Header */}

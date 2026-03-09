@@ -32,42 +32,62 @@ export const families: Family[] = [
     id: 1,
     name: "バラ科",
     description: "バラ目に属する双子葉植物の科。世界中に約3000種が分布する。",
-    characteristics: ["花弁5枚", "葉に鋸歯あり", "果実は多様（さくらんぼ・梨・りんごなど）"],
+    characteristics: [
+      "花弁5枚",
+      "葉に鋸歯あり",
+      "果実は多様（さくらんぼ・梨・りんごなど）",
+    ],
   },
   {
     id: 2,
     name: "ムクロジ科",
-    description: "カエデ亜科を含む科。日本では秋の紅葉で知られるカエデ類が有名。",
-    characteristics: ["対生する葉", "翼果（プロペラ型の実）", "手のひら状に裂ける葉が多い"],
+    description:
+      "カエデ亜科を含む科。日本では秋の紅葉で知られるカエデ類が有名。",
+    characteristics: [
+      "対生する葉",
+      "翼果（プロペラ型の実）",
+      "手のひら状に裂ける葉が多い",
+    ],
   },
   {
     id: 3,
     name: "クスノキ科",
     description: "熱帯・亜熱帯に多い常緑樹の科。芳香性の精油を含む種が多い。",
-    characteristics: ["常緑の光沢ある葉", "3本の葉脈が目立つ", "樟脳の独特な香り"],
+    characteristics: [
+      "常緑の光沢ある葉",
+      "3本の葉脈が目立つ",
+      "樟脳の独特な香り",
+    ],
   },
   {
     id: 4,
     name: "ニレ科",
     description: "温帯を中心に分布する落葉樹の科。街路樹として広く利用される。",
-    characteristics: ["葉の基部が非対称", "単葉で鋸歯あり", "小さな翼果をつける"],
+    characteristics: [
+      "葉の基部が非対称",
+      "単葉で鋸歯あり",
+      "小さな翼果をつける",
+    ],
   },
   {
     id: 5,
     name: "イチョウ科",
-    description: "現存する最古の樹木グループの一つ。イチョウ1種のみからなる科。",
+    description:
+      "現存する最古の樹木グループの一つ。イチョウ1種のみからなる科。",
     characteristics: ["扇形の葉", "葉脈が二又分岐", "雌雄異株"],
   },
   {
     id: 6,
     name: "ブナ科",
-    description: "北半球の温帯に広く分布する落葉・常緑樹の科。どんぐりで知られる。",
+    description:
+      "北半球の温帯に広く分布する落葉・常緑樹の科。どんぐりで知られる。",
     characteristics: ["どんぐり（堅果と殻斗）", "単葉", "風媒花"],
   },
   {
     id: 7,
     name: "ヒノキ科",
-    description: "常緑針葉樹の科。日本では建築材として重要なヒノキ・スギが含まれる。",
+    description:
+      "常緑針葉樹の科。日本では建築材として重要なヒノキ・スギが含まれる。",
     characteristics: ["鱗片状または針状の葉", "球果（まつぼっくり型）", "常緑"],
   },
   {
@@ -80,7 +100,11 @@ export const families: Family[] = [
     id: 9,
     name: "キク科",
     description: "双子葉植物の中で最大の科の一つ。頭状花序が特徴。",
-    characteristics: ["頭状花序", "舌状花と筒状花からなる", "冠毛（綿毛）を持つ種が多い"],
+    characteristics: [
+      "頭状花序",
+      "舌状花と筒状花からなる",
+      "冠毛（綿毛）を持つ種が多い",
+    ],
   },
   {
     id: 10,
@@ -92,37 +116,64 @@ export const families: Family[] = [
     id: 11,
     name: "スミレ科",
     description: "春に小さな可憐な花を咲かせる植物の科。",
-    characteristics: ["5枚の花弁（下の1枚に距あり）", "葉は単葉", "閉鎖花をつける"],
+    characteristics: [
+      "5枚の花弁（下の1枚に距あり）",
+      "葉は単葉",
+      "閉鎖花をつける",
+    ],
   },
   {
     id: 12,
     name: "ツユクサ科",
     description: "熱帯・亜熱帯を中心に分布する一年草・多年草の科。",
-    characteristics: ["3枚の花弁", "葉鞘（さや）で茎を抱く", "朝に開花し午後にしぼむ"],
+    characteristics: [
+      "3枚の花弁",
+      "葉鞘（さや）で茎を抱く",
+      "朝に開花し午後にしぼむ",
+    ],
   },
   {
     id: 13,
     name: "モクレン科",
-    description: "被子植物の中でも原始的なグループ。早春に葉より先に大きな花を咲かせる種が多い。",
-    characteristics: ["葉より先に大きな花を咲かせる", "花弁と萼片が区別しにくい", "果実は集合果"],
+    description:
+      "被子植物の中でも原始的なグループ。早春に葉より先に大きな花を咲かせる種が多い。",
+    characteristics: [
+      "葉より先に大きな花を咲かせる",
+      "花弁と萼片が区別しにくい",
+      "果実は集合果",
+    ],
   },
   {
     id: 14,
     name: "ツバキ科",
-    description: "東アジアを中心に分布する常緑樹の科。美しい花と光沢のある葉が特徴。",
-    characteristics: ["常緑で光沢のある厚い葉", "花弁は5枚以上", "雄しべが多数"],
+    description:
+      "東アジアを中心に分布する常緑樹の科。美しい花と光沢のある葉が特徴。",
+    characteristics: [
+      "常緑で光沢のある厚い葉",
+      "花弁は5枚以上",
+      "雄しべが多数",
+    ],
   },
   {
     id: 15,
     name: "アジサイ科",
     description: "東アジアに多い落葉低木の科。梅雨の時期に咲く花で知られる。",
-    characteristics: ["装飾花（萼片が花弁状）を持つ", "対生する葉", "花色が土壌pHで変化"],
+    characteristics: [
+      "装飾花（萼片が花弁状）を持つ",
+      "対生する葉",
+      "花色が土壌pHで変化",
+    ],
   },
   {
     id: 16,
     name: "シソ科",
-    description: "世界中に約7000種が分布する大きな科。多くの種が芳香性の精油を含む。",
-    characteristics: ["茎が四角形", "唇形花（上唇・下唇に分かれる）", "葉が対生"],
+    description:
+      "世界中に約7000種が分布する大きな科。多くの種が芳香性の精油を含む。",
+    characteristics: [
+      "茎が四角形",
+      "唇形花（上唇・下唇に分かれる）",
+      "葉が対生",
+    ],
   },
 ]
 
@@ -145,7 +196,8 @@ export const plants: Plant[] = [
       "花びらの色は白〜淡いピンク",
     ],
     distribution: "全国（植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2020-04-07_Prunus_%C3%97_yedoensis_Tambasasayama%2CHyogo%28%E4%B8%B9%E6%B3%A2%E7%AF%A0%E5%B1%B1%E5%B8%82%E7%AF%A0%E5%B1%B1%E5%B7%9D%E3%81%AE%E3%82%BD%E3%83%A1%E3%82%A4%E3%83%A8%E3%82%B7%E3%83%8E%29DSCF2986%E2%98%86%E5%BD%A1.jpg",
     similar_plant_ids: [16, 17],
   },
   {
@@ -166,7 +218,8 @@ export const plants: Plant[] = [
       "秋に赤〜橙色に紅葉",
     ],
     distribution: "本州〜九州の山地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum0.jpg",
     similar_plant_ids: [19],
   },
   {
@@ -187,7 +240,8 @@ export const plants: Plant[] = [
       "樹皮は縦に裂ける",
     ],
     distribution: "本州（関東以西）〜沖縄",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuboi-Hachimangu_Kusunoki(Osaka_midorino_hyakusen).jpg",
     similar_plant_ids: [],
   },
   {
@@ -208,7 +262,8 @@ export const plants: Plant[] = [
       "秋に黄橙色に紅葉",
     ],
     distribution: "全国",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Zelkova_serrata_Noma_keyaki01.jpg",
     similar_plant_ids: [],
   },
   {
@@ -229,7 +284,8 @@ export const plants: Plant[] = [
       "雌株は秋に銀杏の実をつける",
     ],
     distribution: "全国（植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/GINKGOBAUM-2.jpg",
     similar_plant_ids: [],
   },
   {
@@ -250,7 +306,8 @@ export const plants: Plant[] = [
       "葉の裏は白っぽい",
     ],
     distribution: "全国の山地・丘陵地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_serrata3.jpg",
     similar_plant_ids: [7, 20],
   },
   {
@@ -271,7 +328,8 @@ export const plants: Plant[] = [
       "葉の表面がコナラより細長い",
     ],
     distribution: "全国の低山",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lasdon_Arboretum_-_Quercus_acutissima_-_IMG_1516.jpg",
     similar_plant_ids: [6, 20],
   },
   {
@@ -292,7 +350,8 @@ export const plants: Plant[] = [
       "葉を揉むとヒノキの香り",
     ],
     distribution: "本州〜九州の山地",
-    image_url: "",
+    image_url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chamaecyparis_obtusa_01.jpg/960px-Chamaecyparis_obtusa_01.jpg",
     similar_plant_ids: [9],
   },
   {
@@ -313,7 +372,8 @@ export const plants: Plant[] = [
       "ヒノキより葉が針状で細い",
     ],
     distribution: "全国（植林）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taro-sugi_20111002.jpg",
     similar_plant_ids: [8],
   },
   {
@@ -334,7 +394,8 @@ export const plants: Plant[] = [
       "アカマツより樹皮が黒い",
     ],
     distribution: "本州〜九州の海岸沿い",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Black_Pine%2C_National_Garden%2C_Tokyo.jpg",
     similar_plant_ids: [22],
   },
   {
@@ -355,7 +416,8 @@ export const plants: Plant[] = [
       "総苞片が反り返るのはセイヨウタンポポ",
     ],
     distribution: "全国の草地・道端",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/DandelionFlower.jpg",
     similar_plant_ids: [24],
   },
   {
@@ -376,7 +438,8 @@ export const plants: Plant[] = [
       "地面を這うように成長する",
     ],
     distribution: "全国の草地・道端",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_repens_-_white_clover_on_way_from_Govindghat_to_Gangria_at_Valley_of_Flowers_National_Park_-_during_LGFC_-_VOF_2019_(1).jpg",
     similar_plant_ids: [],
   },
   {
@@ -397,7 +460,8 @@ export const plants: Plant[] = [
       "秋に穂状の細かい花をつける",
     ],
     distribution: "全国の草地・道端",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Mugwort_imported_from_iNaturalist_photo_180771010_on_26_August_2024.jpg",
     similar_plant_ids: [],
   },
   {
@@ -418,7 +482,8 @@ export const plants: Plant[] = [
       "春のみ咲く（閉鎖花も後で咲く）",
     ],
     distribution: "全国の日当たりの良い草地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_mandshurica_(200704).jpg",
     similar_plant_ids: [33],
   },
   {
@@ -439,7 +504,8 @@ export const plants: Plant[] = [
       "茎は地面を這い節から根を出す",
     ],
     distribution: "全国の道端・畑",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tagblume_Commelina_communis_stack25_2019-08-05-RM-8050218-PSD.jpg",
     similar_plant_ids: [],
   },
   {
@@ -460,7 +526,8 @@ export const plants: Plant[] = [
       "枝の先が短い棘状になることがある",
     ],
     distribution: "全国（栽培・植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_mume.JPG",
     similar_plant_ids: [1, 17],
   },
   {
@@ -481,7 +548,8 @@ export const plants: Plant[] = [
       "ソメイヨシノより花期がやや遅い",
     ],
     distribution: "全国の山地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Branches_of_Cerasus_jamasakura_at_Mount_Obukuma_Saga.JPG",
     similar_plant_ids: [1, 16],
   },
   {
@@ -502,7 +570,8 @@ export const plants: Plant[] = [
       "葉は奇数羽状複葉（5〜9枚の小葉）",
     ],
     distribution: "全国の山野・道端",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
     similar_plant_ids: [],
   },
   {
@@ -523,7 +592,8 @@ export const plants: Plant[] = [
       "秋に橙〜赤に紅葉",
     ],
     distribution: "全国（街路樹として植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Morris_Arboretum_Acer_buergerianum.JPG",
     similar_plant_ids: [2],
   },
   {
@@ -544,7 +614,8 @@ export const plants: Plant[] = [
       "コナラより葉が細長く光沢がある",
     ],
     distribution: "本州（関東以西）〜九州",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_evergreen_oak_(Quercus_myrsinifolia)_(22245673008).jpg",
     similar_plant_ids: [6, 7],
   },
   {
@@ -565,7 +636,8 @@ export const plants: Plant[] = [
       "樹皮は暗灰色で縦に裂ける",
     ],
     distribution: "本州（関東以西）〜沖縄の暖温帯",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii2.jpg",
     similar_plant_ids: [6],
   },
   {
@@ -586,7 +658,8 @@ export const plants: Plant[] = [
       "クロマツより樹皮が薄く、上部ほど赤みが強い",
     ],
     distribution: "全国の山地・丘陵地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_densiflora_Towada.jpg",
     similar_plant_ids: [10],
   },
   {
@@ -607,7 +680,8 @@ export const plants: Plant[] = [
       "根茎から群落を形成する",
     ],
     distribution: "全国の荒地・道端・土手",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Solidago_altissima_161401409.jpg",
     similar_plant_ids: [],
   },
   {
@@ -628,7 +702,8 @@ export const plants: Plant[] = [
       "根生葉が地面に広がり、茎葉は茎を抱く",
     ],
     distribution: "全国の道端・草地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Philadelphia_Fleabane.jpg",
     similar_plant_ids: [11],
   },
   {
@@ -649,7 +724,8 @@ export const plants: Plant[] = [
       "つる性でほかの木に絡みつく",
     ],
     distribution: "全国の山地・公園（植栽も多い）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Wisteria_floribunda5.jpg",
     similar_plant_ids: [],
   },
   {
@@ -670,7 +746,8 @@ export const plants: Plant[] = [
       "幹は灰白色でなめらか",
     ],
     distribution: "全国の川沿い・山地",
-    image_url: "",
+    image_url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg/960px-Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg",
     similar_plant_ids: [],
   },
   {
@@ -691,7 +768,8 @@ export const plants: Plant[] = [
       "花の下に小さな葉がない（コブシにはある）",
     ],
     distribution: "全国（植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Yulan_1.JPG",
     similar_plant_ids: [28],
   },
   {
@@ -712,7 +790,8 @@ export const plants: Plant[] = [
       "秋に赤い果実が握りこぶし状になる",
     ],
     distribution: "全国の山地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_kobus_borealis.jpg",
     similar_plant_ids: [27],
   },
   {
@@ -733,7 +812,8 @@ export const plants: Plant[] = [
       "雄しべが白い柱状にまとまる（筒状）",
     ],
     distribution: "本州〜沖縄の山地・海岸",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_japonica_NBG.jpg",
     similar_plant_ids: [30],
   },
   {
@@ -754,7 +834,8 @@ export const plants: Plant[] = [
       "葉はツバキより小さくやや光沢が少ない",
     ],
     distribution: "九州・四国（自生）、全国（植栽）",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_sasanqua1.jpg",
     similar_plant_ids: [29],
   },
   {
@@ -775,7 +856,8 @@ export const plants: Plant[] = [
       "梅雨時期（6〜7月）に開花",
     ],
     distribution: "全国（植栽）",
-    image_url: "",
+    image_url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg/960px-Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg",
     similar_plant_ids: [32],
   },
   {
@@ -796,7 +878,8 @@ export const plants: Plant[] = [
       "海岸近くの岩場にも自生",
     ],
     distribution: "関東以西の海岸・山地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_macrophylla_forma_normalis_01.JPG",
     similar_plant_ids: [31],
   },
   {
@@ -817,7 +900,8 @@ export const plants: Plant[] = [
       "側面の花弁に毛がある",
     ],
     distribution: "全国の林縁・道端・草地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_grypoceras2.JPG",
     similar_plant_ids: [14],
   },
   {
@@ -838,7 +922,8 @@ export const plants: Plant[] = [
       "早春の道端・畑に多く見られる",
     ],
     distribution: "全国の道端・畑・荒地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_amplexicaule_(52878370216).jpg",
     similar_plant_ids: [35],
   },
   {
@@ -859,7 +944,8 @@ export const plants: Plant[] = [
       "ホトケノザより全体的に大きく、葉が茎を抱かない",
     ],
     distribution: "全国の道端・畑・荒地",
-    image_url: "",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_purpureum_-_Tutermaa.jpg",
     similar_plant_ids: [34],
   },
 ]
