@@ -302,6 +302,18 @@ export const families: Family[] = [
     ],
     classification: "被子植物",
   },
+  {
+    id: 24,
+    name: "ミズキ科",
+    description:
+      "北半球の温帯に広く分布する落葉樹の科。水平に段状に広がる枝ぶりと白い小花が特徴。",
+    characteristics: [
+      "水平に段状に広がる枝",
+      "白い小花が散房花序に集まる",
+      "秋に青黒い実をつける",
+    ],
+    classification: "被子植物",
+  },
 ]
 
 export const plants: Plant[] = [
@@ -1570,6 +1582,213 @@ export const plants: Plant[] = [
     tags: ["春開花", "草本", "雑草", "公園"],
     similar_plant_ids: [45],
   },
+  {
+    id: 56,
+    japanese_name: "ミズナラ",
+    scientific_name: "Quercus crispula",
+    family_id: 6,
+    genus: "コナラ属",
+    description: [
+      "山地に多い落葉高木。コナラより標高の高い場所に生え、ブナ帯の重要な構成樹種。",
+      "日本のナラ類の中で最も大型になり、大木になると幹周り数メートルにも達する。",
+      "どんぐりはコナラより大きく丸い。秋には黄褐色に紅葉する。",
+    ],
+    identification: [
+      "葉はコナラより大きく（長さ7〜15cm）、波状の鋸歯がある",
+      "葉の基部が耳状に張り出す（葉柄がほとんどない）",
+      "どんぐりはコナラより大きく丸い",
+      "山地・亜高山帯に多い（コナラより標高が高い）",
+    ],
+    distribution: "北海道〜九州の山地・亜高山帯",
+    image_url:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Quercus_mongolica_subsp_crispula_kz02.jpg/640px-Quercus_mongolica_subsp_crispula_kz02.jpg",
+    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    similar_plant_ids: [6, 7, 64],
+  },
+  {
+    id: 57,
+    japanese_name: "アベマキ",
+    scientific_name: "Quercus variabilis",
+    family_id: 6,
+    genus: "コナラ属",
+    description: [
+      "暖温帯の丘陵・低山に生える落葉高木。コルク質の厚い樹皮が最大の特徴。",
+      "クヌギに似るが、樹皮がより厚くコルク状に発達する。薪炭材・シイタケ原木として利用。",
+      "本州・四国・九州に分布し、クヌギと混生することが多い。",
+    ],
+    identification: [
+      "樹皮が厚くコルク質でゴツゴツ（クヌギより厚い）",
+      "葉の先端が針状の鋸歯（クヌギに似る）",
+      "葉の裏が星状毛で白っぽい（クヌギは緑）",
+      "どんぐりの殻斗が反り返る鱗片で覆われる",
+    ],
+    distribution: "本州〜九州の丘陵・低山",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_variabilis_JPG1a.JPG",
+    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    similar_plant_ids: [7, 64],
+  },
+  {
+    id: 58,
+    japanese_name: "ブナ",
+    scientific_name: "Fagus crenata",
+    family_id: 6,
+    genus: "ブナ属",
+    description: [
+      "冷温帯を代表する落葉高木。「森の女王」とも称され、ブナ林は豊かな生態系を支える。",
+      "滑らかな灰白色の樹皮と波状の鋸歯をもつ葉が特徴。秋に三角形の実（ブナの実）をつける。",
+      "白神山地・尾瀬など日本有数の自然林はブナが主体。木材は家具・楽器に利用される。",
+    ],
+    identification: [
+      "樹皮が滑らかな灰白色（マダラにならない）",
+      "葉は楕円形で波状の鋸歯、葉縁に絹毛",
+      "秋に三角形の実が殻斗に2個包まれる",
+      "山地〜亜高山帯の純林を形成する",
+    ],
+    distribution: "北海道南部〜九州の山地・冷温帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fagus_crenata_leaves_back.JPG",
+    tags: ["落葉", "ギザギザ", "高木", "山"],
+    similar_plant_ids: [21],
+  },
+  {
+    id: 59,
+    japanese_name: "トチノキ",
+    scientific_name: "Aesculus turbinata",
+    family_id: 2,
+    genus: "トチノキ属",
+    description: [
+      "山地の渓流沿いに生える落葉高木。日本固有種で、大木になり御神木になるものも多い。",
+      "掌状複葉（5〜7枚の小葉）が特徴的で、初夏に白い花穂を立てる。秋に大きな栃の実をつける。",
+      "栃の実は渋みが強いがアク抜きして栃餅・栃饅頭などに利用される。",
+    ],
+    identification: [
+      "大きな掌状複葉（5〜7枚の小葉が放射状、小葉の長さ20〜40cm）",
+      "初夏に白い花穂（長さ15〜25cm）を立てて咲く",
+      "秋に丸い大きな実（直径4〜5cm、表面はいぼ状）",
+      "山地の沢沿い・谷筋に多い",
+    ],
+    distribution: "北海道南部〜九州の山地・渓流沿い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aesculus_turbinata_7.JPG",
+    tags: ["夏開花", "落葉", "手のひら葉", "高木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 60,
+    japanese_name: "ミズキ",
+    scientific_name: "Cornus controversa",
+    family_id: 24,
+    genus: "ミズキ属",
+    description: [
+      "山地に多い落葉高木。水平に段状に広がる枝ぶりが特徴で、遠くからでも識別しやすい。",
+      "初夏に白い小花を無数に集めて咲かせる。秋に青黒い小さな実をつける。",
+      "春に幹を切ると水が多く流れ出ることが名の由来。",
+    ],
+    identification: [
+      "枝が水平に段状に広がる（層状の樹形）",
+      "初夏（5〜6月）に白い小花が散房状に集まって咲く",
+      "秋に青黒い小さな実が房状にたわわになる",
+      "葉は楕円形で弧を描く葉脈が目立つ",
+    ],
+    distribution: "北海道〜九州の山地・渓流沿い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_controversa_01.JPG",
+    tags: ["夏開花", "落葉", "小花集合", "高木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 61,
+    japanese_name: "ホオノキ",
+    scientific_name: "Magnolia obovata",
+    family_id: 13,
+    genus: "モクレン属",
+    description: [
+      "山地に生える落葉高木。日本最大級の葉をもち、長さ20〜40cmにもなる大きな葉が特徴。",
+      "初夏（5〜6月）に白い大きな花（径15〜20cm）を咲かせ、強い芳香がある。",
+      "葉は朴葉味噌・朴葉寿司などに利用され、防腐・抗菌効果がある。",
+    ],
+    identification: [
+      "葉が非常に大きい（長さ20〜40cm）、倒卵形",
+      "白い大きな花（径15〜20cm）に強い芳香（5〜6月）",
+      "秋に赤い実が集合果になる",
+      "枝の先に葉が輪生状に集まる",
+    ],
+    distribution: "北海道南部〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_hypoleuca_5.JPG",
+    tags: ["夏開花", "落葉", "高木", "山"],
+    similar_plant_ids: [27, 28],
+  },
+  {
+    id: 62,
+    japanese_name: "クリ",
+    scientific_name: "Castanea crenata",
+    family_id: 6,
+    genus: "クリ属",
+    description: [
+      "山野に自生するブナ科の落葉高木。秋に甘い栗の実がなることで広く知られる。",
+      "初夏に白い花穂（雄花序）を多数出し、独特の甘い香りを放つ。雌花は根元につく。",
+      "里山の重要な食料源として古くから利用され、縄文時代から栽培された記録がある。",
+    ],
+    identification: [
+      "葉は細長く先端が尖り、鋸歯の先端が刺状（針状）",
+      "初夏に白い長い雄花穂を多数出す（甘い香り）",
+      "秋に鋭いトゲのあるイガに包まれた実",
+      "樹皮は縦に深く裂ける",
+    ],
+    distribution: "全国の山地・丘陵地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_crenata3.jpg",
+    tags: ["夏開花", "落葉", "ギザギザ", "高木", "山"],
+    similar_plant_ids: [6, 21],
+  },
+  {
+    id: 63,
+    japanese_name: "ハウチワカエデ",
+    scientific_name: "Acer japonicum",
+    family_id: 2,
+    genus: "カエデ属",
+    description: [
+      "北海道〜本州の山地に自生する落葉高木。日本固有のカエデで、秋の紅葉が美しい。",
+      "葉は大きく（径10〜15cm）、9〜11裂し丸みのある形が天狗の羽団扇（はうちわ）に似ることが名の由来。",
+      "イロハモミジより葉が大きく裂数が多い。高山・深山の紅葉を代表する。",
+    ],
+    identification: [
+      "葉が大きく（径10〜15cm）9〜11裂の丸みある手のひら型",
+      "イロハモミジより葉が大きく裂数が多い",
+      "秋に赤〜橙色に鮮やかに紅葉",
+      "山地の落葉広葉樹林に自生",
+    ],
+    distribution: "北海道〜本州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_Rog%C3%B3w.JPG",
+    tags: ["春開花", "落葉", "手のひら葉", "高木", "山"],
+    similar_plant_ids: [2, 19],
+  },
+  {
+    id: 64,
+    japanese_name: "ナラガシワ",
+    scientific_name: "Quercus aliena",
+    family_id: 6,
+    genus: "コナラ属",
+    description: [
+      "暖温帯の山地に生える落葉高木。コナラに似るが葉が大きく、西日本に多い。",
+      "葉は大きな波状の鋸歯をもち、コナラより葉が大きい。どんぐりをつける。",
+      "薪炭材・シイタケ原木として利用される。",
+    ],
+    identification: [
+      "葉はコナラより大きく（長さ10〜20cm）、大きな波状の鋸歯",
+      "葉裏に星状毛があり白っぽい",
+      "どんぐりの殻斗の鱗片が反り返らない（アベマキは反る）",
+      "西日本の暖温帯山地に多い",
+    ],
+    distribution: "本州（関東以西）〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena5.jpg",
+    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    similar_plant_ids: [6, 56, 57],
+  },
 ]
 
 export const quizzes: Quiz[] = [
@@ -1901,5 +2120,85 @@ export const quizzes: Quiz[] = [
     answer: "オオイヌノフグリ",
     choices: ["オオイヌノフグリ", "オオバコ", "ハルジオン", "スミレ"],
     plant_id: 55,
+  },
+  {
+    id: 41,
+    type: "identification",
+    question:
+      "コナラより標高の高い山地に生え、葉の基部が耳状に張り出すナラは？",
+    answer: "ミズナラ",
+    choices: ["ミズナラ", "コナラ", "クヌギ", "ナラガシワ"],
+    plant_id: 56,
+  },
+  {
+    id: 42,
+    type: "identification",
+    question: "コルク質の厚い樹皮をもち、クヌギに似るが葉裏が白っぽいナラは？",
+    answer: "アベマキ",
+    choices: ["アベマキ", "クヌギ", "コナラ", "ミズナラ"],
+    plant_id: 57,
+  },
+  {
+    id: 43,
+    type: "identification",
+    question:
+      "滑らかな灰白色の樹皮をもち、冷温帯の純林を形成する「森の女王」は？",
+    answer: "ブナ",
+    choices: ["ブナ", "スダジイ", "コナラ", "シラカシ"],
+    plant_id: 58,
+  },
+  {
+    id: 44,
+    type: "identification",
+    question:
+      "掌状複葉（5〜7枚の小葉）をもち、山地の渓流沿いに生える落葉高木は？",
+    answer: "トチノキ",
+    choices: ["トチノキ", "ネムノキ", "ハウチワカエデ", "フジ"],
+    plant_id: 59,
+  },
+  {
+    id: 45,
+    type: "identification",
+    question:
+      "枝が水平に段状に広がる樹形をもち、初夏に白い小花を散房状に咲かせる木は？",
+    answer: "ミズキ",
+    choices: ["ミズキ", "コブシ", "アジサイ", "ネムノキ"],
+    plant_id: 60,
+  },
+  {
+    id: 46,
+    type: "identification",
+    question:
+      "日本最大級の葉（長さ20〜40cm）をもち、初夏に芳香のある大きな白い花を咲かせる木は？",
+    answer: "ホオノキ",
+    choices: ["ホオノキ", "ハクモクレン", "コブシ", "トチノキ"],
+    plant_id: 61,
+  },
+  {
+    id: 47,
+    type: "identification",
+    question:
+      "鋭いトゲのあるイガに包まれた実をつけ、初夏に甘い香りの白い花穂を出す木は？",
+    answer: "クリ",
+    choices: ["クリ", "コナラ", "スダジイ", "クヌギ"],
+    plant_id: 62,
+  },
+  {
+    id: 48,
+    type: "identification",
+    question:
+      "イロハモミジより葉が大きく（径10〜15cm）、9〜11裂する日本固有のカエデは？",
+    answer: "ハウチワカエデ",
+    choices: ["ハウチワカエデ", "イロハモミジ", "トウカエデ", "ミズナラ"],
+    plant_id: 63,
+  },
+  {
+    id: 49,
+    type: "identification",
+    question:
+      "コナラより大きな葉と波状の鋸歯をもち、西日本の暖温帯山地に多いナラは？",
+    answer: "ナラガシワ",
+    choices: ["ナラガシワ", "コナラ", "ミズナラ", "アベマキ"],
+    plant_id: 64,
   },
 ]
