@@ -1,94 +1,311 @@
-# Next.js Static Site Template
+# JuQa
 
-Next.js 16 + React 19 + TypeScript を使用した静的サイト生成のテンプレートリポジトリです。GitHub Pages へのデプロイが自動化されています。
+## 概要
+
+街路樹や山で見かける植物を体系的に覚えるための学習アプリ。
+以下の3つの学習方法を提供する。
+
+1.  見分け方で覚える
+2.  植物一覧で確認
+3.  クイズで定着
+
+## 目的
+
+- 植物の科・属・種を覚える
+- 見分け方の特徴を理解する
+- 実際の観察で識別できるようになる
+
+---
+
+## ターゲット
+
+- 植物初心者
+- 自然観察好き
+- 登山・散歩
+- 造園・建築関係
+
+---
+
+## MVP機能
+
+### 1. 植物一覧
+
+植物の基本データを閲覧できる。
+
+#### 表示項目
+
+- 写真
+- 和名
+- 学名
+- 科
+- 属
+- 特徴
+- 見分け方
+- よく似た植物
+- 分布
+
+#### 例
+
+**ソメイヨシノ**
+
+- 科: バラ科
+- 属: サクラ属
+
+特徴
+
+- 春に白い花
+- 葉はギザギザ
+
+見分け方
+
+- 花が先に咲く
+- 樹皮に横縞
+
+---
+
+### 2. 科一覧
+
+科ごとに植物を整理。
+
+例
+バラ科
+├ サクラ
+├ ウメ
+├ モモ
+└ ナシ
+
+科の説明
+
+特徴
+
+- 花弁5枚
+- 葉にギザギザ
+
+---
+
+### 3. 見分け方ガイド
+
+特徴ベースの識別。
+
+例
+
+- 葉が針
+  → マツ科
+
+- どんぐり
+  → ブナ科
+
+- 手のひら葉
+  → カエデ
+
+#### UIイメージ
+
+質問形式
+
+- 葉は針ですか？
+
+- YES → マツ科
+  NO
+  ↓
+  どんぐりがありますか？
+
+---
+
+### 4. クイズ
+
+#### ① 写真クイズ
+
+- この植物は？
+  - ○ サクラ
+  - ○ ウメ
+  - ○ モモ
+
+#### ② 特徴クイズ
+
+- どんぐりがなる科は？
+  - ○ ブナ科
+  - ○ マメ科
+  - ○ バラ科
+
+#### ③ 見分け方クイズ
+
+- 葉が手のひら型
+  → ?
+
+---
+
+### 5. お気に入り
+
+覚えたい植物を保存できる機能。
+
+---
+
+## データモデル
+
+### plant
+
+- id
+- japanese_name
+- scientific_name
+- family_id
+- genus
+- description
+- identification
+- distribution
+- image_url
+
+### family
+
+- id
+- name
+- description
+- characteristics
+
+### quiz
+
+- id
+- type
+- question
+- answer
+- choices
+- plant_id
+
+---
+
+## API設計
+
+### 植物
+
+- GET /plants
+- GET /plants/{id}
+
+### 科
+
+- GET /families
+- GET /families/{id}
+
+### クイズ
+
+- GET /quiz/random
+- GET /quiz/family
+- GET /quiz/plant
+
+---
+
+## UI構成
+
+### ホーム
+
+- 植物一覧
+- 科一覧
+- 見分け方
+- クイズ
+
+### 植物詳細
+
+- 写真
+- 名前
+- 科
+- 特徴
+- 見分け方
+- 似ている植物
+
+### クイズ画面
+
+- 問題
+- 選択肢
+- 回答
+- 解説
+
+---
+
+## 初期データ
+
+まずは **50〜100種**で開始。
+
+#### 樹木
+
+- ソメイヨシノ
+- イロハモミジ
+- クスノキ
+- ケヤキ
+- イチョウ
+- コナラ
+- クヌギ
+- ヒノキ
+- スギ
+- クロマツ
+
+#### 野草
+
+- タンポポ
+- シロツメクサ
+- ヨモギ
+- スミレ
+- ツユクサ
+
+---
+
+## 画像データ
+
+候補
+
+- Wikimedia Commons
+- iNaturalist
+
+---
 
 ## 技術スタック
 
-- **Next.js** 16 - App Router / Static Export
-- **React** 19
-- **TypeScript** 5
-- **ESLint** 9 - Flat Config
-- **Prettier** 3
+### Frontend
 
-## このテンプレートの使い方
+- Next.js
 
-1. **「Use this template」ボタン**をクリックして新しいリポジトリを作成
-2. リポジトリをクローン
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   cd YOUR_REPO
-   ```
-3. 依存関係をインストール
-   ```bash
-   pnpm install
-   ```
-4. 開発サーバーを起動
-   ```bash
-   pnpm dev
-   ```
+### Backend
 
-## セットアップ後にやること
+- Hono
+- Prisma
+- Sqlite
 
-### 1. `next.config.js` の修正
+---
 
-`basePath` をリポジトリ名に変更してください：
+## 将来拡張
 
-```js
-basePath: process.env.NODE_ENV === "production" ? "/YOUR_REPO_NAME" : "",
-```
+### AI識別
 
-### 2. `app/layout.tsx` の修正
+写真から植物判定（TensorFlow / ONNX）
 
-メタデータとサイト情報を更新してください：
+### AR識別
 
-```tsx
-export const metadata: Metadata = {
-  title: "Your Site Title",
-  description: "Your site description",
-}
-```
+カメラを向けると植物名表示
 
-### 3. GitHub Pages の設定
+### 観察ログ
 
-1. リポジトリの **Settings** → **Pages** へ移動
-2. **Source** を「GitHub Actions」に設定
+ユーザーが見つけた植物を記録
 
-## ディレクトリ構成
+### 地図
 
-```
-.
-├── app/
-│   ├── layout.tsx      # ルートレイアウト
-│   ├── page.tsx        # ホームページ
-│   └── reset.css       # CSSリセット
-├── .github/
-│   └── workflows/
-│       ├── lint.yml    # リント自動実行
-│       └── deploy.yml  # GitHub Pages 自動デプロイ
-├── next.config.js      # Next.js 設定
-├── tsconfig.json       # TypeScript 設定
-├── eslint.config.mjs   # ESLint 設定
-└── .prettierrc.json    # Prettier 設定
-```
+植物の分布表示
 
-## スクリプト
+---
 
-| コマンド | 説明 |
-|---------|------|
-| `pnpm dev` | 開発サーバーを起動 |
-| `pnpm build` | 静的サイトをビルド（`/out` に出力） |
-| `pnpm lint` | ESLint を実行 |
-| `pnpm format` | Prettier でコードをフォーマット |
-| `pnpm typecheck` | TypeScript の型チェック |
+## アプリ構造
 
-## 機能
+植物
+├ 科
+│ ├ 属
+│ │ ├ 種
+│
+├ 見分け方
+│
+├ クイズ
+│
+└ 観察ログ
 
-- **静的サイト生成** - `next build` で `/out` に HTML を出力
-- **自動デプロイ** - main ブランチへの push で GitHub Pages に自動デプロイ
-- **自動リント** - push 時に ESLint / Prettier チェックを実行
-- **依存関係の自動更新** - Dependabot による週次チェック
-- **エディタ設定** - VS Code での自動フォーマット設定済み
+---
 
-## ライセンス
+## このアプリの特徴
 
-ISC
+- 植物を体系的に「覚える」
+- クイズによる定着
+- 見分け方ベースの学習
