@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
-import { PageHeader, SectionCard } from "components/elements/layout"
+import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 
 export function generateStaticParams() {
   return families.map((family) => ({ id: String(family.id) }))
@@ -30,11 +30,12 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
       <PageHeader backHref="/families" backLabel="科一覧" />
 
-      <h2
-        style={{ margin: "0 0 0.5rem", fontSize: "1.4rem", color: "#7cbe8c" }}
-      >
-        {family.name}
-      </h2>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
+        <h2 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
+          {family.name}
+        </h2>
+        <Tag variant="muted">{family.classification}</Tag>
+      </div>
       <p
         style={{
           margin: "0 0 1.25rem",

@@ -3,6 +3,7 @@ export type Family = {
   name: string
   description: string
   characteristics: string[]
+  classification: "裸子植物" | "被子植物"
 }
 
 export type Plant = {
@@ -37,6 +38,7 @@ export const families: Family[] = [
       "葉に鋸歯あり",
       "果実は多様（さくらんぼ・梨・りんごなど）",
     ],
+    classification: "被子植物",
   },
   {
     id: 2,
@@ -48,6 +50,7 @@ export const families: Family[] = [
       "翼果（プロペラ型の実）",
       "手のひら状に裂ける葉が多い",
     ],
+    classification: "被子植物",
   },
   {
     id: 3,
@@ -58,6 +61,7 @@ export const families: Family[] = [
       "3本の葉脈が目立つ",
       "樟脳の独特な香り",
     ],
+    classification: "被子植物",
   },
   {
     id: 4,
@@ -68,6 +72,7 @@ export const families: Family[] = [
       "単葉で鋸歯あり",
       "小さな翼果をつける",
     ],
+    classification: "被子植物",
   },
   {
     id: 5,
@@ -75,6 +80,7 @@ export const families: Family[] = [
     description:
       "現存する最古の樹木グループの一つ。イチョウ1種のみからなる科。",
     characteristics: ["扇形の葉", "葉脈が二又分岐", "雌雄異株"],
+    classification: "裸子植物",
   },
   {
     id: 6,
@@ -82,6 +88,7 @@ export const families: Family[] = [
     description:
       "北半球の温帯に広く分布する落葉・常緑樹の科。どんぐりで知られる。",
     characteristics: ["どんぐり（堅果と殻斗）", "単葉", "風媒花"],
+    classification: "被子植物",
   },
   {
     id: 7,
@@ -89,12 +96,14 @@ export const families: Family[] = [
     description:
       "常緑針葉樹の科。日本では建築材として重要なヒノキ・スギが含まれる。",
     characteristics: ["鱗片状または針状の葉", "球果（まつぼっくり型）", "常緑"],
+    classification: "裸子植物",
   },
   {
     id: 8,
     name: "マツ科",
     description: "針葉樹の代表的な科。世界中の温帯・寒帯に分布する。",
     characteristics: ["束生する針葉", "大型の球果", "樹脂（松やに）を多く含む"],
+    classification: "裸子植物",
   },
   {
     id: 9,
@@ -105,12 +114,14 @@ export const families: Family[] = [
       "舌状花と筒状花からなる",
       "冠毛（綿毛）を持つ種が多い",
     ],
+    classification: "被子植物",
   },
   {
     id: 10,
     name: "マメ科",
     description: "豆を実らせる植物の科。根粒菌と共生し窒素固定を行う。",
     characteristics: ["蝶形花", "さや状の果実", "3出複葉または羽状複葉"],
+    classification: "被子植物",
   },
   {
     id: 11,
@@ -121,6 +132,7 @@ export const families: Family[] = [
       "葉は単葉",
       "閉鎖花をつける",
     ],
+    classification: "被子植物",
   },
   {
     id: 12,
@@ -131,6 +143,7 @@ export const families: Family[] = [
       "葉鞘（さや）で茎を抱く",
       "朝に開花し午後にしぼむ",
     ],
+    classification: "被子植物",
   },
   {
     id: 13,
@@ -142,6 +155,7 @@ export const families: Family[] = [
       "花弁と萼片が区別しにくい",
       "果実は集合果",
     ],
+    classification: "被子植物",
   },
   {
     id: 14,
@@ -153,6 +167,7 @@ export const families: Family[] = [
       "花弁は5枚以上",
       "雄しべが多数",
     ],
+    classification: "被子植物",
   },
   {
     id: 15,
@@ -163,6 +178,7 @@ export const families: Family[] = [
       "対生する葉",
       "花色が土壌pHで変化",
     ],
+    classification: "被子植物",
   },
   {
     id: 16,
@@ -174,6 +190,7 @@ export const families: Family[] = [
       "唇形花（上唇・下唇に分かれる）",
       "葉が対生",
     ],
+    classification: "被子植物",
   },
   {
     id: 17,
@@ -185,6 +202,7 @@ export const families: Family[] = [
       "平らな針状葉が左右に並ぶ",
       "葉・種子は有毒（仮種皮のみ食べられる）",
     ],
+    classification: "裸子植物",
   },
   {
     id: 18,
@@ -196,6 +214,7 @@ export const families: Family[] = [
       "独特な形の花（距をもつ種が多い）",
       "果実は蒴果（さくか）",
     ],
+    classification: "被子植物",
   },
   {
     id: 19,
@@ -207,6 +226,7 @@ export const families: Family[] = [
       "晴天でのみ開花する（日光で開く）",
       "葉は対生で全縁",
     ],
+    classification: "被子植物",
   },
   {
     id: 20,
@@ -218,6 +238,7 @@ export const families: Family[] = [
       "白い4枚の総苞片（花弁に見える）が十字型",
       "ハート型の葉",
     ],
+    classification: "被子植物",
   },
   {
     id: 21,
@@ -229,6 +250,7 @@ export const families: Family[] = [
       "細長い葉と葉鞘",
       "風媒花（穂状の花序）",
     ],
+    classification: "被子植物",
   },
   {
     id: 22,
@@ -240,6 +262,7 @@ export const families: Family[] = [
       "球根（鱗茎）をもつ",
       "葉脈が平行",
     ],
+    classification: "被子植物",
   },
   {
     id: 23,
@@ -251,6 +274,7 @@ export const families: Family[] = [
       "穂状の花序",
       "踏み荒らされた場所に適応",
     ],
+    classification: "被子植物",
   },
 ]
 

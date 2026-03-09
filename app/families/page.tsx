@@ -50,9 +50,14 @@ const FamiliesPage: FC = () => {
                       {family.description.length > 120 ? "..." : ""}
                     </div>
                   </div>
-                  <Tag style={{ whiteSpace: "nowrap", marginLeft: "0.75rem" }}>
-                    {familyPlants.length}種
-                  </Tag>
+                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginLeft: "0.75rem" }}>
+                    <Tag variant="muted" style={{ whiteSpace: "nowrap" }}>
+                      {family.classification}
+                    </Tag>
+                    <Tag style={{ whiteSpace: "nowrap" }}>
+                      {familyPlants.length}種
+                    </Tag>
+                  </div>
                 </div>
                 <div
                   style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
