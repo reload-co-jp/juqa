@@ -108,6 +108,32 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
           <Tag>{family?.name ?? "—"}</Tag>
           <Tag variant="muted">{plant.genus}</Tag>
         </div>
+        {plant.tags.length > 0 && (
+          <div
+            style={{
+              marginTop: "0.5rem",
+              display: "flex",
+              gap: "0.4rem",
+              flexWrap: "wrap",
+            }}
+          >
+            {plant.tags.map((tag) => (
+              <span
+                key={tag}
+                style={{
+                  background: "#1a2e1a",
+                  color: "#a0d0a2",
+                  borderRadius: "4px",
+                  padding: "0.15rem 0.5rem",
+                  fontSize: "0.75rem",
+                  border: "1px solid #2d4d2d",
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <SectionCard title="解説">

@@ -2,16 +2,35 @@
 
 import { FC, useState } from "react"
 import Link from "next/link"
-import { plants, families } from "lib/data"
+import { plants, families, type PlantTag } from "lib/data"
 import { PageHeader, Tag } from "components/elements/layout"
+
+const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
+  { label: "季節", tags: ["春開花", "夏開花", "秋開花", "常緑", "落葉"] },
+  { label: "葉", tags: ["針葉", "手のひら葉", "ギザギザ", "厚い葉", "光沢"] },
+  { label: "花", tags: ["花弁5枚", "小花集合", "ラッパ型"] },
+  { label: "実", tags: ["どんぐり", "豆", "松ぼっくり"] },
+  { label: "樹形", tags: ["高木", "低木", "草本"] },
+  { label: "環境", tags: ["街路樹", "山", "公園", "雑草"] },
+]
 
 const PlantsPage: FC = () => {
   const [selectedFamilyId, setSelectedFamilyId] = useState<number | null>(null)
+  const [selectedTags, setSelectedTags] = useState<Set<PlantTag>>(new Set())
 
-  const filteredPlants =
-    selectedFamilyId === null
-      ? plants
-      : plants.filter((p) => p.family_id === selectedFamilyId)
+  const toggleTag = (tag: PlantTag) => {
+    setSelectedTags((prev) => {
+      const next = new Set(prev)
+      if (next.has(tag)) { next.delete(tag) } else { next.add(tag) }
+      return next
+    })
+  }
+
+  const filteredPlants = plants.filter((p) => {
+    if (selectedFamilyId !== null && p.family_id !== selectedFamilyId) return false
+    if (selectedTags.size > 0 && ![...selectedTags].every((t) => p.tags.includes(t))) return false
+    return true
+  })
 
   return (
     <div style={{ margin: "0 auto" }}>
@@ -42,6 +61,66 @@ const PlantsPage: FC = () => {
             </option>
           ))}
         </select>
+      </div>
+
+      <div
+        style={{
+          background: "#2d2d2d",
+          borderRadius: "8px",
+          padding: "0.75rem",
+          marginBottom: "1rem",
+        }}
+      >
+        {TAG_GROUPS.map((group) => (
+          <div
+            key={group.label}
+            style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.5rem", flexWrap: "wrap" }}
+          >
+            <span style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}>
+              {group.label}
+            </span>
+            {group.tags.map((tag) => {
+              const active = selectedTags.has(tag)
+              return (
+                <button
+                  key={tag}
+                  onClick={() => toggleTag(tag)}
+                  style={{
+                    background: active ? "#5a9a5c" : "#1a1a1a",
+                    color: active ? "#fff" : "#aaa",
+                    border: `1px solid ${active ? "#5a9a5c" : "#444"}`,
+                    borderRadius: "4px",
+                    padding: "0.15rem 0.5rem",
+                    fontSize: "0.78rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  {tag}
+                </button>
+              )
+            })}
+          </div>
+        ))}
+        {selectedTags.size > 0 && (
+          <button
+            onClick={() => setSelectedTags(new Set())}
+            style={{
+              background: "none",
+              color: "#999",
+              border: "none",
+              fontSize: "0.75rem",
+              cursor: "pointer",
+              marginTop: "0.25rem",
+              padding: 0,
+            }}
+          >
+            ✕ タグをリセット
+          </button>
+        )}
+      </div>
+
+      <div style={{ color: "#999", fontSize: "0.8rem", marginBottom: "0.75rem" }}>
+        {filteredPlants.length}件
       </div>
 
       <div
