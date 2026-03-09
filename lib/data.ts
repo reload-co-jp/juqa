@@ -1044,7 +1044,7 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道・本州・四国の山地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata_Siebold_Zucc._%281824%29.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata_2.JPG",
     similar_plant_ids: [8, 9],
   },
   {
@@ -1066,7 +1066,7 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道・本州中部以北の高山帯砂礫地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Dicentra_peregrina1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Dicentra_peregrina_Komakusa.jpg",
     similar_plant_ids: [],
   },
   {
@@ -1088,7 +1088,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の山地・草地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_scabra_var_buergeri1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_scabra_var._buergeri_03.jpg",
     similar_plant_ids: [],
   },
   {
@@ -1176,7 +1176,7 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道〜九州の落葉広葉樹林の林床",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Erythronium_japonicum2.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Erythronium_japonicum_2006_005.jpg",
     similar_plant_ids: [],
   },
   {
@@ -1198,7 +1198,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の山野・道端・荒地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pueraria_lobata_2012.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kuzu_(Pueraria_Montana_var._lobata).jpg",
     similar_plant_ids: [25],
   },
   {
@@ -1220,7 +1220,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の湿った林縁・沢沿い・草地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Petasites_japonicus_flower_Flickr.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japans_hoefblad_(Petasites_japonicus)._22-03-2021._(d.j.b).jpg",
     similar_plant_ids: [],
   },
   {
@@ -1242,7 +1242,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の道端・公園・踏み荒らされた場所",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_asiatica_in_Osaka_001.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_asiatica.jpg",
     similar_plant_ids: [],
   },
   {
@@ -1264,7 +1264,7 @@ export const plants: Plant[] = [
     ],
     distribution: "本州（関東以西）〜沖縄の海岸・山地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_thunbergii_01.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_Thunbergii.JPG",
     similar_plant_ids: [3],
   },
   {
@@ -1286,7 +1286,7 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道・本州の山地・河川沿い",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_3.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
     similar_plant_ids: [4],
   },
   {
@@ -1308,7 +1308,7 @@ export const plants: Plant[] = [
     ],
     distribution: "本州（東北以南）〜沖縄の林内日陰",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica_(at_Tsukuba_Botanical_Garden,_Ibaraki,_Japan)_02.jpg",
     similar_plant_ids: [15],
   },
   {
@@ -1374,7 +1374,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の山地・草地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Swertia_japonica1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Swertia_japonica_flower.JPG",
     similar_plant_ids: [38],
   },
   {
@@ -1440,7 +1440,7 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道南部〜九州の山地・林縁",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Lilium_auratum_2.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lilium_auratum1.jpg",
     similar_plant_ids: [42],
   },
   {
@@ -1462,7 +1462,7 @@ export const plants: Plant[] = [
     ],
     distribution: "全国の道端・草地・畑",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_persica_close.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_persica_02.JPG",
     similar_plant_ids: [45],
   },
 ]
