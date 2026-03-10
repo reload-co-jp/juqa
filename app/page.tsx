@@ -84,7 +84,7 @@ const Page: FC = () => {
               letterSpacing: "0.05em",
             }}
           >
-            JuQa
+            ジュカ！ <small>(JuQa)</small>
           </h1>
 
           <p

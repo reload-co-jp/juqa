@@ -8,23 +8,23 @@ const siteUrl =
 
 export const metadata: Metadata = {
   title: {
-    default: "JuQa",
-    template: "%s | JuQa",
+    default: "ジュカ！ (JuQa)",
+    template: "%s | ジュカ！ (JuQa)",
   },
   description:
     "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
   openGraph: {
-    title: "JuQa",
+    title: "ジュカ！ (JuQa)",
     description:
       "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
     url: siteUrl,
-    siteName: "JuQa",
+    siteName: "ジュカ！ (JuQa)",
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JuQa",
+    title: "ジュカ！ (JuQa)",
     description:
       "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
   },
@@ -43,7 +43,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           }}
         >
           <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <Title>JuQa</Title>
+            <Title>ジュカ！ (JuQa)</Title>
           </Link>
         </header>
         <div style={{ backgroundColor: "#1e1e1e" }}>
