@@ -22,18 +22,33 @@ const PlantsPage: FC = () => {
   const toggleTag = (tag: PlantTag) => {
     setSelectedTags((prev) => {
       const next = new Set(prev)
-      if (next.has(tag)) { next.delete(tag) } else { next.add(tag) }
+      if (next.has(tag)) {
+        next.delete(tag)
+      } else {
+        next.add(tag)
+      }
       return next
     })
   }
 
   const filteredPlants = plants.filter((p) => {
     if (searchQuery) {
-      const q = searchQuery.replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
-      if (!p.japanese_name.includes(q) && !p.scientific_name.toLowerCase().includes(searchQuery.toLowerCase())) return false
+      const q = searchQuery.replace(/[\u3041-\u3096]/g, (c) =>
+        String.fromCharCode(c.charCodeAt(0) + 0x60)
+      )
+      if (
+        !p.japanese_name.includes(q) &&
+        !p.scientific_name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+        return false
     }
-    if (selectedFamilyId !== null && p.family_id !== selectedFamilyId) return false
-    if (selectedTags.size > 0 && ![...selectedTags].every((t) => p.tags.includes(t))) return false
+    if (selectedFamilyId !== null && p.family_id !== selectedFamilyId)
+      return false
+    if (
+      selectedTags.size > 0 &&
+      ![...selectedTags].every((t) => p.tags.includes(t))
+    )
+      return false
     return true
   })
 
@@ -50,7 +65,7 @@ const PlantsPage: FC = () => {
           style={{
             background: "#2d2d2d",
             color: "#e0e0e0",
-            border: "1px solid #5a9a5c",
+            border: "1px solid #444",
             borderRadius: "6px",
             padding: "0.5rem 0.75rem",
             fontSize: "0.9rem",
@@ -71,7 +86,7 @@ const PlantsPage: FC = () => {
           style={{
             background: "#2d2d2d",
             color: "#e0e0e0",
-            border: "1px solid #5a9a5c",
+            border: "1px solid #444",
             borderRadius: "6px",
             padding: "0.5rem 0.75rem",
             fontSize: "0.9rem",
@@ -91,6 +106,7 @@ const PlantsPage: FC = () => {
         style={{
           background: "#2d2d2d",
           borderRadius: "8px",
+          border: "1px solid #444",
           padding: "0.75rem",
           marginBottom: "1rem",
         }}
@@ -98,9 +114,17 @@ const PlantsPage: FC = () => {
         {TAG_GROUPS.map((group) => (
           <div
             key={group.label}
-            style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.5rem", flexWrap: "wrap" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              marginBottom: "0.5rem",
+              flexWrap: "wrap",
+            }}
           >
-            <span style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}>
+            <span
+              style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}
+            >
               {group.label}
             </span>
             {group.tags.map((tag) => {
@@ -143,7 +167,9 @@ const PlantsPage: FC = () => {
         )}
       </div>
 
-      <div style={{ color: "#999", fontSize: "0.8rem", marginBottom: "0.75rem" }}>
+      <div
+        style={{ color: "#999", fontSize: "0.8rem", marginBottom: "0.75rem" }}
+      >
         {filteredPlants.length}件
       </div>
 
@@ -170,9 +196,9 @@ const PlantsPage: FC = () => {
               <div
                 style={{
                   background: "#2d2d2d",
-                  borderRadius: "8px",
+                  borderRadius: "2px",
                   overflow: "hidden",
-                  borderLeft: "3px solid #5a9a5c",
+                  borderBottom: "2px solid #5a9a5c",
                 }}
               >
                 <div
