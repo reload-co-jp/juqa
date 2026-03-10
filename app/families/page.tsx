@@ -75,6 +75,7 @@ const FamiliesPage: FC = () => {
                       <img
                         src={plant.image_url}
                         alt={plant.japanese_name}
+                        loading="lazy"
                         style={{
                           width: "80px",
                           height: "80px",
