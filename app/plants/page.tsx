@@ -15,6 +15,7 @@ const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
 ]
 
 const PlantsPage: FC = () => {
+  const [searchQuery, setSearchQuery] = useState("")
   const [selectedFamilyId, setSelectedFamilyId] = useState<number | null>(null)
   const [selectedTags, setSelectedTags] = useState<Set<PlantTag>>(new Set())
 
@@ -27,6 +28,10 @@ const PlantsPage: FC = () => {
   }
 
   const filteredPlants = plants.filter((p) => {
+    if (searchQuery) {
+      const q = searchQuery.replace(/[\u3041-\u3096]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60))
+      if (!p.japanese_name.includes(q) && !p.scientific_name.toLowerCase().includes(searchQuery.toLowerCase())) return false
+    }
     if (selectedFamilyId !== null && p.family_id !== selectedFamilyId) return false
     if (selectedTags.size > 0 && ![...selectedTags].every((t) => p.tags.includes(t))) return false
     return true
@@ -35,6 +40,25 @@ const PlantsPage: FC = () => {
   return (
     <div style={{ margin: "0 auto" }}>
       <PageHeader backHref="/" backLabel="トップ" title="植物一覧" />
+
+      <div style={{ marginBottom: "1rem" }}>
+        <input
+          type="search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="名前で検索（和名・学名）"
+          style={{
+            background: "#2d2d2d",
+            color: "#e0e0e0",
+            border: "1px solid #5a9a5c",
+            borderRadius: "6px",
+            padding: "0.5rem 0.75rem",
+            fontSize: "0.9rem",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
+        />
+      </div>
 
       <div style={{ marginBottom: "1rem" }}>
         <select
