@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useCallback, Suspense } from "react"
+import { FC, Suspense } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families, type PlantTag } from "lib/data"
@@ -23,7 +23,7 @@ const PlantsContent: FC = () => {
   const selectedFamilyId = searchParams.get("family") ? Number(searchParams.get("family")) : null
   const selectedTags = new Set<PlantTag>((searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[])
 
-  const updateParams = useCallback((updates: Record<string, string | null>) => {
+  const updateParams = (updates: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams.toString())
     for (const [key, value] of Object.entries(updates)) {
       if (value === null || value === "") {
@@ -33,7 +33,7 @@ const PlantsContent: FC = () => {
       }
     }
     router.replace(`?${params.toString()}`, { scroll: false })
-  }, [router, searchParams])
+  }
 
   const setSearchQuery = (value: string) => updateParams({ q: value })
   const setSelectedFamilyId = (id: number | null) => updateParams({ family: id === null ? null : String(id) })
