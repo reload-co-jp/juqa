@@ -7,13 +7,13 @@ const cards = [
     href: "/plants",
     emoji: "🌿",
     title: "植物一覧",
-    description: "35種の植物を科ごとに整理して学ぼう",
+    description: `${plants.length}種の植物を科ごとに整理して学ぼう`,
   },
   {
     href: "/families",
     emoji: "🌳",
     title: "科一覧",
-    description: "16の科の特徴と代表的な植物を確認しよう",
+    description: `${families.length}の科の特徴と代表的な植物を確認しよう`,
   },
   {
     href: "/guide",
@@ -32,10 +32,10 @@ const cards = [
 const Page: FC = () => {
   return (
     <div style={{ margin: "0 auto" }}>
-      {/* Hero */}
       <div
         style={{
-          background: "linear-gradient(135deg, #1a3d1c 0%, #2d5a30 50%, #1e4a3a 100%)",
+          background:
+            "linear-gradient(135deg, #1a3d1c 0%, #2d5a30 50%, #1e4a3a 100%)",
           borderRadius: "12px",
           padding: "2.5rem 1.5rem",
           marginBottom: "2rem",
@@ -43,7 +43,6 @@ const Page: FC = () => {
           overflow: "hidden",
         }}
       >
-        {/* 背景の装飾 */}
         <div
           aria-hidden
           style={{
@@ -96,11 +95,11 @@ const Page: FC = () => {
               lineHeight: "1.6",
             }}
           >
-            街路樹や山で見かける植物を、<br />
+            街路樹や山で見かける植物を、
+            <br />
             体系的に覚えるための学習アプリ。
           </p>
 
-          {/* Stats */}
           <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
             {[
               { value: plants.length, label: "種の植物" },
@@ -116,7 +115,13 @@ const Page: FC = () => {
                 >
                   {value}
                 </span>
-                <span style={{ color: "#a0d0a2", fontSize: "0.85rem", marginLeft: "0.25rem" }}>
+                <span
+                  style={{
+                    color: "#a0d0a2",
+                    fontSize: "0.85rem",
+                    marginLeft: "0.25rem",
+                  }}
+                >
                   {label}
                 </span>
               </div>
@@ -125,7 +130,6 @@ const Page: FC = () => {
         </div>
       </div>
 
-      {/* Navigation cards */}
       <div>
         {cards.map((card) => (
           <Link
