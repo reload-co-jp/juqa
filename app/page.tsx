@@ -6,25 +6,25 @@ const cards = [
   {
     href: "/plants",
     emoji: "🌿",
-    title: "植物一覧",
+    title: "植物をみる",
     description: `${plants.length}種の植物を科ごとに整理して学ぼう`,
   },
   {
     href: "/families",
     emoji: "🌳",
-    title: "科一覧",
+    title: "科から探す",
     description: `${families.length}の科の特徴と代表的な植物を確認しよう`,
   },
   {
     href: "/guide",
     emoji: "🔍",
-    title: "見分け方",
+    title: "植物の見方ガイド",
     description: "質問に答えて植物の科を絞り込もう",
   },
   {
     href: "/quiz",
     emoji: "📝",
-    title: "クイズ",
+    title: "植物クイズ",
     description: "覚えた知識をクイズで試してみよう",
   },
 ]
@@ -130,34 +130,46 @@ const Page: FC = () => {
         </div>
       </div>
 
-      <div>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "1rem",
+          justifyContent: "center",
+        }}
+      >
         {cards.map((card) => (
           <Link
             key={card.href}
             href={card.href}
-            style={{ textDecoration: "none" }}
+            style={{
+              display: "block",
+              maxWidth: "34rem",
+              textDecoration: "none",
+              width: "100%",
+            }}
           >
             <div
               style={{
                 background: "#2d2d2d",
                 borderRadius: "8px",
-                padding: "1.25rem 1rem",
-                marginBottom: "1rem",
+                padding: "1rem",
                 display: "flex",
+                flexDirection: "column",
                 alignItems: "center",
                 gap: "1rem",
                 borderLeft: "4px solid #5a9a5c",
                 cursor: "pointer",
               }}
             >
-              <span style={{ fontSize: "2rem" }}>{card.emoji}</span>
+              <div style={{ fontSize: "3rem" }}>{card.emoji}</div>
               <div>
                 <div
                   style={{
                     color: "#7cbe8c",
                     fontWeight: "bold",
-                    fontSize: "1.1rem",
-                    marginBottom: "0.25rem",
+                    fontSize: "1.5rem",
+                    textAlign: "center",
                   }}
                 >
                   {card.title}
