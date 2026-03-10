@@ -1,11 +1,33 @@
+import type { Metadata } from "next"
 import { Title } from "components/elements/layout"
 import Link from "next/link"
 import "./reset.css"
 
-export const metadata = {
-  title: "JuQa",
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://reload-co-jp.github.io/juqa/"
+
+export const metadata: Metadata = {
+  title: {
+    default: "JuQa",
+    template: "%s | JuQa",
+  },
   description:
     "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+  openGraph: {
+    title: "JuQa",
+    description:
+      "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+    url: siteUrl,
+    siteName: "JuQa",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JuQa",
+    description:
+      "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+  },
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
@@ -5,6 +6,27 @@ import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 
 export function generateStaticParams() {
   return families.map((family) => ({ id: String(family.id) }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params
+  const family = families.find((f) => f.id === Number(id))
+  if (!family) return {}
+
+  return {
+    title: family.name,
+    description: family.description,
+    openGraph: {
+      title: family.name,
+      description: family.description,
+      type: "article",
+    },
+    twitter: {
+      card: "summary",
+      title: family.name,
+      description: family.description,
+    },
+  }
 }
 
 type Props = {
