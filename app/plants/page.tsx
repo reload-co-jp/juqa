@@ -1,7 +1,8 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, useCallback, Suspense } from "react"
 import Link from "next/link"
+import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families, type PlantTag } from "lib/data"
 import { PageHeader, Tag } from "components/elements/layout"
 
@@ -14,21 +15,32 @@ const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
   { label: "環境", tags: ["街路樹", "山", "公園", "雑草"] },
 ]
 
-const PlantsPage: FC = () => {
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedFamilyId, setSelectedFamilyId] = useState<number | null>(null)
-  const [selectedTags, setSelectedTags] = useState<Set<PlantTag>>(new Set())
+const PlantsContent: FC = () => {
+  const router = useRouter()
+  const searchParams = useSearchParams()
 
-  const toggleTag = (tag: PlantTag) => {
-    setSelectedTags((prev) => {
-      const next = new Set(prev)
-      if (next.has(tag)) {
-        next.delete(tag)
+  const searchQuery = searchParams.get("q") ?? ""
+  const selectedFamilyId = searchParams.get("family") ? Number(searchParams.get("family")) : null
+  const selectedTags = new Set<PlantTag>((searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[])
+
+  const updateParams = useCallback((updates: Record<string, string | null>) => {
+    const params = new URLSearchParams(searchParams.toString())
+    for (const [key, value] of Object.entries(updates)) {
+      if (value === null || value === "") {
+        params.delete(key)
       } else {
-        next.add(tag)
+        params.set(key, value)
       }
-      return next
-    })
+    }
+    router.replace(`?${params.toString()}`, { scroll: false })
+  }, [router, searchParams])
+
+  const setSearchQuery = (value: string) => updateParams({ q: value })
+  const setSelectedFamilyId = (id: number | null) => updateParams({ family: id === null ? null : String(id) })
+  const toggleTag = (tag: PlantTag) => {
+    const next = new Set(selectedTags)
+    if (next.has(tag)) { next.delete(tag) } else { next.add(tag) }
+    updateParams({ tags: [...next].join(",") || null })
   }
 
   const filteredPlants = plants.filter((p) => {
@@ -151,7 +163,7 @@ const PlantsPage: FC = () => {
         ))}
         {selectedTags.size > 0 && (
           <button
-            onClick={() => setSelectedTags(new Set())}
+            onClick={() => updateParams({ tags: null })}
             style={{
               background: "none",
               color: "#999",
@@ -265,5 +277,11 @@ const PlantsPage: FC = () => {
     </div>
   )
 }
+
+const PlantsPage: FC = () => (
+  <Suspense>
+    <PlantsContent />
+  </Suspense>
+)
 
 export default PlantsPage
