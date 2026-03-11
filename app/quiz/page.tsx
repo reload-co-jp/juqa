@@ -3,7 +3,6 @@
 import { FC, useState } from "react"
 import Link from "next/link"
 import { quizzes, plants } from "lib/data"
-import type { Quiz } from "lib/data"
 import {
   PageHeader,
   SectionCard,
