@@ -3,6 +3,7 @@ import { FC } from "react"
 import Link from "next/link"
 import { plants, families } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
+import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 
 export function generateStaticParams() {
   return plants.map((plant) => ({ id: String(plant.id) }))
@@ -60,54 +61,54 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
       <PageHeader backHref="/plants" backLabel="植物一覧" />
 
-      {/* Image */}
-      <div
-        style={{
-          borderRadius: "8px",
-          height: "50dvh",
-          marginBottom: "1rem",
-          overflow: "hidden",
-          background: "#2a3d2b",
-          position: "relative",
-        }}
-      >
-        {plant.image_url ? (
+      {/* Images */}
+      {plant.images && plant.images.length > 0 ? (
+        <PlantPhotoGallery images={plant.images} plantName={plant.japanese_name} />
+      ) : plant.image_url ? (
+        <div
+          style={{
+            borderRadius: "8px",
+            height: "50dvh",
+            marginBottom: "1rem",
+            overflow: "hidden",
+            background: "#2a3d2b",
+            position: "relative",
+          }}
+        >
           <img
             src={plant.image_url}
             alt={plant.japanese_name}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
-        ) : (
           <div
             style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "1.5rem",
-              color: "#a0d0a2",
-              fontWeight: "bold",
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: "60px",
+              background: "linear-gradient(transparent, rgba(0,0,0,0.6))",
             }}
-          >
-            🌿 {plant.japanese_name}
-          </div>
-        )}
+          />
+        </div>
+      ) : (
         <div
           style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            height: "60px",
-            background: "linear-gradient(transparent, rgba(0,0,0,0.6))",
+            borderRadius: "8px",
+            height: "50dvh",
+            marginBottom: "1rem",
+            background: "#2a3d2b",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "1.5rem",
+            color: "#a0d0a2",
+            fontWeight: "bold",
           }}
-        />
-      </div>
+        >
+          🌿 {plant.japanese_name}
+        </div>
+      )}
 
       {/* Header */}
       <div style={{ marginBottom: "1rem" }}>

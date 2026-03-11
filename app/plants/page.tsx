@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, Suspense } from "react"
+import { FC, Suspense, useState, useRef } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
@@ -20,6 +20,9 @@ const PlantsContent: FC = () => {
   const searchParams = useSearchParams()
 
   const searchQuery = searchParams.get("q") ?? ""
+  const [inputValue, setInputValue] = useState(searchQuery)
+  const isComposing = useRef(false)
+
   const selectedFamilyId = searchParams.get("family")
     ? Number(searchParams.get("family"))
     : null
@@ -80,8 +83,20 @@ const PlantsContent: FC = () => {
       <div style={{ marginBottom: "1rem" }}>
         <input
           type="search"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          value={inputValue}
+          onChange={(e) => {
+            setInputValue(e.target.value)
+            if (!isComposing.current) {
+              setSearchQuery(e.target.value)
+            }
+          }}
+          onCompositionStart={() => {
+            isComposing.current = true
+          }}
+          onCompositionEnd={(e) => {
+            isComposing.current = false
+            setSearchQuery((e.target as HTMLInputElement).value)
+          }}
           placeholder="名前で検索（和名・学名）"
           style={{
             background: "#2d2d2d",
