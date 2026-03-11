@@ -3,7 +3,7 @@
 import { FC, Suspense } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
-import { plants, families, type PlantTag } from "lib/data"
+import { plants, families } from "lib/data"
 import { PageHeader, Tag } from "components/elements/layout"
 
 const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
@@ -20,8 +20,12 @@ const PlantsContent: FC = () => {
   const searchParams = useSearchParams()
 
   const searchQuery = searchParams.get("q") ?? ""
-  const selectedFamilyId = searchParams.get("family") ? Number(searchParams.get("family")) : null
-  const selectedTags = new Set<PlantTag>((searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[])
+  const selectedFamilyId = searchParams.get("family")
+    ? Number(searchParams.get("family"))
+    : null
+  const selectedTags = new Set<PlantTag>(
+    (searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[]
+  )
 
   const updateParams = (updates: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams.toString())
@@ -36,10 +40,15 @@ const PlantsContent: FC = () => {
   }
 
   const setSearchQuery = (value: string) => updateParams({ q: value })
-  const setSelectedFamilyId = (id: number | null) => updateParams({ family: id === null ? null : String(id) })
+  const setSelectedFamilyId = (id: number | null) =>
+    updateParams({ family: id === null ? null : String(id) })
   const toggleTag = (tag: PlantTag) => {
     const next = new Set(selectedTags)
-    if (next.has(tag)) { next.delete(tag) } else { next.add(tag) }
+    if (next.has(tag)) {
+      next.delete(tag)
+    } else {
+      next.add(tag)
+    }
     updateParams({ tags: [...next].join(",") || null })
   }
 

@@ -52,7 +52,14 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
       <PageHeader backHref="/families" backLabel="科一覧" />
 
-      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.75rem",
+          marginBottom: "0.5rem",
+        }}
+      >
         <h2 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
           {family.name}
         </h2>

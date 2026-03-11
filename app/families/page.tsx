@@ -50,7 +50,14 @@ const FamiliesPage: FC = () => {
                       {family.description.length > 120 ? "..." : ""}
                     </div>
                   </div>
-                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginLeft: "0.75rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "0.5rem",
+                      alignItems: "center",
+                      marginLeft: "0.75rem",
+                    }}
+                  >
                     <Tag variant="muted" style={{ whiteSpace: "nowrap" }}>
                       {family.classification}
                     </Tag>
