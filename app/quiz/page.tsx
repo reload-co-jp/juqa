@@ -173,6 +173,21 @@ const QuizPage: FC = () => {
         <Tag style={{ display: "inline-block", marginBottom: "0.5rem" }}>
           {typeLabel[quiz.type] ?? quiz.type}
         </Tag>
+        {quiz.type === "photo" && plant && (
+          <div style={{ marginBottom: "0.75rem" }}>
+            <img
+              src={plant.image_url}
+              alt="植物の写真"
+              style={{
+                width: "100%",
+                maxHeight: "240px",
+                objectFit: "cover",
+                borderRadius: "8px",
+                display: "block",
+              }}
+            />
+          </div>
+        )}
         <p
           style={{
             color: "#e0e0e0",
