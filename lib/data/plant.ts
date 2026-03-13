@@ -3266,4 +3266,37 @@ export const plants: Plant[] = [
     tags: ["春開花", "草本", "雑草", "小花集合"],
     similar_plant_ids: [93],
   },
+  {
+    id: 100,
+    japanese_name: "ゴゼンタチバナ",
+    scientific_name: "Cornus canadensis",
+    family_id: 24,
+    genus: "ミズキ属",
+    description: [
+      "亜高山帯〜高山帯の針葉樹林下に群生する草本状の落葉低木。高さ5〜15cm。",
+      "6枚の葉が輪生状につき、夏に白い4枚の苞片（花弁に見える部分）をもつ花を咲かせる。",
+      "秋に鮮やかな赤い集合果をつける。御前立花の名は加賀の白山（御前峰）に多いことに由来する。",
+    ],
+    identification: [
+      "6枚の葉が輪生状につく（実際は2対の対生葉＋2枚の小葉）",
+      "白い4枚の苞片が花弁のように見える",
+      "秋に赤い丸い集合果をつける",
+      "草本状で高さ5〜15cmと低い",
+    ],
+    distribution: "北海道・本州（中部以北）の亜高山帯〜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis_2.jpg",
+        caption: "花（白い苞片）",
+      },
+    ],
+    tags: ["夏開花", "落葉", "草本", "山"],
+    similar_plant_ids: [],
+  },
 ]
