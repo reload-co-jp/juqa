@@ -327,7 +327,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
-    similar_plant_ids: [22],
+    similar_plant_ids: [22, 101],
   },
   {
     id: 11,
@@ -723,7 +723,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
-    similar_plant_ids: [10],
+    similar_plant_ids: [10, 101],
   },
   {
     id: 23,
@@ -3297,6 +3297,138 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 102,
+    japanese_name: "イワカガミ",
+    scientific_name: "Shortia soldanelloides",
+    family_id: 39,
+    genus: "イワカガミ属",
+    description: [
+      "亜高山帯〜高山帯の岩場や林床に生育する常緑の多年草。",
+      "光沢のある丸い葉が岩場に広がり、鏡のように見えることが名前の由来。",
+      "春〜初夏に淡いピンクの花を咲かせ、花弁の縁が細かく裂ける（流蘇状）のが特徴。",
+    ],
+    identification: [
+      "葉は円形〜腎形で光沢があり、縁に鋸歯がある",
+      "花弁5枚で縁が細かく裂ける（流蘇状）",
+      "花色は淡いピンク〜白",
+      "常緑のロゼット状葉が岩場を覆う",
+    ],
+    distribution: "北海道・本州・四国・九州の亜高山帯〜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides_var._soldanelloides.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 101,
+    japanese_name: "ハイマツ",
+    scientific_name: "Pinus pumila",
+    family_id: 8,
+    genus: "マツ属",
+    description: [
+      "高山帯・亜高山帯の上部に生育する常緑針葉樹。幹が地面を這うように広がる匍匐性をもつ。",
+      "日本の高山では最も代表的な低木のひとつ。北海道・本州中部以北の高山帯に群落を形成する。",
+      "風雪に耐えるため樹高は通常1〜2mほどだが、稀に3mを超えることもある。",
+    ],
+    identification: [
+      "針葉が5本束で長さ3〜6cm（短い）",
+      "幹・枝が地面を這うように伸びる（匍匐性）",
+      "球果は卵状球形で長さ3〜5cm、赤紫色から褐色に熟す",
+      "高山帯・亜高山帯の尾根や岩場に生育",
+    ],
+    distribution: "北海道・本州中部以北の亜高山帯〜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_Rebun.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_Rebun.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_cone.jpg",
+        caption: "球果",
+      },
+    ],
+    tags: ["常緑", "針葉", "松ぼっくり", "低木", "山"],
+    similar_plant_ids: [10, 22],
+  },
+  {
+    id: 102,
+    japanese_name: "チングルマ",
+    scientific_name: "Sieversia pentapetala",
+    family_id: 1,
+    genus: "チングルマ属",
+    description: [
+      "高山帯の雪田周辺や湿った岩場に群落をつくる落葉小低木。高さ5〜15cm。",
+      "初夏に白い5弁の花を咲かせ、花後に羽毛状の長い花柱が残る果実が風車（チングルマ）に見立てられたとされる。",
+      "紅葉も美しく、秋には葉が赤や橙に色づき、羽毛状の果穂とともに高山の景観を彩る。",
+    ],
+    identification: [
+      "花弁5枚の白い花、直径約1.5〜2cm",
+      "花後に羽毛状の長い花柱（果穂）が残る",
+      "葉は羽状複葉で小葉の縁に深い鋸歯",
+      "高山帯の雪田周辺・湿地・岩場に生育する低木",
+    ],
+    distribution: "北海道・本州中部以北の高山帯（亜高山帯上部）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala_fruits.jpg",
+        caption: "羽毛状の果穂",
+      },
+    ],
+    tags: ["春開花", "夏開花", "落葉", "花弁5枚", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 103,
+    japanese_name: "イワベンケイ",
+    scientific_name: "Rhodiola rosea",
+    family_id: 40,
+    genus: "イワベンケイ属",
+    description: [
+      "高山帯の岩場や砂礫地に生育する多年草。茎は直立し高さ10〜30cm、葉は多肉質で青緑色。",
+      "雌雄異株で、夏に黄色（雄株）または赤みを帯びた（雌株）小花を茎頂に密集させる。",
+      "根茎にバラに似た香りがあることから「ローズルート」とも呼ばれ、薬用植物としても知られる。",
+    ],
+    identification: [
+      "葉は多肉質で扁平、縁に浅い鋸歯、青緑色",
+      "茎頂に黄〜赤の小花が密集（雌雄異株）",
+      "根茎を切るとバラに似た芳香がある",
+      "高山帯の岩場・砂礫地・雪渓周辺に生育",
+    ],
+    distribution: "北海道・本州中部以北の高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_a1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_a1.jpg",
+        caption: "花（雄株）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_8.jpg",
+        caption: "群落",
+      },
+    ],
+    tags: ["夏開花", "厚い葉", "小花集合", "草本", "山"],
     similar_plant_ids: [],
   },
 ]

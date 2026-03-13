@@ -422,4 +422,28 @@ export const families: Family[] = [
     ],
     classification: "被子植物",
   },
+  {
+    id: 39,
+    name: "イワウメ科",
+    description:
+      "北半球の高山・亜高山帯に分布する小型の常緑植物の科。ロゼット状の葉と美しい花をもつ種が多い。",
+    characteristics: [
+      "常緑のロゼット状葉",
+      "花弁5枚で縁が細かく裂ける種が多い",
+      "高山帯・亜高山帯の岩場や林床に生育",
+    ],
+    classification: "被子植物",
+  },
+  {
+    id: 40,
+    name: "ベンケイソウ科",
+    description:
+      "多肉植物を多く含む双子葉植物の科。乾燥や寒冷に強く、高山や岩場に適応した種が多い。",
+    characteristics: [
+      "多肉質・厚い葉",
+      "花弁4〜5枚の小花が集まる",
+      "乾燥・寒冷地に適応",
+    ],
+    classification: "被子植物",
+  },
 ]
