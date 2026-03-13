@@ -3318,15 +3318,15 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道・本州・四国・九州の亜高山帯〜高山帯",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_01.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_01.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Shortia_soldanelloides_var._soldanelloides.jpg",
-        caption: "全体",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_in_Mount_Norikura.JPG",
+        caption: "自生地",
       },
     ],
     tags: ["春開花", "常緑", "光沢", "草本", "山"],
@@ -3351,15 +3351,15 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道・本州中部以北の亜高山帯〜高山帯",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_Rebun.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_01.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_Rebun.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_01.jpg",
         caption: "全体",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_cone.jpg",
-        caption: "球果",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_cone_and_seed.JPG",
+        caption: "球果と種子",
       },
     ],
     tags: ["常緑", "針葉", "松ぼっくり", "低木", "山"],
