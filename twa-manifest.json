@@ -1,0 +1,36 @@
+{
+  "packageId": "jp.co.reload.juqa",
+  "host": "reload-co-jp.github.io",
+  "name": "ジュカ！ (JuQa)",
+  "launcherName": "ジュカ！",
+  "display": "standalone",
+  "orientation": "default",
+  "themeColor": "#7cbe8c",
+  "themeColorDark": "#7cbe8c",
+  "backgroundColor": "#1e1e1e",
+  "enableNotifications": false,
+  "startUrl": "/juqa/",
+  "iconUrl": "https://reload-co-jp.github.io/juqa/icons/icon-512.png",
+  "maskableIconUrl": "https://reload-co-jp.github.io/juqa/icons/icon-512.png",
+  "monochromeIconUrl": "https://reload-co-jp.github.io/juqa/icons/icon-512.png",
+  "appVersion": "1",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://reload-co-jp.github.io/juqa/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://reload-co-jp.github.io/juqa/",
+  "minSdkVersion": 19,
+  "fingerprints": [],
+  "signingKey": {
+    "path": "android.keystore",
+    "alias": "android"
+  }
+}
