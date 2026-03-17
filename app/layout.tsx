@@ -1,10 +1,16 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Title } from "components/elements/layout"
 import Link from "next/link"
 import "./reset.css"
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://reload-co-jp.github.io/juqa/"
+
+const basePath = process.env.NODE_ENV === "production" ? "/juqa" : ""
+
+export const viewport: Viewport = {
+  themeColor: "#7cbe8c",
+}
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +39,19 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('${basePath}/sw.js', { scope: '${basePath}/' });
+                });
+              }
+            `,
+          }}
+        />
+      </head>
       <body>
         <header
           style={{
