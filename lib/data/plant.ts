@@ -3431,4 +3431,136 @@ export const plants: Plant[] = [
     tags: ["夏開花", "厚い葉", "小花集合", "草本", "山"],
     similar_plant_ids: [],
   },
+  {
+    id: 104,
+    japanese_name: "ベニカナメモチ",
+    scientific_name: "Photinia × fraseri",
+    family_id: 1,
+    genus: "カナメモチ属",
+    description: [
+      "カナメモチとオオカナメモチの交配種で、生垣や庭木として全国に広く植栽される常緑低木〜小高木。",
+      "春の新芽が鮮やかな赤色になるのが最大の特徴で、成熟すると緑色に変わる。",
+      "初夏に白い小花を多数集めた散房花序をつけ、秋には赤い小果実が実る。",
+    ],
+    identification: [
+      "春の新芽・若葉が鮮やかな赤〜橙赤色（成熟すると緑色に変わる）",
+      "葉は革質で光沢があり、縁に細かい鋸歯がある",
+      "白い5弁の小花が散房状に多数集まって咲く（5〜6月）",
+      "生垣として整形されていることが多い",
+    ],
+    distribution: "全国（栽培・植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_x_fraseri_0zz.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_x_fraseri_0zz.jpg",
+        caption: "赤い新芽",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_flowers.jpg",
+        caption: "花（散房花序）",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "ギザギザ", "花弁5枚", "小花集合", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 105,
+    japanese_name: "セイヨウキヅタ",
+    scientific_name: "Hedera helix",
+    family_id: 41,
+    genus: "キヅタ属",
+    description: [
+      "ヨーロッパ・西アジア原産の常緑つる性木本で、日本では公園や建物の壁面緑化・グランドカバーとして広く利用される。",
+      "気根（付着根）で壁や樹木に張り付いて登るため、垂直面でも生育できる。",
+      "秋に小さな黄緑色の花を咲かせ、翌春に黒紫色の果実が実る。",
+    ],
+    identification: [
+      "葉は革質で光沢があり、若い枝では3〜5裂の手のひら型（成木では卵形になる）",
+      "葉脈が白〜薄緑色で目立ち、葉面との対比が特徴的",
+      "気根（付着根）で壁や岩、樹幹をよじ登る",
+      "秋に黄緑色の小花が傘形花序にまとまって咲く",
+    ],
+    distribution: "全国（逸出・帰化、原産地はヨーロッパ〜西アジア）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_003.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_003.JPG",
+        caption: "葉（手のひら型）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_berries_and_leaf.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["常緑", "手のひら葉", "光沢", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 106,
+    japanese_name: "サカキ",
+    scientific_name: "Cleyera japonica",
+    family_id: 14,
+    genus: "サカキ属",
+    description: [
+      "西日本の暖温帯林に自生する常緑小高木で、神道の神事に欠かせない「榊（さかき）」として古来より神聖視されてきた。",
+      "葉は互生し、濃緑色で厚く光沢があり、縁は全縁（鋸歯なし）。葉の裏面はやや淡い緑色。",
+      "初夏に白い5弁花を葉腋に1〜3個つけ、秋に直径1cm程度の球形果実が赤から黒紫色に熟す。",
+    ],
+    identification: [
+      "葉は全縁（鋸歯なし）で濃緑・光沢があり、先端がやや尖る",
+      "葉の縁がわずかに波打ち、葉柄は赤みを帯びることが多い",
+      "初夏（6〜7月）に白い5弁花が葉腋に下向きに咲く",
+      "神社の境内や玉串・お供えに用いられる神聖な木として知られる",
+    ],
+    distribution: "関東南部以西〜九州・沖縄の暖温帯林",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica1.jpg",
+        caption: "葉と枝",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica_flower.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["夏開花", "常緑", "光沢", "厚い葉", "花弁5枚", "高木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 107,
+    japanese_name: "ナンテン",
+    scientific_name: "Nandina domestica",
+    family_id: 42,
+    genus: "ナンテン属",
+    description: [
+      "中国原産の常緑低木で、「難を転ずる」の語呂合わせから縁起木として日本の庭や玄関先に広く植えられる。",
+      "葉は大型の2〜3回羽状複葉で、冬に赤く色づく。茎は根元から直立しほとんど分枝しない。",
+      "初夏に白い小花を円錐花序に多数つけ、秋から冬にかけて鮮やかな赤い球形果実が実る。",
+    ],
+    identification: [
+      "茎は細く直立し分枝が少ない、竹のような外観",
+      "葉は2〜3回羽状複葉で小葉は披針形、冬に赤〜橙色に紅葉する",
+      "赤い球形の果実が房状に垂れ下がる（秋〜冬）",
+      "白い小花が円錐花序に密集して咲く（6〜7月）",
+    ],
+    distribution: "本州〜九州（庭園・植栽、一部逸出・野生化）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica1.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica_flowers.jpg",
+        caption: "花（円錐花序）",
+      },
+    ],
+    tags: ["夏開花", "常緑", "小花集合", "低木", "公園"],
+    similar_plant_ids: [],
+  },
 ]
