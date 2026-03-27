@@ -29,6 +29,7 @@ const PhotoQuizPage: FC = () => {
   )
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
+  const [answers, setAnswers] = useState<string[]>([])
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
 
@@ -46,9 +47,12 @@ const PhotoQuizPage: FC = () => {
   }
 
   const handleNext = () => {
+    const newAnswers = [...answers, selected!]
     if (current + 1 >= shuffledQuizzes.length) {
+      setAnswers(newAnswers)
       setFinished(true)
     } else {
+      setAnswers(newAnswers)
       setCurrent((c) => c + 1)
       setSelected(null)
     }
@@ -65,6 +69,7 @@ const PhotoQuizPage: FC = () => {
     )
     setCurrent(0)
     setSelected(null)
+    setAnswers([])
     setScore(0)
     setFinished(false)
   }
@@ -73,11 +78,7 @@ const PhotoQuizPage: FC = () => {
     const percent = Math.round((score / shuffledQuizzes.length) * 100)
     return (
       <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-        <PageHeader
-          backHref="/quiz/photo"
-          backLabel="写真クイズ"
-          title="結果"
-        />
+        <PageHeader backHref="/" backLabel="トップ" title="写真クイズ結果" />
 
         <SectionCard style={{ padding: "2rem 1rem", textAlign: "center" }}>
           <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
@@ -106,6 +107,104 @@ const PhotoQuizPage: FC = () => {
                 : "実際に植物を観察して、もう一度挑戦してみよう！"}
           </div>
         </SectionCard>
+
+        {/* Review */}
+        <div style={{ marginBottom: "1rem" }}>
+          <div
+            style={{
+              fontSize: "0.85rem",
+              color: "#999",
+              marginBottom: "0.5rem",
+            }}
+          >
+            問題の振り返り
+          </div>
+          {shuffledQuizzes.map((q, i) => {
+            const userAnswer = answers[i]
+            const correct = userAnswer === q.answer
+            const reviewPlant =
+              q.plant_id !== null
+                ? plants.find((p) => p.id === q.plant_id)
+                : null
+            return (
+              <SectionCard
+                key={q.id}
+                style={{
+                  padding: "0.875rem 1rem",
+                  marginBottom: "0.5rem",
+                  borderLeft: `4px solid ${correct ? "#5a9a5c" : "#8a4a4a"}`,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: "0.8rem",
+                      fontWeight: "bold",
+                      color: correct ? "#7cbe8c" : "#e07070",
+                      flexShrink: 0,
+                      marginTop: "0.1rem",
+                    }}
+                  >
+                    {correct ? "○" : "✕"}
+                  </span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{ fontSize: "0.75rem", color: "#999", marginBottom: "0.3rem" }}
+                    >
+                      問題 {i + 1}
+                    </div>
+                    {reviewPlant && (
+                      <img
+                        src={reviewPlant.image_url}
+                        alt="植物の写真"
+                        style={{
+                          width: "100%",
+                          maxHeight: "120px",
+                          objectFit: "cover",
+                          borderRadius: "6px",
+                          display: "block",
+                          marginBottom: "0.4rem",
+                        }}
+                      />
+                    )}
+                    <div style={{ fontSize: "0.82rem", color: "#999" }}>
+                      正解：
+                      <span style={{ color: "#7cbe8c", marginLeft: "0.25rem" }}>
+                        {q.answer}
+                      </span>
+                      {!correct && (
+                        <span style={{ marginLeft: "0.75rem" }}>
+                          あなたの回答：
+                          <span
+                            style={{ color: "#e07070", marginLeft: "0.25rem" }}
+                          >
+                            {userAnswer}
+                          </span>
+                        </span>
+                      )}
+                    </div>
+                    {reviewPlant && (
+                      <div style={{ marginTop: "0.3rem", fontSize: "0.78rem" }}>
+                        <Link
+                          href={`/plants/${reviewPlant.id}`}
+                          style={{ color: "#5a9a5c", textDecoration: "none" }}
+                        >
+                          {reviewPlant.japanese_name} の詳細 →
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </SectionCard>
+            )
+          })}
+        </div>
 
         <div style={{ display: "flex", gap: "0.75rem" }}>
           <Button onClick={handleReset} style={{ flex: 1 }}>
