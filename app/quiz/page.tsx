@@ -23,7 +23,9 @@ function shuffle<T>(arr: T[]): T[] {
 
 const QuizPage: FC = () => {
   const [shuffledQuizzes, setShuffledQuizzes] = useState<ShuffledQuiz[]>(() =>
-    shuffle(quizzes).map((q) => ({ ...q, shuffledChoices: shuffle(q.choices) }))
+    shuffle(quizzes)
+      .slice(0, 8)
+      .map((q) => ({ ...q, shuffledChoices: shuffle(q.choices) }))
   )
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -54,10 +56,12 @@ const QuizPage: FC = () => {
 
   const handleReset = () => {
     setShuffledQuizzes(
-      shuffle(quizzes).map((q) => ({
-        ...q,
-        shuffledChoices: shuffle(q.choices),
-      }))
+      shuffle(quizzes)
+        .slice(0, 8)
+        .map((q) => ({
+          ...q,
+          shuffledChoices: shuffle(q.choices),
+        }))
     )
     setCurrent(0)
     setSelected(null)

@@ -3,11 +3,7 @@
 import { FC, useState } from "react"
 import Link from "next/link"
 import { quizzes, plants } from "lib/data"
-import {
-  PageHeader,
-  SectionCard,
-  Button,
-} from "components/elements/layout"
+import { PageHeader, SectionCard, Button } from "components/elements/layout"
 
 type ShuffledQuiz = Quiz & { shuffledChoices: string[] }
 
@@ -24,10 +20,12 @@ const photoQuizzes = quizzes.filter((q) => q.type === "photo")
 
 const PhotoQuizPage: FC = () => {
   const [shuffledQuizzes, setShuffledQuizzes] = useState<ShuffledQuiz[]>(() =>
-    shuffle(photoQuizzes).map((q) => ({
-      ...q,
-      shuffledChoices: shuffle(q.choices),
-    }))
+    shuffle(photoQuizzes)
+      .slice(0, 8)
+      .map((q) => ({
+        ...q,
+        shuffledChoices: shuffle(q.choices),
+      }))
   )
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -58,10 +56,12 @@ const PhotoQuizPage: FC = () => {
 
   const handleReset = () => {
     setShuffledQuizzes(
-      shuffle(photoQuizzes).map((q) => ({
-        ...q,
-        shuffledChoices: shuffle(q.choices),
-      }))
+      shuffle(photoQuizzes)
+        .slice(0, 8)
+        .map((q) => ({
+          ...q,
+          shuffledChoices: shuffle(q.choices),
+        }))
     )
     setCurrent(0)
     setSelected(null)
@@ -73,7 +73,11 @@ const PhotoQuizPage: FC = () => {
     const percent = Math.round((score / shuffledQuizzes.length) * 100)
     return (
       <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-        <PageHeader backHref="/quiz/photo" backLabel="写真クイズ" title="結果" />
+        <PageHeader
+          backHref="/quiz/photo"
+          backLabel="写真クイズ"
+          title="結果"
+        />
 
         <SectionCard style={{ padding: "2rem 1rem", textAlign: "center" }}>
           <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
@@ -175,7 +179,7 @@ const PhotoQuizPage: FC = () => {
               alt="植物の写真"
               style={{
                 width: "100%",
-                maxHeight: "300px",
+                maxHeight: "600px",
                 objectFit: "cover",
                 borderRadius: "8px",
                 display: "block",
