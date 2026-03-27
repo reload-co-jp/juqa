@@ -28,6 +28,12 @@ const cards = [
     title: "植物クイズ",
     description: "覚えた知識をクイズで試してみよう",
   },
+  {
+    href: "/quiz/photo",
+    emoji: "📷",
+    title: "写真クイズ",
+    description: "写真から植物を見分けよう",
+  },
 ]
 
 const Page: FC = () => {
