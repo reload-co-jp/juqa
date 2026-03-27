@@ -1,6 +1,7 @@
 import { FC } from "react"
 import Link from "next/link"
 import { plants, families } from "lib/data"
+import RandomPlant from "components/RandomPlant"
 
 const cards = [
   {
@@ -129,6 +130,8 @@ const Page: FC = () => {
           </div>
         </div>
       </div>
+
+      <RandomPlant />
 
       <div
         style={{
