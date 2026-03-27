@@ -459,6 +459,42 @@ export const families: Family[] = [
     classification: "被子植物",
   },
   {
+    id: 43,
+    name: "ジンチョウゲ科",
+    description:
+      "熱帯〜温帯に広く分布する木本・草本の科。樹皮が丈夫で和紙の原料として利用される種を含む。",
+    characteristics: [
+      "花弁がなく萼片が花弁状（4枚）",
+      "樹皮が強靭で繊維質",
+      "葉は単葉で全縁",
+    ],
+    classification: "被子植物",
+  },
+  {
+    id: 44,
+    name: "ツツジ科",
+    description:
+      "北半球の温帯〜亜寒帯に広く分布する木本の科。ツツジ・シャクナゲ・ブルーベリーなど観賞・食用として重要な種を多く含む。",
+    characteristics: [
+      "壺形または漏斗形の花",
+      "常緑または落葉の低木〜高木",
+      "酸性土壌を好む種が多い",
+    ],
+    classification: "被子植物",
+  },
+  {
+    id: 45,
+    name: "マツブサ科",
+    description:
+      "東アジアに分布する木本の科。シキミ属・マツブサ属などを含む。APG分類でシキミ科はマツブサ科に統合された。",
+    characteristics: [
+      "芳香性の精油を含む",
+      "花被片が多数で螺旋状につく",
+      "集合果をつける",
+    ],
+    classification: "被子植物",
+  },
+  {
     id: 42,
     name: "メギ科",
     description:

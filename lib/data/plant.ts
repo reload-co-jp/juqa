@@ -888,7 +888,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "公園"],
-    similar_plant_ids: [28],
+    similar_plant_ids: [28, 108],
   },
   {
     id: 28,
@@ -3561,6 +3561,270 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "小花集合", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 108,
+    japanese_name: "モクレン",
+    scientific_name: "Magnolia liliiflora",
+    family_id: 13,
+    genus: "モクレン属",
+    description: [
+      "中国原産の落葉低木〜小高木。早春に葉より先に紫色〜紅紫色の大きな花を咲かせる。",
+      "花弁の外側は紫色、内側は白色で、上を向いて咲く。ハクモクレンと並んで春の庭園を彩る代表的な花木。",
+      "庭園・公園に広く植えられ、ハクモクレンとの自然交配種（サラサモクレン）も多い。",
+    ],
+    identification: [
+      "葉より先に紫色〜紅紫色の花（径8〜10cm）を咲かせる",
+      "花弁の外側が紫色・内側が白色（ハクモクレンは全体白色）",
+      "花弁は6枚（外側の萼片3枚は小さく緑紫色）",
+      "ハクモクレンより花が小さく、樹高も低い傾向がある",
+    ],
+    distribution: "全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliiflora1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliiflora1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliflora_2.jpg",
+        caption: "花（外側の紫色）",
+      },
+    ],
+    tags: ["春開花", "落葉", "高木", "公園"],
+    similar_plant_ids: [27, 28],
+  },
+  {
+    id: 109,
+    japanese_name: "オウバイ",
+    scientific_name: "Jasminum nudiflorum",
+    family_id: 32,
+    genus: "ソケイ属",
+    description: [
+      "中国原産の落葉低木。早春に葉より先に鮮やかな黄色い花を咲かせることから「黄梅」の名がある。",
+      "枝は細く緑色でしなやかに弓状に垂れ下がり、対生する三出複葉をつける。",
+      "梅に似た黄色い花を厳冬から早春に咲かせ、春の訪れを知らせる花木として庭園に広く植えられる。",
+    ],
+    identification: [
+      "緑色でアーチ状に垂れ下がる細い枝",
+      "葉より先に黄色い花（径2〜3cm）を咲かせる（1〜3月）",
+      "花弁は6枚で筒状の基部をもつ",
+      "三出複葉（小葉3枚）、葉は対生",
+    ],
+    distribution: "全国（植栽・庭園・公園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum_kz1.jpg",
+        caption: "枝と花",
+      },
+    ],
+    tags: ["冬開花", "春開花", "落葉", "低木", "公園"],
+    similar_plant_ids: [112],
+  },
+  {
+    id: 110,
+    japanese_name: "ミツマタ",
+    scientific_name: "Edgeworthia chrysantha",
+    family_id: 43,
+    genus: "ミツマタ属",
+    description: [
+      "中国原産の落葉低木。枝が必ず三叉に分かれることから「三椏」の名がある。",
+      "早春に葉より先に、枝先に黄色い花を球状に集めて咲かせる。花には芳香がある。",
+      "樹皮の繊維が強靭で、日本銀行券（お札）の原料として古くから利用されてきた重要な植物。",
+    ],
+    identification: [
+      "枝が必ず3本に分岐する（三叉分枝）",
+      "葉より先に黄色い球状の花序をつける（3〜4月）",
+      "花は花弁がなく萼片が4裂、外側に絹毛が密生し白く見える",
+      "葉は互生で披針形、裏面に絹毛がある",
+    ],
+    distribution: "本州〜九州（植栽・一部山地に野生化）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha_kz3.jpg",
+        caption: "三叉分枝と花序",
+      },
+    ],
+    tags: ["春開花", "落葉", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 111,
+    japanese_name: "ミモザ",
+    scientific_name: "Acacia dealbata",
+    family_id: 10,
+    genus: "アカシア属",
+    description: [
+      "オーストラリア原産の常緑高木。早春に鮮やかな黄色い小花を無数に咲かせ、春の花木として人気が高い。",
+      "葉は2回羽状複葉で灰緑色、若枝や葉に白い粉（蝋質）をまとうのが特徴。",
+      "成長が非常に速く、日当たりのよい庭や公園に植えられる。切り花・フラワーアレンジメントにも広く利用される。",
+    ],
+    identification: [
+      "葉は2回羽状複葉で灰緑色〜シルバーグリーン",
+      "葉や若枝が白い粉（蝋質）をまとう",
+      "早春（2〜3月）に黄色い小花が球状に集まり房状に咲く",
+      "花には甘い芳香がある",
+    ],
+    distribution: "関東以西（植栽）、暖地では野生化する場合がある",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_flowers.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_flowers.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_kz1.jpg",
+        caption: "葉と花序",
+      },
+    ],
+    tags: ["春開花", "常緑", "小花集合", "豆", "高木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 112,
+    japanese_name: "レンギョウ",
+    scientific_name: "Forsythia suspensa",
+    family_id: 32,
+    genus: "レンギョウ属",
+    description: [
+      "中国原産の落葉低木。早春に葉より先に鮮やかな黄色い花を枝いっぱいに咲かせる。",
+      "枝は細くしなやかで弓状に垂れ下がり、対生する単葉または三出複葉をつける。",
+      "オウバイと並んで春を告げる黄色い花木として公園・庭・生け垣に広く利用される。",
+    ],
+    identification: [
+      "葉より先に黄色い花（径2.5〜3.5cm）を咲かせる（3〜4月）",
+      "花弁は4枚に深く裂け、細長い（オウバイの花弁は6枚）",
+      "枝が弓状に垂れ下がり、節で地面につくと発根する",
+      "葉は対生で卵形、縁に鋸歯あり",
+    ],
+    distribution: "全国（植栽・公園・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa_kz2.jpg",
+        caption: "枝と花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "低木", "公園"],
+    similar_plant_ids: [109],
+  },
+  {
+    id: 113,
+    japanese_name: "ヤマブキ",
+    scientific_name: "Kerria japonica",
+    family_id: 1,
+    genus: "ヤマブキ属",
+    description: [
+      "日本原産の落葉低木。春に鮮やかな黄橙色の花を咲かせ、古くから和歌にも詠まれてきた。",
+      "枝は細くしなやかで弓状に広がり、明るい緑色。葉は互生で卵形、縁に重鋸歯がある。",
+      "一重咲きの原種のほか、八重咲きの品種（ヤエヤマブキ）も庭園に広く植えられる。",
+    ],
+    identification: [
+      "鮮やかな黄橙色の花（径3〜5cm）を春（4〜5月）に咲かせる",
+      "花弁は5枚（一重）または多数（八重）",
+      "枝は緑色で細くしなやか、弓状に広がる",
+      "葉は卵形で先が尖り、縁に重鋸歯、表面に皺がある",
+    ],
+    distribution: "北海道〜九州（山地・谷沿い・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_Golden_Guinea_2.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_Golden_Guinea_2.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
+        caption: "枝と葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "ギザギザ", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 114,
+    japanese_name: "アセビ",
+    scientific_name: "Pieris japonica",
+    family_id: 44,
+    genus: "アセビ属",
+    description: [
+      "日本原産の常緑低木。早春に白い壺形の小花が鈴なりに垂れ下がる姿が美しく、庭園や公園に広く植えられる。",
+      "葉・茎・花など全体に有毒成分（アセボトキシン）を含み、馬が食べると酔ったように足がふらつくことから「馬酔木」の字があてられる。",
+      "葉は互生し、光沢のある革質の長楕円形。新葉は春に赤みを帯びることが多い。",
+    ],
+    identification: [
+      "白い壺形の小花が総状花序に鈴なりに垂れ下がる（2〜4月）",
+      "葉は光沢のある革質で濃緑色、枝先に集まってつく",
+      "新葉が赤〜ピンク色を帯びる（春）",
+      "全株有毒（葉・枝を折ると独特の香りがある）",
+    ],
+    distribution: "本州〜九州（山地・岩場・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_2.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_2.jpg",
+        caption: "花（壺形の小花が垂れ下がる）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_kz01.jpg",
+        caption: "葉と花序",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "厚い葉", "ラッパ型", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 115,
+    japanese_name: "シキミ",
+    scientific_name: "Illicium anisatum",
+    family_id: 45,
+    genus: "シキミ属",
+    description: [
+      "日本・韓国・台湾に分布する常緑小高木。全株に強い毒を含む日本唯一の有毒植物で、果実は猛毒。",
+      "仏事に用いられる植物として知られ、寺院や墓地に多く植えられる。独特の芳香がある。",
+      "春に淡黄白色の花を咲かせ、星形の集合果をつける。果実は八角（スターアニス）に似るが別種で有毒。",
+    ],
+    identification: [
+      "葉は光沢ある革質の長楕円形で、独特の強い芳香がある",
+      "春（3〜4月）に淡黄白色の花を咲かせる（花被片多数）",
+      "果実は星形の集合果（猛毒・絶対に食べない）",
+      "寺院・墓地に植えられることが多い",
+    ],
+    distribution: "本州（関東以西）〜沖縄（山地・寺院・墓地）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_fruits.jpg",
+        caption: "果実（星形集合果・猛毒）",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "厚い葉", "低木", "山", "公園"],
     similar_plant_ids: [],
   },
 ]
