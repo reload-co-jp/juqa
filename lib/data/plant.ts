@@ -3300,7 +3300,7 @@ export const plants: Plant[] = [
     similar_plant_ids: [],
   },
   {
-    id: 102,
+    id: 116,
     japanese_name: "イワカガミ",
     scientific_name: "Shortia soldanelloides",
     family_id: 39,
