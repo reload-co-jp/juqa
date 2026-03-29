@@ -24,7 +24,7 @@ function shuffle<T>(arr: T[]): T[] {
 const QuizPage: FC = () => {
   const [shuffledQuizzes, setShuffledQuizzes] = useState<ShuffledQuiz[]>(() =>
     shuffle(quizzes)
-      .slice(0, 8)
+      .slice(0, 4)
       .map((q) => ({ ...q, shuffledChoices: shuffle(q.choices) }))
   )
   const [current, setCurrent] = useState(0)
@@ -61,7 +61,7 @@ const QuizPage: FC = () => {
   const handleReset = () => {
     setShuffledQuizzes(
       shuffle(quizzes)
-        .slice(0, 8)
+        .slice(0, 4)
         .map((q) => ({
           ...q,
           shuffledChoices: shuffle(q.choices),
@@ -168,7 +168,9 @@ const QuizPage: FC = () => {
                         flexWrap: "wrap",
                       }}
                     >
-                      <Tag style={{ fontSize: "0.7rem", padding: "0.1rem 0.4rem" }}>
+                      <Tag
+                        style={{ fontSize: "0.7rem", padding: "0.1rem 0.4rem" }}
+                      >
                         {typeLabel[q.type] ?? q.type}
                       </Tag>
                       <span style={{ color: "#999", fontSize: "0.75rem" }}>

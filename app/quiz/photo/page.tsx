@@ -21,7 +21,7 @@ const photoQuizzes = quizzes.filter((q) => q.type === "photo")
 const PhotoQuizPage: FC = () => {
   const [shuffledQuizzes, setShuffledQuizzes] = useState<ShuffledQuiz[]>(() =>
     shuffle(photoQuizzes)
-      .slice(0, 8)
+      .slice(0, 4)
       .map((q) => ({
         ...q,
         shuffledChoices: shuffle(q.choices),
@@ -61,7 +61,7 @@ const PhotoQuizPage: FC = () => {
   const handleReset = () => {
     setShuffledQuizzes(
       shuffle(photoQuizzes)
-        .slice(0, 8)
+        .slice(0, 4)
         .map((q) => ({
           ...q,
           shuffledChoices: shuffle(q.choices),
@@ -155,12 +155,16 @@ const PhotoQuizPage: FC = () => {
                   </span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div
-                      style={{ fontSize: "0.75rem", color: "#999", marginBottom: "0.3rem" }}
+                      style={{
+                        fontSize: "0.75rem",
+                        color: "#999",
+                        marginBottom: "0.3rem",
+                      }}
                     >
                       問題 {i + 1}
                     </div>
-                    {reviewPlant && (
-                      reviewPlant.images.length > 1 ? (
+                    {reviewPlant &&
+                      (reviewPlant.images.length > 1 ? (
                         <div
                           style={{
                             display: "grid",
@@ -197,8 +201,7 @@ const PhotoQuizPage: FC = () => {
                             marginBottom: "0.4rem",
                           }}
                         />
-                      )
-                    )}
+                      ))}
                     <div style={{ fontSize: "0.82rem", color: "#999" }}>
                       正解：
                       <span style={{ color: "#7cbe8c", marginLeft: "0.25rem" }}>
