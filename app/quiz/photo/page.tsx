@@ -160,18 +160,44 @@ const PhotoQuizPage: FC = () => {
                       問題 {i + 1}
                     </div>
                     {reviewPlant && (
-                      <img
-                        src={reviewPlant.image_url}
-                        alt="植物の写真"
-                        style={{
-                          width: "100%",
-                          maxHeight: "120px",
-                          objectFit: "cover",
-                          borderRadius: "6px",
-                          display: "block",
-                          marginBottom: "0.4rem",
-                        }}
-                      />
+                      reviewPlant.images.length > 1 ? (
+                        <div
+                          style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(2, 1fr)",
+                            gap: "0.3rem",
+                            marginBottom: "0.4rem",
+                          }}
+                        >
+                          {reviewPlant.images.map((img, idx) => (
+                            <img
+                              key={idx}
+                              src={img.url}
+                              alt={img.caption}
+                              style={{
+                                width: "100%",
+                                aspectRatio: "1",
+                                objectFit: "cover",
+                                borderRadius: "4px",
+                                display: "block",
+                              }}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <img
+                          src={reviewPlant.image_url}
+                          alt="植物の写真"
+                          style={{
+                            width: "100%",
+                            maxHeight: "120px",
+                            objectFit: "cover",
+                            borderRadius: "6px",
+                            display: "block",
+                            marginBottom: "0.4rem",
+                          }}
+                        />
+                      )
                     )}
                     <div style={{ fontSize: "0.82rem", color: "#999" }}>
                       正解：
@@ -273,17 +299,42 @@ const PhotoQuizPage: FC = () => {
       <SectionCard style={{ padding: "1rem" }}>
         {plant && (
           <div style={{ marginBottom: "0.75rem" }}>
-            <img
-              src={plant.image_url}
-              alt="植物の写真"
-              style={{
-                width: "100%",
-                maxHeight: "600px",
-                objectFit: "cover",
-                borderRadius: "8px",
-                display: "block",
-              }}
-            />
+            {plant.images.length > 1 ? (
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, 1fr)",
+                  gap: "0.5rem",
+                }}
+              >
+                {plant.images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.url}
+                    alt={img.caption}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "1",
+                      objectFit: "cover",
+                      borderRadius: "6px",
+                      display: "block",
+                    }}
+                  />
+                ))}
+              </div>
+            ) : (
+              <img
+                src={plant.image_url}
+                alt="植物の写真"
+                style={{
+                  width: "100%",
+                  maxHeight: "600px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  display: "block",
+                }}
+              />
+            )}
           </div>
         )}
         <p
