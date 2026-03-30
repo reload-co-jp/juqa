@@ -3450,14 +3450,14 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（栽培・植栽）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_x_fraseri_0zz.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_A.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_x_fraseri_0zz.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_A.jpg",
         caption: "赤い新芽",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_flowers.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_C.jpg",
         caption: "花（散房花序）",
       },
     ],
@@ -3615,14 +3615,14 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（植栽・庭園・公園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Echter_Winterjasmin_HD.JPG",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Echter_Winterjasmin_HD.JPG",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_nudiflorum_kz1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-11-16Jasminum_nudiflorum01.jpg",
         caption: "枝と花",
       },
     ],
@@ -3747,14 +3747,14 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道〜九州（山地・谷沿い・庭園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_Golden_Guinea_2.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_Golden_Guinea_2.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_D.jpg",
         caption: "枝と葉",
       },
     ],
@@ -3780,10 +3780,10 @@ export const plants: Plant[] = [
     ],
     distribution: "本州〜九州（山地・岩場・庭園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_2.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica5.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_2.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica5.jpg",
         caption: "花（壺形の小花が垂れ下がる）",
       },
       {
@@ -3813,14 +3813,14 @@ export const plants: Plant[] = [
     ],
     distribution: "本州（関東以西）〜沖縄（山地・寺院・墓地）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28flower%29.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28flower%29.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_fruits.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28fruits_s2%29.jpg",
         caption: "果実（星形集合果・猛毒）",
       },
     ],
