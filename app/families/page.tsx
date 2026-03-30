@@ -1,7 +1,23 @@
+import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
 import { PageHeader, Tag } from "components/elements/layout"
+
+export const metadata: Metadata = {
+  title: "科一覧",
+  description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
+  openGraph: {
+    title: "科一覧",
+    description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "科一覧",
+    description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
+  },
+}
 
 const FamiliesPage: FC = () => {
   return (

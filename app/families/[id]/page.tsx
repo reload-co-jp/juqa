@@ -4,6 +4,8 @@ import Link from "next/link"
 import { families, plants } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 
+const siteUrl = "https://reload-co-jp.github.io/juqa"
+
 export function generateStaticParams() {
   return families.map((family) => ({ id: String(family.id) }))
 }
@@ -19,10 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: family.name,
       description: family.description,
+      url: `${siteUrl}/families/${family.id}/`,
       type: "article",
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: family.name,
       description: family.description,
     },

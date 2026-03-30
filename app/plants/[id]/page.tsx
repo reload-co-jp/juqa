@@ -5,6 +5,8 @@ import { plants, families } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 
+const siteUrl = "https://reload-co-jp.github.io/juqa"
+
 export function generateStaticParams() {
   return plants.map((plant) => ({ id: String(plant.id) }))
 }
@@ -23,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: plant.japanese_name,
       description,
+      url: `${siteUrl}/plants/${plant.id}/`,
       images,
       type: "article",
     },

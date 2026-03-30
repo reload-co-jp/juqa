@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://reload-co-jp.github.io/juqa/sitemap.xml
