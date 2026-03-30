@@ -95,7 +95,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["常緑", "光沢", "高木", "公園", "街路樹"],
+    tags: ["夏開花", "常緑", "光沢", "高木", "公園", "街路樹"],
     similar_plant_ids: [],
   },
   {
@@ -128,7 +128,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "ギザギザ", "高木", "街路樹", "公園"],
+    tags: ["春開花", "落葉", "ギザギザ", "高木", "街路樹", "公園"],
     similar_plant_ids: [],
   },
   {
@@ -161,7 +161,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "高木", "公園", "街路樹"],
+    tags: ["春開花", "落葉", "高木", "公園", "街路樹"],
     similar_plant_ids: [],
   },
   {
@@ -194,7 +194,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [7, 20],
   },
   {
@@ -227,7 +227,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [6, 20],
   },
   {
@@ -260,7 +260,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
     similar_plant_ids: [9],
   },
   {
@@ -293,7 +293,7 @@ export const plants: Plant[] = [
         caption: "球果",
       },
     ],
-    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
     similar_plant_ids: [8],
   },
   {
@@ -326,7 +326,7 @@ export const plants: Plant[] = [
         caption: "球果",
       },
     ],
-    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
     similar_plant_ids: [22, 101],
   },
   {
@@ -524,7 +524,7 @@ export const plants: Plant[] = [
         caption: "花",
       },
     ],
-    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    tags: ["冬開花", "春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
     similar_plant_ids: [1, 17],
   },
   {
@@ -623,7 +623,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "手のひら葉", "高木", "街路樹"],
+    tags: ["春開花", "落葉", "手のひら葉", "高木", "街路樹"],
     similar_plant_ids: [2],
   },
   {
@@ -656,7 +656,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["常緑", "光沢", "ギザギザ", "どんぐり", "高木", "街路樹"],
+    tags: ["春開花", "常緑", "光沢", "ギザギザ", "どんぐり", "高木", "街路樹"],
     similar_plant_ids: [6, 7],
   },
   {
@@ -689,7 +689,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["常緑", "光沢", "どんぐり", "高木", "山"],
+    tags: ["夏開花", "常緑", "光沢", "どんぐり", "高木", "山"],
     similar_plant_ids: [6],
   },
   {
@@ -722,7 +722,7 @@ export const plants: Plant[] = [
         caption: "球果",
       },
     ],
-    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
     similar_plant_ids: [10, 101],
   },
   {
@@ -953,7 +953,7 @@ export const plants: Plant[] = [
         caption: "花",
       },
     ],
-    tags: ["春開花", "常緑", "厚い葉", "光沢", "高木", "山"],
+    tags: ["冬開花", "春開花", "常緑", "厚い葉", "光沢", "高木", "山"],
     similar_plant_ids: [30],
   },
   {
@@ -986,7 +986,7 @@ export const plants: Plant[] = [
         caption: "花",
       },
     ],
-    tags: ["秋開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
     similar_plant_ids: [29],
   },
   {
@@ -1184,7 +1184,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["常緑", "針葉", "高木", "山"],
+    tags: ["春開花", "常緑", "針葉", "高木", "山"],
     similar_plant_ids: [8, 9],
   },
   {
@@ -1514,7 +1514,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["常緑", "光沢", "厚い葉", "高木", "山"],
+    tags: ["夏開花", "常緑", "光沢", "厚い葉", "高木", "山"],
     similar_plant_ids: [3],
   },
   {
@@ -1547,7 +1547,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "ギザギザ", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "高木", "山"],
     similar_plant_ids: [4],
   },
   {
@@ -1613,7 +1613,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["常緑", "針葉", "高木", "山"],
+    tags: ["春開花", "常緑", "針葉", "高木", "山"],
     similar_plant_ids: [36],
   },
   {
@@ -1844,7 +1844,7 @@ export const plants: Plant[] = [
         caption: "実",
       },
     ],
-    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [6, 7, 64],
   },
   {
@@ -1877,7 +1877,7 @@ export const plants: Plant[] = [
         caption: "樹皮",
       },
     ],
-    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [7, 64],
   },
   {
@@ -1910,7 +1910,7 @@ export const plants: Plant[] = [
         caption: "樹皮",
       },
     ],
-    tags: ["落葉", "ギザギザ", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "高木", "山"],
     similar_plant_ids: [21],
   },
   {
@@ -2108,7 +2108,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "ギザギザ", "どんぐり", "高木", "山"],
+    tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [6, 56, 57],
   },
   {
@@ -2339,7 +2339,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "高木", "山"],
+    tags: ["春開花", "落葉", "高木", "山"],
     similar_plant_ids: [],
   },
   {
@@ -2372,7 +2372,7 @@ export const plants: Plant[] = [
         caption: "樹皮",
       },
     ],
-    tags: ["落葉", "手のひら葉", "高木", "街路樹"],
+    tags: ["春開花", "落葉", "手のひら葉", "高木", "街路樹"],
     similar_plant_ids: [],
   },
   {
@@ -2471,7 +2471,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["落葉", "高木", "公園"],
+    tags: ["春開花", "落葉", "高木", "公園"],
     similar_plant_ids: [],
   },
   {
@@ -2636,7 +2636,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["秋開花", "常緑", "厚い葉", "光沢", "低木", "ギザギザ"],
+    tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "低木", "ギザギザ"],
     similar_plant_ids: [82],
   },
   {
@@ -2867,7 +2867,7 @@ export const plants: Plant[] = [
         caption: "葉",
       },
     ],
-    tags: ["草本", "雑草"],
+    tags: ["夏開花", "草本", "雑草"],
     similar_plant_ids: [],
   },
   {
@@ -3362,7 +3362,7 @@ export const plants: Plant[] = [
         caption: "球果と種子",
       },
     ],
-    tags: ["常緑", "針葉", "松ぼっくり", "低木", "山"],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "低木", "山"],
     similar_plant_ids: [10, 22],
   },
   {
@@ -3494,7 +3494,7 @@ export const plants: Plant[] = [
         caption: "果実",
       },
     ],
-    tags: ["常緑", "手のひら葉", "光沢", "低木", "公園"],
+    tags: ["秋開花", "常緑", "手のひら葉", "光沢", "低木", "公園"],
     similar_plant_ids: [],
   },
   {
