@@ -1,13 +1,17 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, useState, useEffect } from "react"
 import Link from "next/link"
 import { plants } from "lib/data"
 
 const RandomPlant: FC = () => {
-  const [plant] = useState(
-    () => plants[Math.floor(Math.random() * plants.length)]
-  )
+  const [plant, setPlant] = useState<Plant | null>(null)
+
+  useEffect(() => {
+    setPlant(plants[Math.floor(Math.random() * plants.length)])
+  }, [])
+
+  if (!plant) return <div style={{ marginBottom: "2rem", height: "106px" }} />
 
   return (
     <Link
