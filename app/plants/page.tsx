@@ -6,6 +6,120 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
 import { PageHeader, Tag } from "components/elements/layout"
 
+const PlantCardSkeleton: FC = () => (
+  <div
+    style={{
+      maxWidth: "22rem",
+      width: "100%",
+      background: "#2d2d2d",
+      borderRadius: "2px",
+      overflow: "hidden",
+      borderBottom: "2px solid #3a3a3a",
+    }}
+  >
+    <div style={{ height: "240px", background: "#3a3a3a" }} />
+    <div style={{ padding: "0.75rem" }}>
+      <div
+        style={{
+          height: "1rem",
+          width: "60%",
+          background: "#3a3a3a",
+          borderRadius: "4px",
+          marginBottom: "0.5rem",
+        }}
+      />
+      <div
+        style={{
+          height: "0.75rem",
+          width: "80%",
+          background: "#3a3a3a",
+          borderRadius: "4px",
+          marginBottom: "0.5rem",
+        }}
+      />
+      <div
+        style={{
+          height: "1.2rem",
+          width: "30%",
+          background: "#3a3a3a",
+          borderRadius: "4px",
+        }}
+      />
+    </div>
+  </div>
+)
+
+const PlantsSkeleton: FC = () => (
+  <div style={{ margin: "0 auto" }}>
+    <div
+      style={{
+        marginBottom: "1rem",
+        height: "2rem",
+        background: "#2d2d2d",
+        borderRadius: "6px",
+      }}
+    />
+    <div
+      style={{
+        marginBottom: "1rem",
+        height: "2.25rem",
+        background: "#2d2d2d",
+        borderRadius: "6px",
+      }}
+    />
+    <div
+      style={{
+        marginBottom: "1rem",
+        height: "6rem",
+        background: "#2d2d2d",
+        borderRadius: "8px",
+      }}
+    />
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "1rem",
+        justifyContent: "center",
+      }}
+    >
+      {Array.from({ length: 6 }).map((_, i) => (
+        <PlantCardSkeleton key={i} />
+      ))}
+    </div>
+  </div>
+)
+
+const PlantImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const [loaded, setLoaded] = useState(false)
+  return (
+    <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      {!loaded && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "#3a3a3a",
+          }}
+        />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 0.3s",
+        }}
+      />
+    </div>
+  )
+}
+
 const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
   { label: "季節", tags: ["春開花", "夏開花", "秋開花", "冬開花", "常緑", "落葉"] },
   { label: "葉", tags: ["針葉", "手のひら葉", "ギザギザ", "厚い葉", "光沢"] },
@@ -245,15 +359,9 @@ const PlantsContent: FC = () => {
                   }}
                 >
                   {plant.image_url ? (
-                    <img
+                    <PlantImage
                       src={plant.image_url}
                       alt={plant.japanese_name}
-                      loading="lazy"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
                     />
                   ) : (
                     <div
@@ -303,7 +411,7 @@ const PlantsContent: FC = () => {
 }
 
 const PlantsPage: FC = () => (
-  <Suspense>
+  <Suspense fallback={<PlantsSkeleton />}>
     <PlantsContent />
   </Suspense>
 )

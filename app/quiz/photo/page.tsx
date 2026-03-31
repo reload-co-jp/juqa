@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, useState, useRef } from "react"
 import Link from "next/link"
 import { quizzes, plants } from "lib/data"
 import { PageHeader, SectionCard, Button } from "components/elements/layout"
@@ -32,6 +32,8 @@ const PhotoQuizPage: FC = () => {
   const [answers, setAnswers] = useState<string[]>([])
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const loadedCountRef = useRef(0)
 
   const quiz = shuffledQuizzes[current]
   const isCorrect = selected === quiz.answer
@@ -55,6 +57,8 @@ const PhotoQuizPage: FC = () => {
       setAnswers(newAnswers)
       setCurrent((c) => c + 1)
       setSelected(null)
+      setImageLoaded(false)
+      loadedCountRef.current = 0
     }
   }
 
@@ -72,6 +76,15 @@ const PhotoQuizPage: FC = () => {
     setAnswers([])
     setScore(0)
     setFinished(false)
+    setImageLoaded(false)
+    loadedCountRef.current = 0
+  }
+
+  const handleImageLoad = (total: number) => {
+    loadedCountRef.current += 1
+    if (loadedCountRef.current >= total) {
+      setImageLoaded(true)
+    }
   }
 
   if (finished) {
@@ -301,13 +314,41 @@ const PhotoQuizPage: FC = () => {
       {/* Question card */}
       <SectionCard style={{ padding: "1rem" }}>
         {plant && (
-          <div style={{ marginBottom: "0.75rem" }}>
+          <div key={current} style={{ marginBottom: "0.75rem", position: "relative" }}>
+            {!imageLoaded && (
+              <div
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "#3a3a3a",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  zIndex: 1,
+                }}
+              >
+                <div
+                  style={{
+                    width: "2rem",
+                    height: "2rem",
+                    border: "3px solid #555",
+                    borderTop: "3px solid #7cbe8c",
+                    borderRadius: "50%",
+                    animation: "spin 0.8s linear infinite",
+                  }}
+                />
+                <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+              </div>
+            )}
             {plant.images.length > 1 ? (
               <div
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(2, 1fr)",
                   gap: "0.5rem",
+                  opacity: imageLoaded ? 1 : 0,
+                  transition: "opacity 0.3s",
                 }}
               >
                 {plant.images.map((img, i) => (
@@ -315,6 +356,7 @@ const PhotoQuizPage: FC = () => {
                     key={i}
                     src={img.url}
                     alt={img.caption}
+                    onLoad={() => handleImageLoad(plant.images.length)}
                     style={{
                       width: "100%",
                       aspectRatio: "1",
@@ -329,12 +371,15 @@ const PhotoQuizPage: FC = () => {
               <img
                 src={plant.image_url}
                 alt="植物の写真"
+                onLoad={() => handleImageLoad(1)}
                 style={{
                   width: "100%",
                   maxHeight: "600px",
                   objectFit: "cover",
                   borderRadius: "8px",
                   display: "block",
+                  opacity: imageLoaded ? 1 : 0,
+                  transition: "opacity 0.3s",
                 }}
               />
             )}
