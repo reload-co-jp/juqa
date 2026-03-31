@@ -3846,14 +3846,14 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道〜九州（山地の林縁・斜面・庭園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_in_Hakusan_2012-04-15.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_flower.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_in_Hakusan_2012-04-15.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_flower.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_amurensis_1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_s4.jpg",
         caption: "群落",
       },
     ],
@@ -4044,14 +4044,14 @@ export const plants: Plant[] = [
     ],
     distribution: "本州〜九州（湿った岩場・石垣・谷沿い・庭園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera1.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(flower).jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera1.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(flower).jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_2.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(leaf).jpg",
         caption: "葉",
       },
     ],
@@ -4077,10 +4077,10 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道〜本州中部以北（山地の林床・草地）、全国（植栽）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_0.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_-_flowers.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_0.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_-_flowers.jpg",
         caption: "花",
       },
       {
@@ -4110,14 +4110,14 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（植栽・ハーブガーデン・道端に逸出）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_recutita_single.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_flowers.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_recutita_single.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_flowers.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamomile_@_Pharmorganic.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_kz13.jpg",
         caption: "群落",
       },
     ],
@@ -4143,14 +4143,14 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（植栽・鉢植え・花壇）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_x_hortorum_0.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Pelargonium_zonale_with_pink_or_magenta_petals.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_x_hortorum_0.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Pelargonium_zonale_with_pink_or_magenta_petals.jpg",
         caption: "花",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_zonale_plant.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_hortorum-yercaud-salem-India.JPG",
         caption: "全体",
       },
     ],
@@ -4176,10 +4176,10 @@ export const plants: Plant[] = [
     ],
     distribution: "北海道〜九州（湿った草地・河川敷・庭園）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_2.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_RB.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_2.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_RB.jpg",
         caption: "花",
       },
       {
@@ -4275,10 +4275,10 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（植栽・花壇・切り花）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_Flower.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_focus_stack-20220320-RM-144602.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_Flower.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_focus_stack-20220320-RM-144602.jpg",
         caption: "花",
       },
       {
