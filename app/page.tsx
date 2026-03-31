@@ -34,6 +34,12 @@ const cards = [
     title: "写真クイズ",
     description: "写真から植物を見分けよう",
   },
+  {
+    href: "/flowers",
+    emoji: "🌸",
+    title: "開花カレンダー",
+    description: "春・夏・秋・冬の開花時期ごとに花の写真を見よう",
+  },
 ]
 
 const Page: FC = () => {
