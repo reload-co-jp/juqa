@@ -3,18 +3,10 @@
 import { FC, useState, useRef } from "react"
 import Link from "next/link"
 import { quizzes, plants } from "lib/data"
+import { shuffle } from "lib/utils"
 import { PageHeader, SectionCard, Button } from "components/elements/layout"
 
 type ShuffledQuiz = Quiz & { shuffledChoices: string[] }
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
 
 const photoQuizzes = quizzes.filter((q) => q.type === "photo")
 

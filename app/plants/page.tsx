@@ -4,6 +4,7 @@ import { FC, Suspense, useState, useRef } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
+import { TAG_GROUPS } from "lib/tags"
 import { PageHeader, Tag } from "components/elements/layout"
 
 const PlantCardSkeleton: FC = () => (
@@ -119,15 +120,6 @@ const PlantImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
     </div>
   )
 }
-
-const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
-  { label: "季節", tags: ["春開花", "夏開花", "秋開花", "冬開花", "常緑", "落葉"] },
-  { label: "葉", tags: ["針葉", "手のひら葉", "ギザギザ", "厚い葉", "光沢"] },
-  { label: "花", tags: ["花弁5枚", "小花集合", "ラッパ型"] },
-  { label: "実", tags: ["どんぐり", "豆", "松ぼっくり"] },
-  { label: "樹形", tags: ["高木", "低木", "草本"] },
-  { label: "環境", tags: ["街路樹", "山", "公園", "雑草"] },
-]
 
 const PlantsContent: FC = () => {
   const router = useRouter()

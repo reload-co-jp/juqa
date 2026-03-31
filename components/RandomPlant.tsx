@@ -1,12 +1,13 @@
 "use client"
 
-import { FC } from "react"
+import { FC, useState } from "react"
 import Link from "next/link"
 import { plants } from "lib/data"
 
-const plant = plants[Math.floor(Math.random() * plants.length)]
-
 const RandomPlant: FC = () => {
+  const [plant] = useState(
+    () => plants[Math.floor(Math.random() * plants.length)]
+  )
 
   return (
     <Link
