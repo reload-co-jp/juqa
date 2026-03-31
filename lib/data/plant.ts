@@ -3827,4 +3827,466 @@ export const plants: Plant[] = [
     tags: ["春開花", "常緑", "光沢", "厚い葉", "低木", "山", "公園"],
     similar_plant_ids: [],
   },
+  {
+    id: 116,
+    japanese_name: "フクジュソウ",
+    scientific_name: "Adonis ramosa",
+    family_id: 25,
+    genus: "フクジュソウ属",
+    description: [
+      "日本原産の多年草。早春、まだ雪が残る頃に黄金色の花を咲かせることから「元旦草」とも呼ばれる。",
+      "花は直径3〜4cmで花弁は20〜30枚と多く、光沢のある鮮やかな黄色。葉より先または同時に花が開く。",
+      "全草に強い毒（強心配糖体）を含む有毒植物で、根茎は薬用にも利用される。",
+    ],
+    identification: [
+      "早春（1〜3月）に黄金色の花を咲かせる",
+      "花弁が多数（20〜30枚）で光沢がある",
+      "葉は羽状に細かく切れ込み、ニンジンの葉に似る",
+      "花托が半球状に盛り上がり、中心部が緑色",
+    ],
+    distribution: "北海道〜九州（山地の林縁・斜面・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_in_Hakusan_2012-04-15.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_in_Hakusan_2012-04-15.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_amurensis_1.jpg",
+        caption: "群落",
+      },
+    ],
+    tags: ["春開花", "冬開花", "ギザギザ", "草本", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 117,
+    japanese_name: "キブシ",
+    scientific_name: "Stachyurus praecox",
+    family_id: 46,
+    genus: "キブシ属",
+    description: [
+      "日本固有の落葉低木。早春に葉より先に淡黄色の小花を穂状に垂らして咲かせる、山野に普通に見られる植物。",
+      "枝は細く赤褐色で光沢があり、長さ5〜10cmの穂状花序が枝全体に垂れ下がる様子が美しい。",
+      "雌雄異株で、果実は数珠状に連なった液果。かつては果実を染料として利用した。",
+    ],
+    identification: [
+      "早春（3〜4月）に葉より先に淡黄色の穂状花序を垂らす",
+      "枝は赤褐色で光沢があり、互生する",
+      "花は鐘形で小さく（径6〜8mm）、多数が穂に並ぶ",
+      "葉は卵形で縁に鋸歯があり、互生する",
+    ],
+    distribution: "北海道南部〜九州（山地・林縁・谷沿い）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox1.jpg",
+        caption: "花（穂状花序）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox_2.jpg",
+        caption: "枝と花序",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "小花集合", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 118,
+    japanese_name: "シクラメン",
+    scientific_name: "Cyclamen persicum",
+    family_id: 47,
+    genus: "シクラメン属",
+    description: [
+      "地中海沿岸原産の多年草。秋〜冬に花を咲かせる代表的な室内鉢植え植物で、日本では贈答用としても広く流通する。",
+      "花弁が反り返って上向きになる独特の形が特徴で、白・ピンク・赤・紫など豊富な花色がある。",
+      "球茎（扁平な塊茎）から葉と花茎を伸ばし、葉にはしばしば白や銀色の模様が入る。",
+    ],
+    identification: [
+      "花弁が反り返り、上向きに立ち上がる独特の形（10〜3月）",
+      "白・ピンク・赤・紫など花色が豊富",
+      "葉はハート形でしばしば白〜銀色の模様が入る",
+      "地下に扁平な球茎をもつ",
+    ],
+    distribution: "全国（栽培・鉢植え・花壇）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_02.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_02.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_flowers.jpg",
+        caption: "花と葉",
+      },
+    ],
+    tags: ["冬開花", "草本", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 119,
+    japanese_name: "ロウバイ",
+    scientific_name: "Chimonanthus praecox",
+    family_id: 48,
+    genus: "ロウバイ属",
+    description: [
+      "中国原産の落葉低木。冬（12〜2月）に葉より先に蝋細工のような黄色い花を咲かせ、強い芳香を放つ。",
+      "花被片は多数で外側は淡黄色、内側の花被片は暗紫褐色の斑紋をもつ（ソシンロウバイは内側も黄色）。",
+      "庭園・公園に広く植えられ、冬の花木として親しまれる。果実は袋状で種子を数個含む。",
+    ],
+    identification: [
+      "冬（12〜2月）に葉より先に黄色い花を咲かせる",
+      "花被片は蝋細工のような半透明の質感",
+      "内側の花被片に暗紫褐色の斑紋がある（品種により異なる）",
+      "甘く強い芳香がある",
+    ],
+    distribution: "全国（植栽・庭園・公園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox_2.jpg",
+        caption: "枝と花",
+      },
+    ],
+    tags: ["冬開花", "落葉", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 120,
+    japanese_name: "マンサク",
+    scientific_name: "Hamamelis japonica",
+    family_id: 49,
+    genus: "マンサク属",
+    description: [
+      "日本固有の落葉低木〜小高木。冬の終わり〜早春（2〜3月）に葉より先に細いリボン状の黄色い花を咲かせる。",
+      "「まず咲く」が転訛して「マンサク」になったとも言われ、春の訪れを告げる花として親しまれる。",
+      "山地の林縁に自生するほか、庭木や公園樹としても広く植えられる。秋の黄葉も美しい。",
+    ],
+    identification: [
+      "細長いリボン状（長さ1.5〜2cm）の黄色い花弁が4枚（2〜3月）",
+      "葉より先に開花し、枝全体に花がつく",
+      "葉は卵円形で波状の鋸歯、非対称な基部をもつ",
+      "秋に黄色く紅葉する",
+    ],
+    distribution: "本州・四国・九州（山地の林縁・庭園・公園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica_2.jpg",
+        caption: "枝と花",
+      },
+    ],
+    tags: ["冬開花", "春開花", "落葉", "ギザギザ", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 121,
+    japanese_name: "ジンチョウゲ",
+    scientific_name: "Daphne odora",
+    family_id: 43,
+    genus: "ジンチョウゲ属",
+    description: [
+      "中国原産の常緑低木。早春（2〜3月）に甘く強い香りをもつ花を咲かせ、日本三大香木の一つに数えられる。",
+      "花弁に見えるのは萼片で4枚、外側が紅紫色・内側が白色。雌雄異株で日本では雄株がほとんど。",
+      "葉は厚くて光沢があり、枝先に密集してつく。全株有毒で、特に果実・樹皮に毒性がある。",
+    ],
+    identification: [
+      "早春（2〜3月）に強い甘い芳香を放つ",
+      "花は萼片4枚、外側が紅紫色・内側が白色",
+      "葉は厚くて光沢があり、枝先に集まる",
+      "枝先に花が半球状に集まって咲く",
+    ],
+    distribution: "全国（植栽・庭園・公園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora_2.jpg",
+        caption: "枝と花",
+      },
+    ],
+    tags: ["冬開花", "春開花", "常緑", "厚い葉", "光沢", "小花集合", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 122,
+    japanese_name: "ユキノシタ",
+    scientific_name: "Saxifraga stolonifera",
+    family_id: 50,
+    genus: "ユキノシタ属",
+    description: [
+      "日本・中国に分布する常緑多年草。湿った岩場・石垣・庭の半日陰に生え、葉の模様と独特の花姿が特徴。",
+      "初夏（5〜6月）に白い花を咲かせる。上部2枚の花弁は小さく紅紫色の斑点があり、下部3枚は白く細長い。",
+      "丸い葉の表面は暗緑色に白い葉脈が浮き出て美しく、裏面は紅紫色。走出枝で盛んに繁殖する。",
+    ],
+    identification: [
+      "下部3枚の花弁が細長く垂れ下がる独特の花形（5〜7月）",
+      "葉は円形で白い葉脈の模様、裏面は紅紫色",
+      "走出枝（ランナー）を伸ばして子株をつける",
+      "湿った半日陰の石垣・岩場に生育する",
+    ],
+    distribution: "本州〜九州（湿った岩場・石垣・谷沿い・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_2.jpg",
+        caption: "葉",
+      },
+    ],
+    tags: ["春開花", "夏開花", "常緑", "草本", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 123,
+    japanese_name: "スズラン",
+    scientific_name: "Convallaria majalis",
+    family_id: 27,
+    genus: "スズラン属",
+    description: [
+      "北半球の温帯に広く分布する多年草。春（5月）に白い鐘形の小花を穂状に垂らして咲かせ、甘い芳香を放つ。",
+      "葉は幅広の楕円形で2〜3枚が根元から立ち上がり、花茎を包むように生える。秋には赤い球形の果実をつける。",
+      "全株に強い毒（強心配糖体コンバラトキシン）を含む有毒植物。園芸植物・香水の原料としても有名。",
+    ],
+    identification: [
+      "白い鐘形の小花が花茎に沿って下向きに並ぶ（5月）",
+      "甘く強い芳香がある",
+      "幅広の楕円形の葉が2〜3枚、根元から立つ",
+      "秋に赤い球形の果実をつける",
+    ],
+    distribution: "北海道〜本州中部以北（山地の林床・草地）、全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_0.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_0.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_berries.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 124,
+    japanese_name: "カモミール",
+    scientific_name: "Matricaria chamomilla",
+    family_id: 9,
+    genus: "カミツレ属",
+    description: [
+      "ヨーロッパ原産の一年草。春〜初夏に白い舌状花と黄色い筒状花からなる頭状花をつけ、リンゴに似た甘い香りをもつ。",
+      "ハーブティーや化粧品の原料として世界中で利用されるハーブの代表種。日本ではカミツレとも呼ばれる。",
+      "葉は羽状に細かく切れ込み、繊細な印象。花托（花床）は中空で円錐形に盛り上がるのが特徴。",
+    ],
+    identification: [
+      "白い舌状花と黄色い筒状花からなる頭状花（4〜6月）",
+      "リンゴに似た甘い芳香がある",
+      "花托が中空で円錐形に盛り上がる",
+      "葉は羽状に細かく切れ込む",
+    ],
+    distribution: "全国（植栽・ハーブガーデン・道端に逸出）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_recutita_single.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_recutita_single.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamomile_@_Pharmorganic.jpg",
+        caption: "群落",
+      },
+    ],
+    tags: ["春開花", "夏開花", "小花集合", "草本", "公園", "雑草"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 125,
+    japanese_name: "ゼラニウム",
+    scientific_name: "Pelargonium × hortorum",
+    family_id: 51,
+    genus: "テンジクアオイ属",
+    description: [
+      "南アフリカ原産のペラルゴニウム属の交配種で、世界中で最もよく栽培される花壇・鉢植え植物の一つ。",
+      "春〜秋にかけて赤・ピンク・白・サーモンなど豊富な花色の花を次々と咲かせ、長期間楽しめる。",
+      "葉は円形〜腎形でしばしば馬蹄形の暗色の帯模様があり、触ると独特の香りがある。",
+    ],
+    identification: [
+      "赤・ピンク・白など鮮やかな花が散形花序に集まる（春〜秋）",
+      "葉に馬蹄形の暗色の帯模様が入ることが多い",
+      "葉や茎を触ると独特の香りがある",
+      "茎は多肉質で直立または半這性",
+    ],
+    distribution: "全国（植栽・鉢植え・花壇）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_x_hortorum_0.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_x_hortorum_0.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_zonale_plant.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "秋開花", "花弁5枚", "草本", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 126,
+    japanese_name: "サクラソウ",
+    scientific_name: "Primula sieboldii",
+    family_id: 47,
+    genus: "サクラソウ属",
+    description: [
+      "日本原産の多年草。春（4〜5月）に桜に似た淡紅色〜白色の花を咲かせ、古くから観賞用に親しまれてきた。",
+      "埼玉県と大阪府の県（府）の花に指定されており、荒川沿いの自生地は特別天然記念物に指定されている。",
+      "葉は卵形でしわがあり、やわらかな質感。秋には地上部が枯れ、地下茎で越冬する。",
+    ],
+    identification: [
+      "桜に似た5深裂する淡紅色〜白色の花（4〜5月）",
+      "花弁の先が2裂してハート形に見える",
+      "葉はやわらかく卵形でしわがある",
+      "湿った草地・河川敷に群生する",
+    ],
+    distribution: "北海道〜九州（湿った草地・河川敷・庭園）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_2.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_2.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii1.jpg",
+        caption: "群落",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 127,
+    japanese_name: "ユキヤナギ",
+    scientific_name: "Spiraea thunbergii",
+    family_id: 1,
+    genus: "シモツケ属",
+    description: [
+      "日本・中国原産の落葉低木。早春（3〜4月）に細い枝いっぱいに白い小花を咲かせ、雪が積もったように見えることが名前の由来。",
+      "枝は細くしなやかで弓状に垂れ下がり、葉は細い披針形。公園・庭・生け垣として全国に広く植えられる。",
+      "秋には葉がオレンジ〜赤色に紅葉し、春とは異なる美しさを見せる。",
+    ],
+    identification: [
+      "早春（3〜4月）に白い5弁の小花が枝全体に密集して咲く",
+      "枝は細くしなやかで弓状に垂れ下がる",
+      "葉は細い披針形で縁に細かい鋸歯がある",
+      "秋にオレンジ〜赤色に紅葉する",
+    ],
+    distribution: "全国（植栽・庭園・公園・河川沿い）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_1.jpg",
+        caption: "花（枝全体）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_kz01.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "小花集合", "ギザギザ", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 128,
+    japanese_name: "ドウダンツツジ",
+    scientific_name: "Enkianthus perulatus",
+    family_id: 44,
+    genus: "ドウダンツツジ属",
+    description: [
+      "日本固有の落葉低木。春に白い壺形の小花を枝先に多数垂らして咲かせ、秋の紅葉も非常に美しい。",
+      "生け垣・庭木・公園樹として全国に広く植えられ、整形されていることが多い。",
+      "秋の紅葉は鮮やかな赤〜橙色で、紅葉樹として最も人気の高い低木の一つ。",
+    ],
+    identification: [
+      "春（4〜5月）に白い壺形の小花が枝先に垂れ下がる",
+      "葉は枝先に集まって互生し、菱形〜倒卵形で縁に細鋸歯",
+      "秋に鮮やかな赤〜橙色に紅葉する",
+      "生け垣として整形されていることが多い",
+    ],
+    distribution: "本州（静岡・紀伊半島の山地）、全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus_2008-11-08_002.jpg",
+        caption: "紅葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "ラッパ型", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 129,
+    japanese_name: "アネモネ",
+    scientific_name: "Anemone coronaria",
+    family_id: 25,
+    genus: "イチリンソウ属",
+    description: [
+      "地中海沿岸原産の球根植物。春に赤・ピンク・白・紫など鮮やかな花を咲かせる代表的な春の花壇植物。",
+      "花弁に見えるのは萼片で5〜8枚。中心部の雄しべは黒〜紫色で、花とのコントラストが美しい。",
+      "「風の花」とも呼ばれ（ギリシャ語で風を意味する）、切り花としても広く流通する。",
+    ],
+    identification: [
+      "鮮やかな赤・ピンク・白・紫などの花（3〜5月）",
+      "中心部の雄しべが黒〜暗紫色で目立つ",
+      "花弁状の萼片が5〜8枚",
+      "葉は羽状に深く切れ込む",
+    ],
+    distribution: "全国（植栽・花壇・切り花）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_Flower.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_Flower.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_1.jpg",
+        caption: "花（様々な色）",
+      },
+    ],
+    tags: ["春開花", "草本", "公園"],
+    similar_plant_ids: [],
+  },
 ]
