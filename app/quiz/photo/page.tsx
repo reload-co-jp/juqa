@@ -19,7 +19,9 @@ function generatePhotoQuizzes(count: number): PhotoQuiz[] {
   const selected = shuffled.slice(0, count)
   const others = shuffled.slice(count)
   return selected.map((plant, i) => {
-    const distractors = others.slice(i * 3, i * 3 + 3).map((p) => p.japanese_name)
+    const distractors = others
+      .slice(i * 3, i * 3 + 3)
+      .map((p) => p.japanese_name)
     return {
       id: plant.id,
       plant_id: plant.id,
@@ -193,6 +195,7 @@ const PhotoQuizPage: FC = () => {
                               alt={img.caption}
                               style={{
                                 width: "100%",
+                                maxHeight: "400px",
                                 aspectRatio: "1",
                                 objectFit: "cover",
                                 borderRadius: "4px",
@@ -310,136 +313,145 @@ const PhotoQuizPage: FC = () => {
           />
         </div>
       </div>
-
-      {/* Question card */}
-      <SectionCard style={{ padding: "1rem" }}>
-        {plant && (
-          <div key={current} style={{ marginBottom: "0.75rem", position: "relative" }}>
-            {!imageLoaded && (
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "#3a3a3a",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  zIndex: 1,
-                }}
-              >
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: ".5rem",
+          justifyContent: "center",
+        }}
+      >
+        {/* Question card */}
+        <SectionCard style={{ padding: "1rem" }}>
+          {plant && (
+            <div key={current} style={{ position: "relative" }}>
+              {!imageLoaded && (
                 <div
                   style={{
-                    width: "2rem",
-                    height: "2rem",
-                    border: "3px solid #555",
-                    borderTop: "3px solid #7cbe8c",
-                    borderRadius: "50%",
-                    animation: "spin 0.8s linear infinite",
+                    position: "absolute",
+                    inset: 0,
+                    background: "#3a3a3a",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    zIndex: 1,
                   }}
-                />
-                <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-              </div>
-            )}
-            {plant.images.length > 1 ? (
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(2, 1fr)",
-                  gap: "0.5rem",
-                  opacity: imageLoaded ? 1 : 0,
-                  transition: "opacity 0.3s",
-                }}
-              >
-                {plant.images.map((img, i) => (
-                  <img
-                    key={i}
-                    src={img.url}
-                    alt={img.caption}
-                    onLoad={() => handleImageLoad(plant.images.length)}
+                >
+                  <div
                     style={{
-                      width: "100%",
-                      aspectRatio: "1",
-                      objectFit: "cover",
-                      borderRadius: "6px",
-                      display: "block",
+                      width: "2rem",
+                      height: "2rem",
+                      border: "3px solid #555",
+                      borderTop: "3px solid #7cbe8c",
+                      borderRadius: "50%",
+                      animation: "spin 0.8s linear infinite",
                     }}
                   />
-                ))}
-              </div>
-            ) : (
-              <img
-                src={plant.image_url}
-                alt="植物の写真"
-                onLoad={() => handleImageLoad(1)}
+                  <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+                </div>
+              )}
+              {plant.images.length > 1 ? (
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, 1fr)",
+                    gap: "0.5rem",
+                    opacity: imageLoaded ? 1 : 0,
+                    transition: "opacity 0.3s",
+                  }}
+                >
+                  {plant.images.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img.url}
+                      alt={img.caption}
+                      onLoad={() => handleImageLoad(plant.images.length)}
+                      style={{
+                        width: "100%",
+                        maxHeight: "400px",
+                        aspectRatio: "1",
+                        objectFit: "cover",
+                        borderRadius: "6px",
+                        display: "block",
+                      }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={plant.image_url}
+                  alt="植物の写真"
+                  onLoad={() => handleImageLoad(1)}
+                  style={{
+                    width: "100%",
+                    maxHeight: "400px",
+                    objectFit: "cover",
+                    borderRadius: "8px",
+                    display: "block",
+                    opacity: imageLoaded ? 1 : 0,
+                    transition: "opacity 0.3s",
+                  }}
+                />
+              )}
+            </div>
+          )}
+          <p
+            style={{
+              color: "#e0e0e0",
+              fontSize: "1rem",
+              margin: 0,
+              lineHeight: "1.6",
+              fontWeight: "bold",
+            }}
+          >
+            {quiz.question}
+          </p>
+        </SectionCard>
+
+        {/* Choices */}
+        <div style={{ marginBottom: "1rem", flexGrow: 1 }}>
+          {quiz.shuffledChoices.map((choice) => {
+            let bg = "#2d2d2d"
+            let border = "1px solid #444"
+            let color = "#e0e0e0"
+
+            if (selected !== null) {
+              if (choice === quiz.answer) {
+                bg = "#1e3d1f"
+                border = "1px solid #5a9a5c"
+                color = "#7cbe8c"
+              } else if (choice === selected) {
+                bg = "#3d1e1e"
+                border = "1px solid #8a4a4a"
+                color = "#e07070"
+              }
+            }
+
+            return (
+              <button
+                key={choice}
+                onClick={() => handleSelect(choice)}
                 style={{
                   width: "100%",
-                  maxHeight: "600px",
-                  objectFit: "cover",
+                  background: bg,
+                  color,
+                  border,
                   borderRadius: "8px",
+                  padding: "0.875rem 1rem",
+                  fontSize: "0.95rem",
+                  cursor: selected !== null ? "default" : "pointer",
+                  textAlign: "left",
+                  marginBottom: "0.5rem",
                   display: "block",
-                  opacity: imageLoaded ? 1 : 0,
-                  transition: "opacity 0.3s",
+                  transition: "background 0.15s",
                 }}
-              />
-            )}
-          </div>
-        )}
-        <p
-          style={{
-            color: "#e0e0e0",
-            fontSize: "1rem",
-            margin: 0,
-            lineHeight: "1.6",
-            fontWeight: "bold",
-          }}
-        >
-          {quiz.question}
-        </p>
-      </SectionCard>
-
-      {/* Choices */}
-      <div style={{ marginBottom: "1rem" }}>
-        {quiz.shuffledChoices.map((choice) => {
-          let bg = "#2d2d2d"
-          let border = "1px solid #444"
-          let color = "#e0e0e0"
-
-          if (selected !== null) {
-            if (choice === quiz.answer) {
-              bg = "#1e3d1f"
-              border = "1px solid #5a9a5c"
-              color = "#7cbe8c"
-            } else if (choice === selected) {
-              bg = "#3d1e1e"
-              border = "1px solid #8a4a4a"
-              color = "#e07070"
-            }
-          }
-
-          return (
-            <button
-              key={choice}
-              onClick={() => handleSelect(choice)}
-              style={{
-                width: "100%",
-                background: bg,
-                color,
-                border,
-                borderRadius: "8px",
-                padding: "0.875rem 1rem",
-                fontSize: "0.95rem",
-                cursor: selected !== null ? "default" : "pointer",
-                textAlign: "left",
-                marginBottom: "0.5rem",
-                display: "block",
-                transition: "background 0.15s",
-              }}
-            >
-              {choice}
-            </button>
-          )
-        })}
+              >
+                {choice}
+              </button>
+            )
+          })}
+        </div>
       </div>
 
       {/* Answer feedback */}
