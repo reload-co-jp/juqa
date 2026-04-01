@@ -3912,10 +3912,10 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（栽培・鉢植え・花壇）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_02.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_02.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum.jpg",
         caption: "花",
       },
       {
