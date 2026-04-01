@@ -2,22 +2,37 @@
 
 import { FC, useState, useRef } from "react"
 import Link from "next/link"
-import { quizzes, plants } from "lib/data"
+import { plants } from "lib/data"
 import { shuffle } from "lib/utils"
 import { PageHeader, SectionCard, Button } from "components/elements/layout"
 
-type ShuffledQuiz = Quiz & { shuffledChoices: string[] }
+type PhotoQuiz = {
+  id: number
+  plant_id: number
+  question: string
+  answer: string
+  shuffledChoices: string[]
+}
 
-const photoQuizzes = quizzes.filter((q) => q.type === "photo")
+function generatePhotoQuizzes(count: number): PhotoQuiz[] {
+  const shuffled = shuffle(plants)
+  const selected = shuffled.slice(0, count)
+  const others = shuffled.slice(count)
+  return selected.map((plant, i) => {
+    const distractors = others.slice(i * 3, i * 3 + 3).map((p) => p.japanese_name)
+    return {
+      id: plant.id,
+      plant_id: plant.id,
+      question: "この植物は何？",
+      answer: plant.japanese_name,
+      shuffledChoices: shuffle([plant.japanese_name, ...distractors]),
+    }
+  })
+}
 
 const PhotoQuizPage: FC = () => {
-  const [shuffledQuizzes, setShuffledQuizzes] = useState<ShuffledQuiz[]>(() =>
-    shuffle(photoQuizzes)
-      .slice(0, 4)
-      .map((q) => ({
-        ...q,
-        shuffledChoices: shuffle(q.choices),
-      }))
+  const [shuffledQuizzes, setShuffledQuizzes] = useState<PhotoQuiz[]>(() =>
+    generatePhotoQuizzes(4)
   )
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -55,14 +70,7 @@ const PhotoQuizPage: FC = () => {
   }
 
   const handleReset = () => {
-    setShuffledQuizzes(
-      shuffle(photoQuizzes)
-        .slice(0, 4)
-        .map((q) => ({
-          ...q,
-          shuffledChoices: shuffle(q.choices),
-        }))
-    )
+    setShuffledQuizzes(generatePhotoQuizzes(4))
     setCurrent(0)
     setSelected(null)
     setAnswers([])
