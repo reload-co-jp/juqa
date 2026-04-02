@@ -393,7 +393,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "豆", "雑草", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [131],
   },
   {
     id: 13,
@@ -2505,7 +2505,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山", "公園"],
-    similar_plant_ids: [60],
+    similar_plant_ids: [60, 133],
   },
   {
     id: 77,
@@ -3000,7 +3000,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "雑草", "豆", "小花集合"],
-    similar_plant_ids: [84],
+    similar_plant_ids: [84, 131],
   },
   {
     id: 92,
@@ -4287,6 +4287,105 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 131,
+    japanese_name: "レンゲソウ",
+    scientific_name: "Astragalus sinicus",
+    family_id: 10,
+    genus: "ゲンゲ属",
+    description: [
+      "中国原産の越年草で、古くから水田の緑肥として栽培されてきた。ゲンゲとも呼ばれる。",
+      "春になると田んぼや草地を赤紫色に染める風景は日本の春の原風景として親しまれている。",
+      "根粒菌と共生して窒素固定を行い、土壌を肥やす。",
+    ],
+    identification: [
+      "羽状複葉で7〜11枚の小葉が互生する",
+      "赤紫色の蝶形花が茎頂に輪生状に集まる（頭状花序）",
+      "茎は地面を這うように伸びる（草丈10〜25cm）",
+      "水田・畦道・草地に群生することが多い",
+    ],
+    distribution: "全国の田んぼ・草地（西日本に多い）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_ja_Renge01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_ja_Renge01.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_4.JPG",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "豆", "小花集合", "雑草"],
+    similar_plant_ids: [12, 91],
+  },
+  {
+    id: 133,
+    japanese_name: "ハナミズキ",
+    scientific_name: "Cornus florida",
+    family_id: 24,
+    genus: "ミズキ属",
+    description: [
+      "北アメリカ原産の落葉高木で、1912年に日本からアメリカへ贈ったサクラのお返しとして1915年に渡来した。",
+      "春にサクラが散った後、葉が出る前に白やピンクの大きな総苞片が目立つ花を咲かせる。",
+      "秋には鮮やかに紅葉し、赤い実もつける。街路樹や庭木として全国に広く植栽されている。",
+    ],
+    identification: [
+      "白またはピンクの大きな総苞片4枚（花弁に見える部分）の先端が凹んでいる",
+      "葉が出る前に開花する（葉と花が同時のヤマボウシと異なる）",
+      "総苞片の先端がへこんで切れ込む（ヤマボウシは尖る）",
+      "秋に赤い楕円形の実が集まってつく",
+    ],
+    distribution: "全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Flowering_Dogwood_Cornus_florida_Lone_Flower_3008px.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowering_Dogwood_Cornus_florida_Lone_Flower_3008px.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_florida_kz03.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "高木", "街路樹", "公園"],
+    similar_plant_ids: [76],
+  },
+  {
+    id: 132,
+    japanese_name: "ハナカイドウ",
+    scientific_name: "Malus halliana",
+    family_id: 1,
+    genus: "リンゴ属",
+    description: [
+      "中国原産の落葉小高木で、春に濃いピンクの花を下向きに咲かせる。日本へは江戸時代に渡来し、庭木・公園樹として広く植栽されている。",
+      "花は蕾の時が最も色が濃く、開花するにつれて淡いピンク色になる。",
+      "サクラと同時期に開花し、垂れ下がるように咲く花姿が優美で花見の名所にも植えられる。",
+    ],
+    identification: [
+      "濃いピンク〜淡紅色の5弁花が垂れ下がって咲く",
+      "花柄が細長く（2〜4cm）、花が下向きに垂れる",
+      "葉は楕円形〜卵形で細かいギザギザ（鋸歯）がある",
+      "サクラより花色が濃く、花柄が長い",
+    ],
+    distribution: "全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_02.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_02.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_01.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "低木", "公園"],
     similar_plant_ids: [],
   },
 ]
