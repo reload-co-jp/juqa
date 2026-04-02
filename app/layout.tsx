@@ -4,9 +4,9 @@ import Link from "next/link"
 import "./reset.css"
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://reload-co-jp.github.io/juqa/"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
 
-const basePath = process.env.NODE_ENV === "production" ? "/juqa" : ""
+const basePath = ""
 
 export const viewport: Viewport = {
   themeColor: "#7cbe8c",

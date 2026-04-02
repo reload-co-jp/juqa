@@ -5,7 +5,7 @@ import { plants, families } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 
-const siteUrl = "https://reload-co-jp.github.io/juqa"
+const siteUrl = "https://juqa.reload.co.jp"
 
 export function generateStaticParams() {
   return plants.map((plant) => ({ id: String(plant.id) }))

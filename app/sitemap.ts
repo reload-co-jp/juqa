@@ -3,7 +3,7 @@ import { plants, families } from "lib/data"
 
 export const dynamic = "force-static"
 
-const siteUrl = "https://reload-co-jp.github.io/juqa"
+const siteUrl = "https://juqa.reload.co.jp"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { families, plants } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 
-const siteUrl = "https://reload-co-jp.github.io/juqa"
+const siteUrl = "https://juqa.reload.co.jp"
 
 export function generateStaticParams() {
   return families.map((family) => ({ id: String(family.id) }))
