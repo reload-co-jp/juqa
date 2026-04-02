@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next"
 import { plants, families } from "lib/data"
 
+export const dynamic = "force-static"
+
 const siteUrl = "https://reload-co-jp.github.io/juqa"
 
 export default function sitemap(): MetadataRoute.Sitemap {
