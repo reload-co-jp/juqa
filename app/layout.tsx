@@ -41,6 +41,20 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="ja">
       <head>
         <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JMJYKDGGNC"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-JMJYKDGGNC');
+            `,
+          }}
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               if ('serviceWorker' in navigator) {
