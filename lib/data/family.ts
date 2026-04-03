@@ -578,4 +578,16 @@ export const families: Family[] = [
     ],
     classification: "被子植物",
   },
+  {
+    id: 52,
+    name: "ハゼリソウ科",
+    description:
+      "北アメリカを中心に分布する一年草・多年草の科。春に5弁の可憐な花を咲かせる園芸植物が多い。",
+    characteristics: [
+      "花弁5枚の小さな花",
+      "葉は羽状に深く裂ける",
+      "茎は柔らかく這い性",
+    ],
+    classification: "被子植物",
+  },
 ]

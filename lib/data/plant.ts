@@ -4388,4 +4388,37 @@ export const plants: Plant[] = [
     tags: ["春開花", "落葉", "花弁5枚", "低木", "公園"],
     similar_plant_ids: [],
   },
+  {
+    id: 134,
+    japanese_name: "ネモフィラ",
+    scientific_name: "Nemophila menziesii",
+    family_id: 52,
+    genus: "ネモフィラ属",
+    description: [
+      "北アメリカ原産の一年草で、春に青紫色〜白色の5弁花を咲かせる。日本では公園の花壇や斜面に広く植栽される。",
+      "茨城県のひたち海浜公園では丘一面にネモフィラが広がる景観が春の名所として有名で、多くの観光客を集める。",
+      "花色はスカイブルーが最も一般的で、花の中央部に白い紋が入る。白花や黒紫色の品種もある。",
+    ],
+    identification: [
+      "直径2〜3cmの5弁花で、花色は青紫色〜白色、中央部に白い紋がある",
+      "茎は細く柔らかく這うように広がり、草丈10〜30cm程度",
+      "葉は羽状に深く裂け、柔らかく薄い",
+      "花期は3〜5月で、冷涼な気候を好む",
+    ],
+    distribution: "北アメリカ原産（日本全国で植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii_1.jpg",
+        caption: "群生",
+      },
+    ],
+    tags: ["春開花", "草本", "花弁5枚", "公園"],
+    similar_plant_ids: [],
+  },
 ]
