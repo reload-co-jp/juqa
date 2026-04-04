@@ -2142,7 +2142,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山", "花弁5枚"],
-    similar_plant_ids: [66],
+    similar_plant_ids: [66, 135],
   },
   {
     id: 66,
@@ -2175,7 +2175,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
-    similar_plant_ids: [65],
+    similar_plant_ids: [65, 135],
   },
   {
     id: 67,
@@ -4419,6 +4419,237 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "花弁5枚", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 135,
+    japanese_name: "イチリンソウ",
+    scientific_name: "Anemone nikoensis",
+    family_id: 25,
+    genus: "イチリンソウ属",
+    description: [
+      "春、山地の林縁や谷沿いの湿った場所に生えるキンポウゲ科の多年草。茎の先に白い花を1輪だけつけることが名の由来。",
+      "花弁のように見える白い部分は萼片で、5〜6枚ある。同属のニリンソウ（2輪）やサンリンソウ（3輪）と比べて花が大きく目立つ。",
+      "葉は深く切れ込む複葉で、茎葉は3枚輪生する。花径は3〜4cmと大きい。",
+    ],
+    identification: [
+      "茎の先に白い大きな花（径3〜4cm）を1輪だけつける",
+      "萼片は5〜6枚で白く、裏面はやや紫みを帯びることがある",
+      "茎葉は3枚輪生し、深く羽状に裂ける",
+      "山地の林縁・谷沿いの湿った場所に生える（4〜5月）",
+    ],
+    distribution: "北海道〜九州の山地・林縁・谷沿い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(flower).JPG",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "草本", "花弁5枚", "山"],
+    similar_plant_ids: [66],
+  },
+  {
+    id: 136,
+    japanese_name: "ヤマネコノメソウ",
+    scientific_name: "Chrysosplenium japonicum",
+    family_id: 50,
+    genus: "ネコノメソウ属",
+    description: [
+      "春、山地の沢沿いや谷筋の湿った場所に生えるユキノシタ科の多年草。「猫の目草」の名は、果実が熟すと裂けて中の種子が猫の目のように見えることに由来する。",
+      "花弁はなく、黄緑色の萼片4枚が目立つ。花のすぐ下にある苞葉も黄色みを帯びる。",
+      "茎は横に這い、先端付近に集まって花を咲かせる。葉は円形〜腎形で鈍い鋸歯がある。",
+    ],
+    identification: [
+      "花弁がなく、黄緑色の萼片4枚で構成される小花が集まる（3〜5月）",
+      "花の周囲の苞葉が黄色〜黄緑色に色づく",
+      "葉は円形〜腎形で浅い鋸歯があり、茎に対生",
+      "山地の沢沿い・谷筋の湿った林床に生える",
+    ],
+    distribution: "北海道〜九州の山地・沢沿い・谷筋",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome01.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome02.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "草本", "小花集合", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 137,
+    japanese_name: "ヒトリシズカ",
+    scientific_name: "Chloranthus japonicus",
+    family_id: 53,
+    genus: "チャラン属",
+    description: [
+      "春、山地の林内や林縁に生えるセンリョウ科の多年草。白い糸状の雄しべが集まった穂状の花が1本だけ立ち上がり、「一人静」の名はその楚々とした姿に由来する。",
+      "花弁も萼もなく、長い白い雄しべのみで構成される独特な花をもつ。葉は茎の上部に4枚輪生状につき、光沢がある。",
+      "義経の愛妾・静御前の舞姿にたとえられ、フタリシズカ（2本の穂）と対で知られる。",
+    ],
+    identification: [
+      "白い糸状の雄しべが集まった穂を1本だけ直立させる（4〜5月）",
+      "花弁・萼がなく雄しべのみからなる花穂",
+      "葉は茎頂に4枚が輪生状につき、鋸歯があり光沢がある",
+      "山地の落葉樹林内の湿った林床に群生する",
+    ],
+    distribution: "北海道〜九州の山地・林内",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(Montage).jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(Montage).jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(flower).jpg",
+        caption: "花穂",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 138,
+    japanese_name: "マムシグサ",
+    scientific_name: "Arisaema serratum",
+    family_id: 54,
+    genus: "テンナンショウ属",
+    description: [
+      "春〜初夏、山地の林内や林縁に生えるサトイモ科の多年草。緑色〜暗紫色の仏炎苞（ぶつえんほう）が肉穂花序を筒状に包む独特な花姿をもつ。",
+      "茎の模様がマムシの体表に似ることが名の由来。秋には肉穂花序がトウモロコシ状の赤い果実の集合体になる。",
+      "全草に強い毒性（シュウ酸カルシウムなど）があり、誤食すると激しい口内炎を起こす。",
+    ],
+    identification: [
+      "緑〜暗紫色の仏炎苞が筒状に花穂を覆い、先端が前方に垂れる（4〜6月）",
+      "茎にマムシ模様（紫褐色の斑点・縞）がある",
+      "葉は鳥足状複葉で小葉が広がる",
+      "秋に赤い実が房状に集まる",
+    ],
+    distribution: "北海道〜九州の山地・林内・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_1.jpg",
+        caption: "全体・仏炎苞",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_2.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [140],
+  },
+  {
+    id: 139,
+    japanese_name: "クリンソウ",
+    scientific_name: "Primula japonica",
+    family_id: 47,
+    genus: "サクラソウ属",
+    description: [
+      "春〜初夏、山地の渓流沿いや湿った草地に生えるサクラソウ科の多年草。紅紫色の花が茎に数段輪生する姿が仏塔の九輪（くりん）に見えることが名の由来。",
+      "日本固有種で、1段に5〜10個の花が輪状につき、これが2〜6段重なる。花色は濃い紅紫色が基本で、白花品種もある。",
+      "湿潤な環境を好み、谷筋や湿地周辺に群落を形成する。",
+    ],
+    identification: [
+      "紅紫色の花が茎に2〜6段の輪生状につく（5〜7月）",
+      "各段に5〜10輪の花がつき、仏塔の九輪に似る",
+      "葉は根元から出る大きなロゼット状で鋸歯がある",
+      "山地の渓流沿い・湿った草地に群生する",
+    ],
+    distribution: "北海道〜九州の山地・渓流沿い・湿地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica_1.jpg",
+        caption: "群生",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 140,
+    japanese_name: "ミズバショウ",
+    scientific_name: "Lysichiton camtschatcensis",
+    family_id: 54,
+    genus: "ミズバショウ属",
+    description: [
+      "春、雪解け直後の湿地や湿原に白い仏炎苞を立ち上げるサトイモ科の多年草。白い仏炎苞の中に淡黄色の肉穂花序がある。",
+      "尾瀬や日光などの高層湿原の代表植物として広く知られる。花後に葉が大きく成長し、バショウに似た大型の葉になる。",
+      "和名の「水芭蕉」は水辺に生えてバショウに似た葉をつけることに由来する。",
+    ],
+    identification: [
+      "白い仏炎苞（さじ形）の中に淡黄色の棒状の肉穂花序がある（4〜5月）",
+      "雪解け直後〜春に湿原・湿地で開花する",
+      "花後に大きなバナナ状の葉が伸びる（長さ50〜100cm）",
+      "湿原・湿地・沼縁など水辺に群生する",
+    ],
+    distribution: "北海道〜本州中部の湿原・湿地・沼縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis1.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis0.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [138],
+  },
+  {
+    id: 141,
+    japanese_name: "ギンリョウソウ",
+    scientific_name: "Monotropastrum humile",
+    family_id: 44,
+    genus: "ギンリョウソウ属",
+    description: [
+      "春〜夏、山地の暗い林床に生えるツツジ科の多年草。葉緑素をもたない腐生植物（菌従属栄養植物）で、全体が白〜半透明で幽霊のように見える。",
+      "光合成を行わず、菌根菌を介して樹木から栄養を得る。葉は白い鱗片状に退化し、茎は地上に15〜20cm伸びて先端に1輪の花をつける。",
+      "別名「ユウレイタケ」とも呼ばれるが、植物であってキノコではない。",
+    ],
+    identification: [
+      "全体が白〜半透明で葉緑素がない（葉は鱗片状）",
+      "茎の先端に1つの花を下向きにつける（5〜8月）",
+      "暗い林床の落ち葉や腐植土に生える",
+      "群生することが多く、地面からまとめて生える",
+    ],
+    distribution: "北海道〜九州の山地・暗い林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_07527.JPG",
+        caption: "群生",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山"],
     similar_plant_ids: [],
   },
 ]
