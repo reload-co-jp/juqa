@@ -4374,10 +4374,10 @@ export const plants: Plant[] = [
     ],
     distribution: "全国（植栽）",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_02.jpg",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chuisihaitang.jpg",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_02.jpg",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chuisihaitang.jpg",
         caption: "花",
       },
       {
