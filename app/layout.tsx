@@ -96,6 +96,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
             fontSize: ".75rem",
             padding: "1rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "1rem",
           }}
         >
           <p>
@@ -103,6 +107,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               &copy; Reload, Inc.
             </a>
           </p>
+          <a
+            href="https://github.com/reload-co-jp/juqa"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "#aaa", textDecoration: "none" }}
+          >
+            GitHub
+          </a>
         </footer>
       </body>
     </html>
