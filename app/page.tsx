@@ -58,16 +58,10 @@ const navCards = [
     description: "季節の花",
   },
   {
-    href: "/columns/conifer",
-    emoji: "🌲",
-    title: "針葉樹の見分け方",
-    description: "コラム",
-  },
-  {
-    href: "/columns/tree-vs-herb",
-    emoji: "🌿",
-    title: "木と草のちがい",
-    description: "コラム",
+    href: "/columns",
+    emoji: "📖",
+    title: "コラム",
+    description: "植物の豆知識",
   },
 ]
 
