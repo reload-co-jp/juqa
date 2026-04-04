@@ -3,8 +3,7 @@ import { Title } from "components/elements/layout"
 import Link from "next/link"
 import "./reset.css"
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
 
 const basePath = ""
 
@@ -99,7 +98,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             padding: "1rem",
           }}
         >
-          <p>&copy; Reload, Inc.</p>
+          <p>
+            <a href="//reload.co.jp" target="_blank" rel="noreferrer">
+              &copy; Reload, Inc.
+            </a>
+          </p>
         </footer>
       </body>
     </html>
