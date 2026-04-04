@@ -17,22 +17,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const plant = plants.find((p) => p.id === Number(id))
   if (!plant) return {}
 
-  const description = plant.description[0]
+  const family = families.find((f) => f.id === plant.family_id)
+  const description = `${plant.japanese_name}（${plant.scientific_name}）は${family ? `${family.name}の` : ""}植物です。${plant.description[0]}`
+  const pageUrl = `${siteUrl}/plants/${plant.id}/`
   const images = plant.image_url ? [{ url: plant.image_url }] : []
 
   return {
-    title: plant.japanese_name,
+    title: `${plant.japanese_name}（${plant.scientific_name}）`,
     description,
+    alternates: { canonical: pageUrl },
     openGraph: {
-      title: plant.japanese_name,
+      title: `${plant.japanese_name}（${plant.scientific_name}）`,
       description,
-      url: `${siteUrl}/plants/${plant.id}/`,
+      url: pageUrl,
       images,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: plant.japanese_name,
+      title: `${plant.japanese_name}（${plant.scientific_name}）`,
       description,
       images: plant.image_url ? [plant.image_url] : [],
     },
@@ -61,8 +64,62 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
     .map((sid) => plants.find((p) => p.id === sid))
     .filter(Boolean)
 
+  const pageUrl = `${siteUrl}/plants/${plant.id}/`
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Taxon",
+        "@id": pageUrl,
+        name: plant.japanese_name,
+        scientificName: plant.scientific_name,
+        description: plant.description.join(" "),
+        url: pageUrl,
+        ...(plant.image_url ? { image: plant.image_url } : {}),
+        taxonRank: "https://www.wikidata.org/entity/Q7432",
+        ...(family
+          ? {
+              parentTaxon: {
+                "@type": "Taxon",
+                name: family.name,
+              },
+            }
+          : {}),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "植物一覧",
+            item: `${siteUrl}/plants/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: plant.japanese_name,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
+  }
+
   return (
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHeader backHref="/plants" backLabel="植物一覧" />
 
       {/* Images */}
@@ -116,9 +173,9 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
 
       {/* Header */}
       <div style={{ marginBottom: "1rem" }}>
-        <h2 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
+        <h1 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
           {plant.japanese_name}
-        </h2>
+        </h1>
         <p
           style={{
             margin: "0.25rem 0",
