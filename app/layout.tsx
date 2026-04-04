@@ -107,14 +107,22 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               &copy; Reload, Inc.
             </a>
           </p>
-          <a
-            href="https://github.com/reload-co-jp/juqa"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#aaa", textDecoration: "none" }}
-          >
-            GitHub
-          </a>
+          <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+            <Link
+              href="/about"
+              style={{ color: "#aaa", textDecoration: "none" }}
+            >
+              このサイトについて
+            </Link>
+            <a
+              href="https://github.com/reload-co-jp/juqa"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#aaa", textDecoration: "none" }}
+            >
+              GitHub
+            </a>
+          </div>
         </footer>
       </body>
     </html>
