@@ -492,14 +492,19 @@ const Page = () => {
 
       <div
         style={{
-          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "0.75rem",
           padding: "1.5rem",
-          color: "#666",
           fontSize: "0.8rem",
         }}
       >
         <Link href="/plants?tags=%E9%87%9D%E8%91%89" style={{ color: "#7cbe8c", textDecoration: "none" }}>
           針葉タグの植物を一覧で見る →
+        </Link>
+        <Link href="/columns/tree-vs-herb" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          関連コラム：木と草のちがい →
         </Link>
       </div>
     </div>
