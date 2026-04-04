@@ -114,6 +114,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             >
               このサイトについて
             </Link>
+            <Link
+              href="/contact"
+              style={{ color: "#aaa", textDecoration: "none" }}
+            >
+              お問い合わせ
+            </Link>
             <a
               href="https://github.com/reload-co-jp/juqa"
               target="_blank"
