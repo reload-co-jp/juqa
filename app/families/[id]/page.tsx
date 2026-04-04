@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
+import { wikimediaThumb } from "lib/utils"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 
 const siteUrl = "https://juqa.reload.co.jp"
@@ -158,26 +159,56 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
                     padding: "0.6rem 0",
                     borderBottom: "1px solid #3a3a3a",
                     display: "flex",
-                    justifyContent: "space-between",
                     alignItems: "center",
+                    gap: "0.75rem",
                   }}
                 >
-                  <div>
-                    <span style={{ color: "#7cbe8c", fontSize: "0.95rem" }}>
+                  {plant.image_url ? (
+                    <img
+                      src={wikimediaThumb(plant.image_url, 80)}
+                      alt={plant.japanese_name}
+                      loading="lazy"
+                      style={{
+                        width: "48px",
+                        height: "48px",
+                        objectFit: "cover",
+                        borderRadius: "6px",
+                        flexShrink: 0,
+                        background: "#2a3d2b",
+                      }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: "48px",
+                        height: "48px",
+                        borderRadius: "6px",
+                        flexShrink: 0,
+                        background: "#2a3d2b",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "1.25rem",
+                      }}
+                    >
+                      🌿
+                    </div>
+                  )}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ color: "#7cbe8c", fontSize: "0.95rem" }}>
                       {plant.japanese_name}
-                    </span>
-                    <span
+                    </div>
+                    <div
                       style={{
                         color: "#999",
                         fontSize: "0.78rem",
                         fontStyle: "italic",
-                        marginLeft: "0.5rem",
                       }}
                     >
                       {plant.scientific_name}
-                    </span>
+                    </div>
                   </div>
-                  <span style={{ color: "#7cbe8c", fontSize: "0.8rem" }}>
+                  <span style={{ color: "#7cbe8c", fontSize: "0.8rem", flexShrink: 0 }}>
                     →
                   </span>
                 </div>
