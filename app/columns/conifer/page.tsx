@@ -169,6 +169,36 @@ const Page = () => {
         </p>
       </div>
 
+      {/* Intro */}
+      <div
+        style={{
+          borderLeft: "3px solid #5a9a5c",
+          paddingLeft: "1.25rem",
+          marginBottom: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.75rem",
+        }}
+      >
+        {[
+          "山道を歩いていると、あたり一面に背の高い緑の木が続いていることがある。みんな似たような感じで、これがスギなのかヒノキなのか、マツなのかぜんぜんわからない——そんな経験はないだろうか。",
+          "実は、ちゃんと見れば針葉樹には「種類ごとのくせ」がある。葉っぱの形、幹の色、松ぼっくりの形。そのくせさえ覚えてしまえば、山の中でも「あ、あれはヒノキだ」と気づけるようになる。",
+          "むずかしい知識はいらない。まずは2〜3種類、顔見知りになるところから始めよう。",
+        ].map((text, i) => (
+          <p
+            key={i}
+            style={{
+              margin: 0,
+              color: "#bbb",
+              fontSize: "0.9rem",
+              lineHeight: 1.9,
+            }}
+          >
+            {text}
+          </p>
+        ))}
+      </div>
+
       <Section title="まず「葉の形」で2グループに分ける">
         <p
           style={{

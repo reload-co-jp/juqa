@@ -1,0 +1,3 @@
+# textlint はコラムのみ対象
+**
+!app/columns/**/*.tsx

@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "@textlint/text": {
+      "extensions": [".tsx"]
+    }
+  },
+  "rules": {
+    "@textlint-ja/preset-ai-writing": true
+  }
+}

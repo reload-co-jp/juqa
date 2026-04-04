@@ -10,9 +10,17 @@ pnpm build      # 静的ビルド（out/ に出力）
 pnpm lint       # ESLint
 pnpm format     # Prettier（上書き）
 pnpm typecheck  # 型チェック（tsc --noEmit）
+pnpm textlint:columns      # コラム文章の textlint チェック
+pnpm textlint:columns:fix  # コラム文章の textlint 自動修正
 ```
 
 テストは存在しない。
+
+## コラム文章の lint
+
+`app/columns/**/*.tsx` に対して [textlint-rule-preset-ai-writing](https://github.com/textlint-ja/textlint-rule-preset-ai-writing) を適用する。設定は `.textlintrc.json`、対象外パスは `.textlintignore`。
+
+コラムを追加・編集したら `pnpm textlint:columns` を実行すること。
 
 ## アーキテクチャ
 

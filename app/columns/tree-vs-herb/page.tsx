@@ -110,6 +110,36 @@ const Page = () => {
         </p>
       </div>
 
+      {/* Intro */}
+      <div
+        style={{
+          borderLeft: "3px solid #5a9a5c",
+          paddingLeft: "1.25rem",
+          marginBottom: "2rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.75rem",
+        }}
+      >
+        {[
+          "「あれって木？草？」——公園を歩いていると、ふとそんな疑問が浮かぶことがある。アジサイは木なのか草なのか。あんなに大きなタケは木じゃないの？",
+          "子どものころから「木と草は別もの」と感覚でわかっているつもりでも、いざ「何がちがうの？」と聞かれると意外と答えに詰まる。",
+          "答えは茎の「硬さ」にある。たったそれだけのちがいが、サクラとタンポポを分けている。知ってしまえばなんでもないことが、植物の見方をちょっと変えてくれる。",
+        ].map((text, i) => (
+          <p
+            key={i}
+            style={{
+              margin: 0,
+              color: "#bbb",
+              fontSize: "0.9rem",
+              lineHeight: 1.9,
+            }}
+          >
+            {text}
+          </p>
+        ))}
+      </div>
+
       {/* 一番の違い */}
       <Section title="いちばんの違いは「茎が残るか」">
         <p style={body}>
