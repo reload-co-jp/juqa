@@ -3,6 +3,7 @@
 import { FC, useState } from "react"
 import Link from "next/link"
 import { plants } from "lib/data"
+import { wikimediaThumb } from "lib/utils"
 
 const RandomPlant: FC = () => {
   const [plant] = useState<Plant>(
@@ -26,7 +27,7 @@ const RandomPlant: FC = () => {
         }}
       >
         <img
-          src={plant.image_url}
+          src={wikimediaThumb(plant.image_url, 160)}
           alt={plant.japanese_name}
           style={{
             width: "80px",

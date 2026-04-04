@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
+import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
 
 export const metadata: Metadata = {
@@ -96,7 +97,7 @@ const FamiliesPage: FC = () => {
                       }}
                     >
                       <img
-                        src={plant.image_url}
+                        src={wikimediaThumb(plant.image_url ?? "", 160)}
                         alt={plant.japanese_name}
                         loading="lazy"
                         style={{

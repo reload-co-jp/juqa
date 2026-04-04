@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense } from "react"
 import { plants } from "lib/data"
+import { wikimediaThumb } from "lib/utils"
 import { PageHeader } from "components/elements/layout"
 
 const SEASONS: { tag: PlantTag; label: string; color: string; bg: string }[] =
@@ -114,7 +115,7 @@ const FlowersContent: FC = () => {
                 >
                   {plant.image_url ? (
                     <img
-                      src={plant.image_url}
+                      src={wikimediaThumb(plant.image_url, 400)}
                       alt={plant.japanese_name}
                       loading="lazy"
                       style={{

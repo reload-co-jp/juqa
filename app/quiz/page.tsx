@@ -3,7 +3,7 @@
 import { FC, useState } from "react"
 import Link from "next/link"
 import { quizzes, plants } from "lib/data"
-import { shuffle } from "lib/utils"
+import { shuffle, wikimediaThumb } from "lib/utils"
 import {
   PageHeader,
   SectionCard,
@@ -171,7 +171,7 @@ const QuizPage: FC = () => {
                     </div>
                     {q.type === "photo" && reviewPlant && (
                       <img
-                        src={reviewPlant.image_url}
+                        src={wikimediaThumb(reviewPlant.image_url ?? "", 160)}
                         alt="植物の写真"
                         style={{
                           width: "100%",
@@ -297,7 +297,7 @@ const QuizPage: FC = () => {
         {quiz.type === "photo" && plant && (
           <div style={{ marginBottom: "0.75rem" }}>
             <img
-              src={plant.image_url}
+              src={wikimediaThumb(plant.image_url ?? "", 400)}
               alt="植物の写真"
               style={{
                 width: "100%",

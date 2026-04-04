@@ -1,6 +1,7 @@
 import { FC } from "react"
 import Link from "next/link"
 import { plants, families } from "lib/data"
+import { wikimediaThumb } from "lib/utils"
 import RandomPlant from "components/RandomPlant"
 
 const month = new Date().getMonth() + 1
@@ -192,10 +193,11 @@ const Page: FC = () => {
               }}
             >
               <img
-                src={
+                src={wikimediaThumb(
                   plant.images.find((i) => i.caption == "花")?.url ??
-                  plant.image_url
-                }
+                    plant.image_url,
+                  160
+                )}
                 alt={plant.japanese_name}
                 style={{
                   width: "100%",
@@ -268,7 +270,7 @@ const Page: FC = () => {
                 }}
               >
                 <img
-                  src={plant.image_url}
+                  src={wikimediaThumb(plant.image_url, 160)}
                   alt={plant.japanese_name}
                   style={{
                     width: "100%",

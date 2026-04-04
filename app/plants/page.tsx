@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
 import { TAG_GROUPS } from "lib/tags"
+import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
 
 const PlantCardSkeleton: FC = () => (
@@ -105,7 +106,7 @@ const PlantImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
         />
       )}
       <img
-        src={src}
+        src={wikimediaThumb(src, 400)}
         alt={alt}
         loading="lazy"
         onLoad={() => setLoaded(true)}

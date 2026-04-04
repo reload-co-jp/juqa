@@ -1,6 +1,7 @@
 "use client"
 
 import { FC, useState } from "react"
+import { wikimediaThumb } from "lib/utils"
 
 type PlantImage = {
   url: string
@@ -33,7 +34,7 @@ const PlantPhotoGallery: FC<Props> = ({ images, plantName }) => {
       >
         <img
           key={activeIndex}
-          src={current.url}
+          src={wikimediaThumb(current.url, 800)}
           alt={`${plantName} - ${current.caption}`}
           style={{
             width: "100%",
@@ -95,7 +96,7 @@ const PlantPhotoGallery: FC<Props> = ({ images, plantName }) => {
               }}
             >
               <img
-                src={img.url}
+                src={wikimediaThumb(img.url, 160)}
                 alt={img.caption}
                 style={{
                   width: "100%",

@@ -1,3 +1,8 @@
+export function wikimediaThumb(url: string, width: number): string {
+  if (!url.includes("commons.wikimedia.org/wiki/Special:FilePath/")) return url
+  return `${url}?width=${width}`
+}
+
 export function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
