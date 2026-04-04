@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/quiz/`, priority: 0.8 },
     { url: `${siteUrl}/quiz/photo/`, priority: 0.8 },
     { url: `${siteUrl}/guide/`, priority: 0.8 },
+    { url: `${siteUrl}/columns/conifer/`, priority: 0.75 },
   ]
 
   const plantRoutes: MetadataRoute.Sitemap = plants.map((plant) => ({

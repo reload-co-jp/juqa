@@ -57,6 +57,12 @@ const navCards = [
     title: "開花カレンダー",
     description: "季節の花",
   },
+  {
+    href: "/columns/conifer",
+    emoji: "🌲",
+    title: "針葉樹の見分け方",
+    description: "コラム",
+  },
 ]
 
 const Page: FC = () => {
