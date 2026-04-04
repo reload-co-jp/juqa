@@ -15,19 +15,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const family = families.find((f) => f.id === Number(id))
   if (!family) return {}
 
+  const familyPlants = plants.filter((p) => p.family_id === family.id)
+  const pageUrl = `${siteUrl}/families/${family.id}/`
+  const description = `${family.name}（${family.classification}）の特徴と所属する植物${familyPlants.length}種を紹介します。${family.description}`
+
   return {
-    title: family.name,
-    description: family.description,
+    title: `${family.name}の特徴と植物一覧`,
+    description,
+    alternates: { canonical: pageUrl },
     openGraph: {
-      title: family.name,
-      description: family.description,
-      url: `${siteUrl}/families/${family.id}/`,
+      title: `${family.name}の特徴と植物一覧`,
+      description,
+      url: pageUrl,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: family.name,
-      description: family.description,
+      title: `${family.name}の特徴と植物一覧`,
+      description,
     },
   }
 }
@@ -50,9 +55,48 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
   }
 
   const familyPlants = plants.filter((p) => p.family_id === family.id)
+  const pageUrl = `${siteUrl}/families/${family.id}/`
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Taxon",
+        "@id": pageUrl,
+        name: family.name,
+        description: family.description,
+        url: pageUrl,
+        taxonRank: "https://www.wikidata.org/entity/Q35409",
+        hasPart: familyPlants.map((p) => ({
+          "@type": "Taxon",
+          name: p.japanese_name,
+          scientificName: p.scientific_name,
+          url: `${siteUrl}/plants/${p.id}/`,
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "科一覧",
+            item: `${siteUrl}/families/`,
+          },
+          { "@type": "ListItem", position: 3, name: family.name, item: pageUrl },
+        ],
+      },
+    ],
+  }
 
   return (
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHeader backHref="/families" backLabel="科一覧" />
 
       <div
@@ -63,9 +107,9 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
           marginBottom: "0.5rem",
         }}
       >
-        <h2 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
+        <h1 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
           {family.name}
-        </h2>
+        </h1>
         <Tag variant="muted">{family.classification}</Tag>
       </div>
       <p
