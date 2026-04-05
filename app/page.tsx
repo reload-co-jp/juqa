@@ -221,6 +221,85 @@ const Page: FC = () => {
       {/* Pickup */}
       <RandomPlant />
 
+      {/* Columns */}
+      <div style={{ marginBottom: "2rem" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: "0.75rem",
+          }}
+        >
+          <h2
+            style={{
+              margin: 0,
+              fontSize: "1rem",
+              fontWeight: "bold",
+              color: "#ccc",
+              letterSpacing: "0.05em",
+            }}
+          >
+            📖 コラム
+          </h2>
+          <Link
+            href="/columns"
+            style={{
+              fontSize: "0.8rem",
+              color: "#7cbe8c",
+              textDecoration: "none",
+            }}
+          >
+            すべて見る →
+          </Link>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          {[
+            {
+              href: "/columns/conifer",
+              emoji: "🌲",
+              title: "針葉樹林の簡単な見分け方",
+            },
+            {
+              href: "/columns/tree-vs-herb",
+              emoji: "🌿",
+              title: "木と草のちがい",
+            },
+          ].map((col) => (
+            <Link
+              key={col.href}
+              href={col.href}
+              style={{ textDecoration: "none" }}
+            >
+              <div
+                style={{
+                  background: "#242424",
+                  borderRadius: "10px",
+                  padding: "0.75rem 1rem",
+                  border: "1px solid #333",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                }}
+              >
+                <span style={{ fontSize: "1.25rem" }}>{col.emoji}</span>
+                <span
+                  style={{
+                    color: "#e0e0e0",
+                    fontSize: "0.85rem",
+                    fontWeight: "bold",
+                    flex: 1,
+                  }}
+                >
+                  {col.title}
+                </span>
+                <span style={{ color: "#555", fontSize: "0.85rem" }}>→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* Photo grid */}
       <div style={{ marginBottom: "2rem" }}>
         <div
