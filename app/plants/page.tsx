@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
 import { TAG_GROUPS } from "lib/tags"
+import { regionTagsFromDistribution } from "lib/region"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
 
@@ -175,11 +176,10 @@ const PlantsContent: FC = () => {
     }
     if (selectedFamilyId !== null && p.family_id !== selectedFamilyId)
       return false
-    if (
-      selectedTags.size > 0 &&
-      ![...selectedTags].every((t) => p.tags.includes(t))
-    )
-      return false
+    if (selectedTags.size > 0) {
+      const allTags = [...p.tags, ...regionTagsFromDistribution(p.distribution)]
+      if (![...selectedTags].every((t) => allTags.includes(t))) return false
+    }
     return true
   })
 

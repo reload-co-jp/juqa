@@ -5,4 +5,5 @@ export const TAG_GROUPS: { label: string; tags: PlantTag[] }[] = [
   { label: "実", tags: ["どんぐり", "豆", "松ぼっくり"] },
   { label: "樹形", tags: ["高木", "低木", "草本"] },
   { label: "環境", tags: ["街路樹", "山", "公園", "雑草"] },
+  { label: "地域", tags: ["北海道", "本州", "四国", "九州", "沖縄"] },
 ]

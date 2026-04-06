@@ -31,6 +31,11 @@ type PlantTag =
   | "山"
   | "公園"
   | "雑草"
+  | "北海道"
+  | "本州"
+  | "四国"
+  | "九州"
+  | "沖縄"
 
 type Plant = {
   id: number
