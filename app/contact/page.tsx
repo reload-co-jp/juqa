@@ -80,6 +80,7 @@ const ContactPage = () => {
         <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: "1.25rem" }}>
             <label
+              htmlFor="contact-name"
               style={{
                 display: "block",
                 fontSize: "0.85rem",
@@ -90,6 +91,7 @@ const ContactPage = () => {
               お名前
             </label>
             <input
+              id="contact-name"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -111,6 +113,7 @@ const ContactPage = () => {
 
           <div style={{ marginBottom: "1.5rem" }}>
             <label
+              htmlFor="contact-message"
               style={{
                 display: "block",
                 fontSize: "0.85rem",
@@ -121,6 +124,7 @@ const ContactPage = () => {
               お問い合わせ内容
             </label>
             <textarea
+              id="contact-message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
