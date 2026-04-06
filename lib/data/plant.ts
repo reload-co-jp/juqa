@@ -261,7 +261,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
-    similar_plant_ids: [9],
+    similar_plant_ids: [9, 142],
   },
   {
     id: 9,
@@ -4651,5 +4651,38 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "夏開花", "草本", "山"],
     similar_plant_ids: [],
+  },
+  {
+    id: 142,
+    japanese_name: "サワラ",
+    scientific_name: "Chamaecyparis pisifera",
+    family_id: 7,
+    genus: "ヒノキ属",
+    description: [
+      "日本固有の常緑針葉樹。山地の湿地や渓流沿いなど、やや湿潤な場所を好んで生育する。",
+      "葉は鱗片状で先端がやや尖り、裏面にX字型の白い気孔帯がある点でヒノキと区別できる。",
+      "建築材・工芸材として古くから利用されており、木曽五木の一つにも数えられる。",
+    ],
+    identification: [
+      "葉の裏にX字型の白い模様（ヒノキはY字型）",
+      "葉の先端がやや鋭く尖る（ヒノキより先端が鋭い）",
+      "球果は小さく直径約6mmの球形",
+      "樹皮は赤褐色で縦に細く裂ける",
+    ],
+    distribution: "本州〜九州の山地（湿潤地）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_pisifera.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_pisifera.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sawara_Falsecypress_Chamaecyparis_pisifera_Sprig_3008px.jpg",
+        caption: "葉と枝",
+      },
+    ],
+    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
+    similar_plant_ids: [8],
   },
 ]
