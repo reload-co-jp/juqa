@@ -28,7 +28,7 @@
     "@textlint-ja/textlint-rule-preset-ai-writing": "^1.6.1",
     "@types/node": "^25.4.0",
     "@types/react": "^19.2.14",
-    "eslint": "^10.0.3",
+    "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
