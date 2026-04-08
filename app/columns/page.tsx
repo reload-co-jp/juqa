@@ -25,6 +25,17 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": pageUrl,
+  url: pageUrl,
+  name: "コラム",
+  description: "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
+  inLanguage: "ja",
+  isPartOf: { "@id": `${siteUrl}/#website` },
+}
+
 const columns = [
   {
     href: "/columns/conifer",
@@ -47,6 +58,10 @@ const columns = [
 const Page = () => {
   return (
     <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div style={{ marginBottom: "1.5rem" }}>
         <Link
           href="/"

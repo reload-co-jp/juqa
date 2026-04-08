@@ -126,9 +126,31 @@ const TreeCard = ({
   </div>
 )
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": pageUrl,
+  url: pageUrl,
+  headline: "針葉樹林の簡単な見分け方",
+  description:
+    "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。葉の形・樹皮・松ぼっくりなど現地で使えるポイントをまとめました。",
+  image: ogImage,
+  inLanguage: "ja",
+  isPartOf: { "@id": `${siteUrl}/columns/` },
+  publisher: {
+    "@type": "Organization",
+    name: "Reload, Inc.",
+    url: "https://reload.co.jp",
+  },
+}
+
 const Page = () => {
   return (
     <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div style={{ marginBottom: "1.5rem" }}>
         <Link
           href="/"

@@ -66,9 +66,31 @@ const body: React.CSSProperties = {
   margin: "0 0 0.875rem",
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": pageUrl,
+  url: pageUrl,
+  headline: "木と草のちがい",
+  description:
+    "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
+  image: ogImage,
+  inLanguage: "ja",
+  isPartOf: { "@id": `${siteUrl}/columns/` },
+  publisher: {
+    "@type": "Organization",
+    name: "Reload, Inc.",
+    url: "https://reload.co.jp",
+  },
+}
+
 const Page = () => {
   return (
     <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div style={{ marginBottom: "1.5rem" }}>
         <Link
           href="/"

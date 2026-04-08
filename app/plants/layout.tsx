@@ -1,4 +1,20 @@
 import type { Metadata } from "next"
+import { plants } from "lib/data"
+
+const siteUrl = "https://juqa.reload.co.jp"
+const pageUrl = `${siteUrl}/plants/`
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": pageUrl,
+  url: pageUrl,
+  name: "植物一覧",
+  description: "街路樹・公園・山で見かける植物を一覧表示します。科・タグ・キーワードで絞り込み検索できます。",
+  numberOfItems: plants.length,
+  inLanguage: "ja",
+  isPartOf: { "@id": `${siteUrl}/#website` },
+}
 
 export const metadata: Metadata = {
   title: "植物一覧",
@@ -16,5 +32,13 @@ export const metadata: Metadata = {
 }
 
 export default function PlantsLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  )
 }

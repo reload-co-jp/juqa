@@ -35,10 +35,33 @@ export const metadata: Metadata = {
   },
 }
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://juqa.reload.co.jp/#website",
+      url: "https://juqa.reload.co.jp/",
+      name: "ジュカ！ (JuQa)",
+      description: "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+      inLanguage: "ja",
+      publisher: {
+        "@type": "Organization",
+        name: "Reload, Inc.",
+        url: "https://reload.co.jp",
+      },
+    },
+  ],
+}
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

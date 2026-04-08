@@ -5,6 +5,21 @@ import { families, plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
 
+const siteUrl = "https://juqa.reload.co.jp"
+const pageUrl = `${siteUrl}/families/`
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": pageUrl,
+  url: pageUrl,
+  name: "科一覧",
+  description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
+  numberOfItems: families.length,
+  inLanguage: "ja",
+  isPartOf: { "@id": `${siteUrl}/#website` },
+}
+
 export const metadata: Metadata = {
   title: "科一覧",
   description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
@@ -23,6 +38,10 @@ export const metadata: Metadata = {
 const FamiliesPage: FC = () => {
   return (
     <div style={{ margin: "0 auto" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHeader backHref="/" backLabel="トップ" title="科一覧" />
 
       <div>
