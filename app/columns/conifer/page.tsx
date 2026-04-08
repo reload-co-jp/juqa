@@ -169,6 +169,25 @@ const Page = () => {
         </p>
       </div>
 
+      {/* Hero image */}
+      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
+        <img
+          src={ogImage}
+          alt="針葉樹（スギ）の森"
+          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
+        />
+        <div
+          style={{
+            background: "#2a2a2a",
+            padding: "0.4rem 0.75rem",
+            fontSize: "0.7rem",
+            color: "#666",
+          }}
+        >
+          Photo: Wikimedia Commons
+        </div>
+      </div>
+
       {/* Intro */}
       <div
         style={{

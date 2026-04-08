@@ -4,7 +4,7 @@ import Link from "next/link"
 const siteUrl = "https://juqa.reload.co.jp"
 const pageUrl = `${siteUrl}/columns/tree-vs-herb/`
 const ogImage =
-  "https://commons.wikimedia.org/wiki/Special:FilePath/Taro-sugi_20111002.jpg"
+  "https://upload.wikimedia.org/wikipedia/commons/4/49/Cherry_Blossoms_in_Yokosuka%2C_Japan.JPG"
 
 export const metadata: Metadata = {
   title: "木と草のちがい",
@@ -108,6 +108,25 @@ const Page = () => {
         <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
           「サクラは木、タンポポは草」——そのちがいの正体を探ってみよう
         </p>
+      </div>
+
+      {/* Hero image */}
+      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
+        <img
+          src={ogImage}
+          alt="横須賀のサクラ（木本植物の例）"
+          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
+        />
+        <div
+          style={{
+            background: "#2a2a2a",
+            padding: "0.4rem 0.75rem",
+            fontSize: "0.7rem",
+            color: "#666",
+          }}
+        >
+          Photo: Wikimedia Commons
+        </div>
       </div>
 
       {/* Intro */}
