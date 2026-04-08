@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "コラム",
   description:
     "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
+  keywords: ["植物コラム", "植物の豆知識", "植物の見分け方", "植物解説"],
   alternates: {
     canonical: pageUrl,
   },

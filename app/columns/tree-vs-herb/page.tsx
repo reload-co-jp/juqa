@@ -8,6 +8,7 @@ const ogImage =
 
 export const metadata: Metadata = {
   title: "木と草のちがい",
+  keywords: ["木と草のちがい", "木本", "草本", "木質化", "植物学", "樹木", "草花"],
   description:
     "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
   alternates: {

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "写真クイズ",
   description: "植物の写真から名前を当てるクイズです。見た目の特徴を手がかりに植物を識別する力を鍛えましょう。",
+  keywords: ["植物写真クイズ", "植物識別", "植物当てクイズ", "樹木識別", "植物学習"],
   openGraph: {
     title: "写真クイズ",
     description: "植物の写真から名前を当てるクイズです。見た目の特徴を手がかりに植物を識別する力を鍛えましょう。",

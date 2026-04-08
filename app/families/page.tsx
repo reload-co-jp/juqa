@@ -23,6 +23,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: "科一覧",
   description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",
+  keywords: ["科一覧", "植物の科", "バラ科", "キク科", "植物分類", "植物図鑑"],
   openGraph: {
     title: "科一覧",
     description: "植物を科ごとに分類した一覧です。バラ科・キク科など38科の特徴と所属する植物を確認できます。",

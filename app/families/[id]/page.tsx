@@ -23,6 +23,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${family.name}の特徴と植物一覧`,
     description,
+    keywords: [
+      family.name,
+      family.classification,
+      ...familyPlants.slice(0, 8).map((p) => p.japanese_name),
+      "植物図鑑",
+      "植物の科",
+    ],
     alternates: { canonical: pageUrl },
     openGraph: {
       title: `${family.name}の特徴と植物一覧`,

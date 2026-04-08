@@ -25,6 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${plant.japanese_name}（${plant.scientific_name}）`,
     description,
+    keywords: [
+      plant.japanese_name,
+      plant.scientific_name,
+      plant.genus,
+      ...(family ? [family.name] : []),
+      ...plant.tags,
+      "植物図鑑",
+      "見分け方",
+    ],
     alternates: { canonical: pageUrl },
     openGraph: {
       title: `${plant.japanese_name}（${plant.scientific_name}）`,
