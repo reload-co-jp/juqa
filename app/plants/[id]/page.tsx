@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { plants, families } from "lib/data"
-import { wikimediaThumb } from "lib/utils"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 
@@ -132,53 +131,16 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
       <PageHeader backHref="/plants" backLabel="植物一覧" />
 
       {/* Images */}
-      {plant.images && plant.images.length > 0 ? (
-        <PlantPhotoGallery images={plant.images} plantName={plant.japanese_name} />
-      ) : plant.image_url ? (
-        <div
-          style={{
-            borderRadius: "8px",
-            height: "50dvh",
-            marginBottom: "1rem",
-            overflow: "hidden",
-            background: "#2a3d2b",
-            position: "relative",
-          }}
-        >
-          <img
-            src={wikimediaThumb(plant.image_url ?? "", 800)}
-            alt={plant.japanese_name}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: "60px",
-              background: "linear-gradient(transparent, rgba(0,0,0,0.6))",
-            }}
-          />
-        </div>
-      ) : (
-        <div
-          style={{
-            borderRadius: "8px",
-            height: "50dvh",
-            marginBottom: "1rem",
-            background: "#2a3d2b",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "1.5rem",
-            color: "#a0d0a2",
-            fontWeight: "bold",
-          }}
-        >
-          🌿 {plant.japanese_name}
-        </div>
-      )}
+
+      <PlantPhotoGallery
+        images={
+          plant.image_url &&
+          !plant.images.some((img) => img.url === plant.image_url)
+            ? [{ url: plant.image_url, caption: "メイン" }, ...plant.images]
+            : plant.images
+        }
+        plantName={plant.japanese_name}
+      />
 
       {/* Header */}
       <div style={{ marginBottom: "1rem" }}>
