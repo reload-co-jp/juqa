@@ -657,7 +657,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "どんぐり", "高木", "街路樹"],
-    similar_plant_ids: [6, 7],
+    similar_plant_ids: [6, 7, 143],
   },
   {
     id: 21,
@@ -690,7 +690,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "どんぐり", "高木", "山"],
-    similar_plant_ids: [6],
+    similar_plant_ids: [6, 143],
   },
   {
     id: 22,
@@ -4684,5 +4684,665 @@ export const plants: Plant[] = [
     ],
     tags: ["常緑", "針葉", "松ぼっくり", "高木", "山"],
     similar_plant_ids: [8],
+  },
+  {
+    id: 144,
+    japanese_name: "ヤマモモ",
+    scientific_name: "Morella rubra",
+    family_id: 55,
+    genus: "ヤマモモ属",
+    description: [
+      "暖地の山野に自生する常緑高木。初夏に赤く熟す球状の実が特徴。",
+      "実は表面に小さな突起が密集したいちご状で、甘酸っぱく生食のほか果実酒・ジャムにも使われる。",
+      "街路樹・公園樹として西日本を中心に広く植栽されており、高知県・徳島県の県の木に指定されている。",
+    ],
+    identification: [
+      "常緑で細長い革質の葉、先端がやや鈍く縁はほぼ全縁",
+      "6〜7月頃に径1〜1.5cmの赤い球形の実が枝に直接つく",
+      "樹皮は灰白色でなめらか、老木になると縦に浅く裂ける",
+      "雌雄異株で、実がなるのは雌株のみ",
+    ],
+    distribution: "本州（関東以西）〜九州・沖縄の暖温帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Red_bayberry_tree_in_Sumpu_Castle_Park.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_bayberry_tree_in_Sumpu_Castle_Park.JPG",
+        caption: "全体（駿府城公園）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Morella_rubra_(fruits).jpg",
+        caption: "赤く熟した実",
+      },
+    ],
+    tags: ["夏開花", "常緑", "光沢", "高木", "街路樹", "公園", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 143,
+    japanese_name: "マテバシイ",
+    scientific_name: "Lithocarpus edulis",
+    family_id: 6,
+    genus: "マテバシイ属",
+    description: [
+      "暖地の海岸沿いに多い常緑高木。どんぐりが食べられる数少ない樹木のひとつ。",
+      "葉は厚くて光沢があり、ほぼ全縁。スダジイのどんぐりと異なり、アク（タンニン）が少なく炒るだけで食べられる。",
+      "公園や街路樹にも広く植えられており、都市でも見かける機会が多い。",
+    ],
+    identification: [
+      "常緑で厚みのある葉、表面に強い光沢、ほぼ全縁（鋸歯なし）",
+      "どんぐりは細長い楕円形（長さ2〜3cm）で帽子（殻斗）が浅い",
+      "樹皮は灰白色〜暗灰色で縦に不規則に裂ける",
+      "スダジイに似るが、葉の裏が金色にならず緑色のまま",
+    ],
+    distribution: "房総半島・伊豆半島以西〜九州・沖縄の海岸近く",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_and_fruits_of_Lithocarpus_edulis.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_and_fruits_of_Lithocarpus_edulis.jpg",
+        caption: "葉と実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lithocarpus_edulis_Nakai_leaf_acorn.jpg",
+        caption: "葉とどんぐり",
+      },
+    ],
+    tags: ["常緑", "光沢", "どんぐり", "高木", "街路樹", "山"],
+    similar_plant_ids: [20, 21],
+  },
+  {
+    id: 145,
+    japanese_name: "セイヨウツゲ",
+    scientific_name: "Buxus sempervirens",
+    family_id: 56,
+    genus: "ツゲ属",
+    description: [
+      "ヨーロッパ〜西アジア原産の常緑低木。刈り込みに強く、生垣・トピアリー・庭木として世界中で利用される。",
+      "小さな楕円形の葉が密に対生し、枝がよく分岐する。刈り込んでも萌芽力が高く、形を保ちやすい。",
+      "日本でも公園や住宅の生垣に広く植えられており、身近な常緑低木のひとつ。",
+    ],
+    identification: [
+      "常緑で小さな楕円形の葉（長さ1〜3cm）が密に対生し、葉に光沢がある",
+      "枝を折ると独特の強い香りがする",
+      "春に小さな黄緑色の花が葉腋に密集して咲く（花弁なし）",
+      "刈り込まれていない場合は樹高2〜5mほどになる",
+    ],
+    distribution: "ヨーロッパ〜西アジア原産。日本各地で植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens_foliage0.jpg",
+        caption: "葉のアップ",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "低木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 146,
+    japanese_name: "アベリア",
+    scientific_name: "Abelia × grandiflora",
+    family_id: 57,
+    genus: "アベリア属",
+    description: [
+      "中国原産の2種を交配して作られた園芸種の常緑低木。初夏から秋まで長期間、小さなラッパ状の白〜淡ピンク色の花を咲かせる。",
+      "萌芽力が強く刈り込みに耐えるため、道路沿いの生垣や公園の縁取りに非常に広く使われる。",
+      "花には甘い香りがあり、チョウやハチなど多くの昆虫を引き寄せる。",
+    ],
+    identification: [
+      "常緑で小さな卵形の葉（長さ2〜3cm）が対生し、縁に浅い鋸歯がある",
+      "初夏〜晩秋に長さ約2cmの筒状〜漏斗状の白〜淡ピンク色の花を多数つける",
+      "花後も萼片（がくへん）が赤みを帯びて残り、紅葉した葉と合わさって秋も観賞価値がある",
+      "道路の中央分離帯・歩道の植え込みに多用されており、都市で最もよく見る低木のひとつ",
+    ],
+    distribution: "中国原産の交配種。日本各地で広く植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_grandiflora.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_grandiflora.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_flowers.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "常緑", "ギザギザ", "ラッパ型", "低木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 147,
+    japanese_name: "イヌマキ",
+    scientific_name: "Podocarpus macrophyllus",
+    family_id: 58,
+    genus: "マキ属",
+    description: [
+      "関東以西の暖地に自生する常緑高木で、高さ20mに達することもある。",
+      "葉は長さ6〜12cmの線形〜披針形で表面に光沢があり、らせん状に枝に密着する。",
+      "雌株には秋に赤紫色の肉質花托と緑〜紫色の種子がつき、赤い部分は食べられるが種子は有毒。",
+    ],
+    identification: [
+      "幅広の線形葉が枝に密生し、表面は濃緑色で光沢が強い",
+      "裏面に明確な中肋（主脈）が1本あり、ほかの脈はほぼ見えない",
+      "秋に赤紫色の花托（「赤い玉」）と緑〜紫の種子がセットでつく独特の果実",
+      "樹皮は灰褐色で縦に浅く裂け、短冊状に剥がれる",
+    ],
+    distribution: "関東以西・四国・九州・沖縄の暖地。中国・台湾にも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus_(190208-1804).jpg",
+        caption: "葉と枝",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus_6zz.jpg",
+        caption: "赤い花托と種子",
+      },
+    ],
+    tags: ["常緑", "針葉", "光沢", "高木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 148,
+    japanese_name: "クロガネモチ",
+    scientific_name: "Ilex rotunda",
+    family_id: 59,
+    genus: "モチノキ属",
+    description: [
+      "関東以西の暖地に自生する常緑高木で、高さ10〜20mになる。",
+      "葉は長さ5〜9cmの卵形〜楕円形で全縁、表面は濃緑色で光沢がある。",
+      "秋〜冬に鮮やかな赤い小球形の実を枝いっぱいにつけ、正月飾りや縁起木として庭や街路に広く植えられる。",
+    ],
+    identification: [
+      "卵形〜楕円形の葉が互生し、全縁（ギザギザなし）で表面に強い光沢がある",
+      "葉柄・新芽・若い枝が紫褐色〜黒みを帯びる（「クロガネ＝鉄」の名の由来）",
+      "冬に直径5〜7mmの赤い球形の実が枝に鈴なりになる",
+      "雌雄異株で、実をつけるのは雌株のみ",
+    ],
+    distribution: "関東以西・四国・九州・沖縄の暖地。中国・台湾・朝鮮半島南部にも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_kz02.jpg",
+        caption: "葉と枝",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_fruits_in_Banna_Park,_Ishigaki,_Okinawa.jpg",
+        caption: "冬の赤い実",
+      },
+    ],
+    tags: ["常緑", "光沢", "厚い葉", "高木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 149,
+    japanese_name: "モミ",
+    scientific_name: "Abies firma",
+    family_id: 8,
+    genus: "モミ属",
+    description: [
+      "本州・四国・九州に自生する常緑針葉樹で、高さ40mに達する大木になる。",
+      "葉は長さ2〜3cmの扁平な線形で、先端が2裂して尖らず、裏面に2本の白い気孔帯がある。",
+      "クリスマスツリーのモデルとしても知られ、神社の御神木や社叢に大木が残ることが多い。",
+    ],
+    identification: [
+      "扁平な線形の葉が枝の左右に広がって2列に並び、先端が2つに割れてやや鈍頭になる",
+      "葉の裏面に2本の白っぽい気孔帯（白線）がはっきりと見える",
+      "球果（松ぼっくり）は長さ8〜15cmの円柱形で直立してつき、熟すと鱗片がばらけて芯だけ残る",
+      "樹皮は暗灰色で老木になると不規則に割れる",
+    ],
+    distribution: "本州（宮城県以南）・四国・九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma4.jpg",
+        caption: "葉のようす",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma2.jpg",
+        caption: "球果",
+      },
+    ],
+    tags: ["常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 150,
+    japanese_name: "キンモクセイ",
+    scientific_name: "Osmanthus fragrans var. aurantiacus",
+    family_id: 32,
+    genus: "モクセイ属",
+    description: [
+      "中国原産の常緑低木〜小高木で、日本では庭木・街路樹として全国に広く植えられる。",
+      "秋（9〜10月）に直径5mmほどのオレンジ色の小花を枝いっぱいに密集して咲かせ、甘く強い芳香を遠くまで漂わせる。",
+      "日本に流通するキンモクセイはほぼすべて雄株のクローンで、実をつけないことが多い。",
+    ],
+    identification: [
+      "葉は長さ7〜12cmの楕円形〜長楕円形で対生し、縁に浅い鋸歯があるか全縁に近い",
+      "秋に葉腋から束状に咲くオレンジ色の4弁小花と、遠くまで届く甘い芳香が最大の特徴",
+      "白い花を咲かせるギンモクセイと同種の変種で、花色でほぼ判別できる",
+      "葉の表面は濃緑色で光沢があり、裏面は淡緑色",
+    ],
+    distribution: "中国南部原産。日本全国で植栽（関東以西で野外でも越冬）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var._aurantiacus.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var_aurantiacus_f_thunbergii1.jpg",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var._aurantiacus_in_Auckland_Botanic_Gardens_01.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["秋開花", "常緑", "光沢", "小花集合", "低木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 151,
+    japanese_name: "アオキ",
+    scientific_name: "Aucuba japonica",
+    family_id: 60,
+    genus: "アオキ属",
+    description: [
+      "日本・朝鮮半島原産の常緑低木で、高さ1〜3m。林内の日陰でも旺盛に育つ耐陰性の強い庭木。",
+      "葉は長さ8〜20cmの楕円形〜広楕円形で対生し、表面は濃緑色で強い光沢があり、縁に粗い鋸歯がある。",
+      "雌雄異株で、雌株は冬〜春にかけて光沢のある鮮やかな赤い楕円形の実をつけ、観賞価値が高い。",
+    ],
+    identification: [
+      "大きな楕円形の葉が対生し、表面は濃緑色で光沢が非常に強く、縁に粗いギザギザがある",
+      "葉に黄白色の斑が入る「フクリンアオキ」などの斑入り品種が庭木として広く流通する",
+      "冬に枝先に直径1〜1.5cmの楕円形の赤い実が鈴なりになる（雌株のみ）",
+      "茎・葉柄が緑色で木質化が遅く、全体的に青々とした印象（「アオキ＝青木」の由来）",
+    ],
+    distribution: "北海道南部〜九州・沖縄。朝鮮半島・中国にも分布。日本固有変種が多い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aucuba_japonica_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aucuba_japonica_kz05.jpg",
+        caption: "葉と枝",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bessen_van_Aucuba_japonica._Locatie,_Tuinreservaat_Jonker_vallei_01.jpg",
+        caption: "赤い実",
+      },
+    ],
+    tags: ["常緑", "光沢", "ギザギザ", "厚い葉", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 152,
+    japanese_name: "オオムラサキ",
+    scientific_name: "Rhododendron scabrum 'Oomurasaki'",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "日本で最も広く植えられるツツジの園芸品種で、公園・街路・庭の生垣として全国に見られる。",
+      "春（4〜5月）に直径5〜7cmの大きな紫紅色の花を株いっぱいに咲かせ、花弁に濃い斑点が入る。",
+      "半常緑〜常緑の低木で、刈り込みに強く丈夫なため、公共緑地の植栽に最もよく使われる品種。",
+    ],
+    identification: [
+      "花は直径5〜7cmの大輪で鮮やかな紫紅色（赤紫色）、花弁上部に濃い斑点が入る",
+      "葉は長さ2〜4cmの楕円形で、表面に硬い毛がありざらつく感触がある",
+      "開花期は4月下旬〜5月で、ヒラドツツジと並んで街路植栽に多い",
+      "花後も葉が残る半常緑性で、冬も葉が落ちにくい",
+    ],
+    distribution: "日本全国で広く植栽（原種は奄美〜琉球の山地に自生）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_'Oomurasaki'_(1)_Meise_Nat._Plantentuin.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_01.jpg",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_05.jpg",
+        caption: "葉",
+      },
+    ],
+    tags: ["春開花", "常緑", "低木", "街路樹", "公園"],
+    similar_plant_ids: [153],
+  },
+  {
+    id: 153,
+    japanese_name: "サツキ",
+    scientific_name: "Rhododendron indicum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "九州・四国・本州中南部の渓谷の岩場に自生する常緑低木で、江戸時代から盆栽・庭木として栽培されてきた。",
+      "オオムラサキより約1ヶ月遅い初夏（5月下旬〜6月）に開花するのが最大の特徴で、花がほぼ同時に咲き揃う。",
+      "葉はオオムラサキより小さく細長く、硬い毛が多く、縁に浅い鋸歯がある。",
+    ],
+    identification: [
+      "花期は5月下旬〜6月（オオムラサキより1ヶ月遅く、梅雨入り前後に咲く）",
+      "花は直径3〜5cmでオオムラサキより小輪、色は赤〜濃桃色で花弁に斑点が入る",
+      "葉は長さ1.5〜3cmと小さく細長い楕円形で、葉の縁と表面に硬い赤褐色の毛が多い",
+      "盆栽に多用され、岩石園・石組みの植栽でも好まれる小型の低木",
+    ],
+    distribution: "本州（静岡・愛知以西）・四国・九州の渓谷の岩場。栽培品は全国に分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum1.jpg",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum_leaf.jpg",
+        caption: "葉",
+      },
+    ],
+    tags: ["夏開花", "常緑", "低木", "公園"],
+    similar_plant_ids: [152],
+  },
+  {
+    id: 154,
+    japanese_name: "マンリョウ",
+    scientific_name: "Ardisia crenata",
+    family_id: 47,
+    genus: "ヤブコウジ属",
+    description: [
+      "関東以西の暖地の林床に自生する常緑低木で、高さ30〜100cm程度。",
+      "冬に枝先の葉の下に直径6〜8mmの鮮やかな赤い球形の実を多数つけ、正月の縁起木として古くから親しまれる。",
+      "名前の「万両」は実の多さと豊かさを表し、センリョウ（千両）・ヒャクリョウ（百両）より格上とされる。",
+    ],
+    identification: [
+      "葉は長さ7〜15cmの楕円形で互生し、縁に波状のギザギザ（細鋸歯）があり表面に光沢がある",
+      "実は葉の下（枝先の葉腋より下）にぶら下がるように多数つく（センリョウは葉の上につく）",
+      "実は直径6〜8mmの球形で冬に赤く熟し、翌春まで残る",
+      "樹高はセンリョウより高く30〜100cm、茎は直立してあまり分枝しない",
+    ],
+    distribution: "関東以西・四国・九州・沖縄の林床。中国・東南アジア・インドにも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_HabitusFlowersFruits_BotGardBln0906.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_20101209_a.jpg",
+        caption: "赤い実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_20101209_f.jpg",
+        caption: "葉と実",
+      },
+    ],
+    tags: ["夏開花", "常緑", "光沢", "ギザギザ", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 155,
+    japanese_name: "エゴノキ",
+    scientific_name: "Styrax japonica",
+    family_id: 61,
+    genus: "エゴノキ属",
+    description: [
+      "北海道〜九州の山野に広く自生する落葉小高木で、高さ5〜10m。",
+      "初夏（5〜6月）に白い5弁の釣り鐘形の花を枝いっぱいに垂れ下げて咲かせ、清楚な美しさで人気の庭木。",
+      "果実は径1cmほどの球形の核果で、果肉にエゴサポニンという有毒物質を含み、かつて魚を麻痺させる「毒流し漁」に使われた。",
+    ],
+    identification: [
+      "初夏に白い5弁の花が枝から下向きに垂れ下がって多数咲き、芳香がある",
+      "葉は長さ4〜9cmの楕円形〜倒卵形で互生し、縁に細かい鋸歯がある",
+      "秋に灰白色の球形の果実がぶら下がり、先端が尖ったまま残る",
+      "樹皮は灰褐色で縦に浅い縦溝があり滑らか",
+    ],
+    distribution: "北海道〜九州・沖縄の山野。中国・朝鮮半島・フィリピンにも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_10.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_02.jpg",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_01.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "落葉", "花弁5枚", "高木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 156,
+    japanese_name: "エノキ",
+    scientific_name: "Celtis sinensis",
+    family_id: 62,
+    genus: "エノキ属",
+    description: [
+      "北海道〜九州の山野・社寺・農村の屋敷林などに広く生える落葉高木で、高さ20〜25mになる。",
+      "葉は表面がザラザラしており、基部が左右非対称の卵形〜広卵形で、先端側の半分に鋸歯がある。",
+      "秋に直径5〜7mmの赤橙色〜黒紫色に熟す球形の核果をつけ、甘く食べられる。オオムラサキ蝶の食草として有名。",
+    ],
+    identification: [
+      "葉は卵形で基部が左右非対称、表面がザラザラして硬い感触がある",
+      "葉の縁の鋸歯は葉の先端寄り半分のみにあり、基部近くは全縁",
+      "秋に橙赤色〜黒紫色の小さな球形の実をつける",
+      "大木になり、根元近くに板根状の凸凹が発達することがある",
+    ],
+    distribution: "北海道〜九州・沖縄。中国・朝鮮半島・台湾にも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis_at_Mizunomori_Water_Botanical_Garden.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis_4zz.jpg",
+        caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis=Chinese_Hackberry.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["落葉", "ギザギザ", "高木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 157,
+    japanese_name: "ナツツバキ",
+    scientific_name: "Stewartia pseudocamellia",
+    family_id: 14,
+    genus: "ナツツバキ属",
+    description: [
+      "本州・四国・九州の山地に自生する落葉高木で、高さ10〜20m。別名「シャラノキ」。",
+      "夏（6〜7月）にツバキに似た直径5〜6cmの白い5弁花を1日で散らせる一日花で、花弁の縁がやや波打つ。",
+      "樹皮がオレンジ色を帯びた灰褐色のまだら模様に薄く剥がれる美しい幹が特徴で、庭木としても人気。",
+    ],
+    identification: [
+      "夏に白い5弁のツバキ似の花（直径5〜6cm）を1日花として咲かせる",
+      "樹皮がオレンジ灰色のまだら模様に薄く剥がれ、美しい幹肌が目立つ",
+      "葉は長さ5〜9cmの楕円形で互生し、縁に細鋸歯、秋に赤く紅葉する",
+      "果実は木質の卵形の蒴果で5裂して種子を出す",
+    ],
+    distribution: "本州（福島以南）・四国・九州の山地。中国・朝鮮半島にも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Stewartia_pseudocamellia_in_Hackfalls_Arboretum_(4).jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Stewartia_Stewartia_pseudocamellia_Leaves_Vertical_2000px.jpg",
+        caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Stewartia_Stewartia_pseudocamellia_Tree_2000px.jpg",
+        caption: "全体と樹皮",
+      },
+    ],
+    tags: ["夏開花", "落葉", "花弁5枚", "高木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 158,
+    japanese_name: "サルスベリ",
+    scientific_name: "Lagerstroemia indica",
+    family_id: 63,
+    genus: "サルスベリ属",
+    description: [
+      "中国南部原産の落葉小高木で、高さ5〜10m。江戸時代に渡来し、夏の公園・街路に広く植えられる。",
+      "夏〜秋（7〜10月）の長期間にわたって、縮れた花弁をもつ赤・ピンク・白・紫の花を繰り返し咲かせ「百日紅」とも呼ばれる。",
+      "樹皮が非常に滑らかでサルも滑るという意味が名前の由来で、灰褐色の樹皮が薄く剥がれて白っぽい滑らかな幹肌が現れる。",
+    ],
+    identification: [
+      "夏〜秋の長期間、縮れた（ちりめん状）花弁6枚の花を多数咲かせる",
+      "樹皮が非常に滑らかで灰白色〜淡褐色のまだら状、老木でも幹がつるつる",
+      "葉は長さ3〜7cmの楕円形で対生〜互生、全縁で表面に光沢がある",
+      "秋に木質の球形の蒴果をつけ、果皮が6裂して翼のある種子を飛ばす",
+    ],
+    distribution: "中国南部原産。日本全国で広く植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerstroemia_indica_MHNT_Jardin_des_Plantes_de_Toulouse.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerstroemia_indica_MHNT.BOT.2010.13.6.jpg",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crepe_Myrtle_--_Lagerstroemia.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "落葉", "小花集合", "高木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 159,
+    japanese_name: "マユミ",
+    scientific_name: "Euonymus hamiltonianus",
+    family_id: 64,
+    genus: "ニシキギ属",
+    description: [
+      "北海道〜九州の山地に広く自生する落葉低木〜小高木で、高さ2〜8m。",
+      "秋に4裂した淡紅色〜赤色の果実が開いて、橙赤色の仮種皮に包まれた白い種子が現れる姿が美しく、庭木として人気。",
+      "弓矢の弓の材料に使われたことが名前の由来で、木材は硬く緻密で細工物・将棋の駒にも利用される。",
+    ],
+    identification: [
+      "秋に4裂した淡紅色の果実が開き、橙赤色の仮種皮をもつ白い種子が現れる独特の実",
+      "葉は長さ5〜15cmの楕円形で対生し、縁に細かい鋸歯がある",
+      "春〜初夏に直径8mmほどの黄緑色の小花を咲かせる（目立たない）",
+      "秋は葉が黄〜橙色に紅葉し、実との組み合わせが美しい",
+    ],
+    distribution: "北海道〜九州・沖縄の山地林縁。中国・朝鮮半島・ヒマラヤにも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_var_hians_kz05.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_var_hians_kz04.jpg",
+        caption: "果実のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_Japan.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["落葉", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 160,
+    japanese_name: "リョウブ",
+    scientific_name: "Clethra barbinervis",
+    family_id: 65,
+    genus: "リョウブ属",
+    description: [
+      "北海道〜九州の山地に広く自生する落葉小高木で、高さ5〜10m。",
+      "夏（7〜8月）に枝先に長さ10〜20cmの白い穂状花序を直立させ、甘い香りのする小花を多数咲かせる。",
+      "樹皮が茶褐色に薄く剥がれてまだら模様になり、幹肌が美しい。かつて若葉を食用（飢饉食）にしたことから「食いしん坊の木」とも。",
+    ],
+    identification: [
+      "夏に枝先に長い穂状花序を立て、白い小花を密に咲かせ甘い香りがある",
+      "葉は長さ6〜15cmの倒卵形〜楕円形で互生し、縁に鋸歯があり秋に黄葉する",
+      "樹皮が薄片状に剥がれて赤褐色・灰色のまだら模様になる",
+      "秋に小さな球形の蒴果が穂状に並ぶ",
+    ],
+    distribution: "北海道〜九州・沖縄の山地。中国・朝鮮半島・日本固有変種が多い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz06.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz07.jpg",
+        caption: "花の穂",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz05.jpg",
+        caption: "葉",
+      },
+    ],
+    tags: ["夏開花", "落葉", "小花集合", "高木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 161,
+    japanese_name: "ノリウツギ",
+    scientific_name: "Hydrangea paniculata",
+    family_id: 15,
+    genus: "アジサイ属",
+    description: [
+      "北海道〜九州の山地〜丘陵に広く自生する落葉低木〜小高木で、高さ2〜5m。",
+      "夏〜秋（7〜9月）に枝先に大きな円錐形の花序をつけ、白い装飾花と小さな両性花が混在して咲く。",
+      "樹皮の内皮に粘液があり、和紙の紙すき工程で「糊（ノリ）」として使われたことが名前の由来。",
+    ],
+    identification: [
+      "花序が円錐形（パニクル型）で、ガクアジサイの丸い花序と明確に区別できる",
+      "花は白色で、開花が進むにつれ淡ピンク色に変わる装飾花が目立つ",
+      "葉は長さ5〜12cmの卵形で対生〜3輪生し、縁に細かい鋸歯がある",
+      "枝は中実（髄が詰まっている）で、ウツギ類の中空とは異なる",
+    ],
+    distribution: "北海道〜九州の山地・丘陵。中国・朝鮮半島・サハリンにも分布",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_04.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_10.JPG",
+        caption: "花序のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_07-02-2026._(actm.).jpg",
+        caption: "果実期",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "落葉", "小花集合", "低木", "山", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 162,
+    japanese_name: "ムクゲ",
+    scientific_name: "Hibiscus syriacus",
+    family_id: 66,
+    genus: "フヨウ属",
+    description: [
+      "中国・インド原産の落葉低木〜小高木で、高さ2〜4m。日本には平安時代に渡来し、庭木・生垣として広く植えられる。",
+      "夏〜秋（7〜10月）の長期間にわたって直径5〜10cmの一日花を次々と咲かせ、色は白・ピンク・紫・赤など多彩。",
+      "韓国の国花で「無窮花（ムグンファ）」と呼ばれ、朝鮮半島では特に広く親しまれる。",
+    ],
+    identification: [
+      "花は直径5〜10cmのラッパ形〜平開き、花弁5枚で中心が赤紫色に染まる（一日花）",
+      "葉は長さ4〜8cmの菱状卵形で3裂し、縁に粗い鋸歯がある",
+      "雄しべが合着して筒状になり（フヨウ属特有の雄しべ筒）、花柱が突き出る",
+      "果実は楕円形の蒴果で、秋に5裂して綿毛のある種子を散布する",
+    ],
+    distribution: "中国・インド・シリア原産。日本全国で広く植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus-syriacus.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus_syriacus_capsule_hoarfrost_-20200101-RM-102111.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Migrant_hawker_(Aeshna_mixta)_male_on_rose_mallow_(Hibiscus_syriacus).jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "落葉", "ラッパ型", "低木", "街路樹", "公園"],
+    similar_plant_ids: [],
   },
 ]
