@@ -5345,4 +5345,198 @@ export const plants: Plant[] = [
     tags: ["夏開花", "秋開花", "落葉", "ラッパ型", "低木", "街路樹", "公園"],
     similar_plant_ids: [],
   },
+  {
+    id: 163,
+    japanese_name: "エンレイソウ",
+    scientific_name: "Trillium smallii",
+    family_id: 26,
+    genus: "エンレイソウ属",
+    description: [
+      "春に落葉広葉樹林の林床に咲く多年草。3枚の大きな葉と3枚の暗紫褐色の花弁が印象的。",
+      "名前は「延齢草」と書き、薬用に用いられたことに由来する。",
+      "スプリング・エフェメラルの一種で、夏には地上部が枯れる。",
+    ],
+    identification: [
+      "大きな3枚の葉が輪生し、中央から花茎が出る",
+      "花弁は3枚で暗紫褐色（稀に緑色）",
+      "萼片も3枚で緑色、花弁と交互につく",
+      "落葉広葉樹林の林床に生育、4〜6月開花",
+    ],
+    distribution: "北海道〜九州の落葉広葉樹林の林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii.JPG",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii_1.JPG",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 164,
+    japanese_name: "サンカヨウ",
+    scientific_name: "Diphylleia grayi",
+    family_id: 42,
+    genus: "サンカヨウ属",
+    description: [
+      "初夏に亜高山帯の湿った林縁や沢沿いに咲く多年草。白い6弁花を数輪咲かせる。",
+      "雨に濡れると花弁が透明になるという幻想的な性質で知られる。",
+      "果実は藍色の液果で秋に熟し、葉は大きな掌状で独特の存在感がある。",
+    ],
+    identification: [
+      "大きな掌状の葉を2枚つけ、その間から花茎が出る",
+      "白い6弁花で、雨に濡れると透き通るように透明になる",
+      "果実は藍色〜黒紫色の液果",
+      "亜高山帯の湿った林縁・沢沿いに生育、5〜7月開花",
+    ],
+    distribution: "北海道・本州（中部以北）の亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 165,
+    japanese_name: "ヤマエンゴサク",
+    scientific_name: "Corydalis lineariloba",
+    family_id: 18,
+    genus: "キケマン属",
+    description: [
+      "春に落葉広葉樹林の林床に咲く多年草。距（きょ）のある紫〜紅紫色の筒状花が特徴。",
+      "スプリング・エフェメラルの一種で、葉は羽状に深く裂ける。",
+      "ニリンソウやカタクリと同じ時期に林床に咲き、群生することが多い。",
+    ],
+    identification: [
+      "紫〜紅紫色の筒状花で先端が唇形、後方に距（とがった突起）がある",
+      "葉は羽状または掌状に深く切れ込む",
+      "林床に群生し、3〜5月に開花",
+      "夏には地上部が消えるスプリングエフェメラル",
+    ],
+    distribution: "北海道〜九州の山地林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_1.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_3.JPG",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 166,
+    japanese_name: "シラネアオイ",
+    scientific_name: "Glaucidium palmatum",
+    family_id: 25,
+    genus: "シラネアオイ属",
+    description: [
+      "日本固有の1属1種の多年草。亜高山帯〜高山帯の林縁に咲き、「高山植物の女王」とも呼ばれる。",
+      "淡紫〜紫色の大きな花が美しく、花弁に見えるのは実は萼片（4枚）。",
+      "葉は手のひら状に深く裂けるアオイ（葵）に似た形で、白根山（日光）で初めて記録されたことが名の由来。",
+    ],
+    identification: [
+      "淡紫〜紫色の大きな花（直径5〜8cm）で萼片が4枚、花弁はない",
+      "葉は掌状に7〜11裂し、縁に不規則な鋸歯がある",
+      "亜高山帯〜高山帯の林縁・草地に生育",
+      "5〜7月開花",
+    ],
+    distribution: "北海道・本州（中部以北）の亜高山帯〜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum_(flower).JPG",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 167,
+    japanese_name: "イカリソウ",
+    scientific_name: "Epimedium grandiflorum",
+    family_id: 42,
+    genus: "イカリソウ属",
+    description: [
+      "春に山地の林縁や林床に咲く多年草。花の形が船の錨（いかり）に似ることが名前の由来。",
+      "距（きょ）の長い独特の形の花で、白・淡紫・紫・黄色など色彩が豊富。",
+      "葉は複葉で、ハート形の小葉に縁のトゲが特徴的。強壮薬として利用されてきた歴史がある。",
+    ],
+    identification: [
+      "花弁4枚＋萼片8枚で、外側に長い距が4本突き出す（錨形）",
+      "葉は2〜3回3出複葉、小葉はハート形で縁に刺状の鋸歯",
+      "春（4〜5月）に林床・林縁で開花",
+      "花色は白・淡紫・紫・黄など変異が多い",
+    ],
+    distribution: "北海道〜九州の山地林縁・林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_(flower).JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_(flower).JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_01.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 168,
+    japanese_name: "チゴユリ",
+    scientific_name: "Disporum smilacinum",
+    family_id: 27,
+    genus: "チゴユリ属",
+    description: [
+      "春に山地の林床に咲く多年草。小さなユリに似た白い花が可憐で、「稚児のように小さいユリ」が名の由来。",
+      "茎は上部で分岐し、先端に1〜2輪の白い筒状の花をつける。",
+      "秋に黒い液果をつける。",
+    ],
+    identification: [
+      "白い筒状の花が茎の先端に1〜2輪、やや下向きに咲く（長さ1〜1.5cm）",
+      "葉は広卵形〜楕円形で互生し、平行脈が目立つ",
+      "茎の上部が分岐し先端に花をつける",
+      "山地の落葉樹林床に生育、4〜6月開花",
+    ],
+    distribution: "北海道〜九州の山地林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum.JPG",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum_(flower).JPG",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [],
+  },
 ]

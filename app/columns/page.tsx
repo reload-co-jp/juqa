@@ -39,6 +39,14 @@ const jsonLd = {
 
 const columns = [
   {
+    href: "/columns/spring-mountain-flowers",
+    emoji: "🌸",
+    title: "春の登山で見られる花特集",
+    description:
+      "カタクリ・ニリンソウ・ショウジョウバカマなど、春の山でしか出会えないスプリングエフェメラルを中心に、標高別の見頃カレンダーとともに解説します。",
+    tags: ["春の花", "登山", "山野草"],
+  },
+  {
     href: "/columns/conifer",
     emoji: "🌲",
     title: "針葉樹林の簡単な見分け方",
