@@ -30,7 +30,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園", "街路樹"],
-    similar_plant_ids: [16, 17],
+    similar_plant_ids: [16, 17, 169, 170],
   },
   {
     id: 2,
@@ -525,7 +525,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
-    similar_plant_ids: [1, 17],
+    similar_plant_ids: [1, 17, 169, 173, 175],
   },
   {
     id: 17,
@@ -558,7 +558,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
-    similar_plant_ids: [1, 16],
+    similar_plant_ids: [1, 16, 169, 176],
   },
   {
     id: 18,
@@ -591,7 +591,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "低木", "山"],
-    similar_plant_ids: [],
+    similar_plant_ids: [172],
   },
   {
     id: 19,
@@ -2439,7 +2439,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山", "街路樹"],
-    similar_plant_ids: [],
+    similar_plant_ids: [178, 183],
   },
   {
     id: 75,
@@ -3462,7 +3462,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "花弁5枚", "小花集合", "低木", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [182],
   },
   {
     id: 105,
@@ -3759,7 +3759,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "ギザギザ", "低木", "山", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [195],
   },
   {
     id: 114,
@@ -4221,7 +4221,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "小花集合", "ギザギザ", "低木", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [191, 192, 193],
   },
   {
     id: 128,
@@ -5507,6 +5507,105 @@ export const plants: Plant[] = [
     similar_plant_ids: [],
   },
   {
+    id: 169,
+    japanese_name: "モモ",
+    scientific_name: "Prunus persica",
+    family_id: 1,
+    genus: "スモモ属",
+    description: [
+      "春に葉より先に淡いピンク〜濃いピンクの花を咲かせる落葉小高木。果樹として広く栽培される。",
+      "葉は細長い披針形でギザギザ（鋸歯）があり、葉柄に蜜腺をもつ。",
+      "夏に大きな核果（もも）を実らせる。果皮に産毛があり、甘い香りをもつ。",
+    ],
+    identification: [
+      "花は葉より先に咲き、淡〜濃いピンクの5弁花（3〜4月）",
+      "葉は細長い披針形で鋸歯あり、葉柄に小さな蜜腺がある",
+      "果実は大きな核果で表面に産毛がある",
+      "樹皮に横縞の皮目がある（サクラ類と共通）",
+    ],
+    distribution: "全国（果樹として栽培）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/PrunusPersica4.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/PrunusPersica4.jpg",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Autumn_Red_peaches.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [1, 16, 17, 173, 174, 175],
+  },
+  {
+    id: 170,
+    japanese_name: "リンゴ",
+    scientific_name: "Malus domestica",
+    family_id: 1,
+    genus: "リンゴ属",
+    description: [
+      "春に白〜淡いピンクの花を咲かせる落葉小高木。秋に赤や黄色の大きな果実をつける果樹。",
+      "葉は卵形〜楕円形でギザギザ（鋸歯）があり、表面に細かな毛がある。",
+      "果実はりんごと呼ばれる偽果（花托が発達したもの）で、梨状果の典型例。",
+    ],
+    identification: [
+      "花は白〜淡いピンクの5弁花が散房花序に集まる（4〜5月）",
+      "葉は卵形〜楕円形で鋸歯あり、裏面に白い毛がある",
+      "秋に赤〜黄色の大きな梨状果（直径5〜10cm）をつける",
+      "果頂部にガクが残る（ナシと同様の特徴）",
+    ],
+    distribution: "全国（果樹として栽培）、特に青森・長野など冷涼地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tree_with_red_apples_in_Barkedal_4.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tree_with_red_apples_in_Barkedal_4.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Apple-tree_blossoms_2017_G3.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [1, 169, 180, 181],
+  },
+  {
+    id: 171,
+    japanese_name: "ビワ",
+    scientific_name: "Eriobotrya japonica",
+    family_id: 1,
+    genus: "ビワ属",
+    description: [
+      "常緑の小高木で、秋〜冬に白い小花を咲かせ、初夏に橙黄色の果実を実らせる。",
+      "葉は大きくて厚く、裏面に褐色の綿毛が密生する。葉に鋸歯がある。",
+      "果実は食用になるほか、葉は古くから生薬（枇杷葉）として利用されてきた。",
+    ],
+    identification: [
+      "大きな革質の葉（長さ15〜30cm）で裏面に褐色の毛が密生する",
+      "冬（11〜2月）に白い小花が集まった円錐花序を出す（バラ科では珍しい冬開花）",
+      "初夏（5〜6月）に橙黄色の楕円形の核果をつける",
+      "常緑で葉が厚く光沢がある",
+    ],
+    distribution: "本州〜沖縄（暖地に植栽）、原産は中国南部",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica1.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica_kz07.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["冬開花", "常緑", "ギザギザ", "厚い葉", "光沢", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
     id: 168,
     japanese_name: "チゴユリ",
     scientific_name: "Disporum smilacinum",
@@ -5538,5 +5637,797 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "山"],
     similar_plant_ids: [],
+  },
+  {
+    id: 172,
+    japanese_name: "ハマナス",
+    scientific_name: "Rosa rugosa",
+    family_id: 1,
+    genus: "バラ属",
+    description: [
+      "海岸の砂地に生える落葉低木。初夏に濃いピンクの大きな花を咲かせ、甘い香りを放つ。",
+      "葉は羽状複葉で小葉は7〜9枚、表面に皺がありやや光沢がある。茎に鋭いとげが密生する。",
+      "秋に赤い果実（ローズヒップ）をつけ、ビタミンCが豊富で食用になる。",
+    ],
+    identification: [
+      "濃いピンクの大輪5弁花（直径6〜8cm）が5〜8月に咲く",
+      "羽状複葉で小葉に皺がある（バラ属の中でも特徴的）",
+      "茎全体に鋭いとげと軟毛が密生する",
+      "秋に直径2〜3cmの赤い球形果実（ローズヒップ）をつける",
+    ],
+    distribution: "北海道〜本州北部の海岸砂地、東北・北海道に多い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_RF.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_RF.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_2010.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "落葉", "ギザギザ", "花弁5枚", "低木", "山"],
+    similar_plant_ids: [18],
+  },
+  {
+    id: 173,
+    japanese_name: "アンズ",
+    scientific_name: "Prunus armeniaca",
+    family_id: 1,
+    genus: "スモモ属",
+    description: [
+      "早春に葉より先に淡いピンク〜白の花を咲かせる落葉小高木。ウメとモモの中間的な性質をもつ。",
+      "葉は広卵形でやや円みがあり、鋸歯がある。葉柄に蜜腺をもつ。",
+      "夏に橙黄色の核果をつける。甘酸っぱい香りがあり、生食・ジャム・乾燥果（あんず）に利用される。",
+    ],
+    identification: [
+      "花は葉より先に淡いピンク〜白の5弁花が咲く（3〜4月、ウメより少し後）",
+      "葉は広卵形〜円形で先端が急に尖り、鋸歯がある",
+      "果実は橙黄色の核果（直径3〜5cm）で表面に産毛がほとんどない",
+      "樹皮は灰褐色で縦に裂ける",
+    ],
+    distribution: "全国（果樹として栽培）、特に長野・青森など冷涼地、原産は中央アジア",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Blossoming_branch_of_the_apricot_tree.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Blossoming_branch_of_the_apricot_tree.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Apricots.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [16, 169, 175],
+  },
+  {
+    id: 174,
+    japanese_name: "ハナモモ",
+    scientific_name: "Prunus persica f. duplex",
+    family_id: 1,
+    genus: "スモモ属",
+    description: [
+      "モモの園芸品種で、花を観賞するために改良された落葉小高木。ひな祭りの花として親しまれる。",
+      "春に八重咲きや菊咲きの豪華な花を咲かせる。花色は白・ピンク・紅・絞り咲きなど多様。",
+      "果実をほとんどつけないか、つけても小さい品種が多い。",
+    ],
+    identification: [
+      "八重咲きまたは菊咲きの豪華な花（3〜4月）",
+      "花色が白・ピンク・紅・絞りと多彩で、同一株に複数色が出る品種もある",
+      "葉はモモと同様、細長い披針形で鋸歯あり",
+      "果実がつかないか非常に小さい（モモとの区別点）",
+    ],
+    distribution: "全国（観賞用に植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-110222-1643-Prunus_persica_var_persica-Red_Baron_large_double_reddish_pink_flower-Olinda-Maui_(24445996744).jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-110222-1643-Prunus_persica_var_persica-Red_Baron_large_double_reddish_pink_flower-Olinda-Maui_(24445996744).jpg",
+        caption: "花（八重咲き）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_persica_Bl%C3%BCten_20220327_01.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [169, 1, 16],
+  },
+  {
+    id: 175,
+    japanese_name: "スモモ",
+    scientific_name: "Prunus salicina",
+    family_id: 1,
+    genus: "スモモ属",
+    description: [
+      "早春に白い小さな花を咲かせる落葉小高木。夏に赤〜黄色の核果をつける果樹。",
+      "葉は倒卵形〜楕円形で鋸歯がある。葉の表面は光沢があり、裏面の主脈に毛がある。",
+      "果実は「すもも」「プラム」として知られ、甘酸っぱく生食・ジャムに利用される。",
+    ],
+    identification: [
+      "白い小さな5弁花が葉より先または同時に咲く（3〜4月）",
+      "葉は倒卵形〜楕円形で表面に光沢がある",
+      "夏に赤〜黄色の核果（直径3〜5cm）をつける。果実の表面に白い粉（果粉）がある",
+      "樹皮は暗灰褐色で縦に裂け、皮目がある",
+    ],
+    distribution: "全国（果樹として栽培）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_salicina.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_salicina.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/SantaRosaPlumBlossoms.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "光沢", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [16, 169, 173],
+  },
+  {
+    id: 176,
+    japanese_name: "カンヒザクラ",
+    scientific_name: "Cerasus campanulata",
+    family_id: 1,
+    genus: "サクラ属",
+    description: [
+      "沖縄・九州南部に自生するサクラで、早春（1〜2月）に濃いピンク〜紅色の花を咲かせる。",
+      "花は下向きに垂れ下がり、花弁が開ききらず鐘形に咲く。花色が濃く鮮やか。",
+      "本土の多くの早咲きサクラ品種（ヒカンザクラ・カワヅザクラなど）の親として重要。",
+    ],
+    identification: [
+      "濃いピンク〜紅色の花が下向きに垂れ下がって咲く（鐘形）",
+      "花弁が完全に開かず、萼筒が長く目立つ（他のサクラとの最大の違い）",
+      "1〜3月に開花（サクラの中で最も早い部類）",
+      "葉は楕円形〜卵形で鋸歯あり",
+    ],
+    distribution: "沖縄・九州南部（自生）、暖地に植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hikanzakura.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hikanzakura.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunusceret2.jpg",
+        caption: "花（接写）",
+      },
+    ],
+    tags: ["冬開花", "春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [1, 17],
+  },
+  {
+    id: 177,
+    japanese_name: "リンボク",
+    scientific_name: "Prunus zippeliana",
+    family_id: 1,
+    genus: "スモモ属",
+    description: [
+      "常緑の高木で、秋に白い小花を穂状に咲かせるバラ科の珍しい常緑樹。",
+      "葉は大きくて革質、表面に光沢があり、鋸歯がある。バラ科らしくないほど大きな葉が特徴。",
+      "西日本の暖地の山地に自生し、庭木・公園木としても利用される。",
+    ],
+    identification: [
+      "大きな革質の常緑葉（長さ10〜20cm）で表面に光沢がある",
+      "秋（10〜11月）に白い小花が総状花序に集まって咲く",
+      "果実は楕円形の核果で、秋〜冬に赤から黒紫色に熟す",
+      "常緑で大きな葉をもつバラ科の高木（特異的）",
+    ],
+    distribution: "本州（千葉以西）〜沖縄の暖地山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana2.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana2.jpg",
+        caption: "葉と果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana1.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["秋開花", "常緑", "ギザギザ", "厚い葉", "光沢", "高木", "山"],
+    similar_plant_ids: [171],
+  },
+  {
+    id: 178,
+    japanese_name: "アズキナシ",
+    scientific_name: "Sorbus alnifolia",
+    family_id: 1,
+    genus: "ナナカマド属",
+    description: [
+      "春に白い小花を散房状に咲かせる落葉高木。秋に赤〜橙色の小さな果実と美しい紅葉が見られる。",
+      "葉はハンノキ（アルダー）に似た卵形〜楕円形で重鋸歯があり、側脈が目立つ。",
+      "山地の混交林に生え、果実は小鳥に食べられて種子が散布される。",
+    ],
+    identification: [
+      "白い小花が散房花序に集まって咲く（5月）",
+      "葉は卵形〜楕円形で側脈が7〜10対、重鋸歯がある（ハンノキに似る）",
+      "秋に赤〜橙色の小さな果実（直径7〜10mm）をつける",
+      "秋に赤〜橙色に美しく紅葉する",
+    ],
+    distribution: "北海道〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus-alnifolia-flowers.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus-alnifolia-flowers.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_alnifolia_kz01.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "小花集合", "高木", "山"],
+    similar_plant_ids: [74, 183],
+  },
+  {
+    id: 179,
+    japanese_name: "シャリンバイ",
+    scientific_name: "Rhaphiolepis indica var. umbellata",
+    family_id: 1,
+    genus: "シャリンバイ属",
+    description: [
+      "海岸近くに生える常緑低木。春に白い花を散房状に咲かせ、冬に黒紫色の果実をつける。",
+      "葉は厚くて光沢があり、倒卵形〜楕円形で鋸歯がある。塩分・乾燥・潮風に強い。",
+      "街路樹の植え込みや海岸緑化に広く使われる丈夫な樹木。",
+    ],
+    identification: [
+      "白い5弁花が散房花序に集まる（4〜6月）",
+      "葉は厚くて革質、表面に強い光沢がある（常緑）",
+      "冬に黒紫色の球形果実（直径8〜12mm）をつける",
+      "潮風・乾燥に強く、海岸や街路樹植え込みによく見られる",
+    ],
+    distribution: "本州（千葉・静岡以西）〜沖縄の海岸",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata_kz01.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata2.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "常緑", "ギザギザ", "厚い葉", "光沢", "花弁5枚", "低木", "街路樹", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 180,
+    japanese_name: "ズミ",
+    scientific_name: "Malus toringo",
+    family_id: 1,
+    genus: "リンゴ属",
+    description: [
+      "山地に生える落葉小高木。春に白〜淡いピンクの花を多数咲かせ、秋に小さな赤い実をつける。",
+      "葉は卵形〜楕円形で鋸歯があるが、枝先の葉は3〜5裂することがある。",
+      "秋の紅葉と真っ赤な小果実が美しく、観賞樹としても栽培される。",
+    ],
+    identification: [
+      "白〜淡いピンクの5弁花が散房花序に集まる（4〜5月）",
+      "葉は卵形で鋸歯があるが、若枝の葉には切れ込みが入ることがある",
+      "秋に直径8〜10mmの赤い小さな梨状果をつける",
+      "山地の明るい林縁や湿地周辺に生育する",
+    ],
+    distribution: "北海道〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_01.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_zumi_2zz.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
+    similar_plant_ids: [170, 181],
+  },
+  {
+    id: 181,
+    japanese_name: "ヒメリンゴ",
+    scientific_name: "Malus prunifolia",
+    family_id: 1,
+    genus: "リンゴ属",
+    description: [
+      "春に白〜淡いピンクの花を咲かせ、秋に直径2〜3cmの小さな赤い実をつける落葉小高木。",
+      "リンゴに近縁だが果実が小さく、観賞用として公園や庭に植えられる。",
+      "葉は楕円形〜卵形で鋸歯があり、果実は小さいながらリンゴそっくりの形をしている。",
+    ],
+    identification: [
+      "白〜淡いピンクの5弁花が散房花序に集まる（4〜5月）",
+      "葉は楕円形〜卵形で鋸歯があり、リンゴより小さい",
+      "秋に直径2〜3cmの小さな赤〜黄色の梨状果をつける（果頂部にガクが残る）",
+      "リンゴより全体が小型でコンパクトにまとまる",
+    ],
+    distribution: "全国（観賞用に植栽）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia_(Pearleaf_Crabapple).jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia_(Pearleaf_Crabapple).jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia.JPG",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    similar_plant_ids: [170, 180],
+  },
+  {
+    id: 182,
+    japanese_name: "カナメモチ",
+    scientific_name: "Photinia glabra",
+    family_id: 1,
+    genus: "カナメモチ属",
+    description: [
+      "本州（静岡・三重以西）〜沖縄に分布する常緑低木〜高木。ベニカナメモチの原種の一つ。",
+      "初夏に白い小花を散房状に多数咲かせ、秋〜冬に赤い小果実をつける。",
+      "春の新芽が赤みを帯び、葉は革質で光沢がある。葉柄は赤みを帯びることが多い。",
+    ],
+    identification: [
+      "春の新芽が赤〜紅色を帯びる（成熟すると緑色になる）",
+      "葉は倒卵形〜長楕円形、革質で光沢があり縁に細かい鋸歯がある",
+      "白い5弁の小花が散房花序に集まって咲く（5〜6月）",
+      "秋〜冬に直径5〜8mmの赤い球形果実をつける",
+    ],
+    distribution: "本州（静岡・三重以西）〜沖縄の山地・丘陵",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra2.jpg",
+        caption: "実と葉",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "ギザギザ", "花弁5枚", "小花集合", "高木", "山"],
+    similar_plant_ids: [104],
+  },
+  {
+    id: 183,
+    japanese_name: "カマツカ",
+    scientific_name: "Photinia villosa",
+    family_id: 1,
+    genus: "カナメモチ属",
+    description: [
+      "山地に生える落葉低木〜小高木。春に白い小花を散房状に咲かせ、秋に赤い小果実と美しい紅葉が見られる。",
+      "葉は倒卵形〜楕円形で側脈が目立ち、縁に重鋸歯がある。秋には赤〜橙色に鮮やかに紅葉する。",
+      "果実は長さ1cmほどの楕円形で赤く熟し、冬まで残る。材が非常に硬く、鎌の柄などに使われたことが和名の由来。",
+    ],
+    identification: [
+      "白い5弁の小花が散房花序に集まって咲く（4〜5月）",
+      "葉は倒卵形〜楕円形で側脈が目立ち、縁に重鋸歯がある",
+      "秋に赤〜橙色の楕円形果実（長さ約1cm）をつける",
+      "秋に赤〜橙色に鮮やかに紅葉する",
+    ],
+    distribution: "北海道〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz01.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz03.jpg",
+        caption: "実",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "小花集合", "高木", "山"],
+    similar_plant_ids: [74, 178],
+  },
+  {
+    id: 184,
+    japanese_name: "サンザシ",
+    scientific_name: "Crataegus cuneata",
+    family_id: 1,
+    genus: "サンザシ属",
+    description: [
+      "中国原産の落葉低木で、古くから日本にも薬用・庭木として植栽される。枝に鋭いとげがある。",
+      "春に白い5弁花を散房状に咲かせ、秋に赤い果実をつける。果実は酸味があり、薬用・ジャムなどに利用される。",
+      "葉は楔形で先端が浅く3〜5裂する独特の形をしており、縁に鋸歯がある。",
+    ],
+    identification: [
+      "枝に鋭いとげがある",
+      "葉は楔形で先端が3〜5裂する独特の形",
+      "春（4〜5月）に白い5弁花を散房状に咲かせる",
+      "秋に直径1〜2cmの球形果実をつける（赤または黄色、酸味あり）",
+    ],
+    distribution: "全国（庭園・公園・薬用として植栽）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea1.jpg",
+        caption: "果実（黄色品種）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea2.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "手のひら葉", "ギザギザ", "花弁5枚", "低木"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 185,
+    japanese_name: "ヤマナシ",
+    scientific_name: "Pyrus pyrifolia var. pyrifolia",
+    family_id: 1,
+    genus: "ナシ属",
+    description: [
+      "山地に自生するナシの野生原種で、栽培ナシ（ニホンナシ）の祖先とされる落葉高木。",
+      "春に白い5弁花を散房状に咲かせる。果実は直径2〜3cmと小さく硬く、渋みが強いため生食には向かない。",
+      "葉は卵形で縁に細かい鋸歯があり、栽培ナシと似るが全体的に小ぶりで山地に自生する。",
+    ],
+    identification: [
+      "白い5弁花が散房花序に集まって咲く（4月）",
+      "葉は卵形で縁に細かい鋸歯があり、葉柄が長い",
+      "秋に直径2〜3cmの球形果実をつける（硬く渋みがある）",
+      "山地の明るい林縁や渓流沿いに生育する野生の梨",
+    ],
+    distribution: "北海道〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_1.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_1.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nashi_pear_tree_in_bloom.jpg",
+        caption: "開花中の木",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
+    similar_plant_ids: [186],
+  },
+  {
+    id: 186,
+    japanese_name: "ナシ",
+    scientific_name: "Pyrus pyrifolia var. culta",
+    family_id: 1,
+    genus: "ナシ属",
+    description: [
+      "ヤマナシを改良した栽培品種で、「二十世紀」「幸水」「豊水」など多くの品種がある落葉高木。",
+      "春に白い5弁花を多数咲かせ、秋に大きな球形の甘くジューシーな果実をつける。",
+      "葉はヤマナシに似るが、果実が大幅に大きく改良されており、全国の果樹園で広く栽培される。",
+    ],
+    identification: [
+      "白い5弁花が散房花序に集まって咲く（4月）",
+      "葉は卵形〜楕円形で縁に細かい鋸歯がある",
+      "秋に直径5〜10cmの大きな褐色〜黄褐色の球形果実をつける",
+      "果実の表面にザラザラとした皮目（斑点）がある",
+    ],
+    distribution: "全国（農地・果樹園で栽培）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta1.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta2.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木"],
+    similar_plant_ids: [185],
+  },
+  {
+    id: 187,
+    japanese_name: "カリン",
+    scientific_name: "Pseudocydonia sinensis",
+    family_id: 1,
+    genus: "カリン属",
+    description: [
+      "中国原産の落葉高木。春にピンクの花を咲かせ、秋に大きな黄色い芳香のある果実をつける。",
+      "樹皮はなめらかで、まだら模様に薄く剥がれる。材は硬く緻密で工芸品に利用される。",
+      "果実は硬くて渋みが強く生食には向かないが、薬用・果実酒・のど飴の原料として広く利用される。",
+    ],
+    identification: [
+      "春（4月）に淡紅色の5弁花を咲かせる",
+      "秋に長さ10〜15cmの大きな楕円形黄色果実をつける（芳香あり）",
+      "樹皮がなめらかで薄くまだら模様に剥がれる",
+      "葉は楕円形で縁に細かい鋸歯があり、托葉が赤い",
+    ],
+    distribution: "全国（公園・庭園・街路樹として植栽）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocydonia_sinensis.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocydonia_sinensis.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_sinensis2.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園", "街路樹"],
+    similar_plant_ids: [188],
+  },
+  {
+    id: 188,
+    japanese_name: "マルメロ",
+    scientific_name: "Cydonia oblonga",
+    family_id: 1,
+    genus: "マルメロ属",
+    description: [
+      "西アジア〜地中海原産の落葉低木〜高木。春に白〜淡いピンクの大きな花を咲かせる。",
+      "秋に大きな黄色い果実をつける。果実は芳香が強く、ジャムやジェリー（マーマレードの語源）の原料として重要。",
+      "カリンに似るが、葉や若い果実に白い綿毛が密生することで区別できる。",
+    ],
+    identification: [
+      "春（4〜5月）に白〜淡いピンクの大きな5弁花を咲かせる",
+      "秋に洋梨形〜球形の黄色い大きな果実をつける（芳香あり）",
+      "葉や若い果実に白い綿毛が密生する（カリンとの違い）",
+      "カリンより全体に毛が多く、果実の表面に綿毛が残る",
+    ],
+    distribution: "全国（庭園・果樹として植栽）、原産は西アジア",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga_fruit.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "高木"],
+    similar_plant_ids: [187],
+  },
+  {
+    id: 189,
+    japanese_name: "クサボケ",
+    scientific_name: "Chaenomeles japonica",
+    family_id: 1,
+    genus: "ボケ属",
+    description: [
+      "本州〜九州の山野に自生する落葉低木。高さ30〜100cmと低く横に広がる。",
+      "早春に鮮やかなオレンジ〜朱赤色の花を咲かせ、庭植えのボケより小さく野趣がある。",
+      "秋に直径3〜5cmの黄色い芳香のある果実をつけ、ジャムや果実酒に利用される。枝に短い刺がある。",
+    ],
+    identification: [
+      "早春（3〜4月）に鮮やかなオレンジ〜朱赤色の5弁花を咲かせる",
+      "高さ30〜100cmの低い落葉低木で横に広がる",
+      "枝に短い刺がある",
+      "秋に直径3〜5cmの球形黄色果実をつける（芳香あり）",
+    ],
+    distribution: "本州（関東以西）〜九州の日当たりのよい山野",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_2.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 190,
+    japanese_name: "コトネアスター",
+    scientific_name: "Cotoneaster horizontalis",
+    family_id: 1,
+    genus: "コトネアスター属",
+    description: [
+      "中国西部原産の落葉〜半常緑低木（日本ではベニシタンとも呼ばれる）。枝が魚の骨状（ヘリンボーン型）に水平に広がる独特の樹形が特徴。",
+      "初夏に淡いピンクの小花を咲かせ、秋〜冬に真っ赤な小果実が枝いっぱいに実る。",
+      "斜面の被覆・グランドカバー・盆栽として広く利用される。秋には葉が赤く紅葉する。",
+    ],
+    identification: [
+      "枝が魚の骨状（ヘリンボーン型）に水平に広がる独特の樹形",
+      "葉は小さな円形〜広卵形（約1cm）、表面に光沢がある",
+      "初夏に淡いピンクの小花を咲かせる（5〜6月）",
+      "秋〜冬に直径5〜7mmの鮮赤色の小果実が枝いっぱいに密につく",
+    ],
+    distribution: "全国（公園・庭園・グランドカバーとして植栽）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz01.jpg",
+        caption: "全体（ヘリンボーン型の枝）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz1.jpg",
+        caption: "赤い実",
+      },
+    ],
+    tags: ["春開花", "落葉", "光沢", "小花集合", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 191,
+    japanese_name: "シモツケ",
+    scientific_name: "Spiraea japonica",
+    family_id: 1,
+    genus: "シモツケ属",
+    description: [
+      "日本・中国・朝鮮に分布する落葉低木。夏にピンク〜紅紫色の小花を多数集めて咲かせ、刈り込みに強く庭植えや公園緑化によく使われる。",
+      "葉は楕円形〜卵形で縁に不規則な重鋸歯があり、裏面は白みを帯びる。",
+      "ユキヤナギやコデマリと同じシモツケ属で、開花時期は夏（6〜8月）とやや遅い。",
+    ],
+    identification: [
+      "夏（6〜8月）にピンク〜紅紫色の小花が散房花序に密に集まって咲く",
+      "花は直径4〜5mmで雄しべが花弁より長く突き出る",
+      "葉は楕円形で縁に不規則な重鋸歯がある",
+      "高さ50〜100cmの低い落葉低木",
+    ],
+    distribution: "北海道〜九州の山野・日当たりのよい草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz2.jpg",
+        caption: "花序のアップ",
+      },
+    ],
+    tags: ["夏開花", "落葉", "ギザギザ", "小花集合", "低木", "山", "公園"],
+    similar_plant_ids: [127, 192, 193],
+  },
+  {
+    id: 192,
+    japanese_name: "シジミバナ",
+    scientific_name: "Spiraea prunifolia",
+    family_id: 1,
+    genus: "シモツケ属",
+    description: [
+      "中国・台湾原産の落葉低木。早春に白い八重の小花を枝いっぱいに咲かせる。小花がシジミ貝に似ることが名の由来とも。",
+      "枝は細くしなやかで弓状に垂れ、ユキヤナギに似た樹形。葉は卵形で秋に橙〜赤色に紅葉する。",
+      "ユキヤナギより花が大きく（八重咲き）、コデマリより花が小さく枝に沿って咲く。",
+    ],
+    identification: [
+      "早春（3〜4月）に白い八重咲きの小花（径約1cm）を枝全体に密集させて咲く",
+      "枝は細くしなやかで弓状に垂れる",
+      "葉は卵形で両面に細毛があり、秋に橙〜赤色に紅葉する",
+      "ユキヤナギより花が大きく（八重）、開花がやや遅い",
+    ],
+    distribution: "全国（庭園・公園に植栽）、原産は中国・台湾",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia2.jpg",
+        caption: "花と枝",
+      },
+    ],
+    tags: ["春開花", "落葉", "小花集合", "低木", "公園"],
+    similar_plant_ids: [127, 191, 193],
+  },
+  {
+    id: 193,
+    japanese_name: "コデマリ",
+    scientific_name: "Spiraea cantoniensis",
+    family_id: 1,
+    genus: "シモツケ属",
+    description: [
+      "中国原産の落葉低木。春に白い小花が半球状（手毬状）にまとまり、枝先に多数つく。和名「小手毬」はこの花房の形に由来。",
+      "枝は細くしなやかで弓状に垂れ下がり、春は花で枝が見えなくなるほど咲き誇る。",
+      "ユキヤナギ・シジミバナと同じシモツケ属で、いずれも春に白い花を枝いっぱいに咲かせる。",
+    ],
+    identification: [
+      "春（4〜5月）に白い小花が半球状（手毬状）の花序にまとまって枝先に咲く",
+      "枝は細くしなやかで弓状に垂れ下がる",
+      "葉は楔形で先端が浅く3裂し、縁に粗い鋸歯がある",
+      "ユキヤナギより花が塊になり、シジミバナより一重咲きで大きな手毬状の花房",
+    ],
+    distribution: "全国（庭園・公園に植栽）、原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis1.jpg",
+        caption: "花（手毬状の花序）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis2.jpg",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "花弁5枚", "小花集合", "低木", "公園"],
+    similar_plant_ids: [127, 191, 192],
+  },
+  {
+    id: 194,
+    japanese_name: "コゴメウツギ",
+    scientific_name: "Stephanandra incisa",
+    family_id: 1,
+    genus: "コゴメウツギ属",
+    description: [
+      "山地の明るい林縁や谷沿いに生える落葉低木。初夏に淡緑白色の非常に小さな花を穂状に多数咲かせる。",
+      "葉は三角状卵形で掌状に浅く裂け、縁に重鋸歯がある。秋に紅葉する。",
+      "名前の「コゴメ」は小さな花が米粒（胡米）のように見えることに由来する。",
+    ],
+    identification: [
+      "初夏（5〜6月）に淡緑白色の非常に小さな花（径3〜4mm）が穂状に集まって咲く",
+      "葉は三角状卵形で掌状に浅く3〜5裂し、重鋸歯がある",
+      "枝は細くしなやかで弓状に広がる低木（高さ1〜2m）",
+      "山地の明るい林縁・谷沿いに生育する",
+    ],
+    distribution: "北海道〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz01.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz01.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz02.jpg",
+        caption: "葉と花序",
+      },
+    ],
+    tags: ["春開花", "夏開花", "落葉", "手のひら葉", "ギザギザ", "小花集合", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 195,
+    japanese_name: "シロヤマブキ",
+    scientific_name: "Rhodotypos scandens",
+    family_id: 1,
+    genus: "シロヤマブキ属",
+    description: [
+      "本州〜九州の山地に自生する落葉低木。春にヤマブキに似た白い4弁花を咲かせる。",
+      "葉は対生（ヤマブキは互生）で、卵形〜楕円形で縁に重鋸歯がある。表面には皺が多い。",
+      "秋に直径8〜10mmの黒い光沢のある果実が4個セットでつき、長く残る。ヤマブキ属とは別の単型属。",
+    ],
+    identification: [
+      "春（4〜5月）に白い4弁花（径3〜5cm）を咲かせる（ヤマブキは黄色5弁）",
+      "葉は対生（ヤマブキは互生）、卵形で重鋸歯があり表面に皺が目立つ",
+      "秋〜冬に黒い光沢のある果実が4個セットでつく",
+      "花弁が白色・4枚（黄色5弁のヤマブキとの最大の違い）",
+    ],
+    distribution: "本州〜九州の山地の谷沿い・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens2.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "低木", "山"],
+    similar_plant_ids: [113],
   },
 ]
