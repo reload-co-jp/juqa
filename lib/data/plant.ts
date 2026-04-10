@@ -4254,7 +4254,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "ラッパ型", "低木", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [213, 220],
   },
   {
     id: 129,
@@ -5013,7 +5013,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "低木", "街路樹", "公園"],
-    similar_plant_ids: [153],
+    similar_plant_ids: [153, 198, 201],
   },
   {
     id: 153,
@@ -5046,7 +5046,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "低木", "公園"],
-    similar_plant_ids: [152],
+    similar_plant_ids: [152, 198, 201],
   },
   {
     id: 154,
@@ -6429,5 +6429,863 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "落葉", "ギザギザ", "低木", "山"],
     similar_plant_ids: [113],
+  },
+  {
+    id: 196,
+    japanese_name: "バラ",
+    scientific_name: "Rosa × hybrida",
+    family_id: 1,
+    genus: "バラ属",
+    description: [
+      "世界中で広く栽培される落葉または半常緑の低木。古くから観賞用に品種改良が重ねられ、現在では数万品種が存在する。",
+      "茎には鋭いとげがあり、葉は奇数羽状複葉で小葉の縁に鋸歯がある。花色は赤・白・黄・ピンクなど多彩。",
+      "春から秋にかけて繰り返し開花し、芳香を放つ品種が多い。果実（ローズヒップ）は赤く熟し、ビタミンCを豊富に含む。",
+    ],
+    identification: [
+      "茎に鋭いとげがある（とげの形や密度は品種・種によって異なる）",
+      "葉は奇数羽状複葉（小葉3〜7枚）で、小葉の縁に細かい鋸歯がある",
+      "花弁は基本5枚（野生種）から多数枚（園芸品種の八重咲き）まで品種により異なる",
+      "秋に赤いローズヒップ（偽果）をつける",
+    ],
+    distribution: "原産地は北半球の温帯〜亜寒帯。現在は世界中で栽培",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_rose.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_rose.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosehip.jpg",
+        caption: "ローズヒップ（果実）",
+      },
+    ],
+    tags: ["春開花", "夏開花", "落葉", "低木", "花弁5枚", "ギザギザ", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 197,
+    japanese_name: "イチゴノキ",
+    scientific_name: "Arbutus unedo",
+    family_id: 44,
+    genus: "イチゴノキ属",
+    description: [
+      "地中海沿岸・西ヨーロッパ原産の常緑低木。秋から冬にかけて、鈴なりの赤い果実と白い壺型の花を同時につける珍しい木。",
+      "葉は互生で長楕円形、縁に細鋸歯があり表面に光沢がある。樹皮は赤褐色で不規則に剥がれる。",
+      "果実は直径1〜2cmの球形でイチゴに似た外見だが、表面はつぶつぶのイボ状。生食のほかジャムや果実酒にも利用される。",
+    ],
+    identification: [
+      "秋〜冬（10〜12月）に赤い球状果実と白い壺型の花を同時につける",
+      "葉は長楕円形で縁に細鋸歯、表面に光沢がある常緑葉",
+      "果実表面がつぶつぶのイボ状で、熟すと赤〜橙赤色になる",
+      "樹皮が赤褐色で不規則に薄く剥がれる",
+    ],
+    distribution: "地中海沿岸・西ヨーロッパ原産。日本では庭木・公園樹として植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_flowers.jpg",
+        caption: "花（壺型）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_fruits.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["冬開花", "常緑", "光沢", "ラッパ型", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 198,
+    japanese_name: "ツツジ",
+    scientific_name: "Rhododendron kaempferi",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "日本全土の山地・丘陵に広く自生する落葉〜半常緑の低木。春に朱赤色〜橙赤色の大きな漏斗形の花を咲かせ、国内で最も広く分布するツツジ類の一つ。",
+      "葉は2型あり、春葉（大形）は秋に落葉するが、秋葉（小形）は越冬する半常緑性を示す。",
+      "枝や葉に開出毛があり触るとざらつく。花の上側の花弁内面に濃赤色の斑点（蜜標）がある。",
+    ],
+    identification: [
+      "春（4〜6月）に朱赤色〜橙赤色の漏斗形の花（径4〜5cm）を咲かせる",
+      "花の上側の花弁内面に濃赤色の斑点（蜜標）がある",
+      "葉は2型（大形の春葉と越冬する小形の秋葉）をもつ半常緑性",
+      "枝・葉に開出毛があり触るとざらつく",
+    ],
+    distribution: "北海道南部〜九州の山地・丘陵・里山",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi2.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山", "公園"],
+    similar_plant_ids: [152, 153, 199, 200, 203, 208, 209],
+  },
+  {
+    id: 199,
+    japanese_name: "ミツバツツジ",
+    scientific_name: "Rhododendron dilatatum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "本州太平洋側の丘陵〜山地に多い落葉低木。葉が展開する前の春（3〜5月）に、淡紫紅色の花を枝先に咲かせる。",
+      "名前の由来は枝先に3枚の葉が輪生状に集まることから。葉は菱形〜広卵形で先が尖り、縁に細毛がある。",
+      "雄しべは通常10本（ヤマツツジは5本）で、花柱とともに花冠から突き出る。",
+    ],
+    identification: [
+      "春（3〜5月）に葉が出る前に淡紫紅色の漏斗形の花（径3〜4cm）を咲かせる",
+      "枝先に3枚の葉が集まる（「三葉」の名の由来）",
+      "雄しべは10本（ヤマツツジの5本と区別点）",
+      "葉は菱形〜広卵形で縁・裏面脈上に細毛がある",
+    ],
+    distribution: "本州（関東・中部・近畿の太平洋側）の丘陵〜山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum1.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [198, 200, 209, 210, 211],
+  },
+  {
+    id: 200,
+    japanese_name: "レンゲツツジ",
+    scientific_name: "Rhododendron japonicum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "北海道〜九州の高原・山地の草地や林縁に自生する落葉低木。春（5〜6月）に橙赤色の大きな花を葉と同時または先立って咲かせる。",
+      "葉は互生し長楕円形〜倒卵形で、表裏両面に伏した毛がある。全草に有毒成分（グラヤノトキシン）を含み、誤食は危険。",
+      "花は漏斗形で径5〜6cmと大きく、5裂した花冠の上側の裂片に橙褐色の斑点がある。",
+    ],
+    identification: [
+      "春（5〜6月）に橙赤色の大きな漏斗形の花（径5〜6cm）を咲かせる",
+      "花の上側の花冠裂片に橙褐色の斑点がある",
+      "葉・茎・花すべてに毒（グラヤノトキシン）がある",
+      "高原・草地の明るい場所に多い（尾瀬・霧ヶ峰・車山など）",
+    ],
+    distribution: "北海道〜九州の山地・高原の草地・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum2.jpg",
+        caption: "花と葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [198, 199],
+  },
+  {
+    id: 201,
+    japanese_name: "アザレア",
+    scientific_name: "Rhododendron simsii",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "中国南部・台湾原産の常緑低木で、ベルギーなどで品種改良が重ねられた「ベルギーアザレア」が広く流通する。",
+      "冬〜春（11〜4月）に鉢植えとして出回り、白・ピンク・赤など多彩な花色と一重〜八重咲きの品種がある。",
+      "葉は小型で楕円形〜倒卵形、縁と表面に硬い毛がある。屋外では霜に弱いため、日本では主に室内植物として扱われる。",
+    ],
+    identification: [
+      "冬〜春に鉢植えとして流通し、豊富な花色と花形（一重〜八重）をもつ",
+      "葉は小型（長さ2〜4cm）で楕円形、縁と表面に硬毛がある",
+      "サツキ・オオムラサキと比べ葉が小さく、開花期が冬と早い",
+      "霜に弱く屋外越冬が難しい（サツキ・ツツジは屋外越冬可能）",
+    ],
+    distribution: "中国南部・台湾原産。日本では主に鉢植えとして流通",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_simsii.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_simsii.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum1.jpg",
+        caption: "鉢植えの様子",
+      },
+    ],
+    tags: ["冬開花", "春開花", "常緑", "ラッパ型", "低木", "公園"],
+    similar_plant_ids: [152, 153],
+  },
+  {
+    id: 202,
+    japanese_name: "チェッカーベリー",
+    scientific_name: "Gaultheria procumbens",
+    family_id: 44,
+    genus: "シラタマノキ属",
+    description: [
+      "北米東部原産の常緑小低木。地面を這うように広がり、高さ10〜15cm程度。冬に赤い果実をつけグラウンドカバーとして人気がある。",
+      "葉は卵形〜楕円形で厚く光沢があり、潰すと冬緑油（ウィンターグリーン）の香りがする。夏に白い壺型の小花を下向きに咲かせる。",
+      "秋〜冬に赤い果実（直径1cm程度）をつけ、長期間残る。果実は食用になるがサリチル酸メチルを含むため大量摂取は避ける。",
+    ],
+    identification: [
+      "高さ10〜15cmの匍匐性常緑小低木",
+      "葉は卵形で厚く光沢があり、潰すとウィンターグリーンの香りがする",
+      "夏に白い壺型小花、秋〜冬に赤い球形果実をつける",
+      "果実が長期間赤いまま残り、冬の観賞価値が高い",
+    ],
+    distribution: "北米東部原産。日本では園芸植物・鉢植えとして流通",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens.JPG",
+        caption: "果実と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens_1.JPG",
+        caption: "全体の様子",
+      },
+    ],
+    tags: ["夏開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 203,
+    japanese_name: "シャクナゲ",
+    scientific_name: "Rhododendron metternichii",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "本州〜九州の深山に自生する常緑低木〜小高木。春（4〜6月）に枝先に大きな花を散形状に多数咲かせる。",
+      "葉は互生し、大型で長楕円形〜倒卵状楕円形。革質で厚く表面に光沢があり、裏面には淡褐色の綿毛が密生する。",
+      "花は漏斗形〜鐘形で径4〜5cm、淡紅紫色〜白色。上側の花冠裂片に橙黄色の斑点がある。花の美しさから「高山植物の女王」と呼ばれる。",
+    ],
+    identification: [
+      "春（4〜6月）に淡紅紫色〜白色の大きな花を枝先に多数まとめて咲かせる",
+      "葉は大型（長さ10〜20cm）で革質・厚く、裏面に淡褐色の綿毛が密生する",
+      "常緑で葉に光沢があり、葉縁は全縁（鋸歯なし）",
+      "深山に自生し、標高が上がるほど花色が薄くなる傾向がある",
+    ],
+    distribution: "本州（近畿以東）〜九州の深山（標高600〜2000m）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii1.jpg",
+        caption: "花と葉",
+      },
+    ],
+    tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [198, 205, 206, 207],
+  },
+  {
+    id: 204,
+    japanese_name: "イワヒゲ",
+    scientific_name: "Cassiope lycopodioides",
+    family_id: 44,
+    genus: "イワヒゲ属",
+    description: [
+      "本州中部以北〜北海道の高山帯の岩場・礫地に生える常緑小低木。茎は地面を匍匐し、細かい鱗片状の葉がヒノキやスギゴケに似た外見を作る。",
+      "葉は長さ2〜3mmの小型鱗片状で茎に4列に密着する。夏（7〜8月）に枝先に白い壺型の花を下向きに咲かせる。",
+      "高山の極端な環境に適応した植物で、花の美しさと姿の繊細さから高山植物愛好家に人気がある。",
+    ],
+    identification: [
+      "高山帯の岩場を匍匐し、高さ5〜20cmの常緑小低木",
+      "茎に鱗片状の小葉（長さ2〜3mm）が4列に密着し、コケ類のような外見",
+      "夏（7〜8月）に白い壺型の小花を枝先に下向きに咲かせる",
+      "コケモモ・チングルマなど高山の岩場の植物と混生する",
+    ],
+    distribution: "本州中部以北・北海道の高山帯（亜高山帯〜高山帯）の岩場・礫地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cassiope_lycopodioides.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iwahige.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cassiope_lycopodioides_3.JPG",
+        caption: "全体の様子",
+      },
+    ],
+    tags: ["夏開花", "常緑", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 205,
+    japanese_name: "セイヨウシャクナゲ",
+    scientific_name: "Rhododendron ponticum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "ヨーロッパ南西部〜小アジア原産の常緑低木〜小高木。春（5〜6月）に淡紫紅色〜赤紫色の大きな花を枝先に多数まとめて咲かせる。",
+      "葉は大型で長楕円形〜倒披針形、革質で表面に強い光沢がある。日本のシャクナゲ類と比べ葉が長く（15〜25cm）、花房がより大きい傾向がある。",
+      "英国など西欧では野生化して問題になるほど繁殖力が旺盛。日本では公園・庭園樹として植栽され、多くの園芸品種の親にもなっている。",
+    ],
+    identification: [
+      "春（5〜6月）に淡紫紅色〜赤紫色の大きな花を密な花房に咲かせる",
+      "葉が大型（長さ15〜25cm）で長楕円形、革質で強い光沢がある",
+      "日本産シャクナゲと比べ葉が長くて細く、花房がより大きい",
+      "常緑で裏面の綿毛は少なく、日本産シャクナゲより葉が薄い",
+    ],
+    distribution: "ヨーロッパ南西部〜小アジア原産。日本では公園・庭園に植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum_1.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "公園"],
+    similar_plant_ids: [203, 206, 207],
+  },
+  {
+    id: 206,
+    japanese_name: "ハクサンシャクナゲ",
+    scientific_name: "Rhododendron brachycarpum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "本州中部〜北海道の亜高山帯〜高山帯に自生する常緑低木。夏（7〜8月）に白色〜淡紅色の花を枝先に散形状に多数咲かせる。",
+      "葉は長楕円形〜倒卵状楕円形で革質・厚く、裏面に淡褐色の綿毛が密生する。ホンシャクナゲより高所に分布し、開花期も1〜2ヶ月遅い。",
+      "花は漏斗形で径4〜5cm、白〜淡紅色で上側の花弁に黄緑色の斑点がある。「白山」に多いことが名の由来。",
+    ],
+    identification: [
+      "夏（7〜8月）に白〜淡紅色の花を咲かせる（日本のシャクナゲ類で最も遅く咲く）",
+      "葉の裏面に淡褐色の綿毛が密生する",
+      "亜高山帯〜高山帯に分布しホンシャクナゲより高所に多い",
+      "花の上側の花弁に黄緑色の斑点がある",
+    ],
+    distribution: "本州中部（白山・八ヶ岳以北）〜北海道の亜高山帯〜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum_01.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [203, 205, 207],
+  },
+  {
+    id: 207,
+    japanese_name: "ホンシャクナゲ",
+    scientific_name: "Rhododendron japonoheptamerum",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "本州（主に関西・紀伊半島・東海・伊豆）の山地に自生する常緑低木〜小高木。春（4〜6月）に淡紅紫色〜淡白色の花を枝先に多数まとめて咲かせる。",
+      "「シャクナゲ」の代表的な種の一つで、葉は大型（長さ10〜20cm）で革質・厚く、表面に光沢があり裏面に淡褐色の綿毛が密生する。",
+      "R. metternichii と同一または近縁として扱われることが多く、「シャクナゲ」の名で流通する植物のほとんどがこの種またはその近縁種。",
+    ],
+    identification: [
+      "春（4〜6月）に淡紅紫色〜白色の花を枝先に多数まとめて咲かせる",
+      "葉は大型（10〜20cm）で革質・厚く、裏面に淡褐色の綿毛が密生する",
+      "葉縁は全縁（鋸歯なし）で、葉先は丸みを帯びる",
+      "標高600〜1800mの山地の林内・林縁に多い",
+    ],
+    distribution: "本州（関西・紀伊半島・東海・伊豆・富士周辺）の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonoheptamerum_1.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonoheptamerum_1.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_degronianum_1.JPG",
+        caption: "花と葉",
+      },
+    ],
+    tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [203, 205, 206],
+  },
+  {
+    id: 208,
+    japanese_name: "ヒカゲツツジ",
+    scientific_name: "Rhododendron keiskei",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "本州〜九州の日当たりの少ない岩場・林内の岩上に生える常緑低木。春（3〜5月）に淡黄色〜黄緑色の花を咲かせる。",
+      "日本のツツジ類で唯一に近い黄色系の花色をもつ。葉は小型で楕円形〜倒披針形、革質で光沢がある。",
+      "「日陰のツツジ」の意味だが実際には明るい岩場にも生育する。小型で園芸品種も多く、ロックガーデンなどに利用される。",
+    ],
+    identification: [
+      "春（3〜5月）に淡黄色〜黄緑色の漏斗形の花を咲かせる（日本産ツツジ類唯一の黄色系）",
+      "葉は小型（長さ3〜6cm）で楕円形、革質で光沢がある",
+      "岩場・崖の上など岩の多い場所に多い",
+      "他のツツジ類とは花色で明確に識別できる",
+    ],
+    distribution: "本州〜九州の山地の岩場・林縁の岩上",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei.JPG",
+        caption: "花と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei_(flower).JPG",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [198, 209],
+  },
+  {
+    id: 209,
+    japanese_name: "ヤマツツジ",
+    scientific_name: "Rhododendron kaempferi",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "日本全土の山地・丘陵に最も広く自生するツツジ。春（4〜6月）に朱赤色〜橙赤色の漏斗形の花を咲かせ、里山の代表的な花木。",
+      "「ツツジ」の標準和名がヤマツツジを指すことも多く、最も一般的な野生ツツジ。葉は2型（大形の春葉と越冬する小形の秋葉）をもつ半常緑性。",
+      "枝・葉に開出毛があり触るとざらつく。花の上側の花弁内面に濃赤色の斑点（蜜標）がある。雄しべは5本。",
+    ],
+    identification: [
+      "春（4〜6月）に朱赤色〜橙赤色の漏斗形の花（径4〜5cm）を咲かせる",
+      "花の上側の花弁内面に濃赤色の斑点がある",
+      "枝・葉に開出毛があり触るとざらつく",
+      "葉は2型（春葉・越冬する小形の秋葉）をもつ半常緑性",
+    ],
+    distribution: "北海道南部〜九州の山地・丘陵・里山",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi2.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [198, 199, 208],
+  },
+  {
+    id: 210,
+    japanese_name: "アカヤシオ",
+    scientific_name: "Rhododendron pentaphyllum var. nikoense",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "関東〜中部地方の山地に自生する落葉低木。春（4〜5月）に葉が展開する前に、鮮やかな淡紅色〜濃紅色の花を一面に咲かせる。",
+      "枝先に5枚の葉が輪生状に集まる（種小名 pentaphyllum = 5葉に由来）のが最大の特徴。ミツバツツジ（3葉）と区別できる。",
+      "日光・赤城・妙義山など関東の山の尾根・稜線を春に彩る代表的な花で、「ヤシオツツジ」とも呼ばれる。",
+    ],
+    identification: [
+      "春（4〜5月）に葉が出る前に淡紅色〜濃紅色の花を咲かせる",
+      "枝先に5枚の葉が輪生状に集まる（ミツバツツジは3枚）",
+      "花は漏斗形で径4〜5cm、雄しべは10本",
+      "関東・中部の山地の尾根・稜線に多い",
+    ],
+    distribution: "関東〜中部地方（日光、赤城、妙義、奥秩父など）の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum_var._nikoense_flowers.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum_var._nikoense_flowers.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum.jpg",
+        caption: "花と枝",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [199, 211],
+  },
+  {
+    id: 211,
+    japanese_name: "ムラサキヤシオ",
+    scientific_name: "Rhododendron albrechtii",
+    family_id: 44,
+    genus: "ツツジ属",
+    description: [
+      "北海道〜本州（東北・北陸）の山地の林縁・湿った斜面に自生する落葉低木。春（5〜6月）に葉と同時または先立って、鮮やかな紅紫色の花を咲かせる。",
+      "枝先に5枚の葉が輪生状に集まる（アカヤシオと同様）。花は径4〜5cmで漏斗形、上側の花弁に暗い斑点がある。",
+      "東北・北海道の山地の林縁に多く、名前の通り紫色の鮮やかな花が美しい。日本固有種。",
+    ],
+    identification: [
+      "春（5〜6月）に紅紫色の花を咲かせる",
+      "枝先に5枚の葉が輪生状に集まる（アカヤシオと共通の特徴）",
+      "花弁の上側に暗紫色の斑点がある",
+      "東北・北海道の山地の林縁・雪解け後の湿った斜面に多い",
+    ],
+    distribution: "北海道〜本州（東北・北陸）の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii_1.JPG",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    similar_plant_ids: [199, 210],
+  },
+  {
+    id: 212,
+    japanese_name: "カルミア",
+    scientific_name: "Kalmia latifolia",
+    family_id: 44,
+    genus: "カルミア属",
+    description: [
+      "北米東部原産の常緑低木〜低高木。初夏（5〜6月）に白〜濃ピンクの独特な花を密な散形花序に多数咲かせる。別名「マウンテン・ローレル」。",
+      "花のつぼみが多角形の小箱のように見え、開花すると杯形〜五角形に開く独特の形が美しい。葉・茎・花すべてに毒（アンドロメドトキシン）を含む。",
+      "葉は互生し、長楕円形〜倒披針形で革質・厚く光沢がある。アセビやネジキと同じツツジ科の仲間で、日本では庭木・公園樹として植栽される。",
+    ],
+    identification: [
+      "花のつぼみが多角形の小箱状で、開花すると五角形の杯形になる（唯一無二の花形）",
+      "葉は長楕円形で革質・厚く光沢があり、縁が全縁",
+      "初夏（5〜6月）に白〜ピンクの花を密に咲かせる",
+      "全草に毒（アンドロメドトキシン）を含む",
+    ],
+    distribution: "北米東部原産。日本では公園・庭園に植栽",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia1.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 213,
+    japanese_name: "ツリガネツツジ",
+    scientific_name: "Enkianthus campanulatus",
+    family_id: 44,
+    genus: "ドウダンツツジ属",
+    description: [
+      "北海道〜九州の山地に自生する落葉低木〜小高木。春（5〜6月）に橙黄色〜橙赤色の釣鐘型の花を枝先に多数吊り下げる。別名「サラサドウダン」。",
+      "ドウダンツツジ（E. perulatus）と同属で外見が似るが、花が橙色〜赤色（ドウダンツツジは白色）で、花弁の縁が赤く染まる点で区別できる。",
+      "秋の紅葉が非常に美しく、庭木・公園樹としても人気が高い。葉は互生し、倒卵形〜楕円形で縁に細鋸歯がある。",
+    ],
+    identification: [
+      "春（5〜6月）に橙黄色〜橙赤色の釣鐘型の花を吊り下げる（ドウダンツツジは白）",
+      "花弁の縁が赤く染まる「更紗（サラサ）」模様が特徴",
+      "秋の紅葉が鮮やかで観賞価値が高い",
+      "葉は互生、倒卵形で縁に細鋸歯があり、枝先に集まる",
+    ],
+    distribution: "北海道〜九州の山地の林縁・二次林",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus1.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "落葉", "ラッパ型", "低木", "山", "公園"],
+    similar_plant_ids: [128, 220],
+  },
+  {
+    id: 214,
+    japanese_name: "スノキ",
+    scientific_name: "Vaccinium smallii",
+    family_id: 44,
+    genus: "スノキ属",
+    description: [
+      "北海道〜九州の山地の林内・林縁に自生する落葉低木。初夏（6〜7月）に淡紅白色の壺型小花を咲かせ、秋に黒紫色の果実を結ぶ。",
+      "葉は互生し、卵形〜楕円形で薄く縁に細鋸歯がある。ブルーベリーやシャシャンボと同じスノキ属（Vaccinium属）で近縁。",
+      "果実は食用になり甘酸っぱい。名前の由来は「酢の木」（果実が酸っぱいことから）とも言われる。",
+    ],
+    identification: [
+      "初夏（6〜7月）に淡紅白色の壺型小花を下向きに咲かせる",
+      "秋に直径6〜8mmの黒紫色の球形果実をつける（食用）",
+      "葉は卵形〜楕円形で薄く、縁に細鋸歯がある",
+      "山地の林内の落葉低木",
+    ],
+    distribution: "北海道〜九州の山地の林内・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_1.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_1.JPG",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_2.JPG",
+        caption: "果実と葉",
+      },
+    ],
+    tags: ["夏開花", "落葉", "低木", "山"],
+    similar_plant_ids: [215, 216],
+  },
+  {
+    id: 215,
+    japanese_name: "ブルーベリー",
+    scientific_name: "Vaccinium corymbosum",
+    family_id: 44,
+    genus: "スノキ属",
+    description: [
+      "北米原産の落葉低木で、食用の果実（ブルーベリー）を採るために世界中で栽培される。春（4〜5月）に白〜淡紅色の壺型の花を総状に咲かせる。",
+      "果実は熟すと青紫色で、アントシアニンを豊富に含み、目の健康・抗酸化作用で知られる。秋の紅葉も美しく、庭植え・鉢植えとして楽しまれる。",
+      "市販のブルーベリーは主にハイブッシュ系（V. corymbosum）とラビットアイ系（V. virgatum）で、スノキやシャシャンボと同属。",
+    ],
+    identification: [
+      "春（4〜5月）に白〜淡紅色の壺型小花を総状に咲かせる",
+      "夏〜秋に青紫色で白粉を帯びた球形果実が熟す",
+      "葉は卵形〜楕円形で縁に細鋸歯があり、秋に赤く紅葉する",
+      "農園・庭植えで広く栽培される落葉低木",
+    ],
+    distribution: "北米原産。世界中で栽培。日本でも農園・家庭菜園で広く栽培",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum.jpg",
+        caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum1.jpg",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "落葉", "低木", "公園"],
+    similar_plant_ids: [214, 216],
+  },
+  {
+    id: 216,
+    japanese_name: "シャシャンボ",
+    scientific_name: "Vaccinium bracteatum",
+    family_id: 44,
+    genus: "スノキ属",
+    description: [
+      "本州（東北南部以南）〜沖縄の山地・丘陵の林縁に自生する常緑低木〜小高木。夏（6〜7月）に白い壺型小花を総状に多数咲かせ、秋〜冬に黒紫色の果実が熟す。",
+      "葉は互生し、卵形〜楕円形で厚く光沢があり、縁に細かい鋸歯がある。常緑で光沢のある葉が観賞価値もある。スノキ・ブルーベリーと同属（Vaccinium属）。",
+      "果実は食用でジャムや果実酒に利用される。暖地の山野に広く分布し、沿岸部の丘陵にも多い。",
+    ],
+    identification: [
+      "夏（6〜7月）に白い壺型小花を総状に多数咲かせる",
+      "秋〜冬に直径5〜7mmの黒紫色の球形果実をつける（食用）",
+      "常緑で葉に光沢があり、縁に細かい鋸歯がある",
+      "スノキより葉が厚くて光沢があり、常緑である点で区別",
+    ],
+    distribution: "本州（東北南部以南）〜沖縄の山地・丘陵・海岸近くの林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum.jpg",
+        caption: "果実と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum1.jpg",
+        caption: "果実",
+      },
+    ],
+    tags: ["夏開花", "常緑", "光沢", "ギザギザ", "低木", "山"],
+    similar_plant_ids: [214, 215],
+  },
+  {
+    id: 217,
+    japanese_name: "イワナシ",
+    scientific_name: "Epigaea asiatica",
+    family_id: 44,
+    genus: "イワナシ属",
+    description: [
+      "北海道〜九州の山地の林床・岩場に生える常緑の匍匐性小低木。春（4〜5月）に淡紅色の壺型小花を枝先に集めて咲かせる。",
+      "茎は地面を這い高さ5〜20cm程度。葉は互生し、楕円形〜卵形で革質・厚く、表面に短毛がある。縁は全縁またはわずかに波打つ。",
+      "果実は梨形〜球形で食用になる（イワナシの「梨」はこの果実に由来）。東アジアに分布する日本固有に近い種。",
+    ],
+    identification: [
+      "春（4〜5月）に淡紅色の壺型小花を枝先に集めて咲かせる",
+      "茎が地面を匍匐する常緑小低木（高さ5〜20cm）",
+      "葉は楕円形で革質・厚く、表面に短毛がある",
+      "秋に梨形の果実をつける（食用可）",
+    ],
+    distribution: "北海道〜九州の山地（主に日本海側）の林床・岩場",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica_1.JPG",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "常緑", "厚い葉", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 218,
+    japanese_name: "ハナヒリノキ",
+    scientific_name: "Leucothoe grayana",
+    family_id: 44,
+    genus: "ハナヒリノキ属",
+    description: [
+      "本州（関東以西）〜九州の山地の湿った林縁・谷沿いに自生する落葉低木。初夏（6〜7月）に白い壺型小花を総状に多数吊り下げて咲かせる。",
+      "葉・枝・花のすべてに毒（グラヤノトキシン）を含み、粉末にすると鼻腔を刺激してくしゃみが出ることから「花嚏の木（ハナヒリノキ）」の名がある。",
+      "葉は互生し卵形〜卵状楕円形で縁に細鋸歯がある。現在の分類では Eubotryoides grayana に移される場合もある。",
+    ],
+    identification: [
+      "初夏（6〜7月）に白い壺型小花を総状に多数吊り下げて咲かせる",
+      "全草に毒（グラヤノトキシン）を含む",
+      "葉は卵形〜楕円形で縁に細鋸歯があり、表面にわずかに光沢がある",
+      "山地の沢沿い・湿った林縁に多い落葉低木",
+    ],
+    distribution: "本州（関東以西）〜九州の山地の湿った林縁・沢沿い",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_1.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_1.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_2.JPG",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "落葉", "ギザギザ", "低木", "山"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 219,
+    japanese_name: "エリカ",
+    scientific_name: "Erica carnea",
+    family_id: 44,
+    genus: "エリカ属",
+    description: [
+      "ヨーロッパのアルプス〜地中海沿岸原産の常緑小低木。冬〜春（1〜4月）に針状の細葉の間から小さな壺型〜筒型の花を多数咲かせる。",
+      "花色は白・ピンク・赤・紫など豊富で花期が長く、冬の庭を彩る。「ヒース」と呼ばれる植生の代表植物で、スコットランドなどの荒野を覆う植物としても知られる。",
+      "Erica属には800種以上が属する大きな属で、日本では鉢植えや庭植えで楽しまれる。葉は長さ数mmの針状で4枚が輪生する。",
+    ],
+    identification: [
+      "冬〜春（1〜4月）に壺型〜筒型の小花を多数咲かせる",
+      "葉は長さ数mmの針状で4枚が輪生する（独特の葉形）",
+      "花色が白・ピンク・赤・紫など豊富で、同時期の花木として希少",
+      "欧州原産の常緑小低木で、庭植え・鉢植えで流通",
+    ],
+    distribution: "ヨーロッパ（アルプス〜地中海沿岸）原産。日本では庭植え・鉢植えで流通",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea1.jpg",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["冬開花", "春開花", "常緑", "低木", "公園"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 220,
+    japanese_name: "ホツツジ",
+    scientific_name: "Tripetaleia paniculata",
+    family_id: 44,
+    genus: "ホツツジ属",
+    description: [
+      "本州〜九州の山地の湿った林縁・岩場に自生する落葉低木。夏（7〜8月）に白色の3弁花を枝先に円錐花序をなして多数咲かせる。",
+      "花弁が3枚（ドウダンツツジなど同科の多くは5枚）であることが大きな特徴で、属名の Tripetaleia は「3花弁」を意味する。現在は Elliottia 属に含める分類もある。",
+      "葉は互生し、倒卵形〜楕円形で薄く、縁に浅い鋸歯または全縁。山地の酸性土壌・岩場の植物として自生する。",
+    ],
+    identification: [
+      "夏（7〜8月）に白色の3弁花（花弁3枚）を円錐花序に多数咲かせる",
+      "花弁が3枚（他のツツジ科の多くは4〜5枚）という点で識別",
+      "葉は互生、倒卵形〜楕円形で薄い",
+      "山地の湿った林縁・岩場の落葉低木",
+    ],
+    distribution: "本州〜九州の山地の湿った林縁・岩場",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata1.jpg",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata1.jpg",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata2.jpg",
+        caption: "花序",
+      },
+    ],
+    tags: ["夏開花", "落葉", "低木", "山"],
+    similar_plant_ids: [128, 213],
+  },
+  {
+    id: 221,
+    japanese_name: "ネジキ",
+    scientific_name: "Lyonia ovalifolia var. elliptica",
+    family_id: 44,
+    genus: "ネジキ属",
+    description: [
+      "本州〜九州の山地・丘陵の乾燥した林や尾根に自生する落葉小高木。初夏（6〜7月）に白い壺型の小花を総状に多数吊り下げて咲かせる。",
+      "幹・枝がねじれながら成長することから「捩木（ネジキ）」の名がある。葉は互生し、卵形〜楕円形で革質・光沢があり、縁は全縁または微細な鋸歯。",
+      "秋の黄葉〜紅葉が美しい。材が硬くて緻密なため、農耕具の柄や炭材に利用されてきた歴史がある。",
+    ],
+    identification: [
+      "初夏（6〜7月）に白い壺型小花を総状に多数吊り下げて咲かせる",
+      "幹・枝が特徴的にねじれて成長する",
+      "葉は卵形〜楕円形で革質・光沢があり縁が全縁",
+      "乾燥した山地・丘陵の尾根・林内の落葉小高木",
+    ],
+    distribution: "本州〜九州の山地・丘陵の乾燥した尾根・林",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia_Flowers.JPG",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia_Flowers.JPG",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia1.jpg",
+        caption: "花序",
+      },
+    ],
+    tags: ["夏開花", "落葉", "光沢", "高木", "山"],
+    similar_plant_ids: [],
   },
 ]
