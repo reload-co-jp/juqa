@@ -1,8 +1,18 @@
+import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { plants, families } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 import RandomPlant from "components/RandomPlant"
+
+export const metadata: Metadata = {
+  title: "ジュカ！ (JuQa) — 植物学習アプリ",
+  description:
+    "街路樹や山で見かける植物を体系的に覚えるための学習サイト。植物図鑑・クイズ・見分けガイド・開花カレンダーを収録。",
+  alternates: {
+    canonical: "https://juqa.reload.co.jp/",
+  },
+}
 
 const month = new Date().getMonth() + 1
 const seasonTag: PlantTag =

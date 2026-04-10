@@ -9,15 +9,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${siteUrl}/`, priority: 1.0, lastModified },
-    { url: `${siteUrl}/plants/`, priority: 0.9, lastModified },
-    { url: `${siteUrl}/families/`, priority: 0.9, lastModified },
-    { url: `${siteUrl}/quiz/`, priority: 0.8, lastModified },
-    { url: `${siteUrl}/quiz/photo/`, priority: 0.8, lastModified },
-    { url: `${siteUrl}/guide/`, priority: 0.8, lastModified },
-    { url: `${siteUrl}/columns/`, priority: 0.8, lastModified },
-    { url: `${siteUrl}/columns/conifer/`, priority: 0.75, lastModified },
-    { url: `${siteUrl}/columns/tree-vs-herb/`, priority: 0.75, lastModified },
+    { url: `${siteUrl}/`, priority: 1.0, lastModified, changeFrequency: "weekly" },
+    { url: `${siteUrl}/plants/`, priority: 0.9, lastModified, changeFrequency: "weekly" },
+    { url: `${siteUrl}/families/`, priority: 0.9, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/flowers/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/quiz/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/quiz/photo/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/guide/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/conifer/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/tree-vs-herb/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/spring-mountain-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/rosaceae-plants/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/phylogenetic-tree/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
   ]
 
   const plantRoutes: MetadataRoute.Sitemap = plants.map((plant) => ({
