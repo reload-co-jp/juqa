@@ -39,6 +39,14 @@ const jsonLd = {
 
 const columns = [
   {
+    href: "/columns/rosaceae-plants",
+    emoji: "🌹",
+    title: "バラ科の植物たち",
+    description:
+      "サクラ・ウメ・リンゴ・ビワ・ノイバラ……実は身の回りに多いバラ科の植物。5枚の花弁・多数のおしべ・ギザギザの葉という共通の特徴を知ると「バラ科っぽい」と気づけるようになります。",
+    tags: ["バラ科", "花木", "果樹"],
+  },
+  {
     href: "/columns/spring-mountain-flowers",
     emoji: "🌸",
     title: "春の登山で見られる花特集",
