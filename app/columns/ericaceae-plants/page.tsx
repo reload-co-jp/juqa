@@ -72,11 +72,13 @@ const Section = ({
 const PlantCard = ({
   name,
   href,
+  id,
   points,
   tip,
 }: {
   name: string
   href: string
+  id: string
   points: string[]
   tip: string
 }) => (
@@ -92,16 +94,21 @@ const PlantCard = ({
       style={{
         display: "flex",
         alignItems: "center",
-        gap: "0.5rem",
+        gap: "1rem",
         marginBottom: "0.5rem",
       }}
     >
+      <img
+        src={`/images/plants/${id}-0.webp`}
+        alt={name}
+        style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "4px" }}
+      />
       <Link
         href={href}
         style={{
           fontWeight: "bold",
           color: "#7cbe8c",
-          fontSize: "1rem",
+          fontSize: "1.1rem",
           textDecoration: "none",
         }}
       >
@@ -325,6 +332,7 @@ const Page = () => {
         <PlantCard
           name="ヤマツツジ"
           href="/plants/209"
+          id="209"
           points={[
             "日本で最も広く自生するツツジ（4〜6月開花）",
             "朱赤色〜橙赤色の漏斗形の花を咲かせる",
@@ -336,6 +344,7 @@ const Page = () => {
         <PlantCard
           name="ミツバツツジ"
           href="/plants/199"
+          id="199"
           points={[
             "花が咲いてから葉が展開する（春、4〜5月）",
             "枝先に3枚の葉が輪生状に集まるのが名前の由来",
@@ -347,6 +356,7 @@ const Page = () => {
         <PlantCard
           name="サツキ"
           href="/plants/153"
+          id="153"
           points={[
             "5〜6月に開花し、ツツジより約1ヶ月遅い（「皐月＝5月」が名の由来）",
             "葉は小さく硬くて光沢があり、縁に細かい毛が生える",
@@ -358,6 +368,7 @@ const Page = () => {
         <PlantCard
           name="レンゲツツジ"
           href="/plants/200"
+          id="200"
           points={[
             "5〜6月に橙赤色の大きな花を咲かせる",
             "高原・草原・山地の明るい場所に群生する",
@@ -567,7 +578,7 @@ const Page = () => {
           >
             <thead>
               <tr>
-                {["種名", "花の形・色", "開花期", "識別ポイント"].map((h) => (
+                {["画像", "種名", "花の形・色", "開花期", "識別ポイント"].map((h) => (
                   <th
                     key={h}
                     style={{
@@ -586,21 +597,28 @@ const Page = () => {
             </thead>
             <tbody>
               {[
-                { name: "ヤマツツジ", href: "/plants/209", flower: "漏斗形・朱赤", season: "4〜6月", point: "おしべ5本・山野草原" },
-                { name: "ミツバツツジ", href: "/plants/199", flower: "漏斗形・淡紫紅", season: "4〜5月", point: "枝先に3枚葉・葉より先に開花" },
-                { name: "サツキ", href: "/plants/153", flower: "漏斗形・ピンク〜赤", season: "5〜6月", point: "ツツジより約1ヶ月遅い" },
-                { name: "レンゲツツジ", href: "/plants/200", flower: "漏斗形・橙赤", season: "5〜6月", point: "高原群生・有毒" },
-                { name: "ホンシャクナゲ", href: "/plants/207", flower: "漏斗形・淡ピンク〜白", season: "5〜6月", point: "大型革質葉・大輪の花房" },
-                { name: "ハクサンシャクナゲ", href: "/plants/206", flower: "漏斗形・白〜淡紅", season: "7〜8月", point: "亜高山帯・夏咲き" },
-                { name: "アセビ", href: "/plants/114", flower: "壺形・白", season: "2〜4月", point: "早春開花・有毒・常緑" },
-                { name: "ドウダンツツジ", href: "/plants/128", flower: "釣鐘形・白", season: "4月", point: "秋の紅葉が鮮やか" },
-                { name: "ツリガネツツジ", href: "/plants/213", flower: "釣鐘形・橙赤", season: "5〜6月", point: "花が橙色でドウダンと区別" },
-                { name: "スノキ", href: "/plants/214", flower: "壺形・白", season: "6〜7月", point: "青黒い食用果実" },
+                { name: "ヤマツツジ", href: "/plants/209", id: "209", flower: "漏斗形・朱赤", season: "4〜6月", point: "おしべ5本・山野草原" },
+                { name: "ミツバツツジ", href: "/plants/199", id: "199", flower: "漏斗形・淡紫紅", season: "4〜5月", point: "枝先に3枚葉・葉より先に開花" },
+                { name: "サツキ", href: "/plants/153", id: "153", flower: "漏斗形・ピンク〜赤", season: "5〜6月", point: "ツツジより約1ヶ月遅い" },
+                { name: "レンゲツツジ", href: "/plants/200", id: "200", flower: "漏斗形・橙赤", season: "5〜6月", point: "高原群生・有毒" },
+                { name: "ホンシャクナゲ", href: "/plants/207", id: "207", flower: "漏斗形・淡ピンク〜白", season: "5〜6月", point: "大型革質葉・大輪の花房" },
+                { name: "ハクサンシャクナゲ", href: "/plants/206", id: "206", flower: "漏斗形・白〜淡紅", season: "7〜8月", point: "亜高山帯・夏咲き" },
+                { name: "アセビ", href: "/plants/114", id: "114", flower: "壺形・白", season: "2〜4月", point: "早春開花・有毒・常緑" },
+                { name: "ドウダンツツジ", href: "/plants/128", id: "128", flower: "釣鐘形・白", season: "4月", point: "秋の紅葉が鮮やか" },
+                { name: "ツリガネツツジ", href: "/plants/213", id: "213", flower: "釣鐘形・橙赤", season: "5〜6月", point: "花が橙色でドウダンと区別" },
+                { name: "スノキ", href: "/plants/214", id: "214", flower: "壺形・白", season: "6〜7月", point: "青黒い食用果実" },
               ].map((row, i) => (
                 <tr
                   key={row.name}
                   style={{ background: i % 2 === 0 ? "#262626" : "#222" }}
                 >
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                    <img
+                      src={`/images/plants/${row.id}-0.webp`}
+                      alt={row.name}
+                      style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "4px" }}
+                    />
+                  </td>
                   <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
                     <Link
                       href={row.href}
