@@ -8305,4 +8305,31 @@ export const plants: Plant[] = [
     tags: ["夏開花", "落葉", "光沢", "高木", "山"],
     similar_plant_ids: [],
   },
+  {
+    id: 222,
+    japanese_name: "コメツブツメクサ",
+    scientific_name: "Trifolium dubium",
+    family_id: 10,
+    genus: "シャジクソウ属",
+    description: [
+      "ヨーロッパ原産の帰化植物で、道端や草地に生える一年草。",
+      "シロツメクサよりもずっと小さく、黄色い小さな花を球状に咲かせるのが特徴。",
+      "コメツブウマゴヤシとも呼ばれることがあるが、別の植物。",
+    ],
+    identification: [
+      "極めて小さな黄色い花が集合する",
+      "三出複葉の小さな葉",
+      "茎は細く、地面を這うか斜めに立ち上がる",
+      "果実は小さく、花びらが枯れても残る",
+    ],
+    distribution: "全国の道端・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium.jpg",
+    images: [
+      { url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium.jpg", caption: "花と葉の様子" },
+      { url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium_sl25.jpg", caption: "果実の様子" },
+    ],
+    tags: ["春開花", "草本", "小花集合", "雑草"],
+    similar_plant_ids: [12],
+  },
 ]
