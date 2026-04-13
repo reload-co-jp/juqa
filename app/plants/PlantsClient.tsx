@@ -353,7 +353,7 @@ const PlantsContent: FC = () => {
                 >
                   {plant.image_url ? (
                     <PlantImage
-                      src={plant.image_url}
+                      src={plant.local_image_url ?? plant.image_url}
                       alt={plant.japanese_name}
                     />
                   ) : (

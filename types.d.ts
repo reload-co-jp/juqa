@@ -47,7 +47,8 @@ type Plant = {
   identification: string[]
   distribution: string
   image_url: string
-  images: { url: string; caption: string }[]
+  local_image_url?: string
+  images: { url: string; local_url?: string; caption: string }[]
   tags: PlantTag[]
   similar_plant_ids: number[]
 }

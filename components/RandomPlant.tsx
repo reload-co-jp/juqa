@@ -27,7 +27,7 @@ const RandomPlant: FC = () => {
         }}
       >
         <img
-          src={wikimediaThumb(plant.image_url, 160)}
+          src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 160)}
           alt={plant.japanese_name}
           style={{
             width: "80px",

@@ -136,7 +136,7 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
         images={
           plant.image_url &&
           !plant.images.some((img) => img.url === plant.image_url)
-            ? [{ url: plant.image_url, caption: "メイン" }, ...plant.images]
+            ? [{ url: plant.image_url, local_url: plant.local_image_url, caption: "メイン" }, ...plant.images]
             : plant.images
         }
         plantName={plant.japanese_name}

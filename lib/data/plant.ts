@@ -19,13 +19,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/2020-04-07_Prunus_%C3%97_yedoensis_Tambasasayama%2CHyogo%28%E4%B8%B9%E6%B3%A2%E7%AF%A0%E5%B1%B1%E5%B8%82%E7%AF%A0%E5%B1%B1%E5%B7%9D%E3%81%AE%E3%82%BD%E3%83%A1%E3%82%A4%E3%83%A8%E3%82%B7%E3%83%8E%29DSCF2986%E2%98%86%E5%BD%A1.jpg",
+    local_image_url: "/images/plants/1-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/2020-04-07_Prunus_%C3%97_yedoensis_Tambasasayama%2CHyogo%28%E4%B8%B9%E6%B3%A2%E7%AF%A0%E5%B1%B1%E5%B8%82%E7%AF%A0%E5%B1%B1%E5%B7%9D%E3%81%AE%E3%82%BD%E3%83%A1%E3%82%A4%E3%83%A8%E3%82%B7%E3%83%8E%29DSCF2986%E2%98%86%E5%BD%A1.jpg",
+
+        local_url: "/images/plants/1-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_%C3%97_yedoensis_in_bloom%2C_Morris_Arboretum_01.jpg",
+
+        local_url: "/images/plants/1-2.webp",
         caption: "花",
       },
     ],
@@ -52,13 +57,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum0.jpg",
+    local_image_url: "/images/plants/2-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum0.jpg",
+
+        local_url: "/images/plants/2-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum_005.JPG",
+
+        local_url: "/images/plants/2-2.webp",
         caption: "葉",
       },
     ],
@@ -85,13 +95,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜沖縄",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuboi-Hachimangu_Kusunoki(Osaka_midorino_hyakusen).jpg",
+    local_image_url: "/images/plants/3-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuboi-Hachimangu_Kusunoki(Osaka_midorino_hyakusen).jpg",
+
+        local_url: "/images/plants/3-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnamomum_camphora_3zz.jpg",
+
+        local_url: "/images/plants/3-2.webp",
         caption: "葉",
       },
     ],
@@ -118,13 +133,18 @@ export const plants: Plant[] = [
     distribution: "全国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Zelkova_serrata_Noma_keyaki01.jpg",
+    local_image_url: "/images/plants/4-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Zelkova_serrata_Noma_keyaki01.jpg",
+
+        local_url: "/images/plants/4-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Zelkova_serrata_(81-502-L)_Upper_Trunk_Bark.JPG",
+
+        local_url: "/images/plants/4-2.webp",
         caption: "葉",
       },
     ],
@@ -151,13 +171,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/GINKGOBAUM-2.jpg",
+    local_image_url: "/images/plants/5-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/GINKGOBAUM-2.jpg",
+
+        local_url: "/images/plants/5-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ginkgo_biloba_leaves.jpg",
+
+        local_url: "/images/plants/5-2.webp",
         caption: "葉",
       },
     ],
@@ -184,13 +209,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・丘陵地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_serrata3.jpg",
+    local_image_url: "/images/plants/6-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_serrata3.jpg",
+
+        local_url: "/images/plants/6-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_serrata_(24890584014).jpg",
+
+        local_url: "/images/plants/6-2.webp",
         caption: "実",
       },
     ],
@@ -217,13 +247,18 @@ export const plants: Plant[] = [
     distribution: "全国の低山",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lasdon_Arboretum_-_Quercus_acutissima_-_IMG_1516.jpg",
+    local_image_url: "/images/plants/7-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lasdon_Arboretum_-_Quercus_acutissima_-_IMG_1516.jpg",
+
+        local_url: "/images/plants/7-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_acutissima_nuts_02_by_Line1.JPG",
+
+        local_url: "/images/plants/7-2.webp",
         caption: "実",
       },
     ],
@@ -250,13 +285,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地",
     image_url:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chamaecyparis_obtusa_01.jpg/960px-Chamaecyparis_obtusa_01.jpg",
+    local_image_url: "/images/plants/8-1.webp",
     images: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Chamaecyparis_obtusa_01.jpg/960px-Chamaecyparis_obtusa_01.jpg",
+
+        local_url: "/images/plants/8-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_obtusa_foliage.JPG",
+
+        local_url: "/images/plants/8-2.webp",
         caption: "葉",
       },
     ],
@@ -283,13 +323,18 @@ export const plants: Plant[] = [
     distribution: "全国（植林）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Taro-sugi_20111002.jpg",
+    local_image_url: "/images/plants/9-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taro-sugi_20111002.jpg",
+
+        local_url: "/images/plants/9-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_cedar_cones_-_Cryptomeria_japonica.jpg",
+
+        local_url: "/images/plants/9-2.webp",
         caption: "球果",
       },
     ],
@@ -316,13 +361,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の海岸沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Black_Pine%2C_National_Garden%2C_Tokyo.jpg",
+    local_image_url: "/images/plants/10-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Black_Pine%2C_National_Garden%2C_Tokyo.jpg",
+
+        local_url: "/images/plants/10-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_thunbergii_kz06.jpg",
+
+        local_url: "/images/plants/10-2.webp",
         caption: "球果",
       },
     ],
@@ -349,13 +399,18 @@ export const plants: Plant[] = [
     distribution: "全国の草地・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/DandelionFlower.jpg",
+    local_image_url: "/images/plants/11-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/DandelionFlower.jpg",
+
+        local_url: "/images/plants/11-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Dandelion_seeds_3.jpg",
+
+        local_url: "/images/plants/11-2.webp",
         caption: "種子",
       },
     ],
@@ -382,13 +437,18 @@ export const plants: Plant[] = [
     distribution: "全国の草地・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_repens_-_white_clover_on_way_from_Govindghat_to_Gangria_at_Valley_of_Flowers_National_Park_-_during_LGFC_-_VOF_2019_(1).jpg",
+    local_image_url: "/images/plants/12-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_repens_-_white_clover_on_way_from_Govindghat_to_Gangria_at_Valley_of_Flowers_National_Park_-_during_LGFC_-_VOF_2019_(1).jpg",
+
+        local_url: "/images/plants/12-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_repens_(inflorescense)_Edit.jpg",
+
+        local_url: "/images/plants/12-2.webp",
         caption: "花",
       },
     ],
@@ -415,13 +475,18 @@ export const plants: Plant[] = [
     distribution: "全国の草地・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Mugwort_imported_from_iNaturalist_photo_180771010_on_26_August_2024.jpg",
+    local_image_url: "/images/plants/13-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Mugwort_imported_from_iNaturalist_photo_180771010_on_26_August_2024.jpg",
+
+        local_url: "/images/plants/13-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_princeps1.jpg",
+
+        local_url: "/images/plants/13-2.webp",
         caption: "葉",
       },
     ],
@@ -448,13 +513,18 @@ export const plants: Plant[] = [
     distribution: "全国の日当たりの良い草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_mandshurica_(200704).jpg",
+    local_image_url: "/images/plants/14-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_mandshurica_(200704).jpg",
+
+        local_url: "/images/plants/14-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_mandshurica_f._hasegawae_(flower).jpg",
+
+        local_url: "/images/plants/14-2.webp",
         caption: "花",
       },
     ],
@@ -481,13 +551,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・畑",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Tagblume_Commelina_communis_stack25_2019-08-05-RM-8050218-PSD.jpg",
+    local_image_url: "/images/plants/15-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tagblume_Commelina_communis_stack25_2019-08-05-RM-8050218-PSD.jpg",
+
+        local_url: "/images/plants/15-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Commelina_communis%2C_Beechview%2C_2025-06-20.jpg",
+
+        local_url: "/images/plants/15-2.webp",
         caption: "花",
       },
     ],
@@ -514,13 +589,18 @@ export const plants: Plant[] = [
     distribution: "全国（栽培・植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_mume.JPG",
+    local_image_url: "/images/plants/16-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_mume.JPG",
+
+        local_url: "/images/plants/16-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Prunus_mume_(Armeniaca_mume)_at_Nagai_Park%2C_January_2024_-_1221_(2).jpg",
+
+        local_url: "/images/plants/16-2.webp",
         caption: "花",
       },
     ],
@@ -547,13 +627,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Branches_of_Cerasus_jamasakura_at_Mount_Obukuma_Saga.JPG",
+    local_image_url: "/images/plants/17-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Branches_of_Cerasus_jamasakura_at_Mount_Obukuma_Saga.JPG",
+
+        local_url: "/images/plants/17-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Branches_of_Cerasus_jamasakura_at_Mount_Obukuma_Saga.JPG",
+
+        local_url: "/images/plants/17-2.webp",
         caption: "花",
       },
     ],
@@ -580,13 +665,18 @@ export const plants: Plant[] = [
     distribution: "全国の山野・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+    local_image_url: "/images/plants/18-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+
+        local_url: "/images/plants/18-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_multiflora_focus_stacked-20220522-RM-124900.jpg",
+
+        local_url: "/images/plants/18-2.webp",
         caption: "実",
       },
     ],
@@ -613,13 +703,18 @@ export const plants: Plant[] = [
     distribution: "全国（街路樹として植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Morris_Arboretum_Acer_buergerianum.JPG",
+    local_image_url: "/images/plants/19-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Morris_Arboretum_Acer_buergerianum.JPG",
+
+        local_url: "/images/plants/19-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_buergerianum_leaves001.JPG",
+
+        local_url: "/images/plants/19-2.webp",
         caption: "葉",
       },
     ],
@@ -646,13 +741,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_evergreen_oak_(Quercus_myrsinifolia)_(22245673008).jpg",
+    local_image_url: "/images/plants/20-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_evergreen_oak_(Quercus_myrsinifolia)_(22245673008).jpg",
+
+        local_url: "/images/plants/20-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_myrsinifolia_kz4.jpg",
+
+        local_url: "/images/plants/20-2.webp",
         caption: "実",
       },
     ],
@@ -679,13 +779,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜沖縄の暖温帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii2.jpg",
+    local_image_url: "/images/plants/21-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii2.jpg",
+
+        local_url: "/images/plants/21-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii_nuts02.jpg",
+
+        local_url: "/images/plants/21-2.webp",
         caption: "実",
       },
     ],
@@ -712,13 +817,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・丘陵地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_densiflora_Towada.jpg",
+    local_image_url: "/images/plants/22-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_densiflora_Towada.jpg",
+
+        local_url: "/images/plants/22-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_densiflora_Towada.jpg",
+
+        local_url: "/images/plants/22-2.webp",
         caption: "球果",
       },
     ],
@@ -745,13 +855,18 @@ export const plants: Plant[] = [
     distribution: "全国の荒地・道端・土手",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Solidago_altissima_161401409.jpg",
+    local_image_url: "/images/plants/23-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Solidago_altissima_161401409.jpg",
+
+        local_url: "/images/plants/23-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Late_goldenrod_(Solidago_altissima)_(21489204593).jpg",
+
+        local_url: "/images/plants/23-2.webp",
         caption: "花",
       },
     ],
@@ -778,13 +893,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Philadelphia_Fleabane.jpg",
+    local_image_url: "/images/plants/24-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Philadelphia_Fleabane.jpg",
+
+        local_url: "/images/plants/24-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rigeron_Philadelphicus_%E3%83%8F%E3%83%AB%E3%82%B8%E3%82%AA%E3%83%B3_(211876913).jpeg",
+
+        local_url: "/images/plants/24-2.webp",
         caption: "花",
       },
     ],
@@ -811,13 +931,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・公園（植栽も多い）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Wisteria_floribunda5.jpg",
+    local_image_url: "/images/plants/25-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Wisteria_floribunda5.jpg",
+
+        local_url: "/images/plants/25-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Wisteria_floribunda5.jpg",
+
+        local_url: "/images/plants/25-2.webp",
         caption: "花",
       },
     ],
@@ -844,13 +969,18 @@ export const plants: Plant[] = [
     distribution: "全国の川沿い・山地",
     image_url:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg/960px-Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg",
+    local_image_url: "/images/plants/26-1.webp",
     images: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg/960px-Albizia_julibrissin_in_Hyogo-ku%2C_Kobe%2CJapan_DSCF1040.jpg",
+
+        local_url: "/images/plants/26-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Albizia_julibrissin_flowers_Arnold_Arboretum.jpg",
+
+        local_url: "/images/plants/26-2.webp",
         caption: "花",
       },
     ],
@@ -877,13 +1007,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Yulan_1.JPG",
+    local_image_url: "/images/plants/27-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Yulan_1.JPG",
+
+        local_url: "/images/plants/27-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_denudata_-_Orto_botanico_di_Pisa_-_fiore_-_feb_2025_(03).jpg",
+
+        local_url: "/images/plants/27-2.webp",
         caption: "花",
       },
     ],
@@ -910,13 +1045,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_kobus_borealis.jpg",
+    local_image_url: "/images/plants/28-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_kobus_borealis.jpg",
+
+        local_url: "/images/plants/28-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kwiat_magnolii_japo%C5%84skiej._Magnolia_kobus_flower.jpg",
+
+        local_url: "/images/plants/28-2.webp",
         caption: "花",
       },
     ],
@@ -943,13 +1083,18 @@ export const plants: Plant[] = [
     distribution: "本州〜沖縄の山地・海岸",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_japonica_NBG.jpg",
+    local_image_url: "/images/plants/29-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_japonica_NBG.jpg",
+
+        local_url: "/images/plants/29-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_japonica_NBG.jpg",
+
+        local_url: "/images/plants/29-2.webp",
         caption: "花",
       },
     ],
@@ -976,13 +1121,18 @@ export const plants: Plant[] = [
     distribution: "九州・四国（自生）、全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_sasanqua1.jpg",
+    local_image_url: "/images/plants/30-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_sasanqua1.jpg",
+
+        local_url: "/images/plants/30-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Camellia_sasanqua_(flower).jpg",
+
+        local_url: "/images/plants/30-2.webp",
         caption: "花",
       },
     ],
@@ -1009,13 +1159,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg/960px-Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg",
+    local_image_url: "/images/plants/31-1.webp",
     images: [
       {
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg/960px-Hydrangea_of_Shimoda_%E4%B8%8B%E7%94%B0%E3%81%AE%E3%81%82%E3%81%98%E3%81%95%E3%81%84_%282630826953%29.jpg",
+
+        local_url: "/images/plants/31-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_macrophylla_macrophylla_normalis_2zz.jpg",
+
+        local_url: "/images/plants/32-2.webp",
         caption: "花",
       },
     ],
@@ -1042,13 +1197,18 @@ export const plants: Plant[] = [
     distribution: "関東以西の海岸・山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_macrophylla_forma_normalis_01.JPG",
+    local_image_url: "/images/plants/32-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_macrophylla_forma_normalis_01.JPG",
+
+        local_url: "/images/plants/32-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_macrophylla_macrophylla_normalis_2zz.jpg",
+
+        local_url: "/images/plants/32-2.webp",
         caption: "花",
       },
     ],
@@ -1075,13 +1235,18 @@ export const plants: Plant[] = [
     distribution: "全国の林縁・道端・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_grypoceras2.JPG",
+    local_image_url: "/images/plants/33-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_grypoceras2.JPG",
+
+        local_url: "/images/plants/33-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viola_grypoceras_(flower).jpg",
+
+        local_url: "/images/plants/33-2.webp",
         caption: "花",
       },
     ],
@@ -1108,13 +1273,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・畑・荒地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_amplexicaule_(52878370216).jpg",
+    local_image_url: "/images/plants/34-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_amplexicaule_(52878370216).jpg",
+
+        local_url: "/images/plants/34-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_amplexicaule_kz06.jpg",
+
+        local_url: "/images/plants/34-2.webp",
         caption: "花",
       },
     ],
@@ -1141,13 +1311,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・畑・荒地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_purpureum_-_Tutermaa.jpg",
+    local_image_url: "/images/plants/35-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_purpureum_-_Tutermaa.jpg",
+
+        local_url: "/images/plants/35-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lamium_purpureum_closeup.jpg",
+
+        local_url: "/images/plants/35-2.webp",
         caption: "花",
       },
     ],
@@ -1174,13 +1349,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州・四国の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata_2.JPG",
+    local_image_url: "/images/plants/36-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata_2.JPG",
+
+        local_url: "/images/plants/36-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata%2C_Bupyeong%2C_Korea.jpg",
+
+        local_url: "/images/plants/36-2.webp",
         caption: "実",
       },
     ],
@@ -1207,13 +1387,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州中部以北の高山帯砂礫地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Dicentra_peregrina_Komakusa.jpg",
+    local_image_url: "/images/plants/37-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Dicentra_peregrina_Komakusa.jpg",
+
+        local_url: "/images/plants/37-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Dicentra_peregrina_(flower).JPG",
+
+        local_url: "/images/plants/37-2.webp",
         caption: "花",
       },
     ],
@@ -1240,13 +1425,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_scabra_var._buergeri_03.jpg",
+    local_image_url: "/images/plants/38-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_scabra_var._buergeri_03.jpg",
+
+        local_url: "/images/plants/38-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_scabra_var._buergeri_(flower).JPG",
+
+        local_url: "/images/plants/38-2.webp",
         caption: "花",
       },
     ],
@@ -1273,13 +1463,18 @@ export const plants: Plant[] = [
     distribution: "全国（栽培・植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sunflower_from_Silesia2.jpg",
+    local_image_url: "/images/plants/39-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sunflower_from_Silesia2.jpg",
+
+        local_url: "/images/plants/39-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthus_annuus_flower.jpg",
+
+        local_url: "/images/plants/39-2.webp",
         caption: "花",
       },
     ],
@@ -1306,13 +1501,18 @@ export const plants: Plant[] = [
     distribution: "全国の湿った半日陰・道端・庭",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Houttuynia_cordata02.jpg",
+    local_image_url: "/images/plants/40-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Houttuynia_cordata02.jpg",
+
+        local_url: "/images/plants/40-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Houttuynia-cordata-1.jpg",
+
+        local_url: "/images/plants/40-2.webp",
         caption: "花",
       },
     ],
@@ -1339,13 +1539,18 @@ export const plants: Plant[] = [
     distribution: "全国の草地・山野・土手・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis1.jpg",
+    local_image_url: "/images/plants/41-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis1.jpg",
+
+        local_url: "/images/plants/41-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis_%27Cosmopolitan%27_6_2021_Ornamental_Grass-_(51264236723).jpg",
+
+        local_url: "/images/plants/41-2.webp",
         caption: "穂",
       },
     ],
@@ -1372,13 +1577,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の落葉広葉樹林の林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Erythronium_japonicum_2006_005.jpg",
+    local_image_url: "/images/plants/42-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erythronium_japonicum_2006_005.jpg",
+
+        local_url: "/images/plants/42-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erythronium_japonicum_(flower).JPG",
+
+        local_url: "/images/plants/42-2.webp",
         caption: "花",
       },
     ],
@@ -1405,13 +1615,18 @@ export const plants: Plant[] = [
     distribution: "全国の山野・道端・荒地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Kuzu_(Pueraria_Montana_var._lobata).jpg",
+    local_image_url: "/images/plants/43-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kuzu_(Pueraria_Montana_var._lobata).jpg",
+
+        local_url: "/images/plants/43-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pueraria_lobata_subsp._thomsonii_flower_in_Urasoe_Park%2C_Okinawa.jpg",
+
+        local_url: "/images/plants/43-2.webp",
         caption: "花",
       },
     ],
@@ -1438,13 +1653,18 @@ export const plants: Plant[] = [
     distribution: "全国の湿った林縁・沢沿い・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Japans_hoefblad_(Petasites_japonicus)._22-03-2021._(d.j.b).jpg",
+    local_image_url: "/images/plants/44-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japans_hoefblad_(Petasites_japonicus)._22-03-2021._(d.j.b).jpg",
+
+        local_url: "/images/plants/44-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fuki_no_tou_(Petasites_japonicus)_%2C_%E3%83%95%E3%82%AD%E3%83%8E%E3%83%88%E3%82%A6_-_panoramio.jpg",
+
+        local_url: "/images/plants/44-2.webp",
         caption: "花",
       },
     ],
@@ -1471,13 +1691,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・公園・踏み荒らされた場所",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_asiatica.jpg",
+    local_image_url: "/images/plants/45-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_asiatica.jpg",
+
+        local_url: "/images/plants/45-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_asiatica.jpg",
+
+        local_url: "/images/plants/45-2.webp",
         caption: "花",
       },
     ],
@@ -1504,13 +1729,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜沖縄の海岸・山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_Thunbergii.JPG",
+    local_image_url: "/images/plants/46-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_Thunbergii.JPG",
+
+        local_url: "/images/plants/46-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_Thunbergii.JPG",
+
+        local_url: "/images/plants/46-2.webp",
         caption: "葉",
       },
     ],
@@ -1537,13 +1767,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州の山地・河川沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
+    local_image_url: "/images/plants/47-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
+
+        local_url: "/images/plants/47-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
+
+        local_url: "/images/plants/47-2.webp",
         caption: "葉",
       },
     ],
@@ -1570,13 +1805,18 @@ export const plants: Plant[] = [
     distribution: "本州（東北以南）〜沖縄の林内日陰",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica_(at_Tsukuba_Botanical_Garden,_Ibaraki,_Japan)_02.jpg",
+    local_image_url: "/images/plants/48-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica_(at_Tsukuba_Botanical_Garden,_Ibaraki,_Japan)_02.jpg",
+
+        local_url: "/images/plants/48-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica%2C_Institute_for_Nature_Study%2C_Tokyo_03.jpg",
+
+        local_url: "/images/plants/48-2.webp",
         caption: "実",
       },
     ],
@@ -1603,13 +1843,18 @@ export const plants: Plant[] = [
     distribution: "本州（岩手以南）〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Torreya_nucifera2.jpg",
+    local_image_url: "/images/plants/49-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Torreya_nucifera2.jpg",
+
+        local_url: "/images/plants/49-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Torreya_nucifera%E2%80%94fruit%E2%80%94at_the_New_York_Botanical_Garden.jpg",
+
+        local_url: "/images/plants/49-2.webp",
         caption: "実",
       },
     ],
@@ -1636,13 +1881,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・林縁・空き地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chelidonium_majus_a1.jpg",
+    local_image_url: "/images/plants/50-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chelidonium_majus_a1.jpg",
+
+        local_url: "/images/plants/50-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chelidonium_majus_4_RF.jpg",
+
+        local_url: "/images/plants/50-2.webp",
         caption: "花",
       },
     ],
@@ -1669,13 +1919,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Swertia_japonica_flower.JPG",
+    local_image_url: "/images/plants/51-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Swertia_japonica_flower.JPG",
+
+        local_url: "/images/plants/51-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Swertia_japonica_flower.JPG",
+
+        local_url: "/images/plants/51-2.webp",
         caption: "花",
       },
     ],
@@ -1702,13 +1957,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の湿地・水田周辺・池畔",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Saururus_chinensis1.jpg",
+    local_image_url: "/images/plants/52-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saururus_chinensis1.jpg",
+
+        local_url: "/images/plants/52-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hangesyo_06c1213cv.jpg",
+
+        local_url: "/images/plants/52-2.webp",
         caption: "葉",
       },
     ],
@@ -1735,13 +1995,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・空き地・畑",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_viridis_kz01.jpg",
+    local_image_url: "/images/plants/53-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_viridis_kz01.jpg",
+
+        local_url: "/images/plants/53-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_viridis_var._viridis_sl1.jpg",
+
+        local_url: "/images/plants/53-2.webp",
         caption: "穂",
       },
     ],
@@ -1768,13 +2033,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地・林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lilium_auratum1.jpg",
+    local_image_url: "/images/plants/54-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lilium_auratum1.jpg",
+
+        local_url: "/images/plants/54-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lilium_auratum_(flower).JPG",
+
+        local_url: "/images/plants/54-2.webp",
         caption: "花",
       },
     ],
@@ -1801,13 +2071,18 @@ export const plants: Plant[] = [
     distribution: "全国の道端・草地・畑",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_persica_02.JPG",
+    local_image_url: "/images/plants/55-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_persica_02.JPG",
+
+        local_url: "/images/plants/55-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_persica_flower.jpg",
+
+        local_url: "/images/plants/55-2.webp",
         caption: "花",
       },
     ],
@@ -1834,13 +2109,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・亜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_of_Quercus_crispula.JPG",
+    local_image_url: "/images/plants/56-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_of_Quercus_crispula.JPG",
+
+        local_url: "/images/plants/56-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acorn_of_Quercus_crispula.JPG",
+
+        local_url: "/images/plants/56-2.webp",
         caption: "実",
       },
     ],
@@ -1867,13 +2147,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の丘陵・低山",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_variabilis_JPG1a.JPG",
+    local_image_url: "/images/plants/57-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_variabilis_JPG1a.JPG",
+
+        local_url: "/images/plants/57-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_cork_oak_bark.jpg",
+
+        local_url: "/images/plants/57-2.webp",
         caption: "樹皮",
       },
     ],
@@ -1900,13 +2185,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地・冷温帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Fagus_crenata_leaves_back.JPG",
+    local_image_url: "/images/plants/58-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fagus_crenata_leaves_back.JPG",
+
+        local_url: "/images/plants/58-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fagus_crenata_flower_and_fruits.JPG",
+
+        local_url: "/images/plants/58-2.webp",
         caption: "樹皮",
       },
     ],
@@ -1933,13 +2223,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地・渓流沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Aesculus_turbinata_7.JPG",
+    local_image_url: "/images/plants/59-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aesculus_turbinata_7.JPG",
+
+        local_url: "/images/plants/59-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aesculus_turbinata%2C_Barge_walk.jpg",
+
+        local_url: "/images/plants/59-2.webp",
         caption: "花",
       },
     ],
@@ -1966,13 +2261,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・渓流沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_controversa_01.JPG",
+    local_image_url: "/images/plants/60-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_controversa_01.JPG",
+
+        local_url: "/images/plants/60-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus-controversa-flowers.JPG",
+
+        local_url: "/images/plants/60-2.webp",
         caption: "花",
       },
     ],
@@ -1999,13 +2299,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_hypoleuca_5.JPG",
+    local_image_url: "/images/plants/61-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_hypoleuca_5.JPG",
+
+        local_url: "/images/plants/61-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_obovata_(flower_s9).jpg",
+
+        local_url: "/images/plants/61-2.webp",
         caption: "花",
       },
     ],
@@ -2032,13 +2337,18 @@ export const plants: Plant[] = [
     distribution: "全国の山地・丘陵地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_crenata3.jpg",
+    local_image_url: "/images/plants/62-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_crenata3.jpg",
+
+        local_url: "/images/plants/62-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_crenata_City_Botanic_Gardens_Brisbane_L1150811.jpg",
+
+        local_url: "/images/plants/62-2.webp",
         caption: "実",
       },
     ],
@@ -2065,13 +2375,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_Rog%C3%B3w.JPG",
+    local_image_url: "/images/plants/63-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_Rog%C3%B3w.JPG",
+
+        local_url: "/images/plants/63-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_Red_leaves.JPG",
+
+        local_url: "/images/plants/63-2.webp",
         caption: "葉",
       },
     ],
@@ -2098,13 +2413,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena5.jpg",
+    local_image_url: "/images/plants/64-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena5.jpg",
+
+        local_url: "/images/plants/64-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena%2C_Morris_Arboretum_03.jpg",
+
+        local_url: "/images/plants/64-2.webp",
         caption: "葉",
       },
     ],
@@ -2131,13 +2451,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_flaccida1.jpg",
+    local_image_url: "/images/plants/65-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_flaccida1.jpg",
+
+        local_url: "/images/plants/65-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_flaccida_(flower_with_insect).jpg",
+
+        local_url: "/images/plants/65-2.webp",
         caption: "花",
       },
     ],
@@ -2164,13 +2489,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_pseudoaltaica_07.jpg",
+    local_image_url: "/images/plants/66-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_pseudoaltaica_07.jpg",
+
+        local_url: "/images/plants/66-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_pseudoaltaica_(n16).JPG",
+
+        local_url: "/images/plants/66-2.webp",
         caption: "花",
       },
     ],
@@ -2197,13 +2527,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・高山",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis1.jpg",
+    local_image_url: "/images/plants/67-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis1.jpg",
+
+        local_url: "/images/plants/67-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_Syoujyoubakama_in_sanpoukuzuredake_2008_5_27.JPG",
+
+        local_url: "/images/plants/67-2.webp",
         caption: "花",
       },
     ],
@@ -2230,13 +2565,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_acris_var._nipponicus_(Mount_Shirouma).JPG",
+    local_image_url: "/images/plants/68-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_acris_var._nipponicus_(Mount_Shirouma).JPG",
+
+        local_url: "/images/plants/68-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_acris_flower.jpg",
+
+        local_url: "/images/plants/68-2.webp",
         caption: "花",
       },
     ],
@@ -2263,13 +2603,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hosta_sieboldiana1.jpg",
+    local_image_url: "/images/plants/69-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hosta_sieboldiana1.jpg",
+
+        local_url: "/images/plants/69-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hosta_sieboldiana_(flower).jpg",
+
+        local_url: "/images/plants/69-2.webp",
         caption: "花",
       },
     ],
@@ -2296,13 +2641,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・草原",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sanguisorba_officinalis_kz01.jpg",
+    local_image_url: "/images/plants/70-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sanguisorba_officinalis_kz01.jpg",
+
+        local_url: "/images/plants/70-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sanguisorba_officinalis_flower.jpg",
+
+        local_url: "/images/plants/70-2.webp",
         caption: "花",
       },
     ],
@@ -2329,13 +2679,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・渓流沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cercidiphyllum_japonicum_kz02.jpg",
+    local_image_url: "/images/plants/71-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cercidiphyllum_japonicum_kz02.jpg",
+
+        local_url: "/images/plants/71-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cercidiphyllum_japonicum_kz02.jpg",
+
+        local_url: "/images/plants/71-2.webp",
         caption: "葉",
       },
     ],
@@ -2362,13 +2717,18 @@ export const plants: Plant[] = [
     distribution: "日本各地に街路樹として植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Platanus_%C3%97_hispanica_(Platane_commun)_-_20150430_10h12_(10124).jpg",
+    local_image_url: "/images/plants/72-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Platanus_%C3%97_hispanica_(Platane_commun)_-_20150430_10h12_(10124).jpg",
+
+        local_url: "/images/plants/72-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bark_of_a_London_Plane_(Platanus_%C3%97_acerifolia)_-_geograph.org.uk_-_3019538.jpg",
+
+        local_url: "/images/plants/72-2.webp",
         caption: "樹皮",
       },
     ],
@@ -2395,13 +2755,18 @@ export const plants: Plant[] = [
     distribution: "日本各地に公園・街路樹として植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Liriodendron_tulipifera_flower.jpg",
+    local_image_url: "/images/plants/73-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Liriodendron_tulipifera_flower.jpg",
+
+        local_url: "/images/plants/73-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tulip_Tree_Liriodendron_tulipifera_Leaf_Topside_1890px.jpg",
+
+        local_url: "/images/plants/73-2.webp",
         caption: "葉",
       },
     ],
@@ -2428,13 +2793,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・亜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_commixta_(Nanakamado)_-_Flickr_-_odako1.jpg",
+    local_image_url: "/images/plants/74-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_commixta_(Nanakamado)_-_Flickr_-_odako1.jpg",
+
+        local_url: "/images/plants/74-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_commixta_Fruit_in_Mount_Choshi_2011-10-20.jpg",
+
+        local_url: "/images/plants/74-2.webp",
         caption: "実",
       },
     ],
@@ -2461,13 +2831,18 @@ export const plants: Plant[] = [
     distribution: "日本各地に植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_babylonica_Tehran_User_Alborzagos.JPG",
+    local_image_url: "/images/plants/75-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_babylonica_Tehran_User_Alborzagos.JPG",
+
+        local_url: "/images/plants/75-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_babylonica_alternate_leaves.jpg",
+
+        local_url: "/images/plants/75-2.webp",
         caption: "葉",
       },
     ],
@@ -2494,13 +2869,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_kousa_2.jpg",
+    local_image_url: "/images/plants/76-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_kousa_2.jpg",
+
+        local_url: "/images/plants/76-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_kousa_fruit.jpg",
+
+        local_url: "/images/plants/76-2.webp",
         caption: "実",
       },
     ],
@@ -2527,13 +2907,18 @@ export const plants: Plant[] = [
     distribution: "日本各地に街路樹として植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sophora_japonica_(1).jpg",
+    local_image_url: "/images/plants/77-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sophora_japonica_(1).jpg",
+
+        local_url: "/images/plants/77-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Styphnolobium_japonicum_6612.jpg",
+
+        local_url: "/images/plants/77-2.webp",
         caption: "花",
       },
     ],
@@ -2560,13 +2945,18 @@ export const plants: Plant[] = [
     distribution: "日本各地の公園・庭園に植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_grandiflora_flower.jpg",
+    local_image_url: "/images/plants/78-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_grandiflora_flower.jpg",
+
+        local_url: "/images/plants/78-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Southern_Magnolia_Leaf_Cluster_3008px.jpg",
+
+        local_url: "/images/plants/78-2.webp",
         caption: "葉",
       },
     ],
@@ -2593,13 +2983,18 @@ export const plants: Plant[] = [
     distribution: "関東以西〜九州・沖縄の暖地・海岸近く",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ternstroemia_gymnanthera1.jpg",
+    local_image_url: "/images/plants/79-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ternstroemia_gymnanthera1.jpg",
+
+        local_url: "/images/plants/79-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Ternstroemia_Ternstroemia_gymnanthera_fall_fruit.jpg",
+
+        local_url: "/images/plants/79-2.webp",
         caption: "実",
       },
     ],
@@ -2626,13 +3021,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州・沖縄の暖地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_heterophyllus1.jpg",
+    local_image_url: "/images/plants/80-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_heterophyllus1.jpg",
+
+        local_url: "/images/plants/80-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_heterophyllus_(leaf_s3).jpg",
+
+        local_url: "/images/plants/80-2.webp",
         caption: "葉",
       },
     ],
@@ -2659,13 +3059,18 @@ export const plants: Plant[] = [
     distribution: "関東以西〜九州・沖縄の暖地・海岸",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Viburnum_odoratissimum_var._awabuki_kz01.jpg",
+    local_image_url: "/images/plants/81-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viburnum_odoratissimum_var._awabuki_kz01.jpg",
+
+        local_url: "/images/plants/81-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viburnum_awabuki_in_Korea.JPG",
+
+        local_url: "/images/plants/81-2.webp",
         caption: "実",
       },
     ],
@@ -2692,9 +3097,12 @@ export const plants: Plant[] = [
     distribution: "本州（茨城以西）〜九州・沖縄",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ligustrum_japonicum_01.jpg",
+    local_image_url: "/images/plants/82-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ligustrum_japonicum_01.jpg",
+
+        local_url: "/images/plants/82-1.webp",
         caption: "全体",
       },
       {
@@ -2725,13 +3133,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・畑・空き地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Capsella_bursa-pastoris_002.JPG",
+    local_image_url: "/images/plants/83-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Capsella_bursa-pastoris_002.JPG",
+
+        local_url: "/images/plants/83-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Capsella_bursa-pastoris_kz04.jpg",
+
+        local_url: "/images/plants/83-2.webp",
         caption: "実",
       },
     ],
@@ -2758,13 +3171,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Vicia_sativa_LC0223.jpg",
+    local_image_url: "/images/plants/84-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vicia_sativa_LC0223.jpg",
+
+        local_url: "/images/plants/84-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Vicia_sativa_-_flowers.jpg",
+
+        local_url: "/images/plants/84-2.webp",
         caption: "花",
       },
     ],
@@ -2791,13 +3209,18 @@ export const plants: Plant[] = [
     distribution: "近畿以西〜九州・沖縄の草地・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/T_japonicum01.jpg",
+    local_image_url: "/images/plants/85-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/T_japonicum01.jpg",
+
+        local_url: "/images/plants/85-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Episyrphus_balteatus_on_Taraxacum_japonicum_03.jpg",
+
+        local_url: "/images/plants/85-2.webp",
         caption: "花",
       },
     ],
@@ -2824,13 +3247,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州の草地・道端",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Taraxacum_platycarpum_01.jpg",
+    local_image_url: "/images/plants/86-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taraxacum_platycarpum_01.jpg",
+
+        local_url: "/images/plants/86-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/T._platycarpum_Dahlst%27s_flower_and_bud.jpg",
+
+        local_url: "/images/plants/86-2.webp",
         caption: "花",
       },
     ],
@@ -2857,13 +3285,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・芝生・湿地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrocotyle_sibthorpioides_6129.jpg",
+    local_image_url: "/images/plants/87-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrocotyle_sibthorpioides_6129.jpg",
+
+        local_url: "/images/plants/87-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-090702-2020-Hydrocotyle_sibthorpioides-leaf_roots_and_flower_structure-Chings_Pond_Hana_Hwy-Maui_(24600697979).jpg",
+
+        local_url: "/images/plants/87-2.webp",
         caption: "葉",
       },
     ],
@@ -2890,13 +3323,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・畑・庭",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Stellaria_media_3_RF.jpg",
+    local_image_url: "/images/plants/88-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stellaria_media_3_RF.jpg",
+
+        local_url: "/images/plants/88-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stellaria_media_3_RF.jpg",
+
+        local_url: "/images/plants/88-2.webp",
         caption: "花",
       },
     ],
@@ -2923,13 +3361,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_hebiichigo.jpg",
+    local_image_url: "/images/plants/89-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_hebiichigo.jpg",
+
+        local_url: "/images/plants/89-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_hebiichigo_fruit_in_your_hand.jpg",
+
+        local_url: "/images/plants/89-2.webp",
         caption: "実",
       },
     ],
@@ -2956,13 +3399,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の湿地・水田周辺",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_silerifolius.jpg",
+    local_image_url: "/images/plants/90-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_silerifolius.jpg",
+
+        local_url: "/images/plants/90-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_silerifolius.jpg",
+
+        local_url: "/images/plants/90-2.webp",
         caption: "花",
       },
     ],
@@ -2989,13 +3437,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の草地・道端（帰化植物）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_pratense_-_Keila.jpg",
+    local_image_url: "/images/plants/91-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_pratense_-_Keila.jpg",
+
+        local_url: "/images/plants/91-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_pratense_flower.jpg",
+
+        local_url: "/images/plants/91-2.webp",
         caption: "花",
       },
     ],
@@ -3022,13 +3475,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の空き地・道端・荒れ地（帰化植物）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_sumatrensis,_blom-_en_saadhofies,_Pretoria,_a.jpg",
+    local_image_url: "/images/plants/92-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_sumatrensis,_blom-_en_saadhofies,_Pretoria,_a.jpg",
+
+        local_url: "/images/plants/92-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_sumatrensis_sl15.jpg",
+
+        local_url: "/images/plants/92-2.webp",
         caption: "花",
       },
     ],
@@ -3055,13 +3513,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・帰化）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Bellis_perennis_white_(aka).jpg",
+    local_image_url: "/images/plants/93-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bellis_perennis_white_(aka).jpg",
+
+        local_url: "/images/plants/93-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bellis_perennis_closeup.jpg",
+
+        local_url: "/images/plants/93-2.webp",
         caption: "花",
       },
     ],
@@ -3088,13 +3551,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の湿地・水辺",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rabbitear_Iris_Iris_laevigata_Flower_2305px.jpg",
+    local_image_url: "/images/plants/94-2.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rabbitear_Iris_Iris_laevigata_Flower_2305px.jpg",
+
+        local_url: "/images/plants/94-2.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rabbitear_Iris_Iris_laevigata_Flower_2305px.jpg",
+
+        local_url: "/images/plants/94-2.webp",
         caption: "花",
       },
     ],
@@ -3121,13 +3589,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の草原・土手",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_sanguinea_kz01.jpg",
+    local_image_url: "/images/plants/95-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_sanguinea_kz01.jpg",
+
+        local_url: "/images/plants/95-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_sanguinea_flower.jpg",
+
+        local_url: "/images/plants/95-2.webp",
         caption: "花",
       },
     ],
@@ -3154,13 +3627,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_erecta_26122014_(2).jpg",
+    local_image_url: "/images/plants/96-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_erecta_26122014_(2).jpg",
+
+        local_url: "/images/plants/96-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tagetes_erecta_flower.jpg",
+
+        local_url: "/images/plants/96-2.webp",
         caption: "花",
       },
     ],
@@ -3187,13 +3665,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Papaver_Rhoeas_Far-gh_01.jpg",
+    local_image_url: "/images/plants/97-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Papaver_Rhoeas_Far-gh_01.jpg",
+
+        local_url: "/images/plants/97-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Papaver_rhoeas_in_June.jpg",
+
+        local_url: "/images/plants/97-2.webp",
         caption: "花",
       },
     ],
@@ -3220,13 +3703,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の海岸沿い・暖地（植栽・野生化）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Narcissus_tazetta_subsp._tazetta.jpg",
+    local_image_url: "/images/plants/98-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Narcissus_tazetta_subsp._tazetta.jpg",
+
+        local_url: "/images/plants/98-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flower_of_Narcissus_tazetta_at_Nagai_Park%2C_January_2024_-_1393.jpg",
+
+        local_url: "/images/plants/98-2.webp",
         caption: "花",
       },
     ],
@@ -3253,13 +3741,18 @@ export const plants: Plant[] = [
     distribution: "日本全国の道端・草地・空き地（帰化植物）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_UMFS_1.jpg",
+    local_image_url: "/images/plants/99-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_UMFS_1.jpg",
+
+        local_url: "/images/plants/99-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_(flower).jpg",
+
+        local_url: "/images/plants/99-2.webp",
         caption: "花",
       },
     ],
@@ -3286,13 +3779,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州（中部以北）の亜高山帯〜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis.jpg",
+    local_image_url: "/images/plants/100-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis.jpg",
+
+        local_url: "/images/plants/100-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_canadensis_2.jpg",
+
+        local_url: "/images/plants/100-2.webp",
         caption: "花（白い苞片）",
       },
     ],
@@ -3319,13 +3817,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州・四国・九州の亜高山帯〜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_01.jpg",
+    local_image_url: "/images/plants/130-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_01.jpg",
+
+        local_url: "/images/plants/130-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Schizocodon_soldanelloides_in_Mount_Norikura.JPG",
+
+        local_url: "/images/plants/130-2.webp",
         caption: "自生地",
       },
     ],
@@ -3352,13 +3855,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州中部以北の亜高山帯〜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_01.jpg",
+    local_image_url: "/images/plants/101-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_01.jpg",
+
+        local_url: "/images/plants/101-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_cone_and_seed.JPG",
+
+        local_url: "/images/plants/101-2.webp",
         caption: "球果と種子",
       },
     ],
@@ -3385,14 +3893,13 @@ export const plants: Plant[] = [
     distribution: "北海道・本州中部以北の高山帯（亜高山帯上部）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala1.jpg",
+    local_image_url: "/images/plants/102-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala1.jpg",
+
+        local_url: "/images/plants/102-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sieversia_pentapetala_fruits.jpg",
-        caption: "羽毛状の果穂",
       },
     ],
     tags: ["春開花", "夏開花", "落葉", "花弁5枚", "低木", "山"],
@@ -3418,14 +3925,13 @@ export const plants: Plant[] = [
     distribution: "北海道・本州中部以北の高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_a1.jpg",
+    local_image_url: "/images/plants/103-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_a1.jpg",
+
+        local_url: "/images/plants/103-1.webp",
         caption: "花（雄株）",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodiola_rosea_8.jpg",
-        caption: "群落",
       },
     ],
     tags: ["夏開花", "厚い葉", "小花集合", "草本", "山"],
@@ -3451,13 +3957,18 @@ export const plants: Plant[] = [
     distribution: "全国（栽培・植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_A.jpg",
+    local_image_url: "/images/plants/104-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_A.jpg",
+
+        local_url: "/images/plants/104-1.webp",
         caption: "赤い新芽",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_fraseri_C.jpg",
+
+        local_url: "/images/plants/104-2.webp",
         caption: "花（散房花序）",
       },
     ],
@@ -3484,14 +3995,13 @@ export const plants: Plant[] = [
     distribution: "全国（逸出・帰化、原産地はヨーロッパ〜西アジア）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_003.JPG",
+    local_image_url: "/images/plants/105-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_003.JPG",
+
+        local_url: "/images/plants/105-1.webp",
         caption: "葉（手のひら型）",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hedera_helix_berries_and_leaf.jpg",
-        caption: "果実",
       },
     ],
     tags: ["秋開花", "常緑", "手のひら葉", "光沢", "低木", "公園"],
@@ -3517,14 +4027,13 @@ export const plants: Plant[] = [
     distribution: "関東南部以西〜九州・沖縄の暖温帯林",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica1.jpg",
+    local_image_url: "/images/plants/106-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica1.jpg",
+
+        local_url: "/images/plants/106-1.webp",
         caption: "葉と枝",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cleyera_japonica_flower.jpg",
-        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "厚い葉", "花弁5枚", "高木", "山"],
@@ -3550,14 +4059,13 @@ export const plants: Plant[] = [
     distribution: "本州〜九州（庭園・植栽、一部逸出・野生化）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica1.jpg",
+    local_image_url: "/images/plants/107-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica1.jpg",
+
+        local_url: "/images/plants/107-1.webp",
         caption: "果実",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nandina_domestica_flowers.jpg",
-        caption: "花（円錐花序）",
       },
     ],
     tags: ["夏開花", "常緑", "小花集合", "低木", "公園"],
@@ -3583,14 +4091,13 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliiflora1.jpg",
+    local_image_url: "/images/plants/108-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliiflora1.jpg",
+
+        local_url: "/images/plants/108-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_liliflora_2.jpg",
-        caption: "花（外側の紫色）",
       },
     ],
     tags: ["春開花", "落葉", "高木", "公園"],
@@ -3616,13 +4123,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・庭園・公園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Echter_Winterjasmin_HD.JPG",
+    local_image_url: "/images/plants/109-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Echter_Winterjasmin_HD.JPG",
+
+        local_url: "/images/plants/109-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/2006-11-16Jasminum_nudiflorum01.jpg",
+
+        local_url: "/images/plants/109-2.webp",
         caption: "枝と花",
       },
     ],
@@ -3649,14 +4161,13 @@ export const plants: Plant[] = [
     distribution: "本州〜九州（植栽・一部山地に野生化）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha1.jpg",
+    local_image_url: "/images/plants/110-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha1.jpg",
+
+        local_url: "/images/plants/110-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Edgeworthia_chrysantha_kz3.jpg",
-        caption: "三叉分枝と花序",
       },
     ],
     tags: ["春開花", "落葉", "低木", "山", "公園"],
@@ -3682,13 +4193,18 @@ export const plants: Plant[] = [
     distribution: "関東以西（植栽）、暖地では野生化する場合がある",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_flowers.jpg",
+    local_image_url: "/images/plants/111-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_flowers.jpg",
+
+        local_url: "/images/plants/111-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acacia_dealbata_kz1.jpg",
+
+        local_url: "/images/plants/111-2.webp",
         caption: "葉と花序",
       },
     ],
@@ -3715,14 +4231,13 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・公園・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa1.jpg",
+    local_image_url: "/images/plants/112-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa1.jpg",
+
+        local_url: "/images/plants/112-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Forsythia_suspensa_kz2.jpg",
-        caption: "枝と花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "低木", "公園"],
@@ -3748,13 +4263,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州（山地・谷沿い・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
+    local_image_url: "/images/plants/113-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica1.jpg",
+
+        local_url: "/images/plants/113-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerria_japonica_D.jpg",
+
+        local_url: "/images/plants/113-2.webp",
         caption: "枝と葉",
       },
     ],
@@ -3781,13 +4301,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州（山地・岩場・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica5.jpg",
+    local_image_url: "/images/plants/114-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica5.jpg",
+
+        local_url: "/images/plants/114-1.webp",
         caption: "花（壺形の小花が垂れ下がる）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pieris_japonica_kz01.jpg",
+
+        local_url: "/images/plants/114-2.webp",
         caption: "葉と花序",
       },
     ],
@@ -3814,13 +4339,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜沖縄（山地・寺院・墓地）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28flower%29.jpg",
+    local_image_url: "/images/plants/115-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28flower%29.jpg",
+
+        local_url: "/images/plants/115-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Illicium_anisatum_%28fruits_s2%29.jpg",
+
+        local_url: "/images/plants/115-2.webp",
         caption: "果実（星形集合果・猛毒）",
       },
     ],
@@ -3847,13 +4377,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州（山地の林縁・斜面・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_flower.jpg",
+    local_image_url: "/images/plants/116-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_flower.jpg",
+
+        local_url: "/images/plants/116-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Adonis_ramosa_s4.jpg",
+
+        local_url: "/images/plants/116-2.webp",
         caption: "群落",
       },
     ],
@@ -3880,14 +4415,19 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州（山地・林縁・谷沿い）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox1.jpg",
+    local_image_url: "/images/plants/117-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox1.jpg",
+
+        local_url: "/images/plants/117-1.webp",
         caption: "花（穂状花序）",
       },
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox_2.jpg",
-        caption: "枝と花序",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stachyurus_praecox_02.jpg",
+
+        local_url: "/images/plants/117-2.webp",
+        caption: "花（穂状花序）",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "小花集合", "低木", "山"],
@@ -3913,14 +4453,13 @@ export const plants: Plant[] = [
     distribution: "全国（栽培・鉢植え・花壇）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum.jpg",
+    local_image_url: "/images/plants/118-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum.jpg",
+
+        local_url: "/images/plants/118-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cyclamen_persicum_flowers.jpg",
-        caption: "花と葉",
       },
     ],
     tags: ["冬開花", "草本", "公園"],
@@ -3946,14 +4485,13 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・庭園・公園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox1.jpg",
+    local_image_url: "/images/plants/119-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox1.jpg",
+
+        local_url: "/images/plants/119-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chimonanthus_praecox_2.jpg",
-        caption: "枝と花",
       },
     ],
     tags: ["冬開花", "落葉", "低木", "公園"],
@@ -3979,14 +4517,13 @@ export const plants: Plant[] = [
     distribution: "本州・四国・九州（山地の林縁・庭園・公園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica1.jpg",
+    local_image_url: "/images/plants/120-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica1.jpg",
+
+        local_url: "/images/plants/120-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hamamelis_japonica_2.jpg",
-        caption: "枝と花",
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "ギザギザ", "低木", "山", "公園"],
@@ -4012,14 +4549,13 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・庭園・公園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora1.jpg",
+    local_image_url: "/images/plants/121-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora1.jpg",
+
+        local_url: "/images/plants/121-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Daphne_odora_2.jpg",
-        caption: "枝と花",
       },
     ],
     tags: ["冬開花", "春開花", "常緑", "厚い葉", "光沢", "小花集合", "低木", "公園"],
@@ -4045,13 +4581,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州（湿った岩場・石垣・谷沿い・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(flower).jpg",
+    local_image_url: "/images/plants/122-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(flower).jpg",
+
+        local_url: "/images/plants/122-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saxifraga_stolonifera_(leaf).jpg",
+
+        local_url: "/images/plants/122-2.webp",
         caption: "葉",
       },
     ],
@@ -4078,13 +4619,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部以北（山地の林床・草地）、全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_-_flowers.jpg",
+    local_image_url: "/images/plants/123-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_-_flowers.jpg",
+
+        local_url: "/images/plants/123-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Convallaria_majalis_berries.jpg",
+
+        local_url: "/images/plants/123-2.webp",
         caption: "果実",
       },
     ],
@@ -4111,13 +4657,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・ハーブガーデン・道端に逸出）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_flowers.jpg",
+    local_image_url: "/images/plants/124-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_flowers.jpg",
+
+        local_url: "/images/plants/124-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Matricaria_chamomilla_kz13.jpg",
+
+        local_url: "/images/plants/124-2.webp",
         caption: "群落",
       },
     ],
@@ -4144,13 +4695,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・鉢植え・花壇）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Pelargonium_zonale_with_pink_or_magenta_petals.jpg",
+    local_image_url: "/images/plants/125-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Pelargonium_zonale_with_pink_or_magenta_petals.jpg",
+
+        local_url: "/images/plants/125-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pelargonium_hortorum-yercaud-salem-India.JPG",
+
+        local_url: "/images/plants/125-2.webp",
         caption: "全体",
       },
     ],
@@ -4177,13 +4733,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州（湿った草地・河川敷・庭園）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_RB.jpg",
+    local_image_url: "/images/plants/126-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii_RB.jpg",
+
+        local_url: "/images/plants/126-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_sieboldii1.jpg",
+
+        local_url: "/images/plants/126-2.webp",
         caption: "群落",
       },
     ],
@@ -4210,14 +4771,13 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・庭園・公園・河川沿い）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_1.jpg",
+    local_image_url: "/images/plants/127-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_1.jpg",
+
+        local_url: "/images/plants/127-1.webp",
         caption: "花（枝全体）",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_thunbergii_kz01.jpg",
-        caption: "花のアップ",
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "小花集合", "ギザギザ", "低木", "公園"],
@@ -4243,14 +4803,13 @@ export const plants: Plant[] = [
     distribution: "本州（静岡・紀伊半島の山地）、全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus1.jpg",
+    local_image_url: "/images/plants/128-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus1.jpg",
+
+        local_url: "/images/plants/128-1.webp",
         caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_perulatus_2008-11-08_002.jpg",
-        caption: "紅葉",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "ラッパ型", "低木", "公園"],
@@ -4276,13 +4835,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽・花壇・切り花）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_focus_stack-20220320-RM-144602.jpg",
+    local_image_url: "/images/plants/129-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_focus_stack-20220320-RM-144602.jpg",
+
+        local_url: "/images/plants/129-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_coronaria_1.jpg",
+
+        local_url: "/images/plants/129-2.webp",
         caption: "花（様々な色）",
       },
     ],
@@ -4309,13 +4873,18 @@ export const plants: Plant[] = [
     distribution: "全国の田んぼ・草地（西日本に多い）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_ja_Renge01.jpg",
+    local_image_url: "/images/plants/131-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_ja_Renge01.jpg",
+
+        local_url: "/images/plants/131-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Astragalus_sinicus_4.JPG",
+
+        local_url: "/images/plants/131-2.webp",
         caption: "花",
       },
     ],
@@ -4342,13 +4911,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Flowering_Dogwood_Cornus_florida_Lone_Flower_3008px.jpg",
+    local_image_url: "/images/plants/133-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowering_Dogwood_Cornus_florida_Lone_Flower_3008px.jpg",
+
+        local_url: "/images/plants/133-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_florida_kz03.jpg",
+
+        local_url: "/images/plants/133-2.webp",
         caption: "全体",
       },
     ],
@@ -4375,13 +4949,18 @@ export const plants: Plant[] = [
     distribution: "全国（植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chuisihaitang.jpg",
+    local_image_url: "/images/plants/132-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chuisihaitang.jpg",
+
+        local_url: "/images/plants/132-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_halliana_in_Christchurch_Botanic_Gardens_01.jpg",
+
+        local_url: "/images/plants/132-2.webp",
         caption: "全体",
       },
     ],
@@ -4408,13 +4987,18 @@ export const plants: Plant[] = [
     distribution: "北アメリカ原産（日本全国で植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii.jpg",
+    local_image_url: "/images/plants/134-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii.jpg",
+
+        local_url: "/images/plants/134-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nemophila_menziesii_1.jpg",
+
+        local_url: "/images/plants/134-2.webp",
         caption: "群生",
       },
     ],
@@ -4441,13 +5025,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・林縁・谷沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+    local_image_url: "/images/plants/135-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+
+        local_url: "/images/plants/135-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(flower).JPG",
+
+        local_url: "/images/plants/135-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -4474,13 +5063,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・沢沿い・谷筋",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome01.jpg",
+    local_image_url: "/images/plants/136-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome01.jpg",
+
+        local_url: "/images/plants/136-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysosplenium_japonicum=yamanekonome02.jpg",
+
+        local_url: "/images/plants/136-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -4507,13 +5101,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・林内",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(Montage).jpg",
+    local_image_url: "/images/plants/137-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(Montage).jpg",
+
+        local_url: "/images/plants/137-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chloranthus_japonicus_(flower).jpg",
+
+        local_url: "/images/plants/137-2.webp",
         caption: "花穂",
       },
     ],
@@ -4540,13 +5139,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・林内・林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_1.jpg",
+    local_image_url: "/images/plants/138-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_1.jpg",
+
+        local_url: "/images/plants/138-1.webp",
         caption: "全体・仏炎苞",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arisaema_serratum_2.jpg",
+
+        local_url: "/images/plants/138-2.webp",
         caption: "花",
       },
     ],
@@ -4573,13 +5177,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・渓流沿い・湿地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica1.jpg",
+    local_image_url: "/images/plants/139-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica1.jpg",
+
+        local_url: "/images/plants/139-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Primula_japonica_1.jpg",
+
+        local_url: "/images/plants/139-2.webp",
         caption: "群生",
       },
     ],
@@ -4606,13 +5215,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の湿原・湿地・沼縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis1.jpg",
+    local_image_url: "/images/plants/140-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis1.jpg",
+
+        local_url: "/images/plants/140-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lysichiton_camtschatcensis0.jpg",
+
+        local_url: "/images/plants/140-2.webp",
         caption: "花",
       },
     ],
@@ -4639,13 +5253,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・暗い林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile.jpg",
+    local_image_url: "/images/plants/141-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile.jpg",
+
+        local_url: "/images/plants/141-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_07527.JPG",
+
+        local_url: "/images/plants/141-2.webp",
         caption: "群生",
       },
     ],
@@ -4672,13 +5291,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地（湿潤地）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_pisifera.jpg",
+    local_image_url: "/images/plants/142-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_pisifera.jpg",
+
+        local_url: "/images/plants/142-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sawara_Falsecypress_Chamaecyparis_pisifera_Sprig_3008px.jpg",
+
+        local_url: "/images/plants/142-2.webp",
         caption: "葉と枝",
       },
     ],
@@ -4705,13 +5329,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州・沖縄の暖温帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Red_bayberry_tree_in_Sumpu_Castle_Park.JPG",
+    local_image_url: "/images/plants/144-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_bayberry_tree_in_Sumpu_Castle_Park.JPG",
+
+        local_url: "/images/plants/144-1.webp",
         caption: "全体（駿府城公園）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Morella_rubra_(fruits).jpg",
+
+        local_url: "/images/plants/144-2.webp",
         caption: "赤く熟した実",
       },
     ],
@@ -4738,13 +5367,18 @@ export const plants: Plant[] = [
     distribution: "房総半島・伊豆半島以西〜九州・沖縄の海岸近く",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_and_fruits_of_Lithocarpus_edulis.jpg",
+    local_image_url: "/images/plants/143-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_and_fruits_of_Lithocarpus_edulis.jpg",
+
+        local_url: "/images/plants/143-1.webp",
         caption: "葉と実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lithocarpus_edulis_Nakai_leaf_acorn.jpg",
+
+        local_url: "/images/plants/143-2.webp",
         caption: "葉とどんぐり",
       },
     ],
@@ -4771,13 +5405,18 @@ export const plants: Plant[] = [
     distribution: "ヨーロッパ〜西アジア原産。日本各地で植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg",
+    local_image_url: "/images/plants/145-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg",
+
+        local_url: "/images/plants/145-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens_foliage0.jpg",
+
+        local_url: "/images/plants/145-2.webp",
         caption: "葉のアップ",
       },
     ],
@@ -4804,13 +5443,18 @@ export const plants: Plant[] = [
     distribution: "中国原産の交配種。日本各地で広く植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_grandiflora.jpg",
+    local_image_url: "/images/plants/146-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_grandiflora.jpg",
+
+        local_url: "/images/plants/146-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abelia_flowers.jpg",
+
+        local_url: "/images/plants/146-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -4837,13 +5481,18 @@ export const plants: Plant[] = [
     distribution: "関東以西・四国・九州・沖縄の暖地。中国・台湾にも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus.jpg",
+    local_image_url: "/images/plants/147-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus_(190208-1804).jpg",
+
+        local_url: "/images/plants/147-1.webp",
         caption: "葉と枝",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Podocarpus_macrophyllus_6zz.jpg",
+
+        local_url: "/images/plants/147-2.webp",
         caption: "赤い花托と種子",
       },
     ],
@@ -4870,13 +5519,18 @@ export const plants: Plant[] = [
     distribution: "関東以西・四国・九州・沖縄の暖地。中国・台湾・朝鮮半島南部にも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_kz01.jpg",
+    local_image_url: "/images/plants/148-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_kz02.jpg",
+
+        local_url: "/images/plants/148-1.webp",
         caption: "葉と枝",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ilex_rotunda_fruits_in_Banna_Park,_Ishigaki,_Okinawa.jpg",
+
+        local_url: "/images/plants/148-2.webp",
         caption: "冬の赤い実",
       },
     ],
@@ -4903,13 +5557,18 @@ export const plants: Plant[] = [
     distribution: "本州（宮城県以南）・四国・九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma.JPG",
+    local_image_url: "/images/plants/149-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma4.jpg",
+
+        local_url: "/images/plants/149-1.webp",
         caption: "葉のようす",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Abies_firma2.jpg",
+
+        local_url: "/images/plants/149-2.webp",
         caption: "球果",
       },
     ],
@@ -4936,13 +5595,18 @@ export const plants: Plant[] = [
     distribution: "中国南部原産。日本全国で植栽（関東以西で野外でも越冬）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var._aurantiacus.JPG",
+    local_image_url: "/images/plants/150-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var_aurantiacus_f_thunbergii1.jpg",
+
+        local_url: "/images/plants/150-1.webp",
         caption: "花のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_fragrans_var._aurantiacus_in_Auckland_Botanic_Gardens_01.jpg",
+
+        local_url: "/images/plants/150-2.webp",
         caption: "全体",
       },
     ],
@@ -4969,13 +5633,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州・沖縄。朝鮮半島・中国にも分布。日本固有変種が多い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Aucuba_japonica_kz01.jpg",
+    local_image_url: "/images/plants/151-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aucuba_japonica_kz05.jpg",
+
+        local_url: "/images/plants/151-1.webp",
         caption: "葉と枝",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bessen_van_Aucuba_japonica._Locatie,_Tuinreservaat_Jonker_vallei_01.jpg",
+
+        local_url: "/images/plants/151-2.webp",
         caption: "赤い実",
       },
     ],
@@ -5002,13 +5671,18 @@ export const plants: Plant[] = [
     distribution: "日本全国で広く植栽（原種は奄美〜琉球の山地に自生）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_'Oomurasaki'_(1)_Meise_Nat._Plantentuin.jpg",
+    local_image_url: "/images/plants/152-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_01.jpg",
+
+        local_url: "/images/plants/152-1.webp",
         caption: "花のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_scabrum_05.jpg",
+
+        local_url: "/images/plants/152-2.webp",
         caption: "葉",
       },
     ],
@@ -5035,13 +5709,18 @@ export const plants: Plant[] = [
     distribution: "本州（静岡・愛知以西）・四国・九州の渓谷の岩場。栽培品は全国に分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum_kz01.jpg",
+    local_image_url: "/images/plants/153-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum1.jpg",
+
+        local_url: "/images/plants/201-2.webp",
         caption: "花のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum_leaf.jpg",
+
+        local_url: "/images/plants/153-2.webp",
         caption: "葉",
       },
     ],
@@ -5068,13 +5747,18 @@ export const plants: Plant[] = [
     distribution: "関東以西・四国・九州・沖縄の林床。中国・東南アジア・インドにも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_HabitusFlowersFruits_BotGardBln0906.JPG",
+    local_image_url: "/images/plants/154-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_20101209_a.jpg",
+
+        local_url: "/images/plants/154-1.webp",
         caption: "赤い実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata_20101209_f.jpg",
+
+        local_url: "/images/plants/154-2.webp",
         caption: "葉と実",
       },
     ],
@@ -5101,13 +5785,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州・沖縄の山野。中国・朝鮮半島・フィリピンにも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_10.JPG",
+    local_image_url: "/images/plants/155-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_02.jpg",
+
+        local_url: "/images/plants/155-1.webp",
         caption: "花のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Styrax_japonica_01.jpg",
+
+        local_url: "/images/plants/155-2.webp",
         caption: "全体",
       },
     ],
@@ -5134,13 +5823,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州・沖縄。中国・朝鮮半島・台湾にも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis_at_Mizunomori_Water_Botanical_Garden.jpg",
+    local_image_url: "/images/plants/156-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis_4zz.jpg",
+
+        local_url: "/images/plants/156-1.webp",
         caption: "葉",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_sinensis=Chinese_Hackberry.jpg",
+
+        local_url: "/images/plants/156-2.webp",
         caption: "果実",
       },
     ],
@@ -5167,13 +5861,18 @@ export const plants: Plant[] = [
     distribution: "本州（福島以南）・四国・九州の山地。中国・朝鮮半島にも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Stewartia_pseudocamellia_in_Hackfalls_Arboretum_(4).jpg",
+    local_image_url: "/images/plants/157-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Stewartia_Stewartia_pseudocamellia_Leaves_Vertical_2000px.jpg",
+
+        local_url: "/images/plants/157-1.webp",
         caption: "葉",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Stewartia_Stewartia_pseudocamellia_Tree_2000px.jpg",
+
+        local_url: "/images/plants/157-2.webp",
         caption: "全体と樹皮",
       },
     ],
@@ -5200,13 +5899,18 @@ export const plants: Plant[] = [
     distribution: "中国南部原産。日本全国で広く植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerstroemia_indica_MHNT_Jardin_des_Plantes_de_Toulouse.jpg",
+    local_image_url: "/images/plants/158-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lagerstroemia_indica_MHNT.BOT.2010.13.6.jpg",
+
+        local_url: "/images/plants/158-1.webp",
         caption: "花のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crepe_Myrtle_--_Lagerstroemia.jpg",
+
+        local_url: "/images/plants/158-2.webp",
         caption: "全体",
       },
     ],
@@ -5233,13 +5937,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州・沖縄の山地林縁。中国・朝鮮半島・ヒマラヤにも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_var_hians_kz05.jpg",
+    local_image_url: "/images/plants/159-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_var_hians_kz04.jpg",
+
+        local_url: "/images/plants/159-1.webp",
         caption: "果実のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_hamiltonianus_Japan.jpg",
+
+        local_url: "/images/plants/159-2.webp",
         caption: "全体",
       },
     ],
@@ -5266,13 +5975,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州・沖縄の山地。中国・朝鮮半島・日本固有変種が多い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz06.jpg",
+    local_image_url: "/images/plants/160-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz07.jpg",
+
+        local_url: "/images/plants/160-1.webp",
         caption: "花の穂",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Clethra_barbinervis_kz05.jpg",
+
+        local_url: "/images/plants/160-2.webp",
         caption: "葉",
       },
     ],
@@ -5299,13 +6013,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・丘陵。中国・朝鮮半島・サハリンにも分布",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_04.JPG",
+    local_image_url: "/images/plants/161-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_10.JPG",
+
+        local_url: "/images/plants/161-1.webp",
         caption: "花序のアップ",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hydrangea_paniculata_07-02-2026._(actm.).jpg",
+
+        local_url: "/images/plants/161-2.webp",
         caption: "果実期",
       },
     ],
@@ -5332,13 +6051,18 @@ export const plants: Plant[] = [
     distribution: "中国・インド・シリア原産。日本全国で広く植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus-syriacus.jpg",
+    local_image_url: "/images/plants/162-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hibiscus_syriacus_capsule_hoarfrost_-20200101-RM-102111.jpg",
+
+        local_url: "/images/plants/162-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Migrant_hawker_(Aeshna_mixta)_male_on_rose_mallow_(Hibiscus_syriacus).jpg",
+
+        local_url: "/images/plants/162-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -5365,13 +6089,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の落葉広葉樹林の林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii.JPG",
+    local_image_url: "/images/plants/163-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii.JPG",
+
+        local_url: "/images/plants/163-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trillium_smallii_1.JPG",
+
+        local_url: "/images/plants/163-2.webp",
         caption: "花",
       },
     ],
@@ -5398,9 +6127,12 @@ export const plants: Plant[] = [
     distribution: "北海道・本州（中部以北）の亜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi.jpg",
+    local_image_url: "/images/plants/164-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi.jpg",
+
+        local_url: "/images/plants/164-1.webp",
         caption: "全体",
       },
     ],
@@ -5427,13 +6159,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_1.jpg",
+    local_image_url: "/images/plants/165-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_1.jpg",
+
+        local_url: "/images/plants/165-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Corydalis_lineariloba_3.JPG",
+
+        local_url: "/images/plants/165-2.webp",
         caption: "花",
       },
     ],
@@ -5460,13 +6197,18 @@ export const plants: Plant[] = [
     distribution: "北海道・本州（中部以北）の亜高山帯〜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum.jpg",
+    local_image_url: "/images/plants/166-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum.jpg",
+
+        local_url: "/images/plants/166-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucidium_palmatum_(flower).JPG",
+
+        local_url: "/images/plants/166-2.webp",
         caption: "花",
       },
     ],
@@ -5493,13 +6235,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地林縁・林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_(flower).JPG",
+    local_image_url: "/images/plants/167-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_(flower).JPG",
+
+        local_url: "/images/plants/167-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epimedium_grandiflorum_var._thunbergianum_01.jpg",
+
+        local_url: "/images/plants/167-2.webp",
         caption: "全体",
       },
     ],
@@ -5526,13 +6273,18 @@ export const plants: Plant[] = [
     distribution: "全国（果樹として栽培）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/PrunusPersica4.jpg",
+    local_image_url: "/images/plants/169-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/PrunusPersica4.jpg",
+
+        local_url: "/images/plants/169-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Autumn_Red_peaches.jpg",
+
+        local_url: "/images/plants/169-2.webp",
         caption: "果実",
       },
     ],
@@ -5559,13 +6311,18 @@ export const plants: Plant[] = [
     distribution: "全国（果樹として栽培）、特に青森・長野など冷涼地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Tree_with_red_apples_in_Barkedal_4.jpg",
+    local_image_url: "/images/plants/170-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tree_with_red_apples_in_Barkedal_4.jpg",
+
+        local_url: "/images/plants/170-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Apple-tree_blossoms_2017_G3.jpg",
+
+        local_url: "/images/plants/170-2.webp",
         caption: "花",
       },
     ],
@@ -5592,13 +6349,18 @@ export const plants: Plant[] = [
     distribution: "本州〜沖縄（暖地に植栽）、原産は中国南部",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica1.jpg",
+    local_image_url: "/images/plants/171-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica1.jpg",
+
+        local_url: "/images/plants/171-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica_kz07.jpg",
+
+        local_url: "/images/plants/171-2.webp",
         caption: "全体",
       },
     ],
@@ -5625,13 +6387,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地林床",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum.JPG",
+    local_image_url: "/images/plants/168-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum.JPG",
+
+        local_url: "/images/plants/168-1.webp",
         caption: "全体",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Disporum_smilacinum_(flower).JPG",
+
+        local_url: "/images/plants/168-2.webp",
         caption: "花",
       },
     ],
@@ -5658,13 +6425,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州北部の海岸砂地、東北・北海道に多い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_RF.jpg",
+    local_image_url: "/images/plants/172-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_RF.jpg",
+
+        local_url: "/images/plants/172-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_rugosa_2010.jpg",
+
+        local_url: "/images/plants/172-2.webp",
         caption: "全体",
       },
     ],
@@ -5691,13 +6463,18 @@ export const plants: Plant[] = [
     distribution: "全国（果樹として栽培）、特に長野・青森など冷涼地、原産は中央アジア",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Blossoming_branch_of_the_apricot_tree.jpg",
+    local_image_url: "/images/plants/173-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Blossoming_branch_of_the_apricot_tree.jpg",
+
+        local_url: "/images/plants/173-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Apricots.jpg",
+
+        local_url: "/images/plants/173-2.webp",
         caption: "果実",
       },
     ],
@@ -5724,13 +6501,18 @@ export const plants: Plant[] = [
     distribution: "全国（観賞用に植栽）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-110222-1643-Prunus_persica_var_persica-Red_Baron_large_double_reddish_pink_flower-Olinda-Maui_(24445996744).jpg",
+    local_image_url: "/images/plants/174-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-110222-1643-Prunus_persica_var_persica-Red_Baron_large_double_reddish_pink_flower-Olinda-Maui_(24445996744).jpg",
+
+        local_url: "/images/plants/174-1.webp",
         caption: "花（八重咲き）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_persica_Bl%C3%BCten_20220327_01.jpg",
+
+        local_url: "/images/plants/174-2.webp",
         caption: "花",
       },
     ],
@@ -5757,13 +6539,18 @@ export const plants: Plant[] = [
     distribution: "全国（果樹として栽培）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_salicina.jpg",
+    local_image_url: "/images/plants/175-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_salicina.jpg",
+
+        local_url: "/images/plants/175-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/SantaRosaPlumBlossoms.jpg",
+
+        local_url: "/images/plants/175-2.webp",
         caption: "花",
       },
     ],
@@ -5790,13 +6577,18 @@ export const plants: Plant[] = [
     distribution: "沖縄・九州南部（自生）、暖地に植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hikanzakura.JPG",
+    local_image_url: "/images/plants/176-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hikanzakura.JPG",
+
+        local_url: "/images/plants/176-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunusceret2.jpg",
+
+        local_url: "/images/plants/176-2.webp",
         caption: "花（接写）",
       },
     ],
@@ -5823,13 +6615,18 @@ export const plants: Plant[] = [
     distribution: "本州（千葉以西）〜沖縄の暖地山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana2.jpg",
+    local_image_url: "/images/plants/177-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana2.jpg",
+
+        local_url: "/images/plants/177-1.webp",
         caption: "葉と果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana1.jpg",
+
+        local_url: "/images/plants/177-2.webp",
         caption: "全体",
       },
     ],
@@ -5856,13 +6653,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus-alnifolia-flowers.JPG",
+    local_image_url: "/images/plants/178-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus-alnifolia-flowers.JPG",
+
+        local_url: "/images/plants/178-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_alnifolia_kz01.jpg",
+
+        local_url: "/images/plants/178-2.webp",
         caption: "全体",
       },
     ],
@@ -5889,13 +6691,18 @@ export const plants: Plant[] = [
     distribution: "本州（千葉・静岡以西）〜沖縄の海岸",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata_kz01.jpg",
+    local_image_url: "/images/plants/179-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata_kz01.jpg",
+
+        local_url: "/images/plants/179-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhaphiolepis_umbellata2.jpg",
+
+        local_url: "/images/plants/179-2.webp",
         caption: "全体",
       },
     ],
@@ -5922,13 +6729,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_01.jpg",
+    local_image_url: "/images/plants/180-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_01.jpg",
+
+        local_url: "/images/plants/180-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_sieboldii_zumi_2zz.jpg",
+
+        local_url: "/images/plants/180-2.webp",
         caption: "果実",
       },
     ],
@@ -5955,13 +6767,18 @@ export const plants: Plant[] = [
     distribution: "全国（観賞用に植栽）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia_(Pearleaf_Crabapple).jpg",
+    local_image_url: "/images/plants/181-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia_(Pearleaf_Crabapple).jpg",
+
+        local_url: "/images/plants/181-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia.JPG",
+
+        local_url: "/images/plants/181-2.webp",
         caption: "全体",
       },
     ],
@@ -5988,13 +6805,18 @@ export const plants: Plant[] = [
     distribution: "本州（静岡・三重以西）〜沖縄の山地・丘陵",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra1.jpg",
+    local_image_url: "/images/plants/182-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra1.jpg",
+
+        local_url: "/images/plants/182-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_glabra2.jpg",
+
+        local_url: "/images/plants/182-2.webp",
         caption: "実と葉",
       },
     ],
@@ -6021,13 +6843,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz01.jpg",
+    local_image_url: "/images/plants/183-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz01.jpg",
+
+        local_url: "/images/plants/183-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Photinia_villosa_kz03.jpg",
+
+        local_url: "/images/plants/183-2.webp",
         caption: "実",
       },
     ],
@@ -6054,13 +6881,18 @@ export const plants: Plant[] = [
     distribution: "全国（庭園・公園・薬用として植栽）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea1.jpg",
+    local_image_url: "/images/plants/184-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea1.jpg",
+
+        local_url: "/images/plants/184-1.webp",
         caption: "果実（黄色品種）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea2.jpg",
+
+        local_url: "/images/plants/184-2.webp",
         caption: "全体",
       },
     ],
@@ -6087,13 +6919,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_1.JPG",
+    local_image_url: "/images/plants/185-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_1.JPG",
+
+        local_url: "/images/plants/185-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nashi_pear_tree_in_bloom.jpg",
+
+        local_url: "/images/plants/185-2.webp",
         caption: "開花中の木",
       },
     ],
@@ -6120,13 +6957,18 @@ export const plants: Plant[] = [
     distribution: "全国（農地・果樹園で栽培）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta1.jpg",
+    local_image_url: "/images/plants/186-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta1.jpg",
+
+        local_url: "/images/plants/186-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrus_pyrifolia_var_culta2.jpg",
+
+        local_url: "/images/plants/186-2.webp",
         caption: "花",
       },
     ],
@@ -6153,13 +6995,18 @@ export const plants: Plant[] = [
     distribution: "全国（公園・庭園・街路樹として植栽）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocydonia_sinensis.jpg",
+    local_image_url: "/images/plants/187-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudocydonia_sinensis.jpg",
+
+        local_url: "/images/plants/187-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_sinensis2.jpg",
+
+        local_url: "/images/plants/187-2.webp",
         caption: "花",
       },
     ],
@@ -6186,13 +7033,18 @@ export const plants: Plant[] = [
     distribution: "全国（庭園・果樹として植栽）、原産は西アジア",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga.jpg",
+    local_image_url: "/images/plants/188-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga.jpg",
+
+        local_url: "/images/plants/188-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cydonia_oblonga_fruit.jpg",
+
+        local_url: "/images/plants/188-2.webp",
         caption: "果実",
       },
     ],
@@ -6219,13 +7071,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州の日当たりのよい山野",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_1.jpg",
+    local_image_url: "/images/plants/189-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_1.jpg",
+
+        local_url: "/images/plants/189-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chaenomeles_japonica_2.jpg",
+
+        local_url: "/images/plants/189-2.webp",
         caption: "全体",
       },
     ],
@@ -6252,13 +7109,18 @@ export const plants: Plant[] = [
     distribution: "全国（公園・庭園・グランドカバーとして植栽）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz01.jpg",
+    local_image_url: "/images/plants/190-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz01.jpg",
+
+        local_url: "/images/plants/190-1.webp",
         caption: "全体（ヘリンボーン型の枝）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_kz1.jpg",
+
+        local_url: "/images/plants/190-2.webp",
         caption: "赤い実",
       },
     ],
@@ -6285,13 +7147,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山野・日当たりのよい草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz1.jpg",
+    local_image_url: "/images/plants/191-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz1.jpg",
+
+        local_url: "/images/plants/191-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_japonica_kz2.jpg",
+
+        local_url: "/images/plants/191-2.webp",
         caption: "花序のアップ",
       },
     ],
@@ -6318,13 +7185,18 @@ export const plants: Plant[] = [
     distribution: "全国（庭園・公園に植栽）、原産は中国・台湾",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia1.jpg",
+    local_image_url: "/images/plants/192-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia1.jpg",
+
+        local_url: "/images/plants/192-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_prunifolia2.jpg",
+
+        local_url: "/images/plants/192-2.webp",
         caption: "花と枝",
       },
     ],
@@ -6351,13 +7223,18 @@ export const plants: Plant[] = [
     distribution: "全国（庭園・公園に植栽）、原産は中国",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis1.jpg",
+    local_image_url: "/images/plants/193-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis1.jpg",
+
+        local_url: "/images/plants/193-1.webp",
         caption: "花（手毬状の花序）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Spiraea_cantoniensis2.jpg",
+
+        local_url: "/images/plants/193-2.webp",
         caption: "全体",
       },
     ],
@@ -6384,13 +7261,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz01.jpg",
+    local_image_url: "/images/plants/194-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz01.jpg",
+
+        local_url: "/images/plants/194-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stephanandra_incisa_kz02.jpg",
+
+        local_url: "/images/plants/194-2.webp",
         caption: "葉と花序",
       },
     ],
@@ -6417,13 +7299,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地の谷沿い・林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens1.jpg",
+    local_image_url: "/images/plants/195-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens1.jpg",
+
+        local_url: "/images/plants/195-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhodotypos_scandens2.jpg",
+
+        local_url: "/images/plants/195-2.webp",
         caption: "果実",
       },
     ],
@@ -6450,13 +7337,18 @@ export const plants: Plant[] = [
     distribution: "原産地は北半球の温帯〜亜寒帯。現在は世界中で栽培",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_rose.jpg",
+    local_image_url: "/images/plants/196-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_rose.jpg",
+
+        local_url: "/images/plants/196-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosehip.jpg",
+
+        local_url: "/images/plants/196-2.webp",
         caption: "ローズヒップ（果実）",
       },
     ],
@@ -6483,13 +7375,18 @@ export const plants: Plant[] = [
     distribution: "地中海沿岸・西ヨーロッパ原産。日本では庭木・公園樹として植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo1.jpg",
+    local_image_url: "/images/plants/197-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_flowers.jpg",
+
+        local_url: "/images/plants/197-1.webp",
         caption: "花（壺型）",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_fruits.jpg",
+
+        local_url: "/images/plants/197-2.webp",
         caption: "果実",
       },
     ],
@@ -6516,13 +7413,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地・丘陵・里山",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+    local_image_url: "/images/plants/209-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+
+        local_url: "/images/plants/209-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi2.jpg",
+
+        local_url: "/images/plants/209-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6549,13 +7451,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東・中部・近畿の太平洋側）の丘陵〜山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum.jpg",
+    local_image_url: "/images/plants/199-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum.jpg",
+
+        local_url: "/images/plants/199-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_dilatatum1.jpg",
+
+        local_url: "/images/plants/199-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6582,13 +7489,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地・高原の草地・林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum1.jpg",
+    local_image_url: "/images/plants/200-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum1.jpg",
+
+        local_url: "/images/plants/200-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonicum2.jpg",
+
+        local_url: "/images/plants/200-2.webp",
         caption: "花と葉",
       },
     ],
@@ -6615,13 +7527,18 @@ export const plants: Plant[] = [
     distribution: "中国南部・台湾原産。日本では主に鉢植えとして流通",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_simsii.jpg",
+    local_image_url: "/images/plants/201-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_simsii.jpg",
+
+        local_url: "/images/plants/201-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_indicum1.jpg",
+
+        local_url: "/images/plants/201-2.webp",
         caption: "鉢植えの様子",
       },
     ],
@@ -6648,13 +7565,18 @@ export const plants: Plant[] = [
     distribution: "北米東部原産。日本では園芸植物・鉢植えとして流通",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens.JPG",
+    local_image_url: "/images/plants/202-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens.JPG",
+
+        local_url: "/images/plants/202-1.webp",
         caption: "果実と葉",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens_1.JPG",
+
+        local_url: "/images/plants/202-2.webp",
         caption: "全体の様子",
       },
     ],
@@ -6681,13 +7603,18 @@ export const plants: Plant[] = [
     distribution: "本州（近畿以東）〜九州の深山（標高600〜2000m）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii.jpg",
+    local_image_url: "/images/plants/203-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii.jpg",
+
+        local_url: "/images/plants/203-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_metternichii1.jpg",
+
+        local_url: "/images/plants/203-2.webp",
         caption: "花と葉",
       },
     ],
@@ -6714,13 +7641,18 @@ export const plants: Plant[] = [
     distribution: "本州中部以北・北海道の高山帯（亜高山帯〜高山帯）の岩場・礫地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Cassiope_lycopodioides.JPG",
+    local_image_url: "/images/plants/204-0.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iwahige.jpg",
+
+        local_url: "/images/plants/204-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cassiope_lycopodioides_3.JPG",
+
+        local_url: "/images/plants/204-2.webp",
         caption: "全体の様子",
       },
     ],
@@ -6747,13 +7679,18 @@ export const plants: Plant[] = [
     distribution: "ヨーロッパ南西部〜小アジア原産。日本では公園・庭園に植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum.jpg",
+    local_image_url: "/images/plants/205-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum.jpg",
+
+        local_url: "/images/plants/205-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_ponticum_1.jpg",
+
+        local_url: "/images/plants/205-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6780,13 +7717,18 @@ export const plants: Plant[] = [
     distribution: "本州中部（白山・八ヶ岳以北）〜北海道の亜高山帯〜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum.JPG",
+    local_image_url: "/images/plants/206-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum.JPG",
+
+        local_url: "/images/plants/206-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_brachycarpum_01.jpg",
+
+        local_url: "/images/plants/206-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6813,13 +7755,18 @@ export const plants: Plant[] = [
     distribution: "本州（関西・紀伊半島・東海・伊豆・富士周辺）の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonoheptamerum_1.JPG",
+    local_image_url: "/images/plants/207-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_japonoheptamerum_1.JPG",
+
+        local_url: "/images/plants/207-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_degronianum_1.JPG",
+
+        local_url: "/images/plants/207-2.webp",
         caption: "花と葉",
       },
     ],
@@ -6846,13 +7793,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地の岩場・林縁の岩上",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei.JPG",
+    local_image_url: "/images/plants/208-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei.JPG",
+
+        local_url: "/images/plants/208-1.webp",
         caption: "花と葉",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_keiskei_(flower).JPG",
+
+        local_url: "/images/plants/208-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6879,13 +7831,18 @@ export const plants: Plant[] = [
     distribution: "北海道南部〜九州の山地・丘陵・里山",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+    local_image_url: "/images/plants/209-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi1.jpg",
+
+        local_url: "/images/plants/209-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_kaempferi2.jpg",
+
+        local_url: "/images/plants/209-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6912,13 +7869,18 @@ export const plants: Plant[] = [
     distribution: "関東〜中部地方（日光、赤城、妙義、奥秩父など）の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum_var._nikoense_flowers.jpg",
+    local_image_url: "/images/plants/210-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum_var._nikoense_flowers.jpg",
+
+        local_url: "/images/plants/210-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_pentaphyllum.jpg",
+
+        local_url: "/images/plants/210-2.webp",
         caption: "花と枝",
       },
     ],
@@ -6945,13 +7907,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州（東北・北陸）の山地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii.JPG",
+    local_image_url: "/images/plants/211-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii.JPG",
+
+        local_url: "/images/plants/211-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rhododendron_albrechtii_1.JPG",
+
+        local_url: "/images/plants/211-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -6978,13 +7945,18 @@ export const plants: Plant[] = [
     distribution: "北米東部原産。日本では公園・庭園に植栽",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia.jpg",
+    local_image_url: "/images/plants/212-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia.jpg",
+
+        local_url: "/images/plants/212-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Kalmia_latifolia1.jpg",
+
+        local_url: "/images/plants/212-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -7011,13 +7983,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地の林縁・二次林",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus.jpg",
+    local_image_url: "/images/plants/213-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus.jpg",
+
+        local_url: "/images/plants/213-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Enkianthus_campanulatus1.jpg",
+
+        local_url: "/images/plants/213-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -7044,13 +8021,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地の林内・林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_1.JPG",
+    local_image_url: "/images/plants/214-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_1.JPG",
+
+        local_url: "/images/plants/214-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_2.JPG",
+
+        local_url: "/images/plants/214-2.webp",
         caption: "果実と葉",
       },
     ],
@@ -7077,13 +8059,18 @@ export const plants: Plant[] = [
     distribution: "北米原産。世界中で栽培。日本でも農園・家庭菜園で広く栽培",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum.jpg",
+    local_image_url: "/images/plants/215-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum.jpg",
+
+        local_url: "/images/plants/215-1.webp",
         caption: "果実",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_corymbosum1.jpg",
+
+        local_url: "/images/plants/215-2.webp",
         caption: "花",
       },
     ],
@@ -7110,13 +8097,18 @@ export const plants: Plant[] = [
     distribution: "本州（東北南部以南）〜沖縄の山地・丘陵・海岸近くの林縁",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum.jpg",
+    local_image_url: "/images/plants/216-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum.jpg",
+
+        local_url: "/images/plants/216-1.webp",
         caption: "果実と葉",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum1.jpg",
+
+        local_url: "/images/plants/216-2.webp",
         caption: "果実",
       },
     ],
@@ -7143,13 +8135,18 @@ export const plants: Plant[] = [
     distribution: "北海道〜九州の山地（主に日本海側）の林床・岩場",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica.JPG",
+    local_image_url: "/images/plants/217-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica.JPG",
+
+        local_url: "/images/plants/217-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Epigaea_asiatica_1.JPG",
+
+        local_url: "/images/plants/217-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -7176,13 +8173,18 @@ export const plants: Plant[] = [
     distribution: "本州（関東以西）〜九州の山地の湿った林縁・沢沿い",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_1.JPG",
+    local_image_url: "/images/plants/218-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_1.JPG",
+
+        local_url: "/images/plants/218-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leucothoe_grayana_2.JPG",
+
+        local_url: "/images/plants/218-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -7209,13 +8211,18 @@ export const plants: Plant[] = [
     distribution: "ヨーロッパ（アルプス〜地中海沿岸）原産。日本では庭植え・鉢植えで流通",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea.jpg",
+    local_image_url: "/images/plants/219-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea.jpg",
+
+        local_url: "/images/plants/219-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_carnea1.jpg",
+
+        local_url: "/images/plants/219-2.webp",
         caption: "花のアップ",
       },
     ],
@@ -7242,13 +8249,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地の湿った林縁・岩場",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata1.jpg",
+    local_image_url: "/images/plants/220-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata1.jpg",
+
+        local_url: "/images/plants/220-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Elliottia_paniculata2.jpg",
+
+        local_url: "/images/plants/220-2.webp",
         caption: "花序",
       },
     ],
@@ -7275,13 +8287,18 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地・丘陵の乾燥した尾根・林",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia_Flowers.JPG",
+    local_image_url: "/images/plants/221-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia_Flowers.JPG",
+
+        local_url: "/images/plants/221-1.webp",
         caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lyonia_ovalifolia1.jpg",
+
+        local_url: "/images/plants/221-2.webp",
         caption: "花序",
       },
     ],

@@ -206,7 +206,7 @@ const PhotoQuizClient: FC = () => {
                         </div>
                       ) : (
                         <img
-                          src={wikimediaThumb(reviewPlant.image_url ?? "", 160)}
+                          src={reviewPlant.local_image_url ?? wikimediaThumb(reviewPlant.image_url ?? "", 160)}
                           alt="植物の写真"
                           style={{
                             width: "100%",
@@ -380,7 +380,7 @@ const PhotoQuizClient: FC = () => {
                 </div>
               ) : (
                 <img
-                  src={wikimediaThumb(plant.image_url ?? "", 600)}
+                  src={plant.local_image_url ?? wikimediaThumb(plant.image_url ?? "", 600)}
                   alt="植物の写真"
                   onLoad={() => handleImageLoad(1)}
                   style={{

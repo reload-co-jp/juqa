@@ -172,7 +172,7 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
                 >
                   {plant.image_url ? (
                     <img
-                      src={wikimediaThumb(plant.image_url, 80)}
+                      src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 80)}
                       alt={plant.japanese_name}
                       loading="lazy"
                       style={{

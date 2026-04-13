@@ -115,7 +115,7 @@ const FlowersContent: FC = () => {
                 >
                   {plant.image_url ? (
                     <img
-                      src={wikimediaThumb(plant.image_url, 400)}
+                      src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 400)}
                       alt={plant.japanese_name}
                       loading="lazy"
                       style={{

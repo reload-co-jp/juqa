@@ -5,6 +5,7 @@ import { wikimediaThumb } from "lib/utils"
 
 type PlantImage = {
   url: string
+  local_url?: string
   caption: string
 }
 
@@ -51,7 +52,7 @@ const PlantPhotoGallery: FC<Props> = ({ images, plantName }) => {
       >
         <img
           key={activeIndex}
-          src={wikimediaThumb(current.url, 800)}
+          src={current.local_url ?? wikimediaThumb(current.url, 800)}
           alt={`${plantName} - ${current.caption}`}
           style={{
             width: "100%",
@@ -113,7 +114,7 @@ const PlantPhotoGallery: FC<Props> = ({ images, plantName }) => {
               }}
             >
               <img
-                src={wikimediaThumb(img.url, 160)}
+                src={img.local_url ?? wikimediaThumb(img.url, 160)}
                 alt={img.caption}
                 style={{
                   width: "100%",

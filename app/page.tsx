@@ -209,11 +209,12 @@ const Page: FC = () => {
               }}
             >
               <img
-                src={wikimediaThumb(
+                src={
+                  plant.images.find((i) => i.caption == "花")?.local_url ??
                   plant.images.find((i) => i.caption == "花")?.url ??
-                    plant.image_url,
-                  160
-                )}
+                  plant.local_image_url ??
+                  wikimediaThumb(plant.image_url, 160)
+                }
                 alt={plant.japanese_name}
                 style={{
                   width: "100%",
@@ -365,7 +366,7 @@ const Page: FC = () => {
                 }}
               >
                 <img
-                  src={wikimediaThumb(plant.image_url, 160)}
+                  src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 160)}
                   alt={plant.japanese_name}
                   style={{
                     width: "100%",

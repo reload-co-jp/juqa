@@ -171,7 +171,7 @@ const QuizClient: FC = () => {
                     </div>
                     {q.type === "photo" && reviewPlant && (
                       <img
-                        src={wikimediaThumb(reviewPlant.image_url ?? "", 160)}
+                        src={reviewPlant.local_image_url ?? wikimediaThumb(reviewPlant.image_url ?? "", 160)}
                         alt="植物の写真"
                         style={{
                           width: "100%",
@@ -297,7 +297,7 @@ const QuizClient: FC = () => {
         {quiz.type === "photo" && plant && (
           <div style={{ marginBottom: "0.75rem" }}>
             <img
-              src={wikimediaThumb(plant.image_url ?? "", 400)}
+              src={plant.local_image_url ?? wikimediaThumb(plant.image_url ?? "", 400)}
               alt="植物の写真"
               style={{
                 width: "100%",
