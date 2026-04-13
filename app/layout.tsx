@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Title } from "components/elements/layout"
+import { HeaderSearch } from "components/elements/HeaderSearch"
 import Link from "next/link"
 import "./reset.css"
 
@@ -110,11 +111,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
             padding: ".5rem 1rem",
             position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
           <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
             <Title>ジュカ！ (JuQa)</Title>
           </Link>
+          <HeaderSearch />
         </header>
         <div style={{ backgroundColor: "#1e1e1e" }}>
           <main
