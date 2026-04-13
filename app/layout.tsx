@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
   keywords: ["植物", "樹木", "街路樹", "植物図鑑", "植物学習", "見分け方", "植物クイズ", "花", "木", "草", "科"],
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     title: "ジュカ！ (JuQa)",
     description:

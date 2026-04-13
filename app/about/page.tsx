@@ -1,10 +1,22 @@
 import type { Metadata } from "next"
 import { plants, families } from "lib/data"
 
+const siteUrl = "https://juqa.reload.co.jp"
+
 export const metadata: Metadata = {
   title: "このサイトについて",
   description:
     "ジュカ！ (JuQa) は街路樹や山で見かける植物を体系的に学べる学習サイトです。",
+  alternates: {
+    canonical: `${siteUrl}/about/`,
+  },
+  openGraph: {
+    title: "このサイトについて | ジュカ！",
+    description:
+      "ジュカ！ (JuQa) は街路樹や山で見かける植物を体系的に学べる学習サイトです。",
+    url: `${siteUrl}/about/`,
+    type: "website",
+  },
 }
 
 const Page = () => {
