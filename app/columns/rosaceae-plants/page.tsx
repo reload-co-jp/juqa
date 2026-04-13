@@ -1,3 +1,4 @@
+import { PlantCard } from "components/elements/ColumnComponents"
 import type { Metadata } from "next"
 import Link from "next/link"
 
@@ -70,72 +71,6 @@ const Section = ({
   </div>
 )
 
-const PlantCard = ({
-  name,
-  href,
-  points,
-  tip,
-}: {
-  name: string
-  href: string
-  points: string[]
-  tip: string
-}) => (
-  <div
-    style={{
-      background: "#242424",
-      borderRadius: "8px",
-      padding: "1rem",
-      marginBottom: "0.75rem",
-    }}
-  >
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "0.5rem",
-        marginBottom: "0.5rem",
-      }}
-    >
-      <Link
-        href={href}
-        style={{
-          fontWeight: "bold",
-          color: "#7cbe8c",
-          fontSize: "1rem",
-          textDecoration: "none",
-        }}
-      >
-        {name} →
-      </Link>
-    </div>
-    <ul
-      style={{
-        margin: "0 0 0.5rem",
-        paddingLeft: "1.2rem",
-        color: "#ccc",
-        fontSize: "0.875rem",
-        lineHeight: 1.8,
-      }}
-    >
-      {points.map((p) => (
-        <li key={p}>{p}</li>
-      ))}
-    </ul>
-    <div
-      style={{
-        background: "#1e3d1f",
-        borderRadius: "6px",
-        padding: "0.5rem 0.75rem",
-        color: "#a0d0a2",
-        fontSize: "0.8rem",
-      }}
-    >
-      💡 {tip}
-    </div>
-  </div>
-)
-
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -164,7 +99,11 @@ const Page = () => {
       <div style={{ marginBottom: "1.5rem" }}>
         <Link
           href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
+          style={{
+            color: "#7cbe8c",
+            fontSize: "0.85rem",
+            textDecoration: "none",
+          }}
         >
           ← トップへ
         </Link>
@@ -203,11 +142,22 @@ const Page = () => {
       </div>
 
       {/* ヒーロー画像 */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
+      <div
+        style={{
+          marginBottom: "2rem",
+          borderRadius: "12px",
+          overflow: "hidden",
+        }}
+      >
         <img
           src={ogImage}
           alt="ノイバラ（バラ科）の花"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
+          style={{
+            width: "100%",
+            height: "240px",
+            objectFit: "cover",
+            display: "block",
+          }}
         />
         <div
           style={{
@@ -309,7 +259,9 @@ const Page = () => {
               >
                 {f.label}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}>
+              <div
+                style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}
+              >
                 {f.desc}
               </div>
             </div>
@@ -493,36 +445,104 @@ const Page = () => {
           >
             <thead>
               <tr>
-                {["種名", "グループ", "花の色・時期", "識別ポイント"].map((h) => (
-                  <th
-                    key={h}
-                    style={{
-                      padding: "0.5rem 0.75rem",
-                      textAlign: "left",
-                      borderBottom: "1px solid #444",
-                      color: "#7cbe8c",
-                      fontWeight: "bold",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {h}
-                  </th>
-                ))}
+                {["種名", "グループ", "花の色・時期", "識別ポイント"].map(
+                  (h) => (
+                    <th
+                      key={h}
+                      style={{
+                        padding: "0.5rem 0.75rem",
+                        textAlign: "left",
+                        borderBottom: "1px solid #444",
+                        color: "#7cbe8c",
+                        fontWeight: "bold",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {h}
+                    </th>
+                  )
+                )}
               </tr>
             </thead>
             <tbody>
               {[
-                { name: "ソメイヨシノ", href: "/plants/1", group: "花木", flower: "白〜淡ピンク・3〜4月", point: "葉より先に開花" },
-                { name: "ウメ", href: "/plants/16", group: "花木・果樹", flower: "白〜ピンク・1〜3月", point: "香りが強い・花柄が短い" },
-                { name: "ヤマザクラ", href: "/plants/17", group: "花木", flower: "白〜淡ピンク・4月", point: "花と赤い若葉が同時" },
-                { name: "ハナモモ", href: "/plants/174", group: "花木", flower: "濃ピンク〜白・3〜4月", point: "花が枝いっぱいに密集" },
-                { name: "リンゴ", href: "/plants/170", group: "果樹", flower: "白〜淡ピンク・4〜5月", point: "果実のお尻ながく残る" },
-                { name: "ビワ", href: "/plants/171", group: "果樹", flower: "白・11〜2月（冬）", point: "常緑・大きな革質葉" },
-                { name: "アンズ", href: "/plants/173", group: "果樹", flower: "白〜淡ピンク・3月", point: "果実がオレンジ色" },
-                { name: "ノイバラ", href: "/plants/18", group: "野生低木", flower: "白・5〜6月", point: "トゲあり・赤い小果実" },
-                { name: "ハマナス", href: "/plants/172", group: "野生低木", flower: "濃ピンク・5〜8月", point: "海岸砂地・赤く丸い実" },
-                { name: "ヤマブキ", href: "/plants/113", group: "野生低木", flower: "黄・4〜5月", point: "バラ科で黄花は珍しい" },
-                { name: "ナナカマド", href: "/plants/74", group: "落葉高木", flower: "白・5〜6月", point: "羽状複葉・橙赤色の実" },
+                {
+                  name: "ソメイヨシノ",
+                  href: "/plants/1",
+                  group: "花木",
+                  flower: "白〜淡ピンク・3〜4月",
+                  point: "葉より先に開花",
+                },
+                {
+                  name: "ウメ",
+                  href: "/plants/16",
+                  group: "花木・果樹",
+                  flower: "白〜ピンク・1〜3月",
+                  point: "香りが強い・花柄が短い",
+                },
+                {
+                  name: "ヤマザクラ",
+                  href: "/plants/17",
+                  group: "花木",
+                  flower: "白〜淡ピンク・4月",
+                  point: "花と赤い若葉が同時",
+                },
+                {
+                  name: "ハナモモ",
+                  href: "/plants/174",
+                  group: "花木",
+                  flower: "濃ピンク〜白・3〜4月",
+                  point: "花が枝いっぱいに密集",
+                },
+                {
+                  name: "リンゴ",
+                  href: "/plants/170",
+                  group: "果樹",
+                  flower: "白〜淡ピンク・4〜5月",
+                  point: "果実のお尻ながく残る",
+                },
+                {
+                  name: "ビワ",
+                  href: "/plants/171",
+                  group: "果樹",
+                  flower: "白・11〜2月（冬）",
+                  point: "常緑・大きな革質葉",
+                },
+                {
+                  name: "アンズ",
+                  href: "/plants/173",
+                  group: "果樹",
+                  flower: "白〜淡ピンク・3月",
+                  point: "果実がオレンジ色",
+                },
+                {
+                  name: "ノイバラ",
+                  href: "/plants/18",
+                  group: "野生低木",
+                  flower: "白・5〜6月",
+                  point: "トゲあり・赤い小果実",
+                },
+                {
+                  name: "ハマナス",
+                  href: "/plants/172",
+                  group: "野生低木",
+                  flower: "濃ピンク・5〜8月",
+                  point: "海岸砂地・赤く丸い実",
+                },
+                {
+                  name: "ヤマブキ",
+                  href: "/plants/113",
+                  group: "野生低木",
+                  flower: "黄・4〜5月",
+                  point: "バラ科で黄花は珍しい",
+                },
+                {
+                  name: "ナナカマド",
+                  href: "/plants/74",
+                  group: "落葉高木",
+                  flower: "白・5〜6月",
+                  point: "羽状複葉・橙赤色の実",
+                },
               ].map((row, i) => (
                 <tr
                   key={row.name}
@@ -541,13 +561,29 @@ const Page = () => {
                       {row.name}
                     </Link>
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td
+                    style={{
+                      padding: "0.6rem 0.75rem",
+                      borderBottom: "1px solid #333",
+                    }}
+                  >
                     {row.group}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333", whiteSpace: "nowrap" }}>
+                  <td
+                    style={{
+                      padding: "0.6rem 0.75rem",
+                      borderBottom: "1px solid #333",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
                     {row.flower}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td
+                    style={{
+                      padding: "0.6rem 0.75rem",
+                      borderBottom: "1px solid #333",
+                    }}
+                  >
                     {row.point}
                   </td>
                 </tr>
@@ -625,7 +661,10 @@ const Page = () => {
         >
           関連コラム：春の登山で見られる花特集 →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link
+          href="/columns"
+          style={{ color: "#7cbe8c", textDecoration: "none" }}
+        >
           コラム一覧へ →
         </Link>
       </div>
