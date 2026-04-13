@@ -38,6 +38,6 @@
     "sharp": "^0.34.5",
     "textlint": "^15.5.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.0"
+    "typescript-eslint": "^8.58.1"
   }
 }
