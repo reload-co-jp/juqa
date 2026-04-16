@@ -50,12 +50,6 @@ const navCards = [
     description: "絞り込み",
   },
   {
-    href: "/quiz",
-    emoji: "📝",
-    title: "クイズ",
-    description: "知識を試す",
-  },
-  {
     href: "/quiz/photo",
     emoji: "📷",
     title: "写真クイズ",
