@@ -3567,7 +3567,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
-    similar_plant_ids: [95],
+    similar_plant_ids: [95, 223],
   },
   {
     id: 95,
@@ -3605,7 +3605,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
-    similar_plant_ids: [94],
+    similar_plant_ids: [94, 223],
   },
   {
     id: 96,
@@ -8325,11 +8325,58 @@ export const plants: Plant[] = [
     distribution: "全国の道端・草地",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium.jpg",
+    local_image_url: "/images/plants/222-0.webp",
     images: [
-      { url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium.jpg", caption: "花と葉の様子" },
-      { url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium_sl25.jpg", caption: "果実の様子" },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium.jpg",
+        local_url: "/images/plants/222-1.webp",
+        caption: "花と葉の様子",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_dubium_sl25.jpg",
+        local_url: "/images/plants/222-2.webp",
+        caption: "果実の様子",
+      },
     ],
     tags: ["春開花", "草本", "小花集合", "雑草"],
     similar_plant_ids: [12],
+  },
+  {
+    id: 223,
+    japanese_name: "シャガ",
+    scientific_name: "Iris japonica",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "中国原産とされるアヤメ科の多年草で、日本では寺社林や人家近くの半日陰に群生して見られる。",
+      "春に白〜淡い青紫色の花を咲かせ、花被片の縁が細かく波打つ繊細な姿が特徴。",
+      "地下茎でよく殖え、種子はほとんど作らないため、まとまった株立ちになりやすい。",
+    ],
+    identification: [
+      "白っぽい花に青紫や橙色の模様が入り、花びらの縁がフリル状になる",
+      "光沢のある細長い葉が扇状に並び、冬も葉が残る",
+      "林縁・石垣脇・寺社の境内など半日陰のやや湿った場所に群生する",
+      "アヤメ類の中ではやや早い4〜5月に開花し、草丈は低め",
+    ],
+    distribution: "本州〜九州の人家近く・寺社林・林縁（植栽・半野生）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_japonica_5Dsr_3668.jpg",
+    local_image_url: "/images/plants/223-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_japonica_5Dsr_3668.jpg",
+
+        local_url: "/images/plants/223-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B7%E3%83%A3%E3%82%AC-%E8%8A%B1_%285845106698%29.jpg",
+
+        local_url: "/images/plants/223-2.webp",
+        caption: "群生の様子",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "草本", "公園"],
+    similar_plant_ids: [94, 95],
   },
 ]
