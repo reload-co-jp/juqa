@@ -4,7 +4,12 @@ import { FC, useState, useRef } from "react"
 import Link from "next/link"
 import { plants } from "lib/data"
 import { shuffle, wikimediaThumb } from "lib/utils"
-import { PageHeader, SectionCard, Button } from "components/elements/layout"
+import {
+  PageHeader,
+  SectionCard,
+  Button,
+  Tag,
+} from "components/elements/layout"
 
 type PhotoQuiz = {
   id: number
@@ -14,8 +19,56 @@ type PhotoQuiz = {
   shuffledChoices: string[]
 }
 
-function generatePhotoQuizzes(count: number): PhotoQuiz[] {
-  const shuffled = shuffle(plants)
+type PhotoQuizGenre = {
+  id: string
+  label: string
+  description: string
+  filter: (plant: Plant) => boolean
+}
+
+const QUIZ_COUNT = 4
+
+const photoQuizGenres: PhotoQuizGenre[] = [
+  {
+    id: "spring-flowers",
+    label: "春の花",
+    description: "春に花を咲かせる植物から出題",
+    filter: (plant) => plant.tags.includes("春開花"),
+  },
+  {
+    id: "summer-flowers",
+    label: "夏の花",
+    description: "夏に見かける花や樹木から出題",
+    filter: (plant) => plant.tags.includes("夏開花"),
+  },
+  {
+    id: "mountain-plants",
+    label: "山の植物",
+    description: "山地で見かけやすい植物を中心に出題",
+    filter: (plant) => plant.tags.includes("山"),
+  },
+  {
+    id: "street-trees",
+    label: "街路樹",
+    description: "街や公園で見かける木を見分ける",
+    filter: (plant) => plant.tags.includes("街路樹"),
+  },
+  {
+    id: "conifers",
+    label: "針葉樹",
+    description: "針葉を持つ樹木だけで挑戦",
+    filter: (plant) => plant.tags.includes("針葉"),
+  },
+  {
+    id: "acorns",
+    label: "どんぐり",
+    description: "どんぐりをつける仲間を集中的に出題",
+    filter: (plant) => plant.tags.includes("どんぐり"),
+  },
+]
+
+function generatePhotoQuizzes(pool: Plant[], count: number): PhotoQuiz[] {
+  const shuffled = shuffle(pool)
   const selected = shuffled.slice(0, count)
   const others = shuffled.slice(count)
   return selected.map((plant, i) => {
@@ -33,9 +86,8 @@ function generatePhotoQuizzes(count: number): PhotoQuiz[] {
 }
 
 const PhotoQuizClient: FC = () => {
-  const [shuffledQuizzes, setShuffledQuizzes] = useState<PhotoQuiz[]>(() =>
-    generatePhotoQuizzes(4)
-  )
+  const [selectedGenreId, setSelectedGenreId] = useState<string | null>(null)
+  const [shuffledQuizzes, setShuffledQuizzes] = useState<PhotoQuiz[]>([])
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [answers, setAnswers] = useState<string[]>([])
@@ -44,10 +96,25 @@ const PhotoQuizClient: FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false)
   const loadedCountRef = useRef(0)
 
-  const quiz = shuffledQuizzes[current]
-  const isCorrect = selected === quiz.answer
-  const plant =
-    quiz.plant_id !== null ? plants.find((p) => p.id === quiz.plant_id) : null
+  const selectedGenre =
+    photoQuizGenres.find((genre) => genre.id === selectedGenreId) ?? null
+
+  const startGenreQuiz = (genreId: string) => {
+    const genre = photoQuizGenres.find((item) => item.id === genreId)
+    if (!genre) return
+    const pool = plants.filter(genre.filter)
+    if (pool.length < QUIZ_COUNT) return
+
+    setSelectedGenreId(genreId)
+    setShuffledQuizzes(generatePhotoQuizzes(pool, QUIZ_COUNT))
+    setCurrent(0)
+    setSelected(null)
+    setAnswers([])
+    setScore(0)
+    setFinished(false)
+    setImageLoaded(false)
+    loadedCountRef.current = 0
+  }
 
   const handleSelect = (choice: string) => {
     if (selected !== null) return
@@ -72,7 +139,17 @@ const PhotoQuizClient: FC = () => {
   }
 
   const handleReset = () => {
-    setShuffledQuizzes(generatePhotoQuizzes(4))
+    if (!selectedGenre) {
+      setSelectedGenreId(null)
+      setShuffledQuizzes([])
+      return
+    }
+    startGenreQuiz(selectedGenre.id)
+  }
+
+  const handleBackToGenres = () => {
+    setSelectedGenreId(null)
+    setShuffledQuizzes([])
     setCurrent(0)
     setSelected(null)
     setAnswers([])
@@ -89,6 +166,83 @@ const PhotoQuizClient: FC = () => {
     }
   }
 
+  if (!selectedGenre || shuffledQuizzes.length === 0) {
+    return (
+      <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
+        <PageHeader backHref="/" backLabel="トップ" title="写真クイズ" />
+
+        <SectionCard style={{ marginBottom: "1rem" }}>
+          <p
+            style={{
+              margin: "0 0 0.5rem",
+              fontSize: "1rem",
+              fontWeight: "bold",
+              color: "#e0e0e0",
+            }}
+          >
+            ジャンルを選んでスタート
+          </p>
+          <p style={{ margin: 0, color: "#999", fontSize: "0.9rem" }}>
+            4問の写真クイズに挑戦できます。気になるテーマから選んでください。
+          </p>
+        </SectionCard>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "0.75rem",
+          }}
+        >
+          {photoQuizGenres.map((genre) => {
+            const count = plants.filter(genre.filter).length
+            const disabled = count < QUIZ_COUNT
+
+            return (
+              <button
+                key={genre.id}
+                onClick={() => startGenreQuiz(genre.id)}
+                disabled={disabled}
+                style={{
+                  background: disabled ? "#262626" : "#2d2d2d",
+                  color: disabled ? "#777" : "#e0e0e0",
+                  border: `1px solid ${disabled ? "#333" : "#444"}`,
+                  borderRadius: "10px",
+                  padding: "1rem",
+                  textAlign: "left",
+                  cursor: disabled ? "not-allowed" : "pointer",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  <div style={{ fontSize: "1rem", fontWeight: "bold" }}>
+                    {genre.label}
+                  </div>
+                  <Tag variant="muted">{count}種</Tag>
+                </div>
+                <div style={{ fontSize: "0.85rem", lineHeight: "1.6" }}>
+                  {genre.description}
+                </div>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  const quiz = shuffledQuizzes[current]
+  const isCorrect = selected === quiz.answer
+  const plant =
+    quiz.plant_id !== null ? plants.find((p) => p.id === quiz.plant_id) : null
+
   if (finished) {
     const percent = Math.round((score / shuffledQuizzes.length) * 100)
     return (
@@ -96,6 +250,9 @@ const PhotoQuizClient: FC = () => {
         <PageHeader backHref="/" backLabel="トップ" title="写真クイズ結果" />
 
         <SectionCard style={{ padding: "2rem 1rem", textAlign: "center" }}>
+          <div style={{ marginBottom: "0.75rem" }}>
+            <Tag>{selectedGenre.label}</Tag>
+          </div>
           <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
             {percent >= 80 ? "🌟" : percent >= 50 ? "🌿" : "📚"}
           </div>
@@ -253,7 +410,10 @@ const PhotoQuizClient: FC = () => {
 
         <div style={{ display: "flex", gap: "0.75rem" }}>
           <Button onClick={handleReset} style={{ flex: 1 }}>
-            もう一度挑戦する
+            同じジャンルでもう一度
+          </Button>
+          <Button onClick={handleBackToGenres} variant="secondary" style={{ flex: 1 }}>
+            ジャンルを選び直す
           </Button>
           <Link
             href="/"
@@ -281,7 +441,33 @@ const PhotoQuizClient: FC = () => {
 
   return (
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-      <PageHeader backHref="/" backLabel="トップ" title="写真クイズ" />
+      <PageHeader backHref="/quiz" backLabel="クイズへ" title="写真クイズ" />
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "0.75rem",
+          marginBottom: "0.75rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <Tag>{selectedGenre.label}</Tag>
+        <button
+          onClick={handleBackToGenres}
+          style={{
+            background: "transparent",
+            color: "#7cbe8c",
+            border: "none",
+            padding: 0,
+            cursor: "pointer",
+            fontSize: "0.85rem",
+          }}
+        >
+          ジャンルを変更
+        </button>
+      </div>
 
       {/* Progress */}
       <div style={{ marginBottom: "0.75rem" }}>
