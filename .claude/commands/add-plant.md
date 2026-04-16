@@ -32,7 +32,23 @@
    - ステータスが `200` であることを確認する。`404` や `301` のままリダイレクト先が存在しない場合は別の画像を探して差し替える
    - Wikimedia Commons の場合、`Special:FilePath/ファイル名` は正しいファイル名でないと 404 になるため、Commons のページで実在するファイル名を確認してから URL を設定する
 
-5. **型チェック**
+5. **画像を保存する**
+   - 以下のコマンドで画像をダウンロードし、webp に変換して `public/images/plants/` に保存する:
+     ```bash
+     tsx scripts/download-images.ts
+     ```
+   - このスクリプトは以下を自動で行う:
+     - `image_url` → `{id}-0.webp`（代表画像）
+     - `images[0].url` → `{id}-1.webp`
+     - `images[1].url` → `{id}-2.webp`（以降同様）
+     - `plant.ts` に `local_image_url` および `images[].local_url` フィールドを追記
+   - 完了後、ファイルが生成されたことを確認する:
+     ```bash
+     ls public/images/plants/<id>-*.webp
+     ```
+   - **注意**: `local_image_url` と `local_url` はスクリプトが自動追記するため、手動で書かない
+
+6. **型チェック**
    - `pnpm typecheck` を実行して確認する
 
 ## Plant フィールド一覧
