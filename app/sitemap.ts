@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/columns/tree-identification-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/wildflower-field-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/plant-trivia-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/petal-counts/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
   ]
 
