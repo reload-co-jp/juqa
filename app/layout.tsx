@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Title } from "components/elements/layout"
 import { HeaderSearch } from "components/elements/HeaderSearch"
 import Link from "next/link"
+import { columns } from "lib/columns"
 import "./reset.css"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
@@ -141,39 +142,82 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             backgroundColor: "#333",
             boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
             fontSize: ".75rem",
-            padding: "1rem",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "1rem",
+            padding: "1.25rem 1rem",
           }}
         >
-          <p>
-            <a href="//reload.co.jp" target="_blank" rel="noreferrer">
-              &copy; Reload, Inc.
-            </a>
-          </p>
-          <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-            <Link
-              href="/about"
-              style={{ color: "#aaa", textDecoration: "none" }}
-            >
-              このサイトについて
-            </Link>
-            <Link
-              href="/contact"
-              style={{ color: "#aaa", textDecoration: "none" }}
-            >
-              お問い合わせ
-            </Link>
-            <a
-              href="https://github.com/reload-co-jp/juqa"
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: "#aaa", textDecoration: "none" }}
-            >
-              GitHub
-            </a>
+          <div
+            style={{
+              maxWidth: "72rem",
+              margin: "0 auto",
+              width: "100%",
+              display: "grid",
+              gridTemplateColumns: "minmax(0, 1.2fr) minmax(0, 2fr)",
+              gap: "1.5rem",
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <p style={{ margin: 0 }}>
+                <a href="//reload.co.jp" target="_blank" rel="noreferrer">
+                  &copy; Reload, Inc.
+                </a>
+              </p>
+              <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
+                <Link
+                  href="/about"
+                  style={{ color: "#aaa", textDecoration: "none" }}
+                >
+                  このサイトについて
+                </Link>
+                <Link
+                  href="/contact"
+                  style={{ color: "#aaa", textDecoration: "none" }}
+                >
+                  お問い合わせ
+                </Link>
+                <a
+                  href="https://github.com/reload-co-jp/juqa"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: "#aaa", textDecoration: "none" }}
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div
+                style={{
+                  color: "#d0d0d0",
+                  fontWeight: "bold",
+                  marginBottom: "0.6rem",
+                  fontSize: "0.8rem",
+                }}
+              >
+                すべてのコラム
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "0.5rem 0.75rem",
+                }}
+              >
+                {columns.map((column) => (
+                  <Link
+                    key={column.href}
+                    href={column.href}
+                    style={{
+                      color: "#aaa",
+                      textDecoration: "none",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {column.emoji} {column.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </footer>
       </body>
