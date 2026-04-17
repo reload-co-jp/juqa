@@ -3567,7 +3567,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
-    similar_plant_ids: [95, 223],
+    similar_plant_ids: [95, 223, 227],
   },
   {
     id: 95,
@@ -3605,7 +3605,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
-    similar_plant_ids: [94, 223],
+    similar_plant_ids: [94, 223, 227],
   },
   {
     id: 96,
@@ -8377,6 +8377,184 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "草本", "公園"],
+    similar_plant_ids: [94, 95, 224],
+  },
+  {
+    id: 224,
+    japanese_name: "ヒメシャガ",
+    scientific_name: "Iris gracilipes",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "日本固有のアヤメ科多年草で、山地の林縁や草地に自生する小型の植物。",
+      "春に淡い紫色の花を咲かせ、シャガより小ぶりで花びらの縁もなめらか。",
+      "シャガと異なり種子で繁殖するため、群生することは少なく、単株で見られることが多い。",
+    ],
+    identification: [
+      "淡紫色の花でシャガよりひとまわり小さい（花径3〜4cm）",
+      "花被片の縁にフリルがなく、平らでシンプルな形",
+      "山地の林縁・草地に自生し、群生しない（シャガは群生する）",
+      "葉は細く光沢が少なく、冬に枯れる落葉性",
+    ],
+    distribution: "本州〜九州の山地林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_gracilipes.jpg",
+    local_image_url: "/images/plants/224-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_gracilipes_(8936557401).jpg",
+
+        local_url: "/images/plants/224-1.webp",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_gracilipes_080505a.JPG",
+
+        local_url: "/images/plants/224-2.webp",
+        caption: "全体の様子",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    similar_plant_ids: [223],
+  },
+  {
+    id: 225,
+    japanese_name: "イチハツ",
+    scientific_name: "Iris tectorum",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "中国原産のアヤメ科多年草で、日本では古くから屋根の上（茅葺き屋根）に植えられてきた。",
+      "アヤメ属の中でもっとも早く春に開花し、青紫色の大きな花を咲かせる。",
+      "外花被片の中央に白〜淡紫の鶏冠状の突起が走るのが最大の特徴。",
+    ],
+    identification: [
+      "外花被片の中央に白い鶏冠状の突起（冠毛）がある（他のアヤメ属にない特徴）",
+      "アヤメ属で最も早い4〜5月に開花（アヤメ・カキツバタより早い）",
+      "古い家屋の屋根・土塀・石垣脇などに自生・半栽培される",
+      "葉は幅広く、扇状に並ぶ",
+    ],
+    distribution: "本州〜九州の人家近く・土塀・石垣（植栽・半野生）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Roof_Iris_Iris_tectorum_2299px.jpg",
+    local_image_url: "/images/plants/225-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_tectorum_01.JPG",
+
+        local_url: "/images/plants/225-1.webp",
+        caption: "花のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_tectorum_top.jpg",
+
+        local_url: "/images/plants/225-2.webp",
+        caption: "上から見た様子",
+      },
+    ],
+    tags: ["春開花", "草本", "公園"],
+    similar_plant_ids: [94, 95],
+  },
+  {
+    id: 226,
+    japanese_name: "ノハナショウブ",
+    scientific_name: "Iris ensata var. spontanea",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "ハナショウブの原種で、山地の湿地や草原に自生する野生のアヤメ科多年草。",
+      "初夏に赤紫色の花を咲かせ、外花被片の基部に黄色い筋がある。",
+      "ハナショウブはノハナショウブを品種改良して生まれた園芸植物で、本種より花色・花形が多様。",
+    ],
+    identification: [
+      "外花被片の基部に黄色い筋が1本入る（ハナショウブは黄色部が広い品種も多い）",
+      "花色は赤紫色が基本で変化が少ない（ハナショウブは白・ピンク・紫など多様）",
+      "湿地・山地の草原に自生（ハナショウブは公園・庭で栽培）",
+      "葉の中肋（中央の葉脈）が目立つ",
+    ],
+    distribution: "北海道〜九州の山地湿地・草原",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_var._spontanea.jpg",
+    local_image_url: "/images/plants/226-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_var._spontanea_(flower).jpg",
+
+        local_url: "/images/plants/226-1.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "草本", "山"],
+    similar_plant_ids: [94, 227],
+  },
+  {
+    id: 227,
+    japanese_name: "ハナショウブ",
+    scientific_name: "Iris ensata",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "ノハナショウブを原種とする園芸品種群で、江戸時代から品種改良が進んだ日本を代表する花菖蒲。",
+      "初夏に白・ピンク・紫・複色など多彩な花を咲かせ、花菖蒲まつりの主役となる。",
+      "外花被片（垂れ下がる花弁）の中央に黄色い筋が走るのがカキツバタとの識別点。",
+    ],
+    identification: [
+      "外花被片の中央に黄色い筋が入る（カキツバタは白い斑紋）",
+      "花色・花形の変化が非常に多い（白・ピンク・紫・絞り・八重など）",
+      "湿地や水辺の公園・庭園で栽培される（野生では自生しない）",
+      "葉の中肋（中央の葉脈）が目立つ（アヤメは目立たない）",
+    ],
+    distribution: "全国の公園・庭園（栽培）、原産地は日本",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_Thunb.jpg",
+    local_image_url: "/images/plants/227-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_%27Yamato_Hime%27_at_Koizumigata_Park,_Akita,_Japan.jpg",
+
+        local_url: "/images/plants/227-1.webp",
+        caption: "品種「大和姫」",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_%27Miyuki%27_at_Koizumigata_Park,_Akita,_Japan.jpg",
+
+        local_url: "/images/plants/227-2.webp",
+        caption: "品種「深雪」",
+      },
+    ],
+    tags: ["夏開花", "草本", "公園"],
+    similar_plant_ids: [94, 95, 226],
+  },
+  {
+    id: 228,
+    japanese_name: "キショウブ",
+    scientific_name: "Iris pseudacorus",
+    family_id: 37,
+    genus: "アヤメ属",
+    description: [
+      "ヨーロッパ原産のアヤメ科多年草で、明治時代に観賞用として導入後に野生化した帰化植物。",
+      "初夏に鮮やかな黄色の花を咲かせる唯一の黄花アヤメで、水辺や湿地に大群生を作る。",
+      "繁殖力が強く、在来の水辺植物を圧迫するとして特定外来生物の候補にもなっている。",
+    ],
+    identification: [
+      "アヤメ属で唯一の黄色い花（他種との識別は容易）",
+      "水辺・湿地・用水路脇に大群生を作る",
+      "葉は幅広く剣状で長さ60〜100cm、青みがかった緑色",
+      "春〜初夏（5〜6月）に開花し、果実は大型の三稜形",
+    ],
+    distribution: "全国の水辺・湿地・用水路（帰化）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_pseudacorus_2.jpg",
+    local_image_url: "/images/plants/228-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_pseudacorus_1.jpg",
+
+        local_url: "/images/plants/228-1.webp",
+        caption: "群生の様子",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "雑草"],
     similar_plant_ids: [94, 95],
   },
 ]
