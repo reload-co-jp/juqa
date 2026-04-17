@@ -1,0 +1,7 @@
+interface:
+  display_name: "植物追加"
+  short_description: "植物データ追加、科の確認、画像URL検証まで支援します"
+  default_prompt: "Use $add-plant to add a new plant entry to this JuQa repository and run the required validations."
+
+policy:
+  allow_implicit_invocation: false

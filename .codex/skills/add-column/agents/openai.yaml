@@ -1,0 +1,7 @@
+interface:
+  display_name: "コラム追加"
+  short_description: "コラム追加、画像確認、一覧登録、検証まで支援します"
+  default_prompt: "Use $add-column to add a new column page to this JuQa repository and update the columns index."
+
+policy:
+  allow_implicit_invocation: false
