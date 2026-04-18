@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Title } from "components/elements/layout"
 import { HeaderSearch } from "components/elements/HeaderSearch"
 import Link from "next/link"
+import { Suspense } from "react"
 import { columns } from "lib/columns"
 import "./reset.css"
 
@@ -123,7 +124,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
             <Title>ジュカ！ (JuQa)</Title>
           </Link>
-          <HeaderSearch />
+          <Suspense fallback={null}>
+            <HeaderSearch />
+          </Suspense>
         </header>
         <div style={{ backgroundColor: "#1e1e1e" }}>
           <main
