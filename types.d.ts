@@ -37,6 +37,15 @@ type PlantTag =
   | "九州"
   | "沖縄"
 
+type FlowerColor =
+  | "白"
+  | "黄"
+  | "ピンク"
+  | "赤"
+  | "青"
+  | "紫"
+  | "橙"
+
 type Plant = {
   id: number
   japanese_name: string
@@ -50,6 +59,7 @@ type Plant = {
   local_image_url?: string
   images: { url: string; local_url?: string; caption: string }[]
   tags: PlantTag[]
+  flower_colors?: FlowerColor[]
   similar_plant_ids: number[]
 }
 

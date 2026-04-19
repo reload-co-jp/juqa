@@ -6,6 +6,10 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
 import { TAG_GROUPS } from "lib/tags"
 import { regionTagsFromDistribution } from "lib/region"
+import {
+  FLOWER_COLORS,
+  flowerColorsFromPlant,
+} from "lib/flower-color"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
 
@@ -137,6 +141,9 @@ const PlantsContent: FC = () => {
   const selectedTags = new Set<PlantTag>(
     (searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[]
   )
+  const selectedFlowerColors = new Set<FlowerColor>(
+    (searchParams.get("colors") ?? "").split(",").filter(Boolean) as FlowerColor[]
+  )
 
   const updateParams = (updates: Record<string, string | null>) => {
     const params = new URLSearchParams(searchParams.toString())
@@ -162,6 +169,15 @@ const PlantsContent: FC = () => {
     }
     updateParams({ tags: [...next].join(",") || null })
   }
+  const toggleFlowerColor = (color: FlowerColor) => {
+    const next = new Set(selectedFlowerColors)
+    if (next.has(color)) {
+      next.delete(color)
+    } else {
+      next.add(color)
+    }
+    updateParams({ colors: [...next].join(",") || null })
+  }
 
   const filteredPlants = plants.filter((p) => {
     if (searchQuery) {
@@ -176,6 +192,12 @@ const PlantsContent: FC = () => {
     }
     if (selectedFamilyId !== null && p.family_id !== selectedFamilyId)
       return false
+    if (selectedFlowerColors.size > 0) {
+      const flowerColors = flowerColorsFromPlant(p)
+      if (![...selectedFlowerColors].some((color) => flowerColors.includes(color))) {
+        return false
+      }
+    }
     if (selectedTags.size > 0) {
       const allTags = [...p.tags, ...regionTagsFromDistribution(p.distribution)]
       if (![...selectedTags].every((t) => allTags.includes(t))) return false
@@ -254,6 +276,40 @@ const PlantsContent: FC = () => {
           marginBottom: "1rem",
         }}
       >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.4rem",
+            marginBottom: "0.75rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <span style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}>
+            花色
+          </span>
+          {FLOWER_COLORS.map((color) => {
+            const active = selectedFlowerColors.has(color)
+            return (
+              <button
+                key={color}
+                onClick={() => toggleFlowerColor(color)}
+                style={{
+                  background: active ? "#5a9a5c" : "#1a1a1a",
+                  color: active ? "#fff" : "#aaa",
+                  border: `1px solid ${active ? "#5a9a5c" : "#444"}`,
+                  borderRadius: "999px",
+                  padding: "0.15rem 0.65rem",
+                  fontSize: "0.78rem",
+                  cursor: "pointer",
+                }}
+              >
+                {color}
+              </button>
+            )
+          })}
+        </div>
+
         {TAG_GROUPS.map((group) => (
           <div
             key={group.label}
@@ -292,21 +348,39 @@ const PlantsContent: FC = () => {
             })}
           </div>
         ))}
-        {selectedTags.size > 0 && (
-          <button
-            onClick={() => updateParams({ tags: null })}
-            style={{
-              background: "none",
-              color: "#999",
-              border: "none",
-              fontSize: "0.75rem",
-              cursor: "pointer",
-              marginTop: "0.25rem",
-              padding: 0,
-            }}
-          >
-            ✕ タグをリセット
-          </button>
+        {(selectedTags.size > 0 || selectedFlowerColors.size > 0) && (
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.25rem" }}>
+            {selectedFlowerColors.size > 0 && (
+              <button
+                onClick={() => updateParams({ colors: null })}
+                style={{
+                  background: "none",
+                  color: "#999",
+                  border: "none",
+                  fontSize: "0.75rem",
+                  cursor: "pointer",
+                  padding: 0,
+                }}
+              >
+                ✕ 花色をリセット
+              </button>
+            )}
+            {selectedTags.size > 0 && (
+              <button
+                onClick={() => updateParams({ tags: null })}
+                style={{
+                  background: "none",
+                  color: "#999",
+                  border: "none",
+                  fontSize: "0.75rem",
+                  cursor: "pointer",
+                  padding: 0,
+                }}
+              >
+                ✕ タグをリセット
+              </button>
+            )}
+          </div>
         )}
       </div>
 

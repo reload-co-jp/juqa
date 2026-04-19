@@ -35,6 +35,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園", "街路樹"],
+    flower_colors: ["ピンク","白"],
     similar_plant_ids: [16, 17, 169, 170],
   },
   {
@@ -73,6 +74,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "山", "公園"],
+    flower_colors: ["赤"],
     similar_plant_ids: [19],
   },
   {
@@ -339,6 +341,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
+    flower_colors: ["赤"],
     similar_plant_ids: [8],
   },
   {
@@ -415,6 +418,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "雑草", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [24],
   },
   {
@@ -453,6 +457,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "豆", "雑草", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [131],
   },
   {
@@ -529,6 +534,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "花弁5枚", "公園", "雑草"],
+    flower_colors: ["紫"],
     similar_plant_ids: [33],
   },
   {
@@ -567,6 +573,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "雑草"],
+    flower_colors: ["青","白"],
     similar_plant_ids: [],
   },
   {
@@ -605,6 +612,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [1, 17, 169, 173, 175],
   },
   {
@@ -643,6 +651,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
+    flower_colors: ["赤","白","ピンク"],
     similar_plant_ids: [1, 16, 169, 176],
   },
   {
@@ -681,6 +690,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [172],
   },
   {
@@ -871,6 +881,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "草本", "小花集合", "雑草"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -909,6 +920,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "雑草", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [11],
   },
   {
@@ -947,6 +959,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "小花集合", "豆", "低木", "公園", "山"],
+    flower_colors: ["白","紫"],
     similar_plant_ids: [],
   },
   {
@@ -985,6 +998,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "小花集合", "豆", "高木", "公園", "山"],
+    flower_colors: ["白","赤","ピンク"],
     similar_plant_ids: [],
   },
   {
@@ -1023,6 +1037,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [28, 108],
   },
   {
@@ -1061,6 +1076,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "山", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [27],
   },
   {
@@ -1099,6 +1115,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "常緑", "厚い葉", "光沢", "高木", "山"],
+    flower_colors: ["赤","白"],
     similar_plant_ids: [30],
   },
   {
@@ -1137,6 +1154,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [29],
   },
   {
@@ -1175,6 +1193,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "小花集合", "低木", "公園"],
+    flower_colors: ["ピンク","青","紫","赤"],
     similar_plant_ids: [32],
   },
   {
@@ -1251,6 +1270,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "花弁5枚", "山", "公園"],
+    flower_colors: ["青","紫"],
     similar_plant_ids: [14],
   },
   {
@@ -1289,6 +1309,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [35],
   },
   {
@@ -1327,6 +1348,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [34],
   },
   {
@@ -1403,6 +1425,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山"],
+    flower_colors: ["ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -1441,6 +1464,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "草本", "ラッパ型", "山"],
+    flower_colors: ["青","紫"],
     similar_plant_ids: [],
   },
   {
@@ -1479,6 +1503,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "小花集合", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [11, 23],
   },
   {
@@ -1517,6 +1542,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "雑草"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -1593,6 +1619,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -1631,6 +1658,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "豆", "雑草", "山"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [25],
   },
   {
@@ -1821,6 +1849,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山"],
+    flower_colors: ["白","青","紫"],
     similar_plant_ids: [15],
   },
   {
@@ -1897,6 +1926,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -1935,6 +1965,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "草本", "山"],
+    flower_colors: ["白","紫"],
     similar_plant_ids: [38],
   },
   {
@@ -1973,6 +2004,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [40],
   },
   {
@@ -2011,6 +2043,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "雑草"],
+    flower_colors: ["紫"],
     similar_plant_ids: [41],
   },
   {
@@ -2049,6 +2082,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "ラッパ型", "山"],
+    flower_colors: ["白","黄","赤"],
     similar_plant_ids: [42],
   },
   {
@@ -2087,6 +2121,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "公園"],
+    flower_colors: ["青","白"],
     similar_plant_ids: [45],
   },
   {
@@ -2239,6 +2274,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "手のひら葉", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -2277,6 +2313,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "小花集合", "高木", "山"],
+    flower_colors: ["白","青"],
     similar_plant_ids: [],
   },
   {
@@ -2315,6 +2352,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [27, 28],
   },
   {
@@ -2353,6 +2391,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "ギザギザ", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [6, 21],
   },
   {
@@ -2467,6 +2506,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
     similar_plant_ids: [66, 135],
   },
   {
@@ -2505,6 +2545,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白","青","紫"],
     similar_plant_ids: [65, 135],
   },
   {
@@ -2543,6 +2584,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["紫"],
     similar_plant_ids: [],
   },
   {
@@ -2581,6 +2623,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -2619,6 +2662,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山", "ラッパ型"],
+    flower_colors: ["紫","白"],
     similar_plant_ids: [],
   },
   {
@@ -2657,6 +2701,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "草本", "山", "小花集合"],
+    flower_colors: ["赤"],
     similar_plant_ids: [],
   },
   {
@@ -2695,6 +2740,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "山"],
+    flower_colors: ["赤"],
     similar_plant_ids: [],
   },
   {
@@ -2771,6 +2817,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "街路樹", "公園"],
+    flower_colors: ["黄","橙"],
     similar_plant_ids: [],
   },
   {
@@ -2809,6 +2856,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山", "街路樹"],
+    flower_colors: ["白"],
     similar_plant_ids: [178, 183],
   },
   {
@@ -2885,6 +2933,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [60, 133],
   },
   {
@@ -2923,6 +2972,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "高木", "街路樹", "豆"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [],
   },
   {
@@ -2961,6 +3011,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "高木", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -2999,6 +3050,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "高木"],
+    flower_colors: ["白","赤","黄"],
     similar_plant_ids: [],
   },
   {
@@ -3037,6 +3089,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "低木", "ギザギザ"],
+    flower_colors: ["白"],
     similar_plant_ids: [82],
   },
   {
@@ -3075,6 +3128,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "高木", "小花集合"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -3111,6 +3165,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "低木", "小花集合"],
+    flower_colors: ["白"],
     similar_plant_ids: [80],
   },
   {
@@ -3149,6 +3204,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -3187,6 +3243,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "豆"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [89],
   },
   {
@@ -3225,6 +3282,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "小花集合"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [86],
   },
   {
@@ -3263,6 +3321,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "小花集合"],
+    flower_colors: ["黄"],
     similar_plant_ids: [85],
   },
   {
@@ -3339,6 +3398,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -3377,6 +3437,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
+    flower_colors: ["黄","赤"],
     similar_plant_ids: [84],
   },
   {
@@ -3415,6 +3476,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
+    flower_colors: ["黄"],
     similar_plant_ids: [68],
   },
   {
@@ -3453,6 +3515,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "雑草", "豆", "小花集合"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [84, 131],
   },
   {
@@ -3491,6 +3554,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "草本", "雑草", "小花集合"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -3529,6 +3593,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "公園"],
+    flower_colors: ["白","黄","赤"],
     similar_plant_ids: [99],
   },
   {
@@ -3567,6 +3632,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
+    flower_colors: ["青","紫","白","黄"],
     similar_plant_ids: [95, 223, 227],
   },
   {
@@ -3605,6 +3671,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本"],
+    flower_colors: ["青","紫","黄"],
     similar_plant_ids: [94, 223, 227],
   },
   {
@@ -3643,6 +3710,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "秋開花", "草本", "公園"],
+    flower_colors: ["黄","橙"],
     similar_plant_ids: [],
   },
   {
@@ -3681,6 +3749,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "公園"],
+    flower_colors: ["赤"],
     similar_plant_ids: [],
   },
   {
@@ -3719,6 +3788,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "草本"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [],
   },
   {
@@ -3757,6 +3827,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "雑草", "小花集合"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [93],
   },
   {
@@ -3795,6 +3866,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "草本", "山"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -3833,6 +3905,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "草本", "山"],
+    flower_colors: ["ピンク","白"],
     similar_plant_ids: [],
   },
   {
@@ -3903,6 +3976,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "落葉", "花弁5枚", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -3935,6 +4009,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "厚い葉", "小花集合", "草本", "山"],
+    flower_colors: ["黄","赤"],
     similar_plant_ids: [],
   },
   {
@@ -3973,6 +4048,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "花弁5枚", "小花集合", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [182],
   },
   {
@@ -4005,6 +4081,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "常緑", "手のひら葉", "光沢", "低木", "公園"],
+    flower_colors: ["黄","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4037,6 +4114,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "厚い葉", "花弁5枚", "高木", "山"],
+    flower_colors: ["白","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4069,6 +4147,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "小花集合", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -4101,6 +4180,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "公園"],
+    flower_colors: ["赤","紫","白"],
     similar_plant_ids: [27, 28],
   },
   {
@@ -4139,6 +4219,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "低木", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [112],
   },
   {
@@ -4171,6 +4252,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "低木", "山", "公園"],
+    flower_colors: ["黄","白"],
     similar_plant_ids: [],
   },
   {
@@ -4209,6 +4291,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "小花集合", "豆", "高木", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -4241,6 +4324,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "低木", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [109],
   },
   {
@@ -4279,6 +4363,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "ギザギザ", "低木", "山", "公園"],
+    flower_colors: ["黄","橙"],
     similar_plant_ids: [195],
   },
   {
@@ -4317,6 +4402,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "厚い葉", "ラッパ型", "低木", "山", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -4355,6 +4441,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "厚い葉", "低木", "山", "公園"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [],
   },
   {
@@ -4393,6 +4480,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "冬開花", "ギザギザ", "草本", "山", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -4431,6 +4519,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "小花集合", "低木", "山"],
+    flower_colors: ["黄","赤"],
     similar_plant_ids: [],
   },
   {
@@ -4463,6 +4552,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "草本", "公園"],
+    flower_colors: ["白","ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4495,6 +4585,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "落葉", "低木", "公園"],
+    flower_colors: ["黄","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4527,6 +4618,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "ギザギザ", "低木", "山", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -4559,6 +4651,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "常緑", "厚い葉", "光沢", "小花集合", "低木", "公園"],
+    flower_colors: ["白","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4597,6 +4690,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "常緑", "草本", "山", "公園"],
+    flower_colors: ["白","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4635,6 +4729,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -4673,6 +4768,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "小花集合", "草本", "公園", "雑草"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [],
   },
   {
@@ -4711,6 +4807,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "秋開花", "花弁5枚", "草本", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [],
   },
   {
@@ -4749,6 +4846,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -4781,6 +4879,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "小花集合", "ギザギザ", "低木", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [191, 192, 193],
   },
   {
@@ -4813,6 +4912,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "ラッパ型", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [213, 220],
   },
   {
@@ -4851,6 +4951,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "公園"],
+    flower_colors: ["白","ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -4889,6 +4990,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "豆", "小花集合", "雑草"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [12, 91],
   },
   {
@@ -4927,6 +5029,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "高木", "街路樹", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [76],
   },
   {
@@ -4965,6 +5068,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "低木", "公園"],
+    flower_colors: ["ピンク","赤"],
     similar_plant_ids: [],
   },
   {
@@ -5003,6 +5107,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "花弁5枚", "公園"],
+    flower_colors: ["白","青","紫"],
     similar_plant_ids: [],
   },
   {
@@ -5041,6 +5146,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "花弁5枚", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [66],
   },
   {
@@ -5079,6 +5185,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "山"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -5117,6 +5224,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -5155,6 +5263,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["紫","赤"],
     similar_plant_ids: [140],
   },
   {
@@ -5193,6 +5302,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "山"],
+    flower_colors: ["赤","紫","白"],
     similar_plant_ids: [],
   },
   {
@@ -5231,6 +5341,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [138],
   },
   {
@@ -5269,6 +5380,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -5421,6 +5533,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "低木", "街路樹", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -5459,6 +5572,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "秋開花", "常緑", "ギザギザ", "ラッパ型", "低木", "街路樹", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [],
   },
   {
@@ -5497,6 +5611,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["常緑", "針葉", "光沢", "高木", "街路樹", "公園"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -5611,6 +5726,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "常緑", "光沢", "小花集合", "低木", "街路樹", "公園"],
+    flower_colors: ["橙","白"],
     similar_plant_ids: [],
   },
   {
@@ -5687,6 +5803,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "低木", "街路樹", "公園"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [153, 198, 201],
   },
   {
@@ -5725,6 +5842,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "低木", "公園"],
+    flower_colors: ["ピンク","赤"],
     similar_plant_ids: [152, 198, 201],
   },
   {
@@ -5801,6 +5919,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "落葉", "花弁5枚", "高木", "山", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -5877,6 +5996,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "花弁5枚", "高木", "山", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -5915,6 +6035,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "秋開花", "落葉", "小花集合", "高木", "街路樹", "公園"],
+    flower_colors: ["白","ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -5953,6 +6074,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["落葉", "低木", "山", "公園"],
+    flower_colors: ["黄"],
     similar_plant_ids: [],
   },
   {
@@ -5991,6 +6113,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "小花集合", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -6029,6 +6152,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "秋開花", "落葉", "小花集合", "低木", "山", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [],
   },
   {
@@ -6067,6 +6191,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "秋開花", "落葉", "ラッパ型", "低木", "街路樹", "公園"],
+    flower_colors: ["白","ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -6105,6 +6230,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["紫"],
     similar_plant_ids: [],
   },
   {
@@ -6137,6 +6263,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -6175,6 +6302,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -6213,6 +6341,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["紫"],
     similar_plant_ids: [],
   },
   {
@@ -6251,6 +6380,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白","黄","紫"],
     similar_plant_ids: [],
   },
   {
@@ -6289,6 +6419,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["ピンク"],
     similar_plant_ids: [1, 16, 17, 173, 174, 175],
   },
   {
@@ -6327,6 +6458,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","黄","ピンク","赤"],
     similar_plant_ids: [1, 169, 180, 181],
   },
   {
@@ -6365,6 +6497,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "常緑", "ギザギザ", "厚い葉", "光沢", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","黄","橙"],
     similar_plant_ids: [],
   },
   {
@@ -6403,6 +6536,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -6441,6 +6575,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "ギザギザ", "花弁5枚", "低木", "山"],
+    flower_colors: ["ピンク"],
     similar_plant_ids: [18],
   },
   {
@@ -6479,6 +6614,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [16, 169, 175],
   },
   {
@@ -6517,6 +6653,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [169, 1, 16],
   },
   {
@@ -6555,6 +6692,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "光沢", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","黄","赤"],
     similar_plant_ids: [16, 169, 173],
   },
   {
@@ -6593,6 +6731,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["ピンク","赤"],
     similar_plant_ids: [1, 17],
   },
   {
@@ -6631,6 +6770,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["秋開花", "常緑", "ギザギザ", "厚い葉", "光沢", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [171],
   },
   {
@@ -6669,6 +6809,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "小花集合", "高木", "山"],
+    flower_colors: ["白","赤","橙"],
     similar_plant_ids: [74, 183],
   },
   {
@@ -6707,6 +6848,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "ギザギザ", "厚い葉", "光沢", "花弁5枚", "低木", "街路樹", "公園"],
+    flower_colors: ["白","紫"],
     similar_plant_ids: [],
   },
   {
@@ -6745,6 +6887,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [170, 181],
   },
   {
@@ -6783,6 +6926,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [170, 180],
   },
   {
@@ -6821,6 +6965,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "花弁5枚", "小花集合", "高木", "山"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [104],
   },
   {
@@ -6859,6 +7004,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "小花集合", "高木", "山"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [74, 178],
   },
   {
@@ -6897,6 +7043,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "ギザギザ", "花弁5枚", "低木"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -6935,6 +7082,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [186],
   },
   {
@@ -6973,6 +7121,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木"],
+    flower_colors: ["白"],
     similar_plant_ids: [185],
   },
   {
@@ -7011,6 +7160,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園", "街路樹"],
+    flower_colors: ["黄","ピンク","赤"],
     similar_plant_ids: [188],
   },
   {
@@ -7049,6 +7199,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "高木"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [187],
   },
   {
@@ -7087,6 +7238,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "低木", "山"],
+    flower_colors: ["赤","橙"],
     similar_plant_ids: [],
   },
   {
@@ -7125,6 +7277,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "光沢", "小花集合", "低木", "公園"],
+    flower_colors: ["ピンク","赤"],
     similar_plant_ids: [],
   },
   {
@@ -7163,6 +7316,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "ギザギザ", "小花集合", "低木", "山", "公園"],
+    flower_colors: ["ピンク","赤","紫"],
     similar_plant_ids: [127, 192, 193],
   },
   {
@@ -7201,6 +7355,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "小花集合", "低木", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [127, 191, 193],
   },
   {
@@ -7239,6 +7394,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "花弁5枚", "小花集合", "低木", "公園"],
+    flower_colors: ["白"],
     similar_plant_ids: [127, 191, 192],
   },
   {
@@ -7277,6 +7433,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "落葉", "手のひら葉", "ギザギザ", "小花集合", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -7315,6 +7472,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "低木", "山"],
+    flower_colors: ["白","黄"],
     similar_plant_ids: [113],
   },
   {
@@ -7353,6 +7511,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "落葉", "低木", "花弁5枚", "ギザギザ", "公園"],
+    flower_colors: ["白","黄","ピンク","赤"],
     similar_plant_ids: [],
   },
   {
@@ -7391,6 +7550,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "常緑", "光沢", "ラッパ型", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -7429,6 +7589,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山", "公園"],
+    flower_colors: ["赤","橙"],
     similar_plant_ids: [152, 153, 199, 200, 203, 208, 209],
   },
   {
@@ -7467,6 +7628,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [198, 200, 209, 210, 211],
   },
   {
@@ -7505,6 +7667,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    flower_colors: ["赤","橙"],
     similar_plant_ids: [198, 199],
   },
   {
@@ -7543,6 +7706,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "常緑", "ラッパ型", "低木", "公園"],
+    flower_colors: ["白","ピンク","赤"],
     similar_plant_ids: [152, 153],
   },
   {
@@ -7581,6 +7745,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [],
   },
   {
@@ -7619,6 +7784,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    flower_colors: ["白","黄","赤","紫","橙"],
     similar_plant_ids: [198, 205, 206, 207],
   },
   {
@@ -7657,6 +7823,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -7695,6 +7862,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "公園"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [203, 206, 207],
   },
   {
@@ -7733,6 +7901,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    flower_colors: ["白","赤","黄"],
     similar_plant_ids: [203, 205, 207],
   },
   {
@@ -7771,6 +7940,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "厚い葉", "光沢", "ラッパ型", "低木", "山"],
+    flower_colors: ["白","赤","紫"],
     similar_plant_ids: [203, 205, 206],
   },
   {
@@ -7809,6 +7979,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ラッパ型", "低木", "山"],
+    flower_colors: ["黄"],
     similar_plant_ids: [198, 209],
   },
   {
@@ -7847,6 +8018,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    flower_colors: ["赤","橙"],
     similar_plant_ids: [198, 199, 208],
   },
   {
@@ -7885,6 +8057,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    flower_colors: ["赤"],
     similar_plant_ids: [199, 211],
   },
   {
@@ -7923,6 +8096,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山"],
+    flower_colors: ["赤","紫"],
     similar_plant_ids: [199, 210],
   },
   {
@@ -7961,6 +8135,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
+    flower_colors: ["白","ピンク"],
     similar_plant_ids: [],
   },
   {
@@ -7999,6 +8174,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "ラッパ型", "低木", "山", "公園"],
+    flower_colors: ["黄","赤","橙","白"],
     similar_plant_ids: [128, 220],
   },
   {
@@ -8037,6 +8213,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "低木", "山"],
+    flower_colors: ["白","赤","紫"],
     similar_plant_ids: [215, 216],
   },
   {
@@ -8075,6 +8252,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "低木", "公園"],
+    flower_colors: ["白","赤"],
     similar_plant_ids: [214, 216],
   },
   {
@@ -8113,6 +8291,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "ギザギザ", "低木", "山"],
+    flower_colors: ["白","紫"],
     similar_plant_ids: [214, 215],
   },
   {
@@ -8151,6 +8330,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "厚い葉", "低木", "山"],
+    flower_colors: ["赤"],
     similar_plant_ids: [],
   },
   {
@@ -8189,6 +8369,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "ギザギザ", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -8227,6 +8408,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["冬開花", "春開花", "常緑", "低木", "公園"],
+    flower_colors: ["白","ピンク","赤","紫"],
     similar_plant_ids: [],
   },
   {
@@ -8265,6 +8447,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "低木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [128, 213],
   },
   {
@@ -8303,6 +8486,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "落葉", "光沢", "高木", "山"],
+    flower_colors: ["白"],
     similar_plant_ids: [],
   },
   {
@@ -8339,6 +8523,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "小花集合", "雑草"],
+    flower_colors: ["黄"],
     similar_plant_ids: [12],
   },
   {
@@ -8377,6 +8562,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "草本", "公園"],
+    flower_colors: ["白","青","紫","橙"],
     similar_plant_ids: [94, 95, 224],
   },
   {
@@ -8415,6 +8601,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
+    flower_colors: ["紫"],
     similar_plant_ids: [223],
   },
   {
@@ -8453,6 +8640,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "公園"],
+    flower_colors: ["青","紫","白"],
     similar_plant_ids: [94, 95],
   },
   {
@@ -8485,6 +8673,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山"],
+    flower_colors: ["黄","赤","紫","白","ピンク"],
     similar_plant_ids: [94, 227],
   },
   {
@@ -8523,6 +8712,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "公園"],
+    flower_colors: ["白","ピンク","紫","黄"],
     similar_plant_ids: [94, 95, 226],
   },
   {
@@ -8555,6 +8745,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "夏開花", "草本", "雑草"],
+    flower_colors: ["黄"],
     similar_plant_ids: [94, 95],
   },
 ]
