@@ -25,7 +25,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/2020-04-07_Prunus_%C3%97_yedoensis_Tambasasayama%2CHyogo%28%E4%B8%B9%E6%B3%A2%E7%AF%A0%E5%B1%B1%E5%B8%82%E7%AF%A0%E5%B1%B1%E5%B7%9D%E3%81%AE%E3%82%BD%E3%83%A1%E3%82%A4%E3%83%A8%E3%82%B7%E3%83%8E%29DSCF2986%E2%98%86%E5%BD%A1.jpg",
 
         local_url: "/images/plants/1-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_%C3%97_yedoensis_in_bloom%2C_Morris_Arboretum_01.jpg",
@@ -72,6 +72,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/2-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum_flowers_001.JPG",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "山", "公園"],
     flower_colors: ["赤"],
@@ -111,6 +115,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/3-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnamomum_camphora_flowers%2C_Downfall_Creek_Parkland_Wavell_Heights_01.jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "光沢", "高木", "公園", "街路樹"],
     similar_plant_ids: [],
@@ -148,6 +156,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/4-2.webp",
         caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Zelkova-serrata.JPG",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "高木", "街路樹", "公園"],
@@ -187,6 +199,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/5-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ginkgo_biloba_female_flower.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "高木", "公園", "街路樹"],
     similar_plant_ids: [],
@@ -223,7 +239,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_serrata_(24890584014).jpg",
 
         local_url: "/images/plants/6-2.webp",
-        caption: "実",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B3%E3%83%8A%E3%83%A9_(Quercus_serrata)_(21922146700).jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
@@ -263,6 +283,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/7-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_acutissima.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
     similar_plant_ids: [6, 20],
@@ -299,7 +323,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_obtusa_foliage.JPG",
 
         local_url: "/images/plants/8-2.webp",
-        caption: "葉",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_obtusa_01.jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
@@ -338,6 +366,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/9-2.webp",
         caption: "球果",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cryptomeria_japonica-Male_flower.jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
@@ -378,6 +410,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/10-2.webp",
         caption: "球果",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E4%B8%89%E6%B2%B3%E9%BB%91%E6%9D%BE_Pinus_thunbergii_Mikawa_-%E9%A6%99%E6%B8%AF%E8%8A%B1%E5%B1%95_Hong_Kong_Flower_Show-_(9216081834).jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
     similar_plant_ids: [22, 101],
@@ -408,7 +444,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/DandelionFlower.jpg",
 
         local_url: "/images/plants/11-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Dandelion_seeds_3.jpg",
@@ -486,7 +522,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Mugwort_imported_from_iNaturalist_photo_180771010_on_26_August_2024.jpg",
 
         local_url: "/images/plants/13-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_princeps1.jpg",
@@ -680,13 +716,13 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
 
         local_url: "/images/plants/18-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rosa_multiflora_focus_stacked-20220522-RM-124900.jpg",
 
         local_url: "/images/plants/18-2.webp",
-        caption: "実",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "低木", "山"],
@@ -727,6 +763,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/19-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_buergerianum_-_Chelsea_Flower_Show_2024_-_DSC02518.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "街路樹"],
     similar_plant_ids: [2],
@@ -763,7 +803,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_myrsinifolia_kz4.jpg",
 
         local_url: "/images/plants/20-2.webp",
-        caption: "実",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_myrsinifolia_(21489205483).jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "どんぐり", "高木", "街路樹"],
@@ -803,6 +847,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/21-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii_flower_male.jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "光沢", "どんぐり", "高木", "山"],
     similar_plant_ids: [6, 143],
@@ -840,6 +888,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/22-2.webp",
         caption: "球果",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Yeosan_myeon_pine_in_flower.jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
@@ -1377,7 +1429,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata_2.JPG",
 
         local_url: "/images/plants/36-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Taxus_cuspidata%2C_Bupyeong%2C_Korea.jpg",
@@ -1577,7 +1629,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis_%27Cosmopolitan%27_6_2021_Ornamental_Grass-_(51264236723).jpg",
 
         local_url: "/images/plants/41-2.webp",
-        caption: "穂",
+        caption: "花",
       },
     ],
     tags: ["秋開花", "草本", "山", "公園"],
@@ -1769,7 +1821,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Machilus_Thunbergii.JPG",
 
         local_url: "/images/plants/46-2.webp",
-        caption: "葉",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E7%B4%85%E6%A5%A0_Machilus_thunbergii_-%E9%A6%99%E6%B8%AF%E8%8A%B1%E5%B1%95_Hong_Kong_Flower_Show-_(25333644693).jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "厚い葉", "高木", "山"],
@@ -1801,7 +1857,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
 
         local_url: "/images/plants/47-2.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_davidiana_var._japonica_winter_bud.jpg",
@@ -1847,6 +1903,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/48-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica_(9994868276).jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "草本", "山"],
     flower_colors: ["白","青","紫"],
@@ -1878,7 +1938,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Torreya_nucifera2.jpg",
 
         local_url: "/images/plants/49-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Torreya_nucifera%E2%80%94fruit%E2%80%94at_the_New_York_Botanical_Garden.jpg",
@@ -2002,6 +2062,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/52-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saururus_chinensis_(flower).jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "草本", "山"],
     flower_colors: ["白"],
@@ -2039,7 +2103,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_viridis_var._viridis_sl1.jpg",
 
         local_url: "/images/plants/53-2.webp",
-        caption: "穂",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "草本", "雑草"],
@@ -2150,7 +2214,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Leaves_of_Quercus_crispula.JPG",
 
         local_url: "/images/plants/56-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acorn_of_Quercus_crispula.JPG",
@@ -2194,7 +2258,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_cork_oak_bark.jpg",
 
         local_url: "/images/plants/57-2.webp",
-        caption: "樹皮",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_cork_oak_foliage_and_flower.jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "どんぐり", "高木", "山"],
@@ -2232,7 +2300,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fagus_crenata_flower_and_fruits.JPG",
 
         local_url: "/images/plants/58-2.webp",
-        caption: "樹皮",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "高木", "山"],
@@ -2387,7 +2455,11 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_crenata_City_Botanic_Gardens_Brisbane_L1150811.jpg",
 
         local_url: "/images/plants/62-2.webp",
-        caption: "実",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_cren_f.JPG",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "落葉", "ギザギザ", "高木", "山"],
@@ -2428,6 +2500,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/63-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_flowers_001.JPG",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "山"],
     similar_plant_ids: [2, 19],
@@ -2458,7 +2534,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena5.jpg",
 
         local_url: "/images/plants/64-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_aliena%2C_Morris_Arboretum_03.jpg",
@@ -2738,6 +2814,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/71-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cercidiphyllum_japonicum_male_flowers.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "高木", "山"],
     flower_colors: ["赤"],
@@ -2769,7 +2849,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Platanus_%C3%97_hispanica_(Platane_commun)_-_20150430_10h12_(10124).jpg",
 
         local_url: "/images/plants/72-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bark_of_a_London_Plane_(Platanus_%C3%97_acerifolia)_-_geograph.org.uk_-_3019538.jpg",
@@ -2807,7 +2887,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Liriodendron_tulipifera_flower.jpg",
 
         local_url: "/images/plants/73-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tulip_Tree_Liriodendron_tulipifera_Leaf_Topside_1890px.jpg",
@@ -2846,7 +2926,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_commixta_(Nanakamado)_-_Flickr_-_odako1.jpg",
 
         local_url: "/images/plants/74-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_commixta_Fruit_in_Mount_Choshi_2011-10-20.jpg",
@@ -2893,6 +2973,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/75-2.webp",
         caption: "葉",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Salix_babylonica_-_Les_Martels%2C_Giroussens_Tarn.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "高木", "公園"],
     similar_plant_ids: [],
@@ -2930,6 +3014,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/76-2.webp",
         caption: "実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_kousa_flowers.jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "落葉", "高木", "山", "公園"],
@@ -3001,7 +3089,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Magnolia_grandiflora_flower.jpg",
 
         local_url: "/images/plants/78-1.webp",
-        caption: "全体",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Southern_Magnolia_Leaf_Cluster_3008px.jpg",
@@ -3048,6 +3136,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/79-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ternstroemia_gymnanthera_flowers_20130628(3).JPG",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "高木"],
     flower_colors: ["白","赤","黄"],
@@ -3086,6 +3178,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/80-2.webp",
         caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_heterophyllus_(flower_s7).jpg",
+        caption: "花",
       },
     ],
     tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "低木", "ギザギザ"],
@@ -3126,6 +3222,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/81-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viburnum_odoratissimum_var._awabuki.jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "高木", "小花集合"],
     flower_colors: ["白","赤"],
@@ -3162,6 +3262,10 @@ export const plants: Plant[] = [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E5%A5%B3%E8%B2%9E.jpg",
         caption: "実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Curly_Leaf_Privet_%E2%80%98Coriaceum%E2%80%99_Ligustrum_japonicum_%E2%80%98Coriaceum%E2%80%99_flower_spring_10.jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "低木", "小花集合"],
@@ -3201,6 +3305,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/83-2.webp",
         caption: "実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Capsella_bursa-pastoris_(Brassicaceae).jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
@@ -3356,7 +3464,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-090702-2020-Hydrocotyle_sibthorpioides-leaf_roots_and_flower_structure-Chings_Pond_Hana_Hwy-Maui_(24600697979).jpg",
 
         local_url: "/images/plants/87-2.webp",
-        caption: "葉",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "草本", "雑草"],
@@ -3434,6 +3542,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/89-2.webp",
         caption: "実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_hebiichigo_(flower_s2).jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "草本", "雑草", "花弁5枚"],
@@ -3942,6 +4054,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/101-2.webp",
         caption: "球果と種子",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_(flower_male).JPG",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "低木", "山"],
     similar_plant_ids: [10, 22],
@@ -4079,6 +4195,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/105-1.webp",
         caption: "葉（手のひら型）",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ivy_(Hedera_helix)_flowers_and_fruit%2C_Dumfries.jpg",
+        caption: "花",
+      },
     ],
     tags: ["秋開花", "常緑", "手のひら葉", "光沢", "低木", "公園"],
     flower_colors: ["黄","紫"],
@@ -4112,6 +4232,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/106-1.webp",
         caption: "葉と枝",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/W_sakaki4061.jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "光沢", "厚い葉", "花弁5枚", "高木", "山"],
     flower_colors: ["白","赤","紫"],
@@ -4144,6 +4268,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/107-1.webp",
         caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_for_Nandina_domestica_1.jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "小花集合", "低木", "公園"],
@@ -5378,6 +5506,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/141-2.webp",
         caption: "群生",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower_s2).jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "夏開花", "草本", "山"],
     flower_colors: ["白"],
@@ -5453,7 +5585,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Morella_rubra_(fruits).jpg",
 
         local_url: "/images/plants/144-2.webp",
-        caption: "赤く熟した実",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "高木", "街路樹", "公園", "山"],
@@ -5530,6 +5662,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/145-2.webp",
         caption: "葉のアップ",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens_IP1204022.JPG",
+        caption: "花",
       },
     ],
     tags: ["春開花", "常緑", "光沢", "低木", "街路樹", "公園"],
@@ -5879,6 +6015,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/154-2.webp",
         caption: "葉と実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata-flower-yercaud-salem-India.JPG",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "常緑", "光沢", "ギザギザ", "低木", "山", "公園"],
     similar_plant_ids: [],
@@ -5993,6 +6133,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/157-2.webp",
         caption: "全体と樹皮",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stewartia_pseudocamellia_(flower_s11).jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "落葉", "花弁5枚", "高木", "山", "公園"],
@@ -6261,6 +6405,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/164-1.webp",
         caption: "全体",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi_(flower_s5).jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "草本", "山"],
     flower_colors: ["白"],
@@ -6417,6 +6565,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/169-2.webp",
         caption: "果実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_persica_flowers_in_South_Vietnam.jpg",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
     flower_colors: ["ピンク"],
@@ -6494,6 +6646,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/171-2.webp",
         caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica_flower.jpg",
+        caption: "花",
       },
     ],
     tags: ["冬開花", "常緑", "ギザギザ", "厚い葉", "光沢", "花弁5枚", "高木", "公園"],
@@ -6760,13 +6916,13 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana2.jpg",
 
         local_url: "/images/plants/177-1.webp",
-        caption: "葉と果実",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_zippeliana1.jpg",
 
         local_url: "/images/plants/177-2.webp",
-        caption: "全体",
+        caption: "花",
       },
     ],
     tags: ["秋開花", "常緑", "ギザギザ", "厚い葉", "光沢", "高木", "山"],
@@ -6805,7 +6961,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_alnifolia_kz01.jpg",
 
         local_url: "/images/plants/178-2.webp",
-        caption: "全体",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "小花集合", "高木", "山"],
@@ -6922,7 +7078,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Malus_prunifolia.JPG",
 
         local_url: "/images/plants/181-2.webp",
-        caption: "全体",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "ギザギザ", "花弁5枚", "高木", "公園"],
@@ -7039,7 +7195,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Crataegus_cuneata_f_lutea2.jpg",
 
         local_url: "/images/plants/184-2.webp",
-        caption: "全体",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "ギザギザ", "花弁5枚", "低木"],
@@ -7274,6 +7430,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/190-2.webp",
         caption: "赤い実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_(13937637589).jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "落葉", "光沢", "小花集合", "低木", "公園"],
@@ -7735,13 +7895,17 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens.JPG",
 
         local_url: "/images/plants/202-1.webp",
-        caption: "果実と葉",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens_1.JPG",
 
         local_url: "/images/plants/202-2.webp",
         caption: "全体の様子",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens_Golteria_rozes%C5%82ana_2020-08-07_02.jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "厚い葉", "光沢", "低木", "公園"],
@@ -8203,7 +8367,7 @@ export const plants: Plant[] = [
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_1.JPG",
 
         local_url: "/images/plants/214-1.webp",
-        caption: "果実",
+        caption: "花",
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_smallii_var._smallii_2.JPG",
@@ -8288,6 +8452,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/216-2.webp",
         caption: "果実",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum_(flower_s3).jpg",
+        caption: "花",
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "ギザギザ", "低木", "山"],
@@ -8710,6 +8878,10 @@ export const plants: Plant[] = [
         local_url: "/images/plants/227-2.webp",
         caption: "品種「深雪」",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_Thunb.jpg",
+        caption: "花",
+      },
     ],
     tags: ["夏開花", "草本", "公園"],
     flower_colors: ["白","ピンク","紫","黄"],
@@ -8742,6 +8914,10 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/228-1.webp",
         caption: "群生の様子",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Yellow_Iris_Iris_pseudacorus_Flower_1469px.jpg",
+        caption: "花",
       },
     ],
     tags: ["春開花", "夏開花", "草本", "雑草"],
