@@ -25,6 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/columns/wildflower-field-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/plant-trivia-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/petal-counts/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/mothers-day-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/hanafuda-plants/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/spring-flower-meanings/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/columns/wedding-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
   ]
 
