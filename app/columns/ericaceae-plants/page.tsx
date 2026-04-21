@@ -1,14 +1,22 @@
-import type { Metadata } from "next"
-import { Section, PlantCard } from "../../../components/elements/ColumnComponents";
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+  PlantCard,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/ericaceae-plants/`
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/9/9c/Rhododendron_japonicum_01.jpg"
+const title = "ツツジ科の植物たち"
+const description = "ヤマツツジ・サツキ・シャクナゲ・アセビ・ドウダンツツジ……春の山を彩るツツジ科の植物。漏斗形の花・10本のおしべ・酸性土壌を好む性質など、共通の特徴を覚えると見分け方が広がります。"
 
-export const metadata: Metadata = {
-  title: "ツツジ科の植物たち",
+export const metadata = createColumnMetadata({
+  path: "/columns/ericaceae-plants/",
+  title,
+  description,
   keywords: [
     "ツツジ科",
     "ツツジ",
@@ -17,128 +25,31 @@ export const metadata: Metadata = {
     "ドウダンツツジ",
     "ブルーベリー",
     "Ericaceae",
-    "ツツジの見分け方",
+    "ツツジの見分け方"
   ],
-  description:
-    "ヤマツツジ・サツキ・シャクナゲ・アセビ・ドウダンツツジ……春の山を彩るツツジ科の植物。漏斗形の花・10本のおしべ・酸性土壌を好む性質など、共通の特徴を覚えると見分け方が広がります。",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "ツツジ科の植物たち | ジュカ！",
-    description:
-      "ヤマツツジ・サツキ・シャクナゲ・アセビ・ドウダンツツジ……春の山を彩るツツジ科の植物。漏斗形の花・10本のおしべ・酸性土壌を好む性質など、共通の特徴を覚えると見分け方が広がります。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "レンゲツツジ（ツツジ科）の花" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ツツジ科の植物たち | ジュカ！",
-    description:
-      "ヤマツツジ・サツキ・シャクナゲ・アセビ……春の山で出会う花の多くがツツジ科。漏斗形の花と10本のおしべが目印。",
-    images: [ogImage],
-  },
-}
+  ogImage,
+  ogImageAlt: "レンゲツツジ（ツツジ科）の花",
+  twitterDescription: "ヤマツツジ・サツキ・シャクナゲ・アセビ……春の山で出会う花の多くがツツジ科。漏斗形の花と10本のおしべが目印。",
+})
 
-
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "ツツジ科の植物たち",
-  description:
-    "ヤマツツジ・サツキ・シャクナゲ・アセビ・ドウダンツツジ……春の山を彩るツツジ科の植物。漏斗形の花・10本のおしべ・酸性土壌を好む性質など、共通の特徴を覚えると見分け方が広がります。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
+const jsonLd = createColumnJsonLd({
+  path: "/columns/ericaceae-plants/",
+  title,
+  description,
+  ogImage,
+})
 
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      {/* ヘッダー */}
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌺 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          ツツジ科の植物たち
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          春山を彩るツツジ・シャクナゲ・アセビ——その共通点を知ろう
-        </p>
-      </div>
-
-      {/* ヒーロー画像 */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="レンゲツツジ（ツツジ科）の花"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      {/* イントロ */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌺"
+      title={title}
+      subtitle="春山を彩るツツジ・シャクナゲ・アセビ——その共通点を知ろう"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="レンゲツツジ（ツツジ科）の花"
+    >
+      <ColumnIntro>
         {[
           "春の里山や高山を歩いていると、ピンクや白、朱赤の花を咲かせる低木によく出会います。「ツツジかな、サツキかな？」と迷いながら眺めた経験はないでしょうか。実はそれらのほとんどが「ツツジ科」という大きなグループに属する植物です。",
           "ツツジ科には世界で約4000種が含まれ、日本でも山の低木から高山の岩場まで幅広く分布しています。ツツジ・シャクナゲ・アセビ・ドウダンツツジ・サツキはもちろん、北国の食用植物であるブルーベリーやコケモモも同じ仲間です。",
@@ -156,7 +67,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {/* ツツジ科の共通の特徴 */}
       <Section title="ツツジ科に共通する特徴">
@@ -539,7 +450,7 @@ const Page = () => {
           コラム一覧へ →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 

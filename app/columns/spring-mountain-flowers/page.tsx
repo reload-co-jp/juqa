@@ -1,5 +1,11 @@
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+} from "components/elements/ColumnComponents"
 import { plants } from "lib/data"
 
 const getPlantImageUrl = (href: string): string | undefined => {
@@ -7,80 +13,36 @@ const getPlantImageUrl = (href: string): string | undefined => {
   return plants.find((p) => p.id === id)?.image_url
 }
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/spring-mountain-flowers/`
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/e/eb/Erythronium_japonicum_2006_005.jpg"
+const title = "春の登山で見られる花特集"
+const description = "春の登山で出会える花々を特集。カタクリ・ニリンソウ・ショウジョウバカマなど、山にしか咲かない花を見分けるコツや、スプリングエフェメラルの魅力を解説します。"
 
-export const metadata: Metadata = {
-  title: "春の登山で見られる花特集",
-  keywords: ["春の山野草", "登山", "スプリングエフェメラル", "カタクリ", "ニリンソウ", "ショウジョウバカマ", "春の花", "山野草"],
-  description:
-    "春の登山で出会える花々を特集。カタクリ・ニリンソウ・ショウジョウバカマなど、山にしか咲かない花を見分けるコツや、スプリングエフェメラルの魅力を解説します。",
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    title: "春の登山で見られる花特集 | ジュカ！",
-    description:
-      "春の登山で出会える花々を特集。カタクリ・ニリンソウ・ショウジョウバカマなど、山にしか咲かない花を見分けるコツや、スプリングエフェメラルの魅力を解説します。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "カタクリの花" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "春の登山で見られる花特集 | ジュカ！",
-    description:
-      "カタクリ・ニリンソウなど、春の山でしか出会えない花の見分け方と魅力を解説します。",
-    images: [ogImage],
-  },
-}
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "春の登山で見られる花特集",
-  description:
-    "春の登山で出会える花々を特集。カタクリ・ニリンソウ・ショウジョウバカマなど、山にしか咲かない花を見分けるコツや、スプリングエフェメラルの魅力を解説します。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
-
-const Section = ({
+export const metadata = createColumnMetadata({
+  path: "/columns/spring-mountain-flowers/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
+  description,
+  keywords: [
+    "春の山野草",
+    "登山",
+    "スプリングエフェメラル",
+    "カタクリ",
+    "ニリンソウ",
+    "ショウジョウバカマ",
+    "春の花",
+    "山野草"
+  ],
+  ogImage,
+  ogImageAlt: "カタクリの花",
+  twitterDescription: "カタクリ・ニリンソウなど、春の山でしか出会えない花の見分け方と魅力を解説します。",
+})
+
+const jsonLd = createColumnJsonLd({
+  path: "/columns/spring-mountain-flowers/",
+  title,
+  description,
+  ogImage,
+})
 
 const FlowerCard = ({
   name,
@@ -198,83 +160,15 @@ const FlowerCard = ({
 
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      {/* パンくず */}
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      {/* ヘッダー */}
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌸 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          春の登山で見られる花特集
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          雪解けとともに山が色づく——登山道で出会える春の花を一挙紹介
-        </p>
-      </div>
-
-      {/* ヒーロー画像 */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="カタクリの花"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      {/* イントロ */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌸"
+      title={title}
+      subtitle="雪解けとともに山が色づく——登山道で出会える春の花を一挙紹介"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="カタクリの花"
+    >
+      <ColumnIntro>
         {[
           "「この花、なんだろう？」——春の山道を歩いていると、足元に見慣れない花が咲いていることがある。里では見かけない、山ならではの色とかたち。名前も知らずに通り過ぎてしまうのはちょっともったいない。",
           "実は春の山には、短い季節だけに命を燃やす花たちがいる。「スプリング・エフェメラル（春の妖精）」と呼ばれる植物がその代表で、雪が解けた直後に咲き始め、木々が葉を茂らせる前にあっという間に地上から姿を消す。",
@@ -292,7 +186,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {/* スプリングエフェメラルとは */}
       <Section title="スプリング・エフェメラルとは">
@@ -723,7 +617,7 @@ const Page = () => {
           コラム一覧へ →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 

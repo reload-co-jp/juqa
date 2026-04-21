@@ -1,14 +1,22 @@
-import { PlantCard } from "components/elements/ColumnComponents"
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+  PlantCard,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/rosaceae-plants/`
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/6/61/Rosa_canina1.jpg"
+const title = "バラ科の植物たち"
+const description = "サクラ・ウメ・リンゴ・ビワ・ノイバラ……実は身の回りに多いバラ科の植物。共通の特徴（5枚の花弁・花托・ギザギザ葉）を覚えると、野山でも食卓でも「バラ科っぽい」とすぐ気づけるようになります。"
 
-export const metadata: Metadata = {
-  title: "バラ科の植物たち",
+export const metadata = createColumnMetadata({
+  path: "/columns/rosaceae-plants/",
+  title,
+  description,
   keywords: [
     "バラ科",
     "サクラ",
@@ -18,170 +26,31 @@ export const metadata: Metadata = {
     "ノイバラ",
     "ハマナス",
     "バラ科の見分け方",
-    "Rosaceae",
+    "Rosaceae"
   ],
-  description:
-    "サクラ・ウメ・リンゴ・ビワ・ノイバラ……実は身の回りに多いバラ科の植物。共通の特徴（5枚の花弁・花托・ギザギザ葉）を覚えると、野山でも食卓でも「バラ科っぽい」とすぐ気づけるようになります。",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "バラ科の植物たち | ジュカ！",
-    description:
-      "サクラ・ウメ・リンゴ・ビワ・ノイバラ……実は身の回りに多いバラ科の植物。共通の特徴（5枚の花弁・花托・ギザギザ葉）を覚えると、野山でも食卓でも「バラ科っぽい」とすぐ気づけるようになります。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "ノイバラ（バラ科）の花" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "バラ科の植物たち | ジュカ！",
-    description:
-      "サクラ・リンゴ・ビワ・ノイバラ……身近な植物の多くがバラ科。共通の特徴を覚えれば野山で「あ、バラ科だ」とすぐわかる。",
-    images: [ogImage],
-  },
-}
+  ogImage,
+  ogImageAlt: "ノイバラ（バラ科）の花",
+  twitterDescription: "サクラ・リンゴ・ビワ・ノイバラ……身近な植物の多くがバラ科。共通の特徴を覚えれば野山で「あ、バラ科だ」とすぐわかる。",
+})
 
-const Section = ({
+const jsonLd = createColumnJsonLd({
+  path: "/columns/rosaceae-plants/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "バラ科の植物たち",
-  description:
-    "サクラ・ウメ・リンゴ・ビワ・ノイバラ……実は身の回りに多いバラ科の植物。共通の特徴（5枚の花弁・花托・ギザギザ葉）を覚えると、野山でも食卓でも「バラ科っぽい」とすぐ気づけるようになります。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
+  description,
+  ogImage,
+})
 
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{
-            color: "#7cbe8c",
-            fontSize: "0.85rem",
-            textDecoration: "none",
-          }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      {/* ヘッダー */}
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌹 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          バラ科の植物たち
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          サクラもリンゴもビワも同じ仲間——意外と身近な「バラ科」を知ろう
-        </p>
-      </div>
-
-      {/* ヒーロー画像 */}
-      <div
-        style={{
-          marginBottom: "2rem",
-          borderRadius: "12px",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          src={ogImage}
-          alt="ノイバラ（バラ科）の花"
-          style={{
-            width: "100%",
-            height: "240px",
-            objectFit: "cover",
-            display: "block",
-          }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      {/* イントロ */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌹"
+      title={title}
+      subtitle="サクラもリンゴもビワも同じ仲間——意外と身近な「バラ科」を知ろう"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="ノイバラ（バラ科）の花"
+    >
+      <ColumnIntro>
         {[
           "春には桜、梅。夏にはバラ。秋にはリンゴやナシ。食卓にはビワやアンズ……。気づいていないかもしれないが、これらはすべて「バラ科」という同じグループの植物だ。",
           "バラ科は世界に約3000種が分布する大きな仲間で、花木・果樹・山野草を含む非常に多様なグループ。しかし、よく観察すると「5枚の花弁」「多数のおしべ」「ギザギザの葉」といった共通点が見えてくる。",
@@ -199,7 +68,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {/* バラ科の共通の特徴 */}
       <Section title="バラ科に共通する3つの特徴">
@@ -643,7 +512,7 @@ const Page = () => {
           コラム一覧へ →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 

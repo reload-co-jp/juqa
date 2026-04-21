@@ -1,28 +1,14 @@
-import type { Metadata } from "next"
+import { createColumnMetadata } from "components/elements/ColumnComponents"
 import { QuizKnowledgeArticle } from "components/elements/QuizKnowledgeArticle"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/wildflower-field-notes/`
-
-export const metadata: Metadata = {
+export const metadata = createColumnMetadata({
+  path: "/columns/wildflower-field-notes/",
   title: "山野草と雑草の見分けメモ",
   description:
     "タンポポ、ツユクサ、カタクリ、ドクダミなど、身近な草花や山野草を見分けるときの豆知識をQ&A形式でまとめたコラムです。",
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    title: "山野草と雑草の見分けメモ | ジュカ！",
-    description:
-      "タンポポ、ツユクサ、カタクリ、ドクダミなど、身近な草花や山野草を見分けるときの豆知識をQ&A形式でまとめたコラムです。",
-    url: pageUrl,
-    type: "article",
-  },
-  twitter: {
-    card: "summary",
-    title: "山野草と雑草の見分けメモ | ジュカ！",
-    description:
-      "道端の雑草から高山植物まで、覚えておきたい草花の見分けポイントを短く整理しました。",
-  },
-}
+  twitterDescription:
+    "道端の雑草から高山植物まで、覚えておきたい草花の見分けポイントを短く整理しました。",
+})
 
 export default function Page() {
   return (

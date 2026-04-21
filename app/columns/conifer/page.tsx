@@ -1,65 +1,43 @@
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/conifer/`
 const ogImage =
   "https://commons.wikimedia.org/wiki/Special:FilePath/Taro-sugi_20111002.jpg"
+const title = "針葉樹林の簡単な見分け方"
+const description = "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。葉の形・樹皮・松ぼっくりなど現地で使えるポイントをまとめました。"
 
-export const metadata: Metadata = {
-  title: "針葉樹林の簡単な見分け方",
-  keywords: ["針葉樹", "見分け方", "スギ", "ヒノキ", "アカマツ", "クロマツ", "ハイマツ", "針葉樹林", "樹木識別"],
-  description:
-    "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。葉の形・樹皮・松ぼっくりなど現地で使えるポイントをまとめました。",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "針葉樹林の簡単な見分け方 | ジュカ！",
-    description:
-      "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。葉の形・樹皮・松ぼっくりなど現地で使えるポイントをまとめました。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "針葉樹（スギ）の森" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "針葉樹林の簡単な見分け方 | ジュカ！",
-    description:
-      "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。",
-    images: [ogImage],
-  },
-}
-
-const Section = ({
+export const metadata = createColumnMetadata({
+  path: "/columns/conifer/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        marginBottom: "1rem",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
+  description,
+  keywords: [
+    "針葉樹",
+    "見分け方",
+    "スギ",
+    "ヒノキ",
+    "アカマツ",
+    "クロマツ",
+    "ハイマツ",
+    "針葉樹林",
+    "樹木識別"
+  ],
+  ogImage,
+  ogImageAlt: "針葉樹（スギ）の森",
+  twitterDescription: "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。",
+})
+
+const jsonLd = createColumnJsonLd({
+  path: "/columns/conifer/",
+  title,
+  description,
+  ogImage,
+})
 
 const TreeCard = ({
   name,
@@ -127,101 +105,17 @@ const TreeCard = ({
   </div>
 )
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "針葉樹林の簡単な見分け方",
-  description:
-    "スギ・ヒノキ・アカマツ・クロマツ・ハイマツなど、針葉樹林でよく見る木を簡単に見分けるコツを解説。葉の形・樹皮・松ぼっくりなど現地で使えるポイントをまとめました。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
-
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌲 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          針葉樹林の簡単な見分け方
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          スギ・ヒノキ・マツ…よく似た針葉樹を「これだけ」で見分けるコツ
-        </p>
-      </div>
-
-      {/* Hero image */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="針葉樹（スギ）の森"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      {/* Intro */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌲"
+      title={title}
+      subtitle="スギ・ヒノキ・マツ…よく似た針葉樹を「これだけ」で見分けるコツ"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="針葉樹（スギ）の森"
+    >
+      <ColumnIntro>
         {[
           "山道を歩いていると、あたり一面に背の高い緑の木が続いていることがある。みんな似たような感じで、これがスギなのかヒノキなのか、マツなのかぜんぜんわからない——そんな経験はないだろうか。",
           "実は、ちゃんと見れば針葉樹には「種類ごとのくせ」がある。葉っぱの形、幹の色、松ぼっくりの形。そのくせさえ覚えてしまえば、山の中でも「あ、あれはヒノキだ」と気づけるようになる。",
@@ -239,7 +133,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       <Section title="まず「葉の形」で2グループに分ける">
         <p
@@ -579,7 +473,7 @@ const Page = () => {
           関連コラム：木と草のちがい →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 

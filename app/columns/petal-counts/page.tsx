@@ -1,62 +1,26 @@
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/petal-counts/`
 const ogImage = "https://upload.wikimedia.org/wikipedia/commons/a/a2/Rosa_multiflora.jpg"
+const title = "花びらの枚数で見る植物の分類"
+const description =
+  "花びらが5枚、4枚、3の倍数……その違いには意味があります。サクラ、ツユクサ、ヤマユリ、アジサイなどを例に、花びらの枚数の見方をやさしく解説します。"
 
-export const metadata: Metadata = {
-  title: "花びらの枚数で見る植物の分類",
-  description:
-    "花びらが5枚、4枚、3の倍数……その違いには意味があります。サクラ、ツユクサ、ヤマユリ、アジサイなどを例に、花びらの枚数の見方をやさしく解説します。",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "花びらの枚数で見る植物の分類 | ジュカ！",
-    description:
-      "花びらが5枚、4枚、3の倍数……その違いには意味があります。サクラ、ツユクサ、ヤマユリ、アジサイなどを例に、花びらの枚数の見方をやさしく解説します。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "ノイバラの花" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "花びらの枚数で見る植物の分類 | ジュカ！",
-    description:
-      "5枚花、4枚花、3の倍数の花。その違いから植物を見るコツをやさしく解説します。",
-    images: [ogImage],
-  },
-}
-
-const Section = ({
+export const metadata = createColumnMetadata({
+  path: "/columns/petal-counts/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
+  description,
+  ogImage,
+  ogImageAlt: "ノイバラの花",
+  twitterDescription:
+    "5枚花、4枚花、3の倍数の花。その違いから植物を見るコツをやさしく解説します。",
+})
 
 const body: React.CSSProperties = {
   color: "#ccc",
@@ -65,99 +29,24 @@ const body: React.CSSProperties = {
   margin: "0 0 0.875rem",
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "花びらの枚数で見る植物の分類",
-  description:
-    "花びらが5枚、4枚、3の倍数……その違いには意味があります。サクラ、ツユクサ、ヤマユリ、アジサイなどを例に、花びらの枚数の見方をやさしく解説します。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
+const jsonLd = createColumnJsonLd({
+  path: "/columns/petal-counts/",
+  title,
+  description,
+  ogImage,
+})
 
 export default function Page() {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌸 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          花びらの枚数で見る植物の分類
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          5枚、4枚、3の倍数。花びらの数は、植物を見る入口になります
-        </p>
-      </div>
-
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="ノイバラの花"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌸"
+      title={title}
+      subtitle="5枚、4枚、3の倍数。花びらの数は、植物を見る入口になります"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="ノイバラの花"
+    >
+      <ColumnIntro>
         {[
           "花を見たとき、多くの人はまず色や大きさに目がいきます。でも、落ち着いて数えてみると、花びらの枚数には案外はっきりした傾向があります。",
           "たとえば<Link href=\"/plants/1\" style=\"color:#7cbe8c;text-decoration:none;\">ソメイヨシノ</Link>や<Link href=\"/plants/16\" style=\"color:#7cbe8c;text-decoration:none;\">ウメ</Link>、<Link href=\"/plants/18\" style=\"color:#7cbe8c;text-decoration:none;\">ノイバラ</Link>は5枚、<Link href=\"/plants/15\" style=\"color:#7cbe8c;text-decoration:none;\">ツユクサ</Link>や<Link href=\"/plants/54\" style=\"color:#7cbe8c;text-decoration:none;\">ヤマユリ</Link>は3の倍数に見える花を持っています。",
@@ -174,7 +63,7 @@ export default function Page() {
             dangerouslySetInnerHTML={{ __html: text }}
           />
         ))}
-      </div>
+      </ColumnIntro>
 
       <Section title="5枚花はとても多い">
         <p style={body}>
@@ -283,6 +172,6 @@ export default function Page() {
           バラ科の植物たち →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }

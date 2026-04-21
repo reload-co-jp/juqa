@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ColumnArticle, ColumnIntro } from "components/elements/ColumnComponents"
 import { plants, quizzes } from "lib/data"
 
 type ArticleSection = {
@@ -34,57 +35,13 @@ export const QuizKnowledgeArticle = ({
   relatedLinks?: RelatedLink[]
 }) => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/columns"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← コラム一覧へ
-        </Link>
-      </div>
-
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          {emoji} 豆知識コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.35,
-          }}
-        >
-          {title}
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.9rem", margin: 0, lineHeight: 1.8 }}>
-          {subtitle}
-        </p>
-      </div>
-
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji={emoji}
+      label="豆知識コラム"
+      title={title}
+      subtitle={subtitle}
+    >
+      <ColumnIntro>
         {intro.map((text) => (
           <p
             key={text}
@@ -93,7 +50,7 @@ export const QuizKnowledgeArticle = ({
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {sections.map((section) => {
         const items = section.quizIds
@@ -244,6 +201,6 @@ export const QuizKnowledgeArticle = ({
           </Link>
         ))}
       </div>
-    </div>
+    </ColumnArticle>
   )
 }

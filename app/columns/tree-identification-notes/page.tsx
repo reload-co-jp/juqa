@@ -1,28 +1,14 @@
-import type { Metadata } from "next"
+import { createColumnMetadata } from "components/elements/ColumnComponents"
 import { QuizKnowledgeArticle } from "components/elements/QuizKnowledgeArticle"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/tree-identification-notes/`
-
-export const metadata: Metadata = {
+export const metadata = createColumnMetadata({
+  path: "/columns/tree-identification-notes/",
   title: "木の見分けメモ",
   description:
     "桜・マツ・ナラ・モミジなど、街や山で見かける木を見分けるときの観察ポイントをQ&A形式でまとめた豆知識コラムです。",
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    title: "木の見分けメモ | ジュカ！",
-    description:
-      "桜・マツ・ナラ・モミジなど、街や山で見かける木を見分けるときの観察ポイントをQ&A形式でまとめた豆知識コラムです。",
-    url: pageUrl,
-    type: "article",
-  },
-  twitter: {
-    card: "summary",
-    title: "木の見分けメモ | ジュカ！",
-    description:
-      "街や山で見かける木の見分けポイントを、短いQ&Aで読み返せるように整理しました。",
-  },
-}
+  twitterDescription:
+    "街や山で見かける木の見分けポイントを、短いQ&Aで読み返せるように整理しました。",
+})
 
 export default function Page() {
   return (

@@ -1,64 +1,41 @@
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/tree-vs-herb/`
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/4/49/Cherry_Blossoms_in_Yokosuka%2C_Japan.JPG"
+const title = "木と草のちがい"
+const description = "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。"
 
-export const metadata: Metadata = {
-  title: "木と草のちがい",
-  keywords: ["木と草のちがい", "木本", "草本", "木質化", "植物学", "樹木", "草花"],
-  description:
-    "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "木と草のちがい | ジュカ！",
-    description:
-      "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "木と草の比較" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "木と草のちがい | ジュカ！",
-    description:
-      "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
-    images: [ogImage],
-  },
-}
-
-const Section = ({
+export const metadata = createColumnMetadata({
+  path: "/columns/tree-vs-herb/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
+  description,
+  keywords: [
+    "木と草のちがい",
+    "木本",
+    "草本",
+    "木質化",
+    "植物学",
+    "樹木",
+    "草花"
+  ],
+  ogImage,
+  ogImageAlt: "横須賀のサクラ（木本植物の例）",
+  twitterDescription: "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
+})
+
+const jsonLd = createColumnJsonLd({
+  path: "/columns/tree-vs-herb/",
+  title,
+  description,
+  ogImage,
+})
 
 const body: React.CSSProperties = {
   color: "#ccc",
@@ -67,102 +44,17 @@ const body: React.CSSProperties = {
   margin: "0 0 0.875rem",
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "木と草のちがい",
-  description:
-    "サクラは木でタンポポは草——でも、その「ちがい」って何？木質化・越冬・茎の構造など、植物学的な観点からやさしく解説します。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
-
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      {/* Header */}
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌿 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          木と草のちがい
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          「サクラは木、タンポポは草」——そのちがいの正体を探ってみよう
-        </p>
-      </div>
-
-      {/* Hero image */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="横須賀のサクラ（木本植物の例）"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons
-        </div>
-      </div>
-
-      {/* Intro */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌿"
+      title={title}
+      subtitle="「サクラは木、タンポポは草」——そのちがいの正体を探ってみよう"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="横須賀のサクラ（木本植物の例）"
+    >
+      <ColumnIntro>
         {[
           "「あれって木？草？」——公園を歩いていると、ふとそんな疑問が浮かぶことがある。アジサイは木なのか草なのか。あんなに大きなタケは木じゃないの？",
           "子どものころから「木と草は別もの」と感覚でわかっているつもりでも、いざ「何がちがうの？」と聞かれると意外と答えに詰まる。",
@@ -180,7 +72,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {/* 一番の違い */}
       <Section title="いちばんの違いは「茎が残るか」">
@@ -600,7 +492,7 @@ const Page = () => {
           関連コラム：針葉樹林の簡単な見分け方 →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 

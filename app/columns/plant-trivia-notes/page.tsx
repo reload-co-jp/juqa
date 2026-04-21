@@ -1,28 +1,14 @@
-import type { Metadata } from "next"
+import { createColumnMetadata } from "components/elements/ColumnComponents"
 import { QuizKnowledgeArticle } from "components/elements/QuizKnowledgeArticle"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/plant-trivia-notes/`
-
-export const metadata: Metadata = {
+export const metadata = createColumnMetadata({
+  path: "/columns/plant-trivia-notes/",
   title: "植物の特徴と豆知識メモ",
   description:
     "科の特徴、花のふるまい、植物名の由来など、クイズに入っていた知識を読み物としてまとめた植物豆知識コラムです。",
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    title: "植物の特徴と豆知識メモ | ジュカ！",
-    description:
-      "科の特徴、花のふるまい、植物名の由来など、クイズに入っていた知識を読み物としてまとめた植物豆知識コラムです。",
-    url: pageUrl,
-    type: "article",
-  },
-  twitter: {
-    card: "summary",
-    title: "植物の特徴と豆知識メモ | ジュカ！",
-    description:
-      "どんぐりのなる科、就眠運動、ヒマワリの向きなど、覚えておきたい植物の豆知識を短く整理しました。",
-  },
-}
+  twitterDescription:
+    "どんぐりのなる科、就眠運動、ヒマワリの向きなど、覚えておきたい植物の豆知識を短く整理しました。",
+})
 
 export default function Page() {
   return (

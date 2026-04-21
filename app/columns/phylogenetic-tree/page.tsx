@@ -1,79 +1,32 @@
-import type { Metadata } from "next"
 import Link from "next/link"
+import {
+  ColumnArticle,
+  ColumnIntro,
+  Section,
+  createColumnJsonLd,
+  createColumnMetadata,
+} from "components/elements/ColumnComponents"
 
-const siteUrl = "https://juqa.reload.co.jp"
-const pageUrl = `${siteUrl}/columns/phylogenetic-tree/`
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/d/de/Tree_of_life_by_Haeckel.jpg"
+const title = "植物を系統樹で覚えやすく"
+const description = "植物の進化の歴史を示す「系統樹」を頭に入れると、見知らぬ植物でも「この仲間っぽい」と気づける。コケ・シダ・裸子植物・被子植物の大きな流れと、双子葉類・単子葉類の違いをやさしく解説します。"
 
-export const metadata: Metadata = {
-  title: "植物を系統樹で覚えやすく",
-  description:
-    "植物の進化の歴史を示す「系統樹」を頭に入れると、見知らぬ植物でも「この仲間っぽい」と気づける。コケ・シダ・裸子植物・被子植物の大きな流れと、双子葉類・単子葉類の違いをやさしく解説します。",
-  alternates: { canonical: pageUrl },
-  openGraph: {
-    title: "植物を系統樹で覚えやすく | ジュカ！",
-    description:
-      "植物の進化の歴史を示す「系統樹」を頭に入れると、見知らぬ植物でも「この仲間っぽい」と気づける。コケ・シダ・裸子植物・被子植物の大きな流れと、双子葉類・単子葉類の違いをやさしく解説します。",
-    url: pageUrl,
-    type: "article",
-    images: [{ url: ogImage, alt: "ヘッケルの描いた生命の樹（1879年）" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "植物を系統樹で覚えやすく | ジュカ！",
-    description:
-      "系統樹を知ると植物が覚えやすくなる。コケ→シダ→裸子植物→被子植物の進化の流れを図解でわかりやすく解説。",
-    images: [ogImage],
-  },
-}
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": pageUrl,
-  url: pageUrl,
-  headline: "植物を系統樹で覚えやすく",
-  description:
-    "植物の進化の歴史を示す「系統樹」を頭に入れると、見知らぬ植物でも「この仲間っぽい」と気づける。コケ・シダ・裸子植物・被子植物の大きな流れをやさしく解説します。",
-  image: ogImage,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/columns/` },
-  publisher: {
-    "@type": "Organization",
-    name: "Reload, Inc.",
-    url: "https://reload.co.jp",
-  },
-}
-
-const Section = ({
+export const metadata = createColumnMetadata({
+  path: "/columns/phylogenetic-tree/",
   title,
-  children,
-}: {
-  title: string
-  children: React.ReactNode
-}) => (
-  <div
-    style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
-      marginBottom: "1.5rem",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "1rem",
-        fontWeight: "bold",
-        color: "#7cbe8c",
-        margin: "0 0 1rem",
-      }}
-    >
-      {title}
-    </h2>
-    {children}
-  </div>
-)
+  description,
+  ogImage,
+  ogImageAlt: "ヘッケルの描いた生命の樹（1879年）",
+  twitterDescription: "系統樹を知ると植物が覚えやすくなる。コケ→シダ→裸子植物→被子植物の進化の流れを図解でわかりやすく解説。",
+})
+
+const jsonLd = createColumnJsonLd({
+  path: "/columns/phylogenetic-tree/",
+  title,
+  description,
+  ogImage,
+})
 
 const TreeNode = ({
   label,
@@ -158,83 +111,16 @@ const TreeNode = ({
 
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      {/* パンくず */}
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      {/* ヘッダー */}
-      <div style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(90,154,92,0.2)",
-            border: "1px solid #5a9a5c",
-            borderRadius: "20px",
-            padding: "0.2rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#a0d0a2",
-            marginBottom: "0.75rem",
-          }}
-        >
-          🌿 コラム
-        </div>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-            lineHeight: 1.3,
-          }}
-        >
-          植物を系統樹で覚えやすく
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          「進化の枝分かれ」を知ると、植物の見分け方が一気に整理される
-        </p>
-      </div>
-
-      {/* ヒーロー画像 */}
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
-        <img
-          src={ogImage}
-          alt="ヘッケルの描いた生命の樹（1879年）"
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
-        />
-        <div
-          style={{
-            background: "#2a2a2a",
-            padding: "0.4rem 0.75rem",
-            fontSize: "0.7rem",
-            color: "#666",
-          }}
-        >
-          Photo: Wikimedia Commons（Ernst Haeckel, 1879年）
-        </div>
-      </div>
-
-      {/* イントロ */}
-      <div
-        style={{
-          borderLeft: "3px solid #5a9a5c",
-          paddingLeft: "1.25rem",
-          marginBottom: "2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0.75rem",
-        }}
-      >
+    <ColumnArticle
+      emoji="🌿"
+      title={title}
+      subtitle="「進化の枝分かれ」を知ると、植物の見分け方が一気に整理される"
+      jsonLd={jsonLd}
+      heroImage={ogImage}
+      heroAlt="ヘッケルの描いた生命の樹（1879年）"
+      heroCredit="Photo: Wikimedia Commons（Ernst Haeckel, 1879年）"
+    >
+      <ColumnIntro>
         {[
           "植物の名前を覚えようとして、なかなか頭に入らない——そんな経験はないだろうか。バラ科やキク科という「科」の名前を暗記しようとすると、ただのリストになってしまい、どうしても記憶に残りにくい。",
           "そこで役立つのが「系統樹」の考え方だ。系統樹とは植物の進化の歴史を木の枝のように示した図で、「共通の祖先からどのように枝分かれしたか」を表している。枝が近い植物ほど特徴が似ているので、系統樹を頭に入れておくと、初めて見る植物でも「この仲間だな」と推測しやすくなる。",
@@ -252,7 +138,7 @@ const Page = () => {
             {text}
           </p>
         ))}
-      </div>
+      </ColumnIntro>
 
       {/* 系統樹とは */}
       <Section title="系統樹とは——植物の「家系図」">
@@ -834,7 +720,7 @@ const Page = () => {
           コラム一覧へ →
         </Link>
       </div>
-    </div>
+    </ColumnArticle>
   )
 }
 
