@@ -74,6 +74,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_palmatum_flowers_001.JPG",
+
+        local_url: "/images/plants/2-3.webp",
         caption: "花",
       },
     ],
@@ -117,6 +119,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnamomum_camphora_flowers%2C_Downfall_Creek_Parkland_Wavell_Heights_01.jpg",
+
+        local_url: "/images/plants/3-3.webp",
         caption: "花",
       },
     ],
@@ -159,6 +163,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Zelkova-serrata.JPG",
+
+        local_url: "/images/plants/4-3.webp",
         caption: "花",
       },
     ],
@@ -201,6 +207,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ginkgo_biloba_female_flower.jpg",
+
+        local_url: "/images/plants/5-3.webp",
         caption: "花",
       },
     ],
@@ -243,6 +251,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%B3%E3%83%8A%E3%83%A9_(Quercus_serrata)_(21922146700).jpg",
+
+        local_url: "/images/plants/6-3.webp",
         caption: "花",
       },
     ],
@@ -285,6 +295,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_acutissima.jpg",
+
+        local_url: "/images/plants/7-3.webp",
         caption: "花",
       },
     ],
@@ -327,6 +339,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaecyparis_obtusa_01.jpg",
+
+        local_url: "/images/plants/8-3.webp",
         caption: "花",
       },
     ],
@@ -369,6 +383,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cryptomeria_japonica-Male_flower.jpg",
+
+        local_url: "/images/plants/9-3.webp",
         caption: "花",
       },
     ],
@@ -412,6 +428,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E6%97%A5%E6%9C%AC%E4%B8%89%E6%B2%B3%E9%BB%91%E6%9D%BE_Pinus_thunbergii_Mikawa_-%E9%A6%99%E6%B8%AF%E8%8A%B1%E5%B1%95_Hong_Kong_Flower_Show-_(9216081834).jpg",
+
+        local_url: "/images/plants/10-3.webp",
         caption: "花",
       },
     ],
@@ -765,6 +783,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_buergerianum_-_Chelsea_Flower_Show_2024_-_DSC02518.jpg",
+
+        local_url: "/images/plants/19-3.webp",
         caption: "花",
       },
     ],
@@ -807,6 +827,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_myrsinifolia_(21489205483).jpg",
+
+        local_url: "/images/plants/20-3.webp",
         caption: "花",
       },
     ],
@@ -849,6 +871,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanopsis_sieboldii_flower_male.jpg",
+
+        local_url: "/images/plants/21-3.webp",
         caption: "花",
       },
     ],
@@ -891,6 +915,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Yeosan_myeon_pine_in_flower.jpg",
+
+        local_url: "/images/plants/22-3.webp",
         caption: "花",
       },
     ],
@@ -1825,6 +1851,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E7%B4%85%E6%A5%A0_Machilus_thunbergii_-%E9%A6%99%E6%B8%AF%E8%8A%B1%E5%B1%95_Hong_Kong_Flower_Show-_(25333644693).jpg",
+
+        local_url: "/images/plants/46-3.webp",
         caption: "花",
       },
     ],
@@ -1905,6 +1933,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pollia_japonica_(9994868276).jpg",
+
+        local_url: "/images/plants/48-3.webp",
         caption: "花",
       },
     ],
@@ -2064,6 +2094,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Saururus_chinensis_(flower).jpg",
+
+        local_url: "/images/plants/52-3.webp",
         caption: "花",
       },
     ],
@@ -2262,6 +2294,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_cork_oak_foliage_and_flower.jpg",
+
+        local_url: "/images/plants/57-3.webp",
         caption: "花",
       },
     ],
@@ -2459,6 +2493,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Castanea_cren_f.JPG",
+
+        local_url: "/images/plants/62-3.webp",
         caption: "花",
       },
     ],
@@ -2502,6 +2538,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_japonicum_flowers_001.JPG",
+
+        local_url: "/images/plants/63-3.webp",
         caption: "花",
       },
     ],
@@ -2816,6 +2854,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cercidiphyllum_japonicum_male_flowers.jpg",
+
+        local_url: "/images/plants/71-3.webp",
         caption: "花",
       },
     ],
@@ -2975,6 +3015,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/(MHNT)_Salix_babylonica_-_Les_Martels%2C_Giroussens_Tarn.jpg",
+
+        local_url: "/images/plants/75-3.webp",
         caption: "花",
       },
     ],
@@ -3181,6 +3223,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Osmanthus_heterophyllus_(flower_s7).jpg",
+
+        local_url: "/images/plants/80-3.webp",
         caption: "花",
       },
     ],
@@ -3224,6 +3268,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Viburnum_odoratissimum_var._awabuki.jpg",
+
+        local_url: "/images/plants/81-3.webp",
         caption: "花",
       },
     ],
@@ -3265,6 +3311,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Curly_Leaf_Privet_%E2%80%98Coriaceum%E2%80%99_Ligustrum_japonicum_%E2%80%98Coriaceum%E2%80%99_flower_spring_10.jpg",
+
+        local_url: "/images/plants/82-3.webp",
         caption: "花",
       },
     ],
@@ -3308,6 +3356,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_of_Capsella_bursa-pastoris_(Brassicaceae).jpg",
+
+        local_url: "/images/plants/83-3.webp",
         caption: "花",
       },
     ],
@@ -3545,6 +3595,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_hebiichigo_(flower_s2).jpg",
+
+        local_url: "/images/plants/89-3.webp",
         caption: "花",
       },
     ],
@@ -4056,6 +4108,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pumila_(flower_male).JPG",
+
+        local_url: "/images/plants/101-3.webp",
         caption: "花",
       },
     ],
@@ -4197,6 +4251,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ivy_(Hedera_helix)_flowers_and_fruit%2C_Dumfries.jpg",
+
+        local_url: "/images/plants/105-2.webp",
         caption: "花",
       },
     ],
@@ -4234,6 +4290,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/W_sakaki4061.jpg",
+
+        local_url: "/images/plants/106-2.webp",
         caption: "花",
       },
     ],
@@ -4271,6 +4329,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Flowers_for_Nandina_domestica_1.jpg",
+
+        local_url: "/images/plants/107-2.webp",
         caption: "花",
       },
     ],
@@ -5508,6 +5568,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower_s2).jpg",
+
+        local_url: "/images/plants/141-3.webp",
         caption: "花",
       },
     ],
@@ -5665,6 +5727,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens_IP1204022.JPG",
+
+        local_url: "/images/plants/145-3.webp",
         caption: "花",
       },
     ],
@@ -6017,6 +6081,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ardisia_crenata-flower-yercaud-salem-India.JPG",
+
+        local_url: "/images/plants/154-3.webp",
         caption: "花",
       },
     ],
@@ -6136,6 +6202,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Stewartia_pseudocamellia_(flower_s11).jpg",
+
+        local_url: "/images/plants/157-3.webp",
         caption: "花",
       },
     ],
@@ -6407,6 +6475,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diphylleia_grayi_(flower_s5).jpg",
+
+        local_url: "/images/plants/164-2.webp",
         caption: "花",
       },
     ],
@@ -6567,6 +6637,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_persica_flowers_in_South_Vietnam.jpg",
+
+        local_url: "/images/plants/169-3.webp",
         caption: "花",
       },
     ],
@@ -6649,6 +6721,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eriobotrya_japonica_flower.jpg",
+
+        local_url: "/images/plants/171-3.webp",
         caption: "花",
       },
     ],
@@ -7433,6 +7507,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_horizontalis_(13937637589).jpg",
+
+        local_url: "/images/plants/190-3.webp",
         caption: "花",
       },
     ],
@@ -7905,6 +7981,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gaultheria_procumbens_Golteria_rozes%C5%82ana_2020-08-07_02.jpg",
+
+        local_url: "/images/plants/202-3.webp",
         caption: "花",
       },
     ],
@@ -8455,6 +8533,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Vaccinium_bracteatum_(flower_s3).jpg",
+
+        local_url: "/images/plants/216-3.webp",
         caption: "花",
       },
     ],
@@ -8880,6 +8960,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_ensata_Thunb.jpg",
+
+        local_url: "/images/plants/227-3.webp",
         caption: "花",
       },
     ],
@@ -8917,6 +8999,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Yellow_Iris_Iris_pseudacorus_Flower_1469px.jpg",
+
+        local_url: "/images/plants/228-2.webp",
         caption: "花",
       },
     ],
