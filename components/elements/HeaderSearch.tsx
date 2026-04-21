@@ -67,18 +67,21 @@ export const HeaderSearch = () => {
           minWidth: 0,
           padding: "0.45rem 0.7rem",
           borderRadius: "6px",
-          border: "1px solid #5f926a",
-          background: "#f4f8f2",
-          color: "#203024",
+          border: "1px solid rgba(190, 236, 197, 0.55)",
+          background: "#17231a",
+          color: "#f4fbf5",
+          colorScheme: "dark",
+          boxShadow: "inset 0 1px 2px rgba(0, 0, 0, 0.35)",
+          caretColor: "#b7e7c0",
           fontSize: "0.85rem",
         }}
       />
       <button
         type="submit"
         style={{
-          background: "#2f5a35",
+          background: "#1f3b25",
           color: "#fff",
-          border: "none",
+          border: "1px solid rgba(190, 236, 197, 0.38)",
           padding: "0.45rem 0.85rem",
           borderRadius: "6px",
           cursor: "pointer",
