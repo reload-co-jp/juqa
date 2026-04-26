@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next"
 import { plants, families } from "lib/data"
+import { columns } from "lib/columns"
 
 export const dynamic = "force-static"
 
@@ -16,21 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/quiz/photo/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/guide/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/conifer/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/tree-vs-herb/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/spring-mountain-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/rosaceae-plants/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/phylogenetic-tree/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/tree-identification-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/wildflower-field-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/plant-trivia-notes/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/petal-counts/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/mothers-day-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/hanafuda-plants/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/spring-flower-meanings/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
-    { url: `${siteUrl}/columns/wedding-flowers/`, priority: 0.75, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
   ]
+
+  const columnRoutes: MetadataRoute.Sitemap = columns.map((column) => ({
+    url: `${siteUrl}${column.href}/`,
+    priority: 0.75,
+    lastModified,
+    changeFrequency: "monthly",
+  }))
 
   const plantRoutes: MetadataRoute.Sitemap = plants.map((plant) => ({
     url: `${siteUrl}/plants/${plant.id}/`,
@@ -44,5 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
   }))
 
-  return [...staticRoutes, ...plantRoutes, ...familyRoutes]
+  return [...staticRoutes, ...columnRoutes, ...plantRoutes, ...familyRoutes]
 }

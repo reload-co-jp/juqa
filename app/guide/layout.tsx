@@ -4,9 +4,13 @@ export const metadata: Metadata = {
   title: "見分け方ガイド",
   description: "花の色・葉の形など特徴を選択していくことで、目の前の植物を絞り込める見分け方ガイドです。",
   keywords: ["植物の見分け方", "植物識別", "植物ガイド", "花の色", "葉の形", "樹木の見分け方"],
+  alternates: {
+    canonical: "https://juqa.reload.co.jp/guide/",
+  },
   openGraph: {
     title: "見分け方ガイド",
     description: "花の色・葉の形など特徴を選択していくことで、目の前の植物を絞り込める見分け方ガイドです。",
+    url: "https://juqa.reload.co.jp/guide/",
     type: "website",
   },
   twitter: {

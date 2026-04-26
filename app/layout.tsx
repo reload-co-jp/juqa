@@ -33,12 +33,21 @@ export const metadata: Metadata = {
     siteName: "ジュカ！ (JuQa)",
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: `${siteUrl}icons/icon-512.png`,
+        width: 512,
+        height: 512,
+        alt: "ジュカ！ (JuQa)",
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "ジュカ！ (JuQa)",
     description:
       "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+    images: [`${siteUrl}icons/icon-512.png`],
   },
 }
 
