@@ -2621,7 +2621,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "山", "花弁5枚"],
     flower_colors: ["白"],
-    similar_plant_ids: [66, 135],
+    similar_plant_ids: [66, 135, 229, 230],
   },
   {
     id: 66,
@@ -2660,7 +2660,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "山"],
     flower_colors: ["白","青","紫"],
-    similar_plant_ids: [65, 135],
+    similar_plant_ids: [65, 135, 229, 230, 231],
   },
   {
     id: 67,
@@ -3059,6 +3059,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cornus_kousa_flowers.jpg",
+
+        local_url: "/images/plants/76-3.webp",
         caption: "花",
       },
     ],
@@ -3180,6 +3182,8 @@ export const plants: Plant[] = [
       },
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ternstroemia_gymnanthera_flowers_20130628(3).JPG",
+
+        local_url: "/images/plants/79-3.webp",
         caption: "花",
       },
     ],
@@ -9007,5 +9011,161 @@ export const plants: Plant[] = [
     tags: ["春開花", "夏開花", "草本", "雑草"],
     flower_colors: ["黄"],
     similar_plant_ids: [94, 95],
+  },
+  {
+    id: 229,
+    japanese_name: "ユキワリソウ",
+    scientific_name: "Hepatica nobilis var. japonica",
+    family_id: 25,
+    genus: "ミスミソウ属",
+    description: [
+      "早春に雪の間から咲き出す多年草で、園芸ではミスミソウの名でも親しまれる。",
+      "花色の変化が多く、白・淡紅・青紫などさまざまな色が見られる。",
+      "葉は三角状に3裂し、花後も越冬葉として残る。",
+    ],
+    identification: [
+      "早春に葉より先か同時に花茎を上げる",
+      "花に見える部分は萼片で、白・ピンク・青紫など変化が多い",
+      "葉は厚く3裂し、先が浅く尖る",
+      "山地の落葉樹林や石灰岩地に生える",
+    ],
+    distribution: "本州〜九州の山地林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Hepatica_nobilis_japonica_0zz.jpg",
+    local_image_url: "/images/plants/229-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hepatica_nobilis_japonica_0zz.jpg",
+
+        local_url: "/images/plants/229-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_hepatica_var_japonica_f_magna2.jpg",
+
+        local_url: "/images/plants/229-2.webp",
+        caption: "花色の変化",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    flower_colors: ["白", "ピンク", "青", "紫"],
+    similar_plant_ids: [66, 230],
+  },
+  {
+    id: 230,
+    japanese_name: "アズマイチゲ",
+    scientific_name: "Anemone raddeana",
+    family_id: 25,
+    genus: "イチリンソウ属",
+    description: [
+      "落葉広葉樹林の林床に春先だけ現れる多年草で、白い花を1輪ずつ咲かせる。",
+      "花後は短期間で地上部が消えるスプリング・エフェメラルの一種。",
+      "群生すると林床が白く見えるほどまとまって咲くことがある。",
+    ],
+    identification: [
+      "白い花を1輪ずつ上向きに咲かせる",
+      "茎の上部に3枚の深く裂けた葉が輪生状につく",
+      "早春に咲き、初夏前には地上部が消える",
+      "山地の明るい落葉樹林に群生する",
+    ],
+    distribution: "北海道〜九州の山地林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_raddeana_1.JPG",
+    local_image_url: "/images/plants/230-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_raddeana_1.JPG",
+
+        local_url: "/images/plants/230-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_raddeana_(flowers).JPG",
+
+        local_url: "/images/plants/230-2.webp",
+        caption: "群生の様子",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [65, 66, 229],
+  },
+  {
+    id: 231,
+    japanese_name: "セツブンソウ",
+    scientific_name: "Eranthis pinnatifida",
+    family_id: 25,
+    genus: "セツブンソウ属",
+    description: [
+      "節分のころから咲き始める早春の多年草で、日本の代表的なスプリング・エフェメラル。",
+      "白い萼片の中心に紫色の雄しべと黄色い蜜腺が集まり、小さいながらよく目立つ。",
+      "石灰岩地の林床に生えることが多く、自生地は限られる。",
+    ],
+    identification: [
+      "白い萼片の中心に黄と紫の細かな構造が目立つ",
+      "花の直下に深く裂けた葉状の総苞が広がる",
+      "節分前後のごく早い時期に咲く",
+      "低山の林床や石灰岩地に点在する",
+    ],
+    distribution: "本州の山地林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Eranthis_pinnatifida_4.JPG",
+    local_image_url: "/images/plants/231-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eranthis_pinnatifida_4.JPG",
+
+        local_url: "/images/plants/231-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Eranthis_pinnatifida_(flower_s2).jpg",
+
+        local_url: "/images/plants/231-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "草本", "山"],
+    flower_colors: ["白", "黄", "紫"],
+    similar_plant_ids: [66, 229],
+  },
+  {
+    id: 232,
+    japanese_name: "ムスカリ",
+    scientific_name: "Muscari armeniacum",
+    family_id: 27,
+    genus: "ムスカリ属",
+    description: [
+      "春に青紫色の壺形の小花を密に咲かせる球根植物で、花壇や公園でよく植えられる。",
+      "ブドウの房のような花序からブドウヒヤシンスとも呼ばれる。",
+      "丈夫で殖えやすく、植えっぱなしでも毎年花を見せる。",
+    ],
+    identification: [
+      "青紫色の壺形の小花が総状に密集する",
+      "葉は細長く、根元から何枚も出る",
+      "草丈は低く、花壇の縁取りによく使われる",
+      "春の公園や庭で群植されることが多い",
+    ],
+    distribution: "全国の花壇・公園・庭（栽培）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Muscari_-_S%C3%BCmb%C3%BCl,_Yenik%C3%B6y_06.jpg",
+    local_image_url: "/images/plants/232-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Muscari_-_S%C3%BCmb%C3%BCl,_Yenik%C3%B6y_06.jpg",
+
+        local_url: "/images/plants/232-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Muscari_armeniacum_im_Schnee_20220403_01.jpg",
+
+        local_url: "/images/plants/232-2.webp",
+        caption: "群生の様子",
+      },
+    ],
+    tags: ["春開花", "草本", "公園"],
+    flower_colors: ["青", "紫"],
+    similar_plant_ids: [],
   },
 ]
