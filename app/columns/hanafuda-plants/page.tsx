@@ -6,12 +6,14 @@ import {
   createColumnJsonLd,
   createColumnMetadata,
 } from "components/elements/ColumnComponents"
+import { plants } from "lib/data/plant"
+import { wikimediaThumb } from "lib/utils"
 
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/c/c7/Hanafuda_January_Hikari.svg"
 const title = "花札に描かれている植物"
 const description =
-  "花札の12か月に描かれている松、梅、桜、藤、菖蒲、牡丹、萩、芒、菊、紅葉、柳、桐を、季節感と植物の特徴からやさしく読み解きます。"
+  "花札の12か月に描かれている松、梅、桜、藤、菖蒲、牡丹、萩、芒（すすき）、菊、紅葉、柳、桐を、季節感と植物の特徴からやさしく読み解きます。"
 
 export const metadata = createColumnMetadata({
   path: "/columns/hanafuda-plants/",
@@ -39,18 +41,18 @@ const body: React.CSSProperties = {
 }
 
 const monthPlants = [
-  { month: "1月", plant: "松", motif: "松に鶴", href: "/plants/22" },
-  { month: "2月", plant: "梅", motif: "梅に鶯", href: "/plants/16" },
-  { month: "3月", plant: "桜", motif: "桜に幕", href: "/plants/1" },
-  { month: "4月", plant: "藤", motif: "藤に不如帰", href: "/plants/25" },
-  { month: "5月", plant: "菖蒲", motif: "菖蒲に八橋", href: "/plants/95" },
-  { month: "6月", plant: "牡丹", motif: "牡丹に蝶" },
-  { month: "7月", plant: "萩", motif: "萩に猪" },
-  { month: "8月", plant: "芒", motif: "芒に月・雁", href: "/plants/41" },
-  { month: "9月", plant: "菊", motif: "菊に盃" },
-  { month: "10月", plant: "紅葉", motif: "紅葉に鹿", href: "/plants/2" },
-  { month: "11月", plant: "柳", motif: "柳に小野道風", href: "/plants/75" },
-  { month: "12月", plant: "桐", motif: "桐に鳳凰" },
+  { month: "1月", plant: "松", motif: "松に鶴", href: "/plants/22", plantId: 22 },
+  { month: "2月", plant: "梅", motif: "梅に鶯", href: "/plants/16", plantId: 16 },
+  { month: "3月", plant: "桜", motif: "桜に幕", href: "/plants/1", plantId: 1 },
+  { month: "4月", plant: "藤", motif: "藤に不如帰", href: "/plants/25", plantId: 25 },
+  { month: "5月", plant: "菖蒲", motif: "菖蒲に八橋", href: "/plants/95", plantId: 95 },
+  { month: "6月", plant: "牡丹", motif: "牡丹に蝶", href: "/plants/245", plantId: 245 },
+  { month: "7月", plant: "萩", motif: "萩に猪", href: "/plants/238", plantId: 238 },
+  { month: "8月", plant: "芒（すすき）", motif: "芒（すすき）に月・雁", href: "/plants/41", plantId: 41 },
+  { month: "9月", plant: "菊", motif: "菊に盃", href: "/plants/244", plantId: 244 },
+  { month: "10月", plant: "紅葉", motif: "紅葉に鹿", href: "/plants/2", plantId: 2 },
+  { month: "11月", plant: "柳", motif: "柳に小野道風", href: "/plants/75", plantId: 75 },
+  { month: "12月", plant: "桐", motif: "桐に鳳凰", href: "/plants/242", plantId: 242 },
 ] as const
 
 const seasonalGroups = [
@@ -62,7 +64,7 @@ const seasonalGroups = [
   {
     title: "初夏から秋へ移る草花",
     months: ["5月", "6月", "7月", "8月", "9月"],
-    note: "水辺の菖蒲、華やかな牡丹、秋の七草にも数えられる萩や芒、重陽の菊へ季節が進みます。",
+    note: "水辺の菖蒲、華やかな牡丹、秋の七草にも数えられる萩や芒（すすき）、重陽の菊へ季節が進みます。",
   },
   {
     title: "晩秋と年の終わりの木",
@@ -112,33 +114,52 @@ export default function Page() {
             gridTemplateColumns: "repeat(auto-fit, minmax(11rem, 1fr))",
           }}
         >
-          {monthPlants.map((item) => (
-            <div
-              key={item.month}
-              style={{
-                background: "#242424",
-                border: "1px solid #3a3a3a",
-                borderRadius: "8px",
-                padding: "0.85rem",
-              }}
-            >
-              <div style={{ color: "#7cbe8c", fontSize: "0.78rem", marginBottom: "0.25rem" }}>
-                {item.month}
-              </div>
-              <div style={{ color: "#e0e0e0", fontSize: "0.95rem", fontWeight: "bold" }}>
-                {"href" in item ? (
-                  <Link href={item.href} style={{ color: "#e0e0e0", textDecoration: "none" }}>
-                    {item.plant} →
+          {monthPlants.map((item) => {
+            const plant = plants.find((entry) => entry.id === item.plantId)
+            const imageSrc = plant
+              ? plant.local_image_url ?? wikimediaThumb(plant.image_url ?? "", 320)
+              : ""
+
+            return (
+              <div
+                key={item.month}
+                style={{
+                  background: "#242424",
+                  border: "1px solid #3a3a3a",
+                  borderRadius: "8px",
+                  overflow: "hidden",
+                }}
+              >
+                {plant && imageSrc ? (
+                  <Link href={item.href} style={{ display: "block", lineHeight: 0 }}>
+                    <img
+                      src={imageSrc}
+                      alt={`${item.plant}の写真`}
+                      style={{
+                        aspectRatio: "4 / 3",
+                        display: "block",
+                        objectFit: "cover",
+                        width: "100%",
+                      }}
+                    />
                   </Link>
-                ) : (
-                  item.plant
-                )}
+                ) : null}
+                <div style={{ padding: "0.85rem" }}>
+                  <div style={{ color: "#7cbe8c", fontSize: "0.78rem", marginBottom: "0.25rem" }}>
+                    {item.month}
+                  </div>
+                  <div style={{ color: "#e0e0e0", fontSize: "0.95rem", fontWeight: "bold" }}>
+                    <Link href={item.href} style={{ color: "#e0e0e0", textDecoration: "none" }}>
+                      {item.plant} →
+                    </Link>
+                  </div>
+                  <div style={{ color: "#999", fontSize: "0.78rem", lineHeight: 1.6 }}>
+                    {item.motif}
+                  </div>
+                </div>
               </div>
-              <div style={{ color: "#999", fontSize: "0.78rem", lineHeight: 1.6 }}>
-                {item.motif}
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </Section>
 
@@ -185,14 +206,26 @@ export default function Page() {
           の仲間を見分ける入口にもなります。
         </p>
         <p style={body}>
-          6月は牡丹、7月は萩、8月は
+          6月は
+          <Link href="/plants/245" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+            ボタン
+          </Link>
+          、7月は
+          <Link href="/plants/238" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+            ヤマハギ
+          </Link>
+          、8月は
           <Link href="/plants/41" style={{ color: "#7cbe8c", textDecoration: "none" }}>
             ススキ
           </Link>
-          、9月は菊です。花札の月名は現在の花の見頃と少しずれることもありますが、旧暦の季節感や和歌・絵画の題材としての印象を重ねて見ると理解しやすくなります。
+          、9月は
+          <Link href="/plants/244" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+            キク
+          </Link>
+          です。花札の月名は現在の花の見頃と少しずれることもありますが、旧暦の季節感や和歌・絵画の題材としての印象を重ねて見ると理解しやすくなります。
         </p>
         <p style={body}>
-          とくに芒は、月や雁と一緒に描かれることで、花そのものよりも秋の野原の空気を表しています。植物名を覚えるだけでなく、植物がつくる景色ごと覚えるのが花札らしい楽しみ方です。
+          とくに芒（すすき）は、月や雁と一緒に描かれることで、花そのものよりも秋の野原の空気を表しています。植物名を覚えるだけでなく、植物がつくる景色ごと覚えるのが花札らしい楽しみ方です。
         </p>
       </Section>
 
@@ -212,7 +245,11 @@ export default function Page() {
           の枝が垂れる姿を思い浮かべると、札の雰囲気がつかみやすくなります。
         </p>
         <p style={body}>
-          12月は桐です。桐に鳳凰という絵柄は、年の終わりを華やかに締めくくる特別な札として扱われます。桐は植物としてだけでなく、家紋や意匠にもよく使われるため、花札の中でも装飾的な意味が強い植物です。
+          12月は
+          <Link href="/plants/242" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+            キリ
+          </Link>
+          です。桐に鳳凰という絵柄は、年の終わりを華やかに締めくくる特別な札として扱われます。桐は植物としてだけでなく、家紋や意匠にもよく使われるため、花札の中でも装飾的な意味が強い植物です。
         </p>
       </Section>
 
