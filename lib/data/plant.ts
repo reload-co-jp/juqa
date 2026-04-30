@@ -9188,9 +9188,12 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の高原・亜高山帯",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Chamerion_angustifolium_(flower).jpg",
+    local_image_url: "/images/plants/233-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Chamerion_angustifolium_(flower).jpg",
+
+        local_url: "/images/plants/233-1.webp",
         caption: "花",
       },
     ],
@@ -9218,9 +9221,12 @@ export const plants: Plant[] = [
     distribution: "全国の畑地・人里周辺（栽培・半野生）",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_chinense1.jpg",
+    local_image_url: "/images/plants/234-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_chinense1.jpg",
+
+        local_url: "/images/plants/234-1.webp",
         caption: "花",
       },
     ],
@@ -9248,9 +9254,12 @@ export const plants: Plant[] = [
     distribution: "本州〜九州の山地草原・岩場",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_thunbergii_56025333.jpg",
+    local_image_url: "/images/plants/235-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_thunbergii_56025333.jpg",
+
+        local_url: "/images/plants/235-1.webp",
         caption: "花",
       },
     ],
@@ -9278,9 +9287,12 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の高原・山地草原",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/Hemerocallis_middendorffii_1zz.jpg",
+    local_image_url: "/images/plants/236-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/Hemerocallis_middendorffii_1zz.jpg",
+
+        local_url: "/images/plants/236-1.webp",
         caption: "花",
       },
     ],
@@ -9308,9 +9320,12 @@ export const plants: Plant[] = [
     distribution: "北海道〜本州中部の湿原・山地草原",
     image_url:
       "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%82%BE%E3%83%AA%E3%83%B3%E3%83%89%E3%82%A6_Gentiana_triflora_var._japonica.JPG",
+    local_image_url: "/images/plants/237-1.webp",
     images: [
       {
         url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%82%BE%E3%83%AA%E3%83%B3%E3%83%89%E3%82%A6_Gentiana_triflora_var._japonica.JPG",
+
+        local_url: "/images/plants/237-1.webp",
         caption: "花",
       },
     ],
@@ -9682,5 +9697,956 @@ export const plants: Plant[] = [
     tags: ["春開花", "夏開花", "草本", "山", "雑草", "小花集合"],
     flower_colors: ["ピンク", "赤", "紫"],
     similar_plant_ids: [],
+  },
+  {
+    id: 249,
+    japanese_name: "イタドリ",
+    scientific_name: "Reynoutria japonica",
+    family_id: 72,
+    genus: "イタドリ属",
+    description: [
+      "道端・山野・河川敷に群生する多年草で、地下茎で旺盛に広がる。",
+      "春の若芽は「スカンポ」とも呼ばれ山菜として食べられる。茎には酸味がある。",
+      "夏に白〜淡紅色の小花を穂状に多数咲かせ、雌雄異株。",
+    ],
+    identification: [
+      "茎は中空で太く、赤紫色の斑点がある",
+      "葉は広卵形〜三角形で先が急に尖り、基部は切形",
+      "葉の付け根に膜質の鞘（托葉鞘）が茎を包む",
+      "道端・土手・山野で大きな群落をつくる",
+    ],
+    distribution: "北海道〜九州の道端・土手・山野・河川敷",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fallopia_japonica01.jpg",
+    local_image_url: "/images/plants/249-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fallopia_japonica01.jpg",
+
+        local_url: "/images/plants/249-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fallopia_japonica_03_ies.jpg",
+
+        local_url: "/images/plants/249-2.webp",
+        caption: "花序",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "雑草", "小花集合"],
+    flower_colors: ["白", "ピンク"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 250,
+    japanese_name: "イチヤクソウ",
+    scientific_name: "Pyrola japonica",
+    family_id: 44,
+    genus: "イチヤクソウ属",
+    description: [
+      "山地の林床に生える常緑の多年草。薬草として利用されたことが名前の由来。",
+      "光沢のある楕円形の葉がロゼット状に根元から出て、夏に白い花を穂状に咲かせる。",
+      "花弁5枚で下向きに咲き、S字に曲がった長い花柱が突き出る。",
+    ],
+    identification: [
+      "常緑の楕円形〜卵形の葉が根元からロゼット状に出る",
+      "葉の表面に光沢があり、縁に細かい鋸歯がある",
+      "夏に白〜淡紅色の花を穂状に下向きに咲かせる",
+      "S字に曲がった長い花柱が花弁の外に突き出る",
+    ],
+    distribution: "北海道〜九州の山地の林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrola_japonica.JPG",
+    local_image_url: "/images/plants/250-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrola_japonica.JPG",
+
+        local_url: "/images/plants/250-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pyrola_japonica_2.JPG",
+
+        local_url: "/images/plants/250-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "常緑", "草本", "山", "花弁5枚"],
+    flower_colors: ["白", "ピンク"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 251,
+    japanese_name: "イチリンソウ",
+    scientific_name: "Anemone nikoensis",
+    family_id: 25,
+    genus: "イチリンソウ属",
+    description: [
+      "春の山野に生える多年草。茎の先に大きな白い花を1輪だけつけることが名前の由来。",
+      "花弁に見えるのは萼片で5〜6枚。ニリンソウよりひとまわり大きい。",
+      "葉は2〜3回羽状複葉で深く切れ込み、茎葉が花の下で輪生状につく。",
+    ],
+    identification: [
+      "茎の先に白い大きな花を1輪だけつける",
+      "花弁に見えるのは萼片で5〜6枚（表が白、裏がやや紫）",
+      "茎葉が3枚輪生し、深く羽状に切れ込む",
+      "ニリンソウより花が大きく、1輪のみ",
+    ],
+    distribution: "本州〜九州の山地の林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+    local_image_url: "/images/plants/251-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
+
+        local_url: "/images/plants/251-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(flower).JPG",
+
+        local_url: "/images/plants/251-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [272],
+  },
+  {
+    id: 252,
+    japanese_name: "ウド",
+    scientific_name: "Aralia cordata",
+    family_id: 41,
+    genus: "ウド属",
+    description: [
+      "山地の林縁や草地に生える大型の多年草で、草丈1〜2mになる。山菜の王様とも呼ばれる。",
+      "春の若芽は独特の香りがあり、天ぷら・酢味噌和えなどで食べられる。",
+      "夏に白い小花が球状の複散形花序に集まって咲き、秋に黒い実をつける。",
+    ],
+    identification: [
+      "草丈1〜2mになる大型の多年草で全体に独特の香りがある",
+      "葉は大型の2〜3回羽状複葉",
+      "夏に白い小花が球状に集まった大きな散形花序をつける",
+      "茎は太く中空で、若い茎は食用になる",
+    ],
+    distribution: "北海道〜九州の山地の林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Aralia_cordata.jpg",
+    local_image_url: "/images/plants/252-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aralia_cordata.jpg",
+
+        local_url: "/images/plants/252-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Aralia_cordata,_flower_02.jpg",
+
+        local_url: "/images/plants/252-2.webp",
+        caption: "花序",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "小花集合"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 253,
+    japanese_name: "オケラ",
+    scientific_name: "Atractylodes japonica",
+    family_id: 9,
+    genus: "オケラ属",
+    description: [
+      "山地の林縁や草地に生える多年草。古来より「をけら」として知られ、正月の屠蘇散の材料にも使われる。",
+      "葉は羽状に3〜5裂し、縁に棘状の鋸歯がある。",
+      "秋に白〜淡紅色の頭花をつけ、花の周りを魚骨状に分裂した苞葉が囲む独特の姿が特徴。",
+    ],
+    identification: [
+      "葉は羽状に3〜5裂し、縁に棘状の鋸歯がある",
+      "花の周りを羽状に分裂した苞葉（魚骨状）が囲む",
+      "秋に白〜淡紅色の頭花をつける",
+      "根茎は太く独特の香りがあり薬用になる",
+    ],
+    distribution: "本州・四国・九州の山地の林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%AA%E3%82%B1%E3%83%A9_Atractylodes_japonica.JPG",
+    local_image_url: "/images/plants/253-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%AA%E3%82%B1%E3%83%A9_Atractylodes_japonica.JPG",
+
+        local_url: "/images/plants/253-1.webp",
+        caption: "花",
+      },
+    ],
+    tags: ["秋開花", "草本", "山", "小花集合"],
+    flower_colors: ["白", "ピンク"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 254,
+    japanese_name: "ウツギ",
+    scientific_name: "Deutzia crenata",
+    family_id: 15,
+    genus: "ウツギ属",
+    description: [
+      "山野の日当たりのよい場所に生える落葉低木。初夏に白い5枚花弁の花を多数咲かせる。",
+      "茎が中空なことが名前の由来（空木=ウツギ）。旧暦の卯月（4月）に咲くことから「卯の花」とも呼ばれる。",
+      "樹皮は灰褐色で縦に剥がれ、若い枝には星状毛がある。",
+    ],
+    identification: [
+      "枝を折ると中空になっている（空木）",
+      "白い5枚花弁の花が枝先に円錐状に密集して咲く",
+      "葉は対生で卵形〜長楕円形、縁に細かい鋸歯",
+      "樹皮が縦に細かく剥がれる",
+    ],
+    distribution: "北海道〜九州の山野・林縁・道端",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Deutzia_crenata_01.jpg",
+    local_image_url: "/images/plants/254-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutzia_crenata_01.jpg",
+
+        local_url: "/images/plants/254-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Deutzia_crenata_(1).JPG",
+
+        local_url: "/images/plants/254-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "低木", "山", "落葉", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 255,
+    japanese_name: "マイヅルソウ",
+    scientific_name: "Maianthemum dilatatum",
+    family_id: 27,
+    genus: "マイヅルソウ属",
+    description: [
+      "山地〜亜高山帯の林床に群生する多年草。葉脈の模様が舞鶴（鶴が翼を広げた姿）に見えることが名前の由来。",
+      "初夏に白い小花を穂状に多数咲かせ、秋には赤く熟す実をつける。",
+      "ハート形の光沢ある葉が地面を覆い、林床の緑化に貢献する。",
+    ],
+    identification: [
+      "ハート形（心形）の葉が1〜2枚茎につく",
+      "葉脈が目立ち、表面に光沢がある",
+      "初夏に白い4枚花弁の小花が穂状に密集して咲く",
+      "秋に赤い球形の実をつける",
+    ],
+    distribution: "北海道〜九州の山地・亜高山帯の林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Maianthemum_dilatatum_(200705).jpg",
+    local_image_url: "/images/plants/255-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Maianthemum_dilatatum_(200705).jpg",
+
+        local_url: "/images/plants/255-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Maianthemum_dilatatum_(flowers).JPG",
+
+        local_url: "/images/plants/255-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "小花集合", "光沢"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 256,
+    japanese_name: "ギンリョウソウ",
+    scientific_name: "Monotropastrum humile",
+    family_id: 44,
+    genus: "ギンリョウソウ属",
+    description: [
+      "山地の湿った林床に生える腐生植物。葉緑素を持たず、菌類を介して有機物を得る。",
+      "全体が白く半透明で、銀竜草の名の通り銀白色のユニークな姿。",
+      "初夏に白い花を1輪下向きに咲かせ、果実は白い液果になる。",
+    ],
+    identification: [
+      "全体が白〜半透明で葉緑素を持たない（腐生植物）",
+      "葉は白い鱗片状に退化している",
+      "花は1輪が茎の先端に下向きに咲く",
+      "ユリオプシスに似た白い植物体が林床に直立する",
+    ],
+    distribution: "北海道〜九州の山地の湿った林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower).JPG",
+    local_image_url: "/images/plants/256-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower).JPG",
+
+        local_url: "/images/plants/256-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_01.jpg",
+
+        local_url: "/images/plants/256-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "草本", "山"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 257,
+    japanese_name: "ゴゼンタチバナ",
+    scientific_name: "Cornus canadensis",
+    family_id: 24,
+    genus: "ゴゼンタチバナ属",
+    description: [
+      "亜高山帯〜高山帯の林床に生える常緑の矮小低木。4枚の白い総苞片が花弁のように見える。",
+      "名前は白山の主峰・御前峰（ゴゼンガタケ）に多いことに由来。",
+      "秋に赤く熟す実が6個まとまってつき、食べられる。",
+    ],
+    identification: [
+      "4枚の大きな白い総苞片が花弁状に広がる",
+      "葉は6枚が輪生状につく（実際は対生＋苞葉）",
+      "秋に鮮やかな赤い実が6個まとまってつく",
+      "亜高山帯の林床を群生して覆う",
+    ],
+    distribution: "北海道〜中部・東北地方の亜高山帯・高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(1).jpg",
+    local_image_url: "/images/plants/257-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(1).jpg",
+
+        local_url: "/images/plants/257-1.webp",
+        caption: "花と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(2).jpg",
+
+        local_url: "/images/plants/257-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "低木", "山", "常緑"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 258,
+    japanese_name: "キンポウゲ",
+    scientific_name: "Ranunculus japonicus",
+    family_id: 25,
+    genus: "キンポウゲ属",
+    description: [
+      "田んぼの畦や湿った草地・山野に生える多年草。春から初夏に光沢のある黄色い花を咲かせる。",
+      "花弁は5枚で内側に光沢があり、金色に輝くことが名前の由来（金鳳花）。",
+      "葉・茎に毒性成分（プロトアネモニン）を含む。",
+    ],
+    identification: [
+      "5枚の花弁が内側に強い光沢を持つ黄色い花",
+      "葉は掌状に3〜5深裂し、さらに切れ込む",
+      "田んぼの畦・湿地・山野の草地に群生する",
+      "花弁に触れると光が反射して金属光沢のように輝く",
+    ],
+    distribution: "北海道〜九州の田畦・湿地・山野草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_japonicus_1.JPG",
+    local_image_url: "/images/plants/258-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_japonicus_1.JPG",
+
+        local_url: "/images/plants/258-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Ranunculus_japonicus_2.JPG",
+
+        local_url: "/images/plants/258-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山", "雑草", "花弁5枚"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [260],
+  },
+  {
+    id: 259,
+    japanese_name: "ウメバチソウ",
+    scientific_name: "Parnassia palustris",
+    family_id: 64,
+    genus: "ウメバチソウ属",
+    description: [
+      "湿った草地・高山帯や亜高山帯の草地に生える多年草。秋に白い5枚花弁の花を咲かせる。",
+      "花の形が梅の花に似て、家紋の梅鉢に似ることが名前の由来。",
+      "5本の仮雄しべ（退化した雄しべ）の先端が黄色の腺体に分かれる独特の構造を持つ。",
+    ],
+    identification: [
+      "白い5枚花弁の花で、梅の花に似た形",
+      "5本の仮雄しべ（先端が黄色い腺体に分かれる）が目立つ",
+      "根生葉はハート形で長い葉柄をもつ",
+      "湿った草地・高山の草地に単独で咲く",
+    ],
+    distribution: "北海道〜九州の湿地・高山・亜高山帯の草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/20230805_143207_Parnassia_palustris_L.jpg",
+    local_image_url: "/images/plants/259-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/20230805_143207_Parnassia_palustris_L.jpg",
+
+        local_url: "/images/plants/259-1.webp",
+        caption: "花",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 260,
+    japanese_name: "ミヤマキンバイ",
+    scientific_name: "Potentilla matsumurae",
+    family_id: 1,
+    genus: "キジムシロ属",
+    description: [
+      "高山帯の岩礫地や雪渓周辺の草地に生える多年草。黄色い5枚花弁の花が高山を彩る。",
+      "「深山金梅」の名の通り、高山帯に咲く梅に似た黄色い花。",
+      "葉は3出複葉で小葉の縁に鋸歯があり、匐枝（ランナー）で広がる。",
+    ],
+    identification: [
+      "黄色い5枚花弁の花が直径2cm程度",
+      "葉は3出複葉で小葉に丸みがあり、縁に鋸歯がある",
+      "高山帯の岩礫地・雪渓周辺に生える",
+      "ランナーで広がり群落をつくる",
+    ],
+    distribution: "北海道・本州中部以北の高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_matsumurae_(flower).JPG",
+    local_image_url: "/images/plants/260-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_matsumurae_(flower).JPG",
+
+        local_url: "/images/plants/260-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_matsumurae_01.jpg",
+
+        local_url: "/images/plants/260-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [258],
+  },
+  {
+    id: 261,
+    japanese_name: "テングクワガタ",
+    scientific_name: "Pseudolysimachion ornatum",
+    family_id: 23,
+    genus: "クワガタソウ属",
+    description: [
+      "高山帯〜亜高山帯の草地に生える多年草。青紫色の小花を穂状に多数咲かせる。",
+      "クワガタソウの高山型で、花穂が長く密に花をつけることが特徴。",
+      "葉は卵形で対生し、縁に鋸歯がある。",
+    ],
+    identification: [
+      "青紫色の小花が長い穂状に密集して咲く",
+      "花弁は4枚で合着した筒状（先が4裂）",
+      "葉は対生で卵形〜楕円形、縁に鋸歯",
+      "高山帯・亜高山帯の草地に生える",
+    ],
+    distribution: "本州中部の高山帯・亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudolysimachion_ornatum1.jpg",
+    local_image_url: "/images/plants/261-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudolysimachion_ornatum1.jpg",
+
+        local_url: "/images/plants/261-1.webp",
+        caption: "花穂",
+      },
+    ],
+    tags: ["夏開花", "草本", "山"],
+    flower_colors: ["青", "紫"],
+    similar_plant_ids: [273],
+  },
+  {
+    id: 262,
+    japanese_name: "キバナノコマノツメ",
+    scientific_name: "Viola biflora",
+    family_id: 11,
+    genus: "スミレ属",
+    description: [
+      "高山帯〜亜高山帯の湿った林床や草地に生える多年草。黄色い花をつける数少ない山岳スミレ。",
+      "「黄花の駒の爪」の名はシカの蹄（コマノツメ）のような葉の形に由来する。",
+      "茎に2輪の花をつけることが多く、学名 biflora（二花）もそれに由来。",
+    ],
+    identification: [
+      "黄色い花弁5枚（下弁に赤褐色の筋がある）",
+      "葉は腎形〜円形で光沢があり、基部が深いハート形",
+      "茎に通常2花つける",
+      "高山・亜高山帯の湿った場所に生える",
+    ],
+    distribution: "北海道〜本州中部の高山帯・亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Bergveilchen.jpg",
+    local_image_url: "/images/plants/262-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bergveilchen.jpg",
+
+        local_url: "/images/plants/262-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lapinorvokki_Viola_biflora_IMG_4009_C.JPG",
+
+        local_url: "/images/plants/262-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 263,
+    japanese_name: "ヨツバムグラ",
+    scientific_name: "Galium trachyspermum",
+    family_id: 71,
+    genus: "ヤエムグラ属",
+    description: [
+      "山野の林縁や草地に生える多年草。茎の節ごとに4枚の葉が輪生状につくことが名前の由来。",
+      "葉・茎に細かい刺があり、他の植物や衣類にからみつく。",
+      "夏に白い小花を多数咲かせ、果実には棘状の毛がある。",
+    ],
+    identification: [
+      "節ごとに4枚の葉が輪生状につく",
+      "茎は細く四角ばり、小さな刺で他物にからむ",
+      "白い4枚花弁の小花を枝先につける",
+      "果実に棘状の毛がある",
+    ],
+    distribution: "北海道〜九州の山野・林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_trachyspermum_1.JPG",
+    local_image_url: "/images/plants/263-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_trachyspermum_1.JPG",
+
+        local_url: "/images/plants/263-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Galium_trachyspermum_2.JPG",
+
+        local_url: "/images/plants/263-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "雑草"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 264,
+    japanese_name: "ミヤマカラマツソウ",
+    scientific_name: "Thalictrum alpinum",
+    family_id: 25,
+    genus: "カラマツソウ属",
+    description: [
+      "高山帯〜亜高山帯の草地や岩礫地に生える小型の多年草。白〜淡紫色の花弁のない花を穂状につける。",
+      "カラマツソウ属の中でも最も小型で、花粉を運ぶ雄しべが糸状に垂れ下がる。",
+      "羽状複葉の小葉は円形〜腎形で、先端が3裂する独特の形をもつ。",
+    ],
+    identification: [
+      "草丈10〜30cmの小型で、花弁がなく細い雄しべが目立つ",
+      "白〜淡紫色の花を穂状に密につける",
+      "小葉は小さな円形〜腎形で3裂し、特徴的な形",
+      "高山帯の草地・岩礫地に生える",
+    ],
+    distribution: "北海道・本州中部以北の高山帯・亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_meadow_rue,_Thalictrum_alpinum_(24501105156).jpg",
+    local_image_url: "/images/plants/264-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_meadow_rue,_Thalictrum_alpinum_(24501105156).jpg",
+
+        local_url: "/images/plants/264-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_meadow_rue,_Thalictrum_alpinum_(26818801147).jpg",
+
+        local_url: "/images/plants/264-2.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "小花集合"],
+    flower_colors: ["白", "紫"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 265,
+    japanese_name: "ワダソウ",
+    scientific_name: "Pseudostellaria japonica",
+    family_id: 36,
+    genus: "ワチガイソウ属",
+    description: [
+      "山地の林床や林縁に生える多年草。春に白い5枚花弁の小花を咲かせる。",
+      "ハコベに似た白い花を咲かせるが、花弁の先が浅くしか切れ込まないことで区別できる。",
+      "地下に塊根をもち、山地の腐植土の多い場所に生える。",
+    ],
+    identification: [
+      "白い5枚花弁で、先端が浅く2裂する（ハコベより切れ込みが浅い）",
+      "葉は対生でへら形〜倒卵形、茎の上部の葉は大きい",
+      "地下に紡錘形の塊根（芋状）をもつ",
+      "山地の林床・林縁に生える",
+    ],
+    distribution: "本州〜九州の山地の林床・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudostellaria_japonica_1.JPG",
+    local_image_url: "/images/plants/265-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pseudostellaria_japonica_1.JPG",
+
+        local_url: "/images/plants/265-1.webp",
+        caption: "花",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 266,
+    japanese_name: "ナナカマド",
+    scientific_name: "Sorbus commixta",
+    family_id: 1,
+    genus: "ナナカマド属",
+    description: [
+      "山地〜亜高山帯に生える落葉高木。初夏に白い小花の散房花序を咲かせ、秋に真っ赤な実と紅葉で山を彩る。",
+      "名前は「七回かまどに入れても燃え残る」ほど木が硬いことに由来する。",
+      "高山帯の紅葉の代表種で、カエデと並ぶ美しい紅葉が楽しめる。",
+    ],
+    identification: [
+      "羽状複葉で小葉は7〜15枚、縁に細かい鋸歯がある",
+      "初夏に白い小花が散房花序に密集して咲く",
+      "秋に鮮やかな赤い実が房状につく",
+      "秋に美しく紅葉する",
+    ],
+    distribution: "北海道〜九州の山地・亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamadoflower.JPG",
+    local_image_url: "/images/plants/266-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamadoflower.JPG",
+
+        local_url: "/images/plants/266-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamado_rowanberry.jpg",
+
+        local_url: "/images/plants/266-2.webp",
+        caption: "実",
+      },
+    ],
+    tags: ["夏開花", "高木", "山", "落葉", "小花集合"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 267,
+    japanese_name: "タカネヤハズハハコ",
+    scientific_name: "Anaphalis margaritacea",
+    family_id: 9,
+    genus: "ヤハズハハコ属",
+    description: [
+      "高山帯の岩礫地や草地に生える多年草。白い総苞片が花弁状に見える頭花が特徴。",
+      "ハハコグサ（ゴギョウ）の仲間で、「矢筈（矢の切れ込み）」に似た苞葉が名前の由来。",
+      "白い綿毛のような葉と茎が目立ち、全体が白っぽく見える。",
+    ],
+    identification: [
+      "白い総苞片が花弁状に見える頭花を多数つける",
+      "葉と茎に白い綿毛が密生し、全体が白っぽい",
+      "葉の裏面は白いフェルト状の綿毛に覆われる",
+      "高山帯の岩礫地・草地に生える",
+    ],
+    distribution: "北海道・本州の高山帯・亜高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anaphalis_margaritacea_(2840894545).jpg",
+    local_image_url: "/images/plants/267-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anaphalis_margaritacea_(2840894545).jpg",
+
+        local_url: "/images/plants/267-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anaphalis_margaritacea_(2841722738).jpg",
+
+        local_url: "/images/plants/267-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "草本", "山", "小花集合"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 268,
+    japanese_name: "ショウジョウバカマ",
+    scientific_name: "Heloniopsis orientalis",
+    family_id: 26,
+    genus: "ショウジョウバカマ属",
+    description: [
+      "山地〜高山帯の湿地や林床に生える常緑の多年草。早春に淡紅色〜紫色の花を咲かせる。",
+      "「猩々袴」の名は、赤い花（猩々＝赤い顔の伝説の霊獣）と下部の葉（袴のイメージ）に由来。",
+      "ロゼット状の根生葉は冬も緑を保ち、葉先に珠芽（むかご）をつけて増える。",
+    ],
+    identification: [
+      "早春（残雪期）に淡紅色〜紫色の花を穂状につける",
+      "根生葉はロゼット状で常緑、倒披針形〜へら形",
+      "葉先に珠芽（むかご）をつけて栄養繁殖する",
+      "湿地・渓流沿い・高山の雪解け後の草地に生える",
+    ],
+    distribution: "北海道〜九州の山地〜高山帯の湿地・林床",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_01.jpg",
+    local_image_url: "/images/plants/268-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_01.jpg",
+
+        local_url: "/images/plants/268-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_(bud).jpg",
+
+        local_url: "/images/plants/268-2.webp",
+        caption: "つぼみ",
+      },
+    ],
+    tags: ["春開花", "草本", "山", "常緑"],
+    flower_colors: ["ピンク", "紫"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 269,
+    japanese_name: "タカネツメクサ",
+    scientific_name: "Cerastium pauciflorum",
+    family_id: 36,
+    genus: "ミミナグサ属",
+    description: [
+      "高山帯の岩礫地や砂礫地に生える多年草。白い5枚花弁の花を咲かせる高山植物。",
+      "ツメクサ（マメ科）とは無関係で、ナデシコ科のミミナグサ属に属する。",
+      "葉・茎に腺毛が多く、小型で高山の厳しい環境に適応した植物。",
+    ],
+    identification: [
+      "白い5枚花弁（各花弁が先端で2裂する）",
+      "葉は線形〜披針形で対生し、腺毛がある",
+      "茎は細く、株立ちになる",
+      "高山帯の岩礫地・砂礫地に生える",
+    ],
+    distribution: "北海道・本州の高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_alpinum_001.jpg",
+    local_image_url: "/images/plants/269-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_alpinum_001.jpg",
+
+        local_url: "/images/plants/269-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cerastium_alpinum_(48568279362).jpg",
+
+        local_url: "/images/plants/269-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 270,
+    japanese_name: "ツガザクラ",
+    scientific_name: "Phyllodoce nipponica",
+    family_id: 44,
+    genus: "ツガザクラ属",
+    description: [
+      "高山帯の岩礫地や砂礫地に生える常緑の矮小低木。壺型の白〜淡紅色の小花が下向きに咲く。",
+      "「栂桜」の名はツガに似た葉と桜に見立てた花に由来。",
+      "高山に生える矮小な常緑低木で、チングルマとともに高山植物の代表格。",
+    ],
+    identification: [
+      "壺型（ウツボ型）の小花が下向きに咲く",
+      "葉は小さな線形でツガの葉に似る",
+      "常緑で矮小低木（高さ10〜20cm）",
+      "高山帯の岩礫地・砂礫地に群生する",
+    ],
+    distribution: "本州の高山帯（中部以北）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllodoce_nipponica_(flower).JPG",
+    local_image_url: "/images/plants/270-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllodoce_nipponica_(flower).JPG",
+
+        local_url: "/images/plants/270-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllodoce_nipponica_(Mount_Tsurugi).JPG",
+
+        local_url: "/images/plants/270-2.webp",
+        caption: "群生",
+      },
+    ],
+    tags: ["夏開花", "低木", "山", "常緑", "ラッパ型"],
+    flower_colors: ["白", "ピンク"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 271,
+    japanese_name: "イワウメ",
+    scientific_name: "Diapensia lapponica",
+    family_id: 39,
+    genus: "イワウメ属",
+    description: [
+      "高山帯の強風が当たる風衝地（ハイマツ帯より上）に生える常緑の矮小低木。高山植物の代表種。",
+      "白い5枚花弁の花が美しく、白山などの高山で見られる。",
+      "クッション状に密集して生え、高山の厳しい環境に適応した植物。",
+    ],
+    identification: [
+      "白い5枚花弁の花（直径1cm程度）が花茎の先につく",
+      "葉は小さく密集したへら形の常緑葉でクッション状になる",
+      "高山帯の最上部・風衝地に生える",
+      "茎は地を這いクッション状の群落をつくる",
+    ],
+    distribution: "北海道・本州中部以北の高山帯（風衝地）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Diapensia_lapponica_(flower_s10).jpg",
+    local_image_url: "/images/plants/271-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diapensia_lapponica_(flower_s10).jpg",
+
+        local_url: "/images/plants/271-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Diapensia_lapponica_(2580182899).jpg",
+
+        local_url: "/images/plants/271-2.webp",
+        caption: "群生",
+      },
+    ],
+    tags: ["夏開花", "低木", "山", "常緑", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 272,
+    japanese_name: "ハクサンイチゲ",
+    scientific_name: "Anemone narcissiflora",
+    family_id: 25,
+    genus: "イチリンソウ属",
+    description: [
+      "高山帯の草地に生える多年草。白い花（萼片が花弁状）を数輪まとめて咲かせる。",
+      "「白山一花」の名は白山で多く見られ、美しい花をもつことに由来。",
+      "梅雨時の高山を代表する植物で、雪渓のそばでも見られる。",
+    ],
+    identification: [
+      "白い萼片が花弁状で5〜6枚、数輪を散形花序につける",
+      "葉は根生葉が掌状に深く5〜7裂する",
+      "茎葉が3枚輪生し、苞葉として花の下につく",
+      "高山帯の雪解け後の草地に群生する",
+    ],
+    distribution: "北海道・本州中部以北の高山帯",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemonastrum_narcissiflorum_sl1.jpg",
+    local_image_url: "/images/plants/272-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemonastrum_narcissiflorum_sl1.jpg",
+
+        local_url: "/images/plants/272-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemonastrum_narcissiflorum_sl2.jpg",
+
+        local_url: "/images/plants/272-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["白"],
+    similar_plant_ids: [251],
+  },
+  {
+    id: 273,
+    japanese_name: "クワガタソウ",
+    scientific_name: "Veronica miqueliana",
+    family_id: 23,
+    genus: "クワガタソウ属",
+    description: [
+      "山地の林床や林縁に生える多年草。春から初夏に淡青紫色の4枚花弁の小花を咲かせる。",
+      "実の形が兜の鍬形（クワガタ）に似ることが名前の由来。",
+      "クワガタソウ属は世界に多くの種があり、テングクワガタなどの高山型も知られる。",
+    ],
+    identification: [
+      "淡青紫色の4枚花弁の小花（直径1cm程度）",
+      "花弁には濃い紫色の筋がある",
+      "葉は対生で卵形〜円形、縁に鋸歯がある",
+      "山地の林床・林縁に生える",
+    ],
+    distribution: "本州〜四国の山地の林床・林縁",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_miqueliana_01.jpg",
+    local_image_url: "/images/plants/273-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_miqueliana_01.jpg",
+
+        local_url: "/images/plants/273-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Veronica_miqueliana_2.JPG",
+
+        local_url: "/images/plants/273-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山"],
+    flower_colors: ["青", "紫"],
+    similar_plant_ids: [261],
   },
 ]

@@ -807,6 +807,18 @@ export const families: Family[] = [
     classification: "被子植物",
   },
   {
+    id: 72,
+    name: "タデ科",
+    description:
+      "世界中に広く分布する草本・低木の科。茎の節が膨らみ、花は小さく密集して穂状につく種が多い。イタドリ・スイバ・ミズヒキなど身近な植物を多く含む。",
+    characteristics: [
+      "茎の節が膨らみ、葉鞘（托葉鞘）が茎を包む",
+      "小さな花が穂状・総状に密集する",
+      "果実は3稜形または両面凸形の痩果",
+    ],
+    classification: "被子植物",
+  },
+  {
     id: 71,
     name: "アカネ科",
     description:
