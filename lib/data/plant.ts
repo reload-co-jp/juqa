@@ -9577,4 +9577,110 @@ export const plants: Plant[] = [
     flower_colors: ["白", "ピンク", "赤", "紫"],
     similar_plant_ids: [],
   },
+  {
+    id: 246,
+    japanese_name: "ナデシコ",
+    scientific_name: "Dianthus superbus var. longicalycinus",
+    family_id: 36,
+    genus: "ナデシコ属",
+    description: [
+      "日当たりのよい草地や河原に生える多年草で、カワラナデシコとも呼ばれる。",
+      "細く裂けた淡紅色の花弁が特徴で、秋の七草のひとつとして古くから親しまれてきた。",
+      "園芸品種のダイアンサス類と近い仲間だが、野生の株は繊細な草姿になる。",
+    ],
+    identification: [
+      "花弁は5枚で、先が細かく糸状に深く裂ける",
+      "花色は淡いピンク〜紅紫色で、夏から秋に咲く",
+      "葉は細い線形〜披針形で対生する",
+      "日当たりのよい河原・草地・山地の斜面に生える",
+    ],
+    distribution: "本州〜九州の河原・草地・山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%AB%E3%83%AF%E3%83%A9%E3%83%8A%E3%83%87%E3%82%B7%E3%82%B3_Dianthus_superbus_var._longicalycinus.JPG",
+    local_image_url: "/images/plants/246-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%AB%E3%83%AF%E3%83%A9%E3%83%8A%E3%83%87%E3%82%B7%E3%82%B3_Dianthus_superbus_var._longicalycinus.JPG",
+        local_url: "/images/plants/246-0.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%AB%E3%83%AF%E3%83%A9%E3%83%8A%E3%83%87%E3%82%B7%E3%82%B3_Dianthus_superbus_var._longicalycinus_%28flower%29_tmp.jpg",
+        local_url: "/images/plants/246-1.webp",
+        caption: "花のアップ",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "草本", "山", "花弁5枚"],
+    flower_colors: ["ピンク", "赤", "紫"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 247,
+    japanese_name: "アカネ",
+    scientific_name: "Rubia argyi",
+    family_id: 71,
+    genus: "アカネ属",
+    description: [
+      "山野の林縁や草地に生えるつる性の多年草で、茎や葉に小さな刺があり他の植物にからむ。",
+      "根から赤い染料をとる植物として古くから利用され、茜色の語源にもなった。",
+      "夏から秋に淡黄緑色の小花を咲かせ、秋に黒く熟す果実をつける。",
+    ],
+    identification: [
+      "葉は4枚輪生に見えるが、2枚は托葉が葉状になったもの",
+      "茎は細く四角ばり、下向きの小さな刺で他物にからむ",
+      "淡黄緑色の小花を枝先にまばらにつける",
+      "秋に丸い果実が黒く熟す",
+    ],
+    distribution: "本州〜九州の山野・林縁・草地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rubia_akane_var._erecta_%E7%9B%B4%E7%AB%8B%E7%B4%85%E8%97%A4%E8%8D%89_%28mingiweng%29.jpg",
+    local_image_url: "/images/plants/247-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Rubia_akane_var._erecta_%E7%9B%B4%E7%AB%8B%E7%B4%85%E8%97%A4%E8%8D%89_%28mingiweng%29.jpg",
+        local_url: "/images/plants/247-0.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "草本", "山"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 248,
+    japanese_name: "アザミ",
+    scientific_name: "Cirsium japonicum",
+    family_id: 9,
+    genus: "アザミ属",
+    description: [
+      "日当たりのよい草地や道端に生える多年草で、一般にノアザミとして見られる代表的なアザミ。",
+      "紫紅色の頭花と刺のある葉が特徴で、初夏から夏の草地でよく目立つ。",
+      "アザミ類は種が多く識別が難しいが、ノアザミは春〜初夏に咲く身近な種類。",
+    ],
+    identification: [
+      "紫紅色の頭花を上向きにつける",
+      "総苞は粘り、触るとややべたつく",
+      "葉は羽状に切れ込み、縁に鋭い刺がある",
+      "日当たりのよい草地・道端・山野に生える",
+    ],
+    distribution: "本州〜九州の草地・道端・山野",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cirsium_japonicum_1.JPG",
+    local_image_url: "/images/plants/248-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cirsium_japonicum_1.JPG",
+        local_url: "/images/plants/248-0.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cirsium_japonicum_3.JPG",
+        local_url: "/images/plants/248-1.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "草本", "山", "雑草", "小花集合"],
+    flower_colors: ["ピンク", "赤", "紫"],
+    similar_plant_ids: [],
+  },
 ]

@@ -806,4 +806,16 @@ export const families: Family[] = [
     ],
     classification: "被子植物",
   },
+  {
+    id: 71,
+    name: "アカネ科",
+    description:
+      "熱帯から温帯に広く分布する木本・草本の科。対生または輪生する葉と合弁花をもつ種が多く、クチナシやコーヒーノキ、アカネなどを含む。",
+    characteristics: [
+      "対生または輪生する葉",
+      "托葉をもつ",
+      "小さな合弁花を集める種が多い",
+    ],
+    classification: "被子植物",
+  },
 ]
