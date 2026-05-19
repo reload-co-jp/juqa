@@ -9303,34 +9303,34 @@ export const plants: Plant[] = [
   {
     id: 237,
     japanese_name: "トウヤクリンドウ",
-    scientific_name: "Gentiana triflora var. japonica",
+    scientific_name: "Gentiana algida",
     family_id: 19,
     genus: "リンドウ属",
     description: [
-      "湿原や山地草原に生える多年草で、秋に青紫色の筒状花を数個ずつまとまって咲かせる。",
-      "エゾリンドウの変種として扱われることもあり、リンドウより湿った環境を好む。",
-      "秋の湿原景観を彩る代表的な山野草のひとつ。",
+      "高山帯の草地や礫地に生える多年草で、淡い黄白色の筒状花を咲かせる。",
+      "名前のトウヤクは当薬に由来し、苦味のあるリンドウ類として知られる。",
+      "日本では本州中部以北の高山に見られ、秋の稜線で目立つ高山植物のひとつ。",
     ],
     identification: [
-      "青紫色の筒状花が茎先や上部葉腋にまとまってつく",
-      "湿原や湿った草地に生える",
-      "葉は対生で細長く、茎を抱くようにつく",
-      "リンドウより大型で、花が複数集まることが多い",
+      "花は淡い黄白色〜クリーム色で、紫色の斑点が入ることがある",
+      "筒状花は茎先や上部葉腋に数個まとまってつく",
+      "葉は対生し、細長い披針形で茎を抱くようにつく",
+      "高山帯の草地・礫地に生え、秋に咲く",
     ],
-    distribution: "北海道〜本州中部の湿原・山地草原",
+    distribution: "北海道・本州中部以北の高山帯草地・礫地",
     image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%82%BE%E3%83%AA%E3%83%B3%E3%83%89%E3%82%A6_Gentiana_triflora_var._japonica.JPG",
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_algida_flower.JPG",
     local_image_url: "/images/plants/237-1.webp",
     images: [
       {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/%E3%82%A8%E3%82%BE%E3%83%AA%E3%83%B3%E3%83%89%E3%82%A6_Gentiana_triflora_var._japonica.JPG",
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Gentiana_algida_flower.JPG",
 
         local_url: "/images/plants/237-1.webp",
         caption: "花",
       },
     ],
     tags: ["秋開花", "草本", "山", "ラッパ型"],
-    flower_colors: ["青", "紫"],
+    flower_colors: ["白", "黄"],
     similar_plant_ids: [38],
   },
   {
