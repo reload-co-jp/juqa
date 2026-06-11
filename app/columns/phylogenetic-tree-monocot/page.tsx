@@ -6,6 +6,7 @@ import {
   createColumnJsonLd,
   createColumnMetadata,
 } from "components/elements/ColumnComponents"
+import { PhylogeneticFlow } from "components/columns/PhylogeneticFlow"
 
 const title = "単子葉類の系統を辿る——葉脈だけで判断しない"
 const description =
@@ -40,67 +41,6 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   >
     {name} →
   </Link>
-)
-
-const BranchNode = ({
-  label,
-  sub,
-  color,
-  border,
-  indent = 0,
-  plants,
-}: {
-  label: string
-  sub?: string
-  color: string
-  border: string
-  indent?: number
-  plants?: { name: string; href: string }[]
-}) => (
-  <div
-    style={{
-      marginLeft: `${indent * 1.5}rem`,
-      marginBottom: "0.75rem",
-      position: "relative",
-    }}
-  >
-    {indent > 0 && (
-      <div
-        style={{
-          position: "absolute",
-          left: "-1rem",
-          top: "0.9rem",
-          width: "0.75rem",
-          height: "1px",
-          background: "#555",
-        }}
-      />
-    )}
-    <div
-      style={{
-        background: color,
-        border: `1px solid ${border}`,
-        borderRadius: "8px",
-        padding: "0.75rem 1rem",
-      }}
-    >
-      <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: sub || plants ? "0.3rem" : 0 }}>
-        {label}
-      </div>
-      {sub && (
-        <div style={{ fontSize: "0.78rem", color: "#aaa", marginBottom: plants ? "0.4rem" : 0 }}>
-          {sub}
-        </div>
-      )}
-      {plants && plants.length > 0 && (
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {plants.map((p) => (
-            <PlantLink key={p.href} href={p.href} name={p.name} />
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
 )
 
 const GroupCard = ({
@@ -171,45 +111,10 @@ const Page = () => {
         <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           単子葉類はひとつの単系統群（共通の祖先から派生した閉じたグループ）だが、内部でいくつかの大きな分岐がある。最も基底的（古くに分岐）なグループにサトイモ科があり、そこから多様なグループに分かれていった。
         </p>
-        <div style={{ position: "relative" }}>
-          <BranchNode
-            label="基底的単子葉類"
-            sub="仏炎苞と肉穂花序が特徴・湿地・水辺に多い"
-            color="#1a2a1a"
-            border="#3a5a3a"
-            plants={[
-              { name: "ミズバショウ", href: "/plants/140" },
-              { name: "マムシグサ", href: "/plants/138" },
-            ]}
-          />
-          <div style={{ marginLeft: "0.75rem", borderLeft: "2px solid #444", paddingLeft: "0.25rem" }}>
-            <BranchNode
-              label="コメリナ類（ツユクサ・イネなど）"
-              sub="葉鞘が茎を包む・小さな花が多い・草本中心"
-              color="#1a2a2a"
-              border="#3a5a6a"
-              indent={1}
-              plants={[
-                { name: "ツユクサ", href: "/plants/15" },
-                { name: "ススキ", href: "/plants/41" },
-                { name: "エノコログサ", href: "/plants/53" },
-              ]}
-            />
-            <BranchNode
-              label="ユリ目（ユリ・アヤメ・ヒガンバナなど）"
-              sub="花被片6枚・球根または根茎をもつ・観賞価値が高い"
-              color="#1e2a1e"
-              border="#3a6a5a"
-              indent={1}
-              plants={[
-                { name: "カタクリ", href: "/plants/42" },
-                { name: "ヤマユリ", href: "/plants/54" },
-                { name: "カキツバタ", href: "/plants/94" },
-                { name: "スイセン", href: "/plants/98" },
-              ]}
-            />
-          </div>
-        </div>
+        <PhylogeneticFlow
+          variant="monocot"
+          caption="葉脈だけでなく、花被片・葉鞘・仏炎苞・球根の有無を枝ごとに見る。"
+        />
         <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ 単子葉類の共通特徴は「子葉1枚・葉脈平行・花被片3の倍数・茎の維管束が散在・根が須根系」。ただし例外もあるため複数の特徴で判断する。
         </p>

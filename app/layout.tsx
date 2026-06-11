@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Suspense } from "react"
 import { columns } from "lib/columns"
 import "./reset.css"
+import "@xyflow/react/dist/style.css"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
 

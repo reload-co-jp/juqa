@@ -6,6 +6,7 @@ import {
   createColumnJsonLd,
   createColumnMetadata,
 } from "components/elements/ColumnComponents"
+import { PhylogeneticFlow } from "components/columns/PhylogeneticFlow"
 
 const title = "双子葉類の系統を辿る——離弁花と合弁花の分岐"
 const description =
@@ -40,67 +41,6 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   >
     {name} →
   </Link>
-)
-
-const BranchNode = ({
-  label,
-  sub,
-  color,
-  border,
-  indent = 0,
-  plants,
-}: {
-  label: string
-  sub?: string
-  color: string
-  border: string
-  indent?: number
-  plants?: { name: string; href: string }[]
-}) => (
-  <div
-    style={{
-      marginLeft: `${indent * 1.5}rem`,
-      marginBottom: "0.75rem",
-      position: "relative",
-    }}
-  >
-    {indent > 0 && (
-      <div
-        style={{
-          position: "absolute",
-          left: "-1rem",
-          top: "0.9rem",
-          width: "0.75rem",
-          height: "1px",
-          background: "#555",
-        }}
-      />
-    )}
-    <div
-      style={{
-        background: color,
-        border: `1px solid ${border}`,
-        borderRadius: "8px",
-        padding: "0.75rem 1rem",
-      }}
-    >
-      <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: sub || plants ? "0.3rem" : 0 }}>
-        {label}
-      </div>
-      {sub && (
-        <div style={{ fontSize: "0.78rem", color: "#aaa", marginBottom: plants ? "0.4rem" : 0 }}>
-          {sub}
-        </div>
-      )}
-      {plants && plants.length > 0 && (
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {plants.map((p) => (
-            <PlantLink key={p.href} href={p.href} name={p.name} />
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
 )
 
 const GroupCard = ({
@@ -171,45 +111,10 @@ const Page = () => {
         <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           双子葉類の系統樹では、大きく3つのグループへの分岐が重要だ。下の図は簡略化した系統の流れで、上ほど「古くに分岐したグループ」を示す。
         </p>
-        <div style={{ position: "relative" }}>
-          <BranchNode
-            label="原始的な双子葉類（基部被子植物に近いグループ）"
-            sub="花被片が多数・螺旋状につく・花弁と萼の境界が曖昧"
-            color="#1a2a1a"
-            border="#3a5a3a"
-            plants={[
-              { name: "ハクモクレン", href: "/plants/27" },
-              { name: "コブシ", href: "/plants/28" },
-              { name: "ドクダミ", href: "/plants/40" },
-            ]}
-          />
-          <div style={{ marginLeft: "0.75rem", borderLeft: "2px solid #444", paddingLeft: "0.25rem" }}>
-            <BranchNode
-              label="真正双子葉類・離弁花グループ"
-              sub="花弁が1枚ずつ独立して並ぶ・4〜5枚が多い"
-              color="#1a2a2a"
-              border="#3a5a6a"
-              indent={1}
-              plants={[
-                { name: "ソメイヨシノ", href: "/plants/1" },
-                { name: "フジ", href: "/plants/25" },
-                { name: "ナズナ", href: "/plants/83" },
-              ]}
-            />
-            <BranchNode
-              label="真正双子葉類・合弁花グループ"
-              sub="花弁の基部がくっついて筒状や壺状になる"
-              color="#1e2a1e"
-              border="#3a6a5a"
-              indent={1}
-              plants={[
-                { name: "タンポポ", href: "/plants/11" },
-                { name: "ホトケノザ", href: "/plants/34" },
-                { name: "リンドウ", href: "/plants/38" },
-              ]}
-            />
-          </div>
-        </div>
+        <PhylogeneticFlow
+          variant="dicot"
+          caption="APG分類の正式分類群ではなく、野外観察で使いやすい特徴のまとまりとして簡略化。"
+        />
         <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ 現代のAPG分類では「離弁花類」「合弁花類」という区分は正式な分類群ではなく、系統の傾向として理解する。実際は複数の目（Order）にまたがる。
         </p>

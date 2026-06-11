@@ -6,6 +6,7 @@ import {
   createColumnJsonLd,
   createColumnMetadata,
 } from "components/elements/ColumnComponents"
+import { PhylogeneticFlow } from "components/columns/PhylogeneticFlow"
 
 const ogImage =
   "https://upload.wikimedia.org/wikipedia/commons/d/de/Tree_of_life_by_Haeckel.jpg"
@@ -27,87 +28,6 @@ const jsonLd = createColumnJsonLd({
   description,
   ogImage,
 })
-
-const TreeNode = ({
-  label,
-  sub,
-  examples,
-  color,
-  border,
-  indent = 0,
-}: {
-  label: string
-  sub?: string
-  examples?: { name: string; href: string }[]
-  color: string
-  border: string
-  indent?: number
-}) => (
-  <div
-    style={{
-      marginLeft: `${indent * 1.5}rem`,
-      marginBottom: "0.75rem",
-      position: "relative",
-    }}
-  >
-    {indent > 0 && (
-      <div
-        style={{
-          position: "absolute",
-          left: "-1rem",
-          top: "0.9rem",
-          width: "0.75rem",
-          height: "1px",
-          background: "#555",
-        }}
-      />
-    )}
-    <div
-      style={{
-        background: color,
-        border: `1px solid ${border}`,
-        borderRadius: "8px",
-        padding: "0.75rem 1rem",
-      }}
-    >
-      <div
-        style={{
-          fontWeight: "bold",
-          fontSize: "0.9rem",
-          color: "#e0e0e0",
-          marginBottom: sub || examples ? "0.3rem" : 0,
-        }}
-      >
-        {label}
-      </div>
-      {sub && (
-        <div style={{ fontSize: "0.78rem", color: "#aaa", marginBottom: examples ? "0.4rem" : 0 }}>
-          {sub}
-        </div>
-      )}
-      {examples && examples.length > 0 && (
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {examples.map((e) => (
-            <Link
-              key={e.href}
-              href={e.href}
-              style={{
-                background: "#1e3d1f",
-                color: "#7cbe8c",
-                borderRadius: "4px",
-                padding: "0.1rem 0.5rem",
-                fontSize: "0.75rem",
-                textDecoration: "none",
-              }}
-            >
-              {e.name} →
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
-)
 
 const Page = () => {
   return (
@@ -182,61 +102,10 @@ const Page = () => {
         >
           植物の系統樹で最も重要な分岐は次の4つのグループへの進化だ。陸上に進出した植物は、水の利用方法と繁殖の方法を徐々に改良しながら多様化してきた。
         </p>
-        <div style={{ position: "relative" }}>
-          <TreeNode
-            label="コケ植物"
-            sub="維管束なし・胞子で繁殖・水辺や湿地に多い"
-            color="#1a2a1a"
-            border="#3a5a3a"
-          />
-          <div
-            style={{
-              marginLeft: "0.75rem",
-              borderLeft: "2px solid #444",
-              paddingLeft: "0.25rem",
-            }}
-          >
-            <TreeNode
-              label="シダ植物"
-              sub="維管束あり・胞子で繁殖・林床に多い"
-              color="#1a2a1a"
-              border="#3a5a3a"
-              indent={1}
-            />
-            <div
-              style={{
-                marginLeft: "1.5rem",
-                borderLeft: "2px solid #444",
-                paddingLeft: "0.25rem",
-              }}
-            >
-              <TreeNode
-                label="裸子植物"
-                sub="種子で繁殖・花被なし・球果（まつぼっくり）をつける"
-                examples={[
-                  { name: "クロマツ", href: "/plants/10" },
-                  { name: "ヒノキ", href: "/plants/8" },
-                  { name: "イチョウ", href: "/plants/5" },
-                ]}
-                color="#1a2a2a"
-                border="#3a5a6a"
-                indent={1}
-              />
-              <TreeNode
-                label="被子植物"
-                sub="種子が果実に包まれる・花弁をもつ・最も多様なグループ"
-                examples={[
-                  { name: "ソメイヨシノ", href: "/plants/1" },
-                  { name: "タンポポ", href: "/plants/11" },
-                  { name: "ヤマユリ", href: "/plants/54" },
-                ]}
-                color="#1a2a1e"
-                border="#3a6a5a"
-                indent={1}
-              />
-            </div>
-          </div>
-        </div>
+        <PhylogeneticFlow
+          variant="plant"
+          caption="枝ラベルは進化上の大きな獲得形質。近い枝ほど形や繁殖方法の共通点を探しやすい。"
+        />
         <p
           style={{
             color: "#aaa",

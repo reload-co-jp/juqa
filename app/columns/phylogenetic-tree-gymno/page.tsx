@@ -6,6 +6,7 @@ import {
   createColumnJsonLd,
   createColumnMetadata,
 } from "components/elements/ColumnComponents"
+import { PhylogeneticFlow } from "components/columns/PhylogeneticFlow"
 
 const title = "裸子植物4グループを系統で整理する"
 const description =
@@ -40,67 +41,6 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   >
     {name} →
   </Link>
-)
-
-const BranchNode = ({
-  label,
-  sub,
-  color,
-  border,
-  indent = 0,
-  plants,
-}: {
-  label: string
-  sub?: string
-  color: string
-  border: string
-  indent?: number
-  plants?: { name: string; href: string }[]
-}) => (
-  <div
-    style={{
-      marginLeft: `${indent * 1.5}rem`,
-      marginBottom: "0.75rem",
-      position: "relative",
-    }}
-  >
-    {indent > 0 && (
-      <div
-        style={{
-          position: "absolute",
-          left: "-1rem",
-          top: "0.9rem",
-          width: "0.75rem",
-          height: "1px",
-          background: "#555",
-        }}
-      />
-    )}
-    <div
-      style={{
-        background: color,
-        border: `1px solid ${border}`,
-        borderRadius: "8px",
-        padding: "0.75rem 1rem",
-      }}
-    >
-      <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: sub || plants ? "0.3rem" : 0 }}>
-        {label}
-      </div>
-      {sub && (
-        <div style={{ fontSize: "0.78rem", color: "#aaa", marginBottom: plants ? "0.4rem" : 0 }}>
-          {sub}
-        </div>
-      )}
-      {plants && plants.length > 0 && (
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {plants.map((p) => (
-            <PlantLink key={p.href} href={p.href} name={p.name} />
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
 )
 
 const GroupCard = ({
@@ -198,41 +138,10 @@ const Page = () => {
         <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           現生の裸子植物は大きく4つのグループに分けられる。球果植物（マツ目・ヒノキ目など）が最も種類が多く、残りはそれぞれ独立した古い系統だ。
         </p>
-        <div style={{ position: "relative" }}>
-          <BranchNode
-            label="イチョウ目（イチョウ科）"
-            sub="現生は1属1種のみ・古生代から姿がほぼ変わらない「生きた化石」"
-            color="#1a2a1a"
-            border="#3a5a3a"
-            plants={[{ name: "イチョウ", href: "/plants/5" }]}
-          />
-          <div style={{ marginLeft: "0.75rem", borderLeft: "2px solid #444", paddingLeft: "0.25rem" }}>
-            <BranchNode
-              label="球果植物（マツ目・ヒノキ目など）"
-              sub="球果（まつぼっくり型）に種子がつく・針葉樹の大多数"
-              color="#1a2a2a"
-              border="#3a5a6a"
-              indent={1}
-              plants={[
-                { name: "クロマツ", href: "/plants/10" },
-                { name: "アカマツ", href: "/plants/22" },
-                { name: "ヒノキ", href: "/plants/8" },
-                { name: "スギ", href: "/plants/9" },
-              ]}
-            />
-            <BranchNode
-              label="イチイ目（イチイ科・マキ科など）"
-              sub="球果を作らない・種子に肉質の仮種皮または花托をもつ"
-              color="#1e2a1e"
-              border="#3a6a5a"
-              indent={1}
-              plants={[
-                { name: "イチイ", href: "/plants/36" },
-                { name: "イヌマキ", href: "/plants/147" },
-              ]}
-            />
-          </div>
-        </div>
+        <PhylogeneticFlow
+          variant="gymno"
+          caption="球果を作る枝と作らない枝を分けると、マツ・ヒノキ・イチイ・イチョウの違いが見やすい。"
+        />
         <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ ソテツ目・グネツム目など他のグループも存在するが、日本の山野・街路で見かける裸子植物の大部分はこの3グループに属する。
         </p>
