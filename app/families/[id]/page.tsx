@@ -4,8 +4,7 @@ import Link from "next/link"
 import { families, plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
-
-const siteUrl = "https://juqa.reload.co.jp"
+import { familyAioSummaryText, publisher, siteUrl } from "lib/seo"
 
 export function generateStaticParams() {
   return families.map((family) => ({ id: String(family.id) }))
@@ -64,17 +63,35 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
 
   const familyPlants = plants.filter((p) => p.family_id === family.id)
   const pageUrl = `${siteUrl}/families/${family.id}/`
+  const aioSummary = familyAioSummaryText(family, familyPlants)
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${family.name}の特徴と植物一覧`,
+        description: aioSummary,
+        inLanguage: "ja",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        mainEntity: { "@id": `${pageUrl}#taxon` },
+        about: { "@id": `${pageUrl}#taxon` },
+        publisher,
+      },
+      {
         "@type": "Taxon",
-        "@id": pageUrl,
+        "@id": `${pageUrl}#taxon`,
         name: family.name,
         description: family.description,
         url: pageUrl,
         taxonRank: "https://www.wikidata.org/entity/Q35409",
+        additionalProperty: [
+          { "@type": "PropertyValue", name: "分類", value: family.classification },
+          { "@type": "PropertyValue", name: "特徴", value: family.characteristics.join(" ") },
+          { "@type": "PropertyValue", name: "収録植物数", value: String(familyPlants.length) },
+        ],
         hasPart: familyPlants.map((p) => ({
           "@type": "Taxon",
           name: p.japanese_name,
@@ -93,6 +110,20 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
             item: `${siteUrl}/families/`,
           },
           { "@type": "ListItem", position: 3, name: family.name, item: pageUrl },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: `${family.name}はどんな植物の科ですか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: aioSummary,
+            },
+          },
         ],
       },
     ],
@@ -130,6 +161,12 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
       >
         {family.description}
       </p>
+
+      <SectionCard title="要点">
+        <p style={{ margin: 0, color: "#e0e0e0", fontSize: "0.95rem", lineHeight: "1.8" }}>
+          {aioSummary}
+        </p>
+      </SectionCard>
 
       <SectionCard title="主な特徴">
         <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: "1.7" }}>

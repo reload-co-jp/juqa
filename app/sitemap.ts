@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/guide/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
+    { url: `${siteUrl}/llms.txt`, priority: 0.4, lastModified, changeFrequency: "weekly" },
+    { url: `${siteUrl}/llms-full.txt`, priority: 0.4, lastModified, changeFrequency: "weekly" },
   ]
 
   const columnRoutes: MetadataRoute.Sitemap = columns.map((column) => ({

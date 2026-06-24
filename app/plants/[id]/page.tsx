@@ -4,8 +4,7 @@ import Link from "next/link"
 import { plants, families } from "lib/data"
 import { PageHeader, SectionCard, Tag } from "components/elements/layout"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
-
-const siteUrl = "https://juqa.reload.co.jp"
+import { plantAioSummaryText, plantSummary, publisher, siteUrl } from "lib/seo"
 
 export function generateStaticParams() {
   return plants.map((plant) => ({ id: String(plant.id) }))
@@ -73,27 +72,70 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
     .filter(Boolean)
 
   const pageUrl = `${siteUrl}/plants/${plant.id}/`
+  const aioSummary = plantAioSummaryText(plant, family)
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: `${plant.japanese_name}（${plant.scientific_name}）`,
+        description: aioSummary,
+        inLanguage: "ja",
+        isPartOf: { "@id": `${siteUrl}/#website` },
+        mainEntity: { "@id": `${pageUrl}#taxon` },
+        about: { "@id": `${pageUrl}#taxon` },
+        publisher,
+      },
+      {
         "@type": "Taxon",
-        "@id": pageUrl,
+        "@id": `${pageUrl}#taxon`,
         name: plant.japanese_name,
         scientificName: plant.scientific_name,
         description: plant.description.join(" "),
         url: pageUrl,
         ...(plant.image_url ? { image: plant.image_url } : {}),
         taxonRank: "https://www.wikidata.org/entity/Q7432",
+        additionalProperty: [
+          { "@type": "PropertyValue", name: "科", value: family?.name ?? "" },
+          { "@type": "PropertyValue", name: "属", value: plant.genus },
+          { "@type": "PropertyValue", name: "分布", value: plant.distribution },
+          { "@type": "PropertyValue", name: "見分け方", value: plant.identification.join(" ") },
+          { "@type": "PropertyValue", name: "タグ", value: plant.tags.join("、") },
+        ],
         ...(family
           ? {
               parentTaxon: {
                 "@type": "Taxon",
                 name: family.name,
+                url: `${siteUrl}/families/${family.id}/`,
               },
             }
           : {}),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: `${plant.japanese_name}は何科の植物ですか？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: family ? `${plant.japanese_name}は${family.name}の植物です。` : `${plant.japanese_name}の科は未設定です。`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: `${plant.japanese_name}の見分け方は？`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: plant.identification.join(" "),
+            },
+          },
+        ],
       },
       {
         "@type": "BreadcrumbList",
@@ -129,6 +171,12 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
       />
 
       <PageHeader backHref="/plants" backLabel="植物一覧" />
+
+      <script
+        type="application/json"
+        id="plant-summary-data"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(plantSummary(plant, family)) }}
+      />
 
       {/* Images */}
 
@@ -195,6 +243,12 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
           </div>
         )}
       </div>
+
+      <SectionCard title="要点">
+        <p style={{ margin: 0, color: "#e0e0e0", fontSize: "0.95rem", lineHeight: "1.8" }}>
+          {aioSummary}
+        </p>
+      </SectionCard>
 
       <SectionCard title="解説">
         <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: "1.7" }}>

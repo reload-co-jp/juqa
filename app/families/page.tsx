@@ -4,35 +4,59 @@ import Link from "next/link"
 import { families, plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
+import { siteUrl } from "lib/seo"
 
-const siteUrl = "https://juqa.reload.co.jp"
 const pageUrl = `${siteUrl}/families/`
+const description = `植物を科ごとに分類した一覧です。バラ科・キク科など${families.length}科の特徴と所属する植物を確認できます。`
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": pageUrl,
-  url: pageUrl,
-  name: "科一覧",
-  description: "植物を科ごとに分類した一覧です。バラ科・キク科など66科の特徴と所属する植物を確認できます。",
-  numberOfItems: families.length,
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/#website` },
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": pageUrl,
+      url: pageUrl,
+      name: "科一覧",
+      description,
+      numberOfItems: families.length,
+      inLanguage: "ja",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${pageUrl}#itemlist` },
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#itemlist`,
+      name: "科一覧",
+      numberOfItems: families.length,
+      itemListElement: families.map((family, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteUrl}/families/${family.id}/`,
+        item: {
+          "@type": "Taxon",
+          name: family.name,
+          description: family.description,
+        },
+      })),
+    },
+  ],
 }
 
 export const metadata: Metadata = {
   title: "科一覧",
-  description: "植物を科ごとに分類した一覧です。バラ科・キク科など66科の特徴と所属する植物を確認できます。",
+  description,
   keywords: ["科一覧", "植物の科", "バラ科", "キク科", "植物分類", "植物図鑑"],
+  alternates: { canonical: pageUrl },
   openGraph: {
     title: "科一覧",
-    description: "植物を科ごとに分類した一覧です。バラ科・キク科など66科の特徴と所属する植物を確認できます。",
+    description,
+    url: pageUrl,
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "科一覧",
-    description: "植物を科ごとに分類した一覧です。バラ科・キク科など66科の特徴と所属する植物を確認できます。",
+    description,
   },
 }
 

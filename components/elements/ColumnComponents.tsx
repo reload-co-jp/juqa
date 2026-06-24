@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import React from "react"
 import { plants } from "lib/data/plant"
+import { publisher, siteUrl } from "lib/seo"
 
-export const columnSiteUrl = "https://juqa.reload.co.jp"
+export const columnSiteUrl = siteUrl
 
 export type ColumnMetadataInput = {
   path: `/columns/${string}/`
@@ -67,16 +68,13 @@ export const createColumnJsonLd = ({
     "@type": "Article",
     "@id": pageUrl,
     url: pageUrl,
+    mainEntityOfPage: pageUrl,
     headline: title,
     description,
     ...(ogImage ? { image: ogImage } : {}),
     inLanguage: "ja",
     isPartOf: { "@id": `${columnSiteUrl}/columns/` },
-    publisher: {
-      "@type": "Organization",
-      name: "Reload, Inc.",
-      url: "https://reload.co.jp",
-    },
+    publisher,
   }
 }
 

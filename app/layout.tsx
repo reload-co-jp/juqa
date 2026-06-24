@@ -4,10 +4,10 @@ import { HeaderSearch } from "components/elements/HeaderSearch"
 import Link from "next/link"
 import { Suspense } from "react"
 import { columns } from "lib/columns"
+import { families, plants } from "lib/data"
+import { publisher, siteDescription, siteName, siteUrl } from "lib/seo"
 import "./reset.css"
 import "@xyflow/react/dist/style.css"
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://juqa.reload.co.jp/"
 
 const basePath = ""
 
@@ -17,38 +17,36 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "ジュカ！ (JuQa)",
-    template: "%s | ジュカ！ (JuQa)",
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+  metadataBase: new URL(siteUrl),
+  description: siteDescription,
   keywords: ["植物", "樹木", "街路樹", "植物図鑑", "植物学習", "見分け方", "植物クイズ", "花", "木", "草", "科"],
   alternates: {
-    canonical: siteUrl,
+    canonical: `${siteUrl}/`,
   },
   openGraph: {
-    title: "ジュカ！ (JuQa)",
-    description:
-      "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
-    url: siteUrl,
-    siteName: "ジュカ！ (JuQa)",
+    title: siteName,
+    description: siteDescription,
+    url: `${siteUrl}/`,
+    siteName,
     locale: "ja_JP",
     type: "website",
     images: [
       {
-        url: `${siteUrl}icons/icon-512.png`,
+        url: `${siteUrl}/icons/icon-512.png`,
         width: 512,
         height: 512,
-        alt: "ジュカ！ (JuQa)",
+        alt: siteName,
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "ジュカ！ (JuQa)",
-    description:
-      "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
-    images: [`${siteUrl}icons/icon-512.png`],
+    title: siteName,
+    description: siteDescription,
+    images: [`${siteUrl}/icons/icon-512.png`],
   },
 }
 
@@ -59,13 +57,30 @@ const websiteJsonLd = {
       "@type": "WebSite",
       "@id": "https://juqa.reload.co.jp/#website",
       url: "https://juqa.reload.co.jp/",
-      name: "ジュカ！ (JuQa)",
-      description: "街路樹や山で見かける植物を体系的に覚えるための学習ができるサイト",
+      name: siteName,
+      description: siteDescription,
       inLanguage: "ja",
-      publisher: {
-        "@type": "Organization",
-        name: "Reload, Inc.",
-        url: "https://reload.co.jp",
+      publisher,
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/plants/?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Dataset",
+      "@id": `${siteUrl}/#plant-dataset`,
+      name: "ジュカ！植物データセット",
+      description: `${plants.length}種の植物と${families.length}科の分類・見分け方・分布・タグを収録した日本語植物学習データ。`,
+      url: `${siteUrl}/llms-full.txt`,
+      inLanguage: "ja",
+      isAccessibleForFree: true,
+      creator: publisher,
+      keywords: ["植物", "植物図鑑", "街路樹", "山野草", "植物分類", "見分け方"],
+      distribution: {
+        "@type": "DataDownload",
+        contentUrl: `${siteUrl}/llms-full.txt`,
+        encodingFormat: "text/plain",
       },
     },
   ],
