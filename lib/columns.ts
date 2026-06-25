@@ -32,6 +32,14 @@ export const columns = [
     tags: ["基礎知識", "木本", "草本"],
   },
   {
+    href: "/columns/wild-type-plants",
+    emoji: "🌱",
+    title: "原種とはなにか",
+    description:
+      "園芸品種や栽培品種の話で出てくる「原種」とは何か。野生種・在来種・品種改良との違いを、ノイバラやガクアジサイを例にやさしく解説します。",
+    tags: ["基礎知識", "品種改良", "野生種"],
+  },
+  {
     href: "/columns/phylogenetic-tree",
     emoji: "🌿",
     title: "植物を系統樹で覚えやすく",
