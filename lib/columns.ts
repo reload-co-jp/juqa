@@ -1,5 +1,21 @@
 export const columns = [
   {
+    href: "/columns/plant-divisions",
+    emoji: "🗂️",
+    title: "植物界の「門」を一覧で整理する",
+    description:
+      "植物界の中はさらに「門」に分かれる。コケ植物3門・シダ植物3門・裸子植物4門・被子植物1門を代表植物つきで一覧解説します。",
+    tags: ["基礎知識", "生物分類", "植物学"],
+  },
+  {
+    href: "/columns/plant-kingdom",
+    emoji: "🍃",
+    title: "植物界とは何か——キノコや昆布との境界線",
+    description:
+      "キノコや昆布は植物？生物分類の「界」という考え方から、植物界の条件と植物っぽいのに植物ではない仲間たちをやさしく解説します。",
+    tags: ["基礎知識", "生物分類", "植物学"],
+  },
+  {
     href: "/columns/rosaceae-plants",
     emoji: "🌹",
     title: "バラ科の植物たち",
