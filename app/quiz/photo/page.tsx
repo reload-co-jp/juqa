@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import PhotoQuizClient from "./PhotoQuizClient"
 
 export const metadata: Metadata = {
-  title: "写真クイズ",
+  title: { absolute: "写真クイズ | ジュカ！ (JuQa)" },
   description:
     "植物の写真を見て名前を当てるクイズ。実際の植物画像から種類を識別する力を養えます。",
   openGraph: {

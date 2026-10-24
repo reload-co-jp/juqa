@@ -8,13 +8,12 @@ import { plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader } from "components/elements/layout"
 
-const SEASONS: { tag: PlantTag; label: string; color: string; bg: string }[] =
-  [
-    { tag: "春開花", label: "春", color: "#f4a7b9", bg: "#3d1f2a" },
-    { tag: "夏開花", label: "夏", color: "#7ecdc8", bg: "#1a3535" },
-    { tag: "秋開花", label: "秋", color: "#e8a04a", bg: "#3d2a10" },
-    { tag: "冬開花", label: "冬", color: "#8ab4d8", bg: "#1a2535" },
-  ]
+const SEASONS: { tag: PlantTag; label: string; color: string; bg: string }[] = [
+  { tag: "春開花", label: "春", color: "#f4a7b9", bg: "#3d1f2a" },
+  { tag: "夏開花", label: "夏", color: "#7ecdc8", bg: "#1a3535" },
+  { tag: "秋開花", label: "秋", color: "#e8a04a", bg: "#3d2a10" },
+  { tag: "冬開花", label: "冬", color: "#8ab4d8", bg: "#1a2535" },
+]
 
 const getCurrentSeasonTag = (): PlantTag => {
   const month = new Date().getMonth() + 1
@@ -23,6 +22,86 @@ const getCurrentSeasonTag = (): PlantTag => {
   if (month >= 9 && month <= 11) return "秋開花"
   return "冬開花"
 }
+
+const SeasonGrid: FC<{ plants: Plant[]; color: string }> = ({
+  plants,
+  color,
+}) => (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
+      gap: "0.75rem",
+    }}
+  >
+    {plants.map((plant) => (
+      <Link
+        key={plant.id}
+        href={`/plants/${plant.id}`}
+        style={{ textDecoration: "none" }}
+      >
+        <div
+          style={{
+            background: "#2d2d2d",
+            borderRadius: "6px",
+            overflow: "hidden",
+            borderBottom: `2px solid ${color}`,
+          }}
+        >
+          <div
+            style={{
+              height: "120px",
+              background: "#2a3d2b",
+              overflow: "hidden",
+            }}
+          >
+            {plant.image_url ? (
+              <img
+                src={
+                  plant.local_image_url ?? wikimediaThumb(plant.image_url, 400)
+                }
+                alt={plant.japanese_name}
+                loading="lazy"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "1.5rem",
+                }}
+              >
+                🌸
+              </div>
+            )}
+          </div>
+          <div style={{ padding: "0.5rem 0.6rem" }}>
+            <div
+              style={{
+                color: "#e0e0e0",
+                fontSize: "0.85rem",
+                fontWeight: "bold",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {plant.japanese_name}
+            </div>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
+)
 
 const FlowersContent: FC = () => {
   const router = useRouter()
@@ -76,7 +155,13 @@ const FlowersContent: FC = () => {
               >
                 {label}
               </div>
-              <div style={{ color: "#777", fontSize: "0.75rem", marginTop: "0.2rem" }}>
+              <div
+                style={{
+                  color: "#777",
+                  fontSize: "0.75rem",
+                  marginTop: "0.2rem",
+                }}
+              >
                 {count}種
               </div>
             </button>
@@ -85,85 +170,31 @@ const FlowersContent: FC = () => {
       </div>
 
       {selected ? (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-            gap: "0.75rem",
-          }}
-        >
-          {seasonPlants.map((plant) => (
-            <Link
-              key={plant.id}
-              href={`/plants/${plant.id}`}
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  background: "#2d2d2d",
-                  borderRadius: "6px",
-                  overflow: "hidden",
-                  borderBottom: `2px solid ${selected.color}`,
-                }}
-              >
-                <div
-                  style={{
-                    height: "120px",
-                    background: "#2a3d2b",
-                    overflow: "hidden",
-                  }}
-                >
-                  {plant.image_url ? (
-                    <img
-                      src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 400)}
-                      alt={plant.japanese_name}
-                      loading="lazy"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  ) : (
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "1.5rem",
-                      }}
-                    >
-                      🌸
-                    </div>
-                  )}
-                </div>
-                <div style={{ padding: "0.5rem 0.6rem" }}>
-                  <div
-                    style={{
-                      color: "#e0e0e0",
-                      fontSize: "0.85rem",
-                      fontWeight: "bold",
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                    }}
-                  >
-                    {plant.japanese_name}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <SeasonGrid plants={seasonPlants} color={selected.color} />
       ) : null}
     </div>
   )
 }
 
 const FlowersClient: FC = () => (
-  <Suspense>
+  <Suspense
+    fallback={
+      <div>
+        <PageHeader backHref="/" backLabel="トップ" title="開花カレンダー" />
+        {SEASONS.map(({ tag, label, color }) => (
+          <section key={tag} style={{ marginBottom: "1.5rem" }}>
+            <h2 style={{ color, fontSize: "1.1rem", margin: "0 0 0.75rem" }}>
+              {label}に咲く植物
+            </h2>
+            <SeasonGrid
+              plants={plants.filter((p) => p.tags.includes(tag))}
+              color={color}
+            />
+          </section>
+        ))}
+      </div>
+    }
+  >
     <FlowersContent />
   </Suspense>
 )

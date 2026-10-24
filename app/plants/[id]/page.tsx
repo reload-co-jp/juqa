@@ -1,17 +1,51 @@
 import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
-import { plants, families } from "lib/data"
-import { PageHeader, SectionCard, Tag } from "components/elements/layout"
+import { plants, families, mergedPlantIds } from "lib/data"
+import { redirect } from "next/navigation"
+import {
+  Breadcrumbs,
+  PageHeader,
+  SectionCard,
+  Tag,
+} from "components/elements/layout"
+import { columns } from "lib/columns"
+import { readdirSync, readFileSync } from "fs"
+import path from "path"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 import { plantAioSummaryText, plantSummary, publisher, siteUrl } from "lib/seo"
 
+// コラム本文中の /plants/{id} リンクから植物→コラムの逆引きを作る（ビルド時のみ実行）
+const columnsDir = path.join(process.cwd(), "app/columns")
+const columnPlantIds = new Map(
+  readdirSync(columnsDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => {
+      const source = readFileSync(
+        path.join(columnsDir, d.name, "page.tsx"),
+        "utf8"
+      )
+      const ids = [...source.matchAll(/\/plants\/(\d+)/g)].map((m) =>
+        Number(m[1])
+      )
+      return [`/columns/${d.name}`, new Set(ids)] as const
+    })
+)
+
 export function generateStaticParams() {
-  return plants.map((plant) => ({ id: String(plant.id) }))
+  return [...plants.map((p) => p.id), ...Object.keys(mergedPlantIds)].map(
+    (id) => ({ id: String(id) })
+  )
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params
+  const mergedTo = mergedPlantIds[Number(id)]
+  if (mergedTo)
+    return {
+      robots: { index: false },
+      alternates: { canonical: `${siteUrl}/plants/${mergedTo}/` },
+    }
   const plant = plants.find((p) => p.id === Number(id))
   if (!plant) return {}
 
@@ -55,6 +89,8 @@ type Props = {
 
 const PlantDetailPage: FC<Props> = async ({ params }) => {
   const { id } = await params
+  const mergedTo = mergedPlantIds[Number(id)]
+  if (mergedTo) redirect(`/plants/${mergedTo}`)
   const plant = plants.find((p) => p.id === Number(id))
 
   if (!plant) {
@@ -70,6 +106,16 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
   const similarPlants = plant.similar_plant_ids
     .map((sid) => plants.find((p) => p.id === sid))
     .filter(Boolean)
+
+  const sameFamilyPlants = plants.filter(
+    (p) =>
+      p.family_id === plant.family_id &&
+      p.id !== plant.id &&
+      !plant.similar_plant_ids.includes(p.id)
+  )
+  const relatedColumns = columns.filter((c) =>
+    columnPlantIds.get(c.href)?.has(plant.id)
+  )
 
   const pageUrl = `${siteUrl}/plants/${plant.id}/`
   const aioSummary = plantAioSummaryText(plant, family)
@@ -102,8 +148,16 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
           { "@type": "PropertyValue", name: "科", value: family?.name ?? "" },
           { "@type": "PropertyValue", name: "属", value: plant.genus },
           { "@type": "PropertyValue", name: "分布", value: plant.distribution },
-          { "@type": "PropertyValue", name: "見分け方", value: plant.identification.join(" ") },
-          { "@type": "PropertyValue", name: "タグ", value: plant.tags.join("、") },
+          {
+            "@type": "PropertyValue",
+            name: "見分け方",
+            value: plant.identification.join(" "),
+          },
+          {
+            "@type": "PropertyValue",
+            name: "タグ",
+            value: plant.tags.join("、"),
+          },
         ],
         ...(family
           ? {
@@ -124,7 +178,9 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
             name: `${plant.japanese_name}は何科の植物ですか？`,
             acceptedAnswer: {
               "@type": "Answer",
-              text: family ? `${plant.japanese_name}は${family.name}の植物です。` : `${plant.japanese_name}の科は未設定です。`,
+              text: family
+                ? `${plant.japanese_name}は${family.name}の植物です。`
+                : `${plant.japanese_name}の科は未設定です。`,
             },
           },
           {
@@ -170,12 +226,20 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHeader backHref="/plants" backLabel="植物一覧" />
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "ホーム" },
+          { href: "/plants", label: "植物一覧" },
+          { label: plant.japanese_name },
+        ]}
+      />
 
       <script
         type="application/json"
         id="plant-summary-data"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(plantSummary(plant, family)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(plantSummary(plant, family)),
+        }}
       />
 
       {/* Images */}
@@ -184,7 +248,14 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
         images={
           plant.image_url &&
           !plant.images.some((img) => img.url === plant.image_url)
-            ? [{ url: plant.image_url, local_url: plant.local_image_url, caption: "メイン" }, ...plant.images]
+            ? [
+                {
+                  url: plant.image_url,
+                  local_url: plant.local_image_url,
+                  caption: "メイン",
+                },
+                ...plant.images,
+              ]
             : plant.images
         }
         plantName={plant.japanese_name}
@@ -213,7 +284,16 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
             flexWrap: "wrap",
           }}
         >
-          <Tag>{family?.name ?? "—"}</Tag>
+          {family ? (
+            <Link
+              href={`/families/${family.id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <Tag>{family.name}</Tag>
+            </Link>
+          ) : (
+            <Tag>—</Tag>
+          )}
           <Tag variant="muted">{plant.genus}</Tag>
         </div>
         {plant.tags.length > 0 && (
@@ -226,8 +306,9 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
             }}
           >
             {plant.tags.map((tag) => (
-              <span
+              <Link
                 key={tag}
+                href={`/plants?tags=${encodeURIComponent(tag)}`}
                 style={{
                   background: "#1a2e1a",
                   color: "#a0d0a2",
@@ -235,17 +316,25 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
                   padding: "0.15rem 0.5rem",
                   fontSize: "0.75rem",
                   border: "1px solid #2d4d2d",
+                  textDecoration: "none",
                 }}
               >
                 {tag}
-              </span>
+              </Link>
             ))}
           </div>
         )}
       </div>
 
       <SectionCard title="要点">
-        <p style={{ margin: 0, color: "#e0e0e0", fontSize: "0.95rem", lineHeight: "1.8" }}>
+        <p
+          style={{
+            margin: 0,
+            color: "#e0e0e0",
+            fontSize: "0.95rem",
+            lineHeight: "1.8",
+          }}
+        >
           {aioSummary}
         </p>
       </SectionCard>
@@ -312,6 +401,46 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
               ) : null
             )}
           </div>
+        </SectionCard>
+      )}
+
+      {family && sameFamilyPlants.length > 0 && (
+        <SectionCard title={`同じ${family.name}の植物`}>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            {sameFamilyPlants.slice(0, 12).map((sp) => (
+              <Link
+                key={sp.id}
+                href={`/plants/${sp.id}`}
+                style={{
+                  background: "#2a2a2a",
+                  color: "#cfe8d1",
+                  borderRadius: "4px",
+                  padding: "0.3rem 0.75rem",
+                  textDecoration: "none",
+                  fontSize: "0.85rem",
+                }}
+              >
+                {sp.japanese_name}
+              </Link>
+            ))}
+          </div>
+        </SectionCard>
+      )}
+
+      {relatedColumns.length > 0 && (
+        <SectionCard title="関連コラム">
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: "1.8" }}>
+            {relatedColumns.map((c) => (
+              <li key={c.href}>
+                <Link
+                  href={c.href}
+                  style={{ color: "#7cbe8c", fontSize: "0.9rem" }}
+                >
+                  {c.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </SectionCard>
       )}
 

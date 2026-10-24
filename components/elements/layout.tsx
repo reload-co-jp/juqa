@@ -1,14 +1,17 @@
 import { ComponentProps, FC, ReactNode } from "react"
 import Link from "next/link"
 
-export const Title: FC<ComponentProps<"h1">> = ({
+export const Title: FC<ComponentProps<"div">> = ({
   style,
   children,
   ...props
 }) => (
-  <h1 style={{ fontSize: "1rem", margin: 0, ...style }} {...props}>
+  <div
+    style={{ fontSize: "1rem", fontWeight: "bold", margin: 0, ...style }}
+    {...props}
+  >
     {children}
-  </h1>
+  </div>
 )
 
 export const PageHeader: FC<{
@@ -31,11 +34,46 @@ export const PageHeader: FC<{
       ← {backLabel}
     </Link>
     {title && (
-      <h2 style={{ margin: 0, fontSize: "1.1rem", color: "#e0e0e0" }}>
+      <h1 style={{ margin: 0, fontSize: "1.1rem", color: "#e0e0e0" }}>
         {title}
-      </h2>
+      </h1>
     )}
   </div>
+)
+
+export const Breadcrumbs: FC<{ items: { href?: string; label: string }[] }> = ({
+  items,
+}) => (
+  <nav aria-label="パンくずリスト" style={{ marginBottom: "1rem" }}>
+    <ol
+      style={{
+        listStyle: "none",
+        margin: 0,
+        padding: 0,
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "0.35rem",
+        fontSize: "0.8rem",
+        color: "#999",
+      }}
+    >
+      {items.map((item, i) => (
+        <li key={item.label} style={{ display: "flex", gap: "0.35rem" }}>
+          {i > 0 && <span aria-hidden="true">›</span>}
+          {item.href ? (
+            <Link
+              href={item.href}
+              style={{ color: "#7cbe8c", textDecoration: "none" }}
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <span aria-current="page">{item.label}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
 )
 
 export const SectionCard: FC<{
@@ -53,9 +91,11 @@ export const SectionCard: FC<{
     }}
   >
     {title && (
-      <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.95rem", color: "#7cbe8c" }}>
+      <h2
+        style={{ margin: "0 0 0.75rem", fontSize: "0.95rem", color: "#7cbe8c" }}
+      >
         {title}
-      </h3>
+      </h2>
     )}
     {children}
   </div>

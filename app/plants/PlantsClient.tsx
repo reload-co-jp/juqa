@@ -6,96 +6,9 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { plants, families } from "lib/data"
 import { TAG_GROUPS } from "lib/tags"
 import { regionTagsFromDistribution } from "lib/region"
-import {
-  FLOWER_COLORS,
-  flowerColorsFromPlant,
-} from "lib/flower-color"
+import { FLOWER_COLORS, flowerColorsFromPlant } from "lib/flower-color"
 import { wikimediaThumb } from "lib/utils"
 import { PageHeader, Tag } from "components/elements/layout"
-
-const PlantCardSkeleton: FC = () => (
-  <div
-    style={{
-      maxWidth: "22rem",
-      width: "100%",
-      background: "#2d2d2d",
-      borderRadius: "2px",
-      overflow: "hidden",
-      borderBottom: "2px solid #3a3a3a",
-    }}
-  >
-    <div style={{ height: "240px", background: "#3a3a3a" }} />
-    <div style={{ padding: "0.75rem" }}>
-      <div
-        style={{
-          height: "1rem",
-          width: "60%",
-          background: "#3a3a3a",
-          borderRadius: "4px",
-          marginBottom: "0.5rem",
-        }}
-      />
-      <div
-        style={{
-          height: "0.75rem",
-          width: "80%",
-          background: "#3a3a3a",
-          borderRadius: "4px",
-          marginBottom: "0.5rem",
-        }}
-      />
-      <div
-        style={{
-          height: "1.2rem",
-          width: "30%",
-          background: "#3a3a3a",
-          borderRadius: "4px",
-        }}
-      />
-    </div>
-  </div>
-)
-
-const PlantsSkeleton: FC = () => (
-  <div style={{ margin: "0 auto" }}>
-    <div
-      style={{
-        marginBottom: "1rem",
-        height: "2rem",
-        background: "#2d2d2d",
-        borderRadius: "6px",
-      }}
-    />
-    <div
-      style={{
-        marginBottom: "1rem",
-        height: "2.25rem",
-        background: "#2d2d2d",
-        borderRadius: "6px",
-      }}
-    />
-    <div
-      style={{
-        marginBottom: "1rem",
-        height: "6rem",
-        background: "#2d2d2d",
-        borderRadius: "8px",
-      }}
-    />
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "1rem",
-        justifyContent: "center",
-      }}
-    >
-      {Array.from({ length: 6 }).map((_, i) => (
-        <PlantCardSkeleton key={i} />
-      ))}
-    </div>
-  </div>
-)
 
 const PlantImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
   const [loaded, setLoaded] = useState(false)
@@ -127,6 +40,92 @@ const PlantImage: FC<{ src: string; alt: string }> = ({ src, alt }) => {
   )
 }
 
+const PlantCards: FC<{ plants: Plant[] }> = ({ plants }) => (
+  <div
+    style={{
+      display: "flex",
+      flexWrap: "wrap",
+      gap: "1rem",
+      justifyContent: "center",
+    }}
+  >
+    {plants.map((plant) => {
+      const family = families.find((f) => f.id === plant.family_id)
+      return (
+        <Link
+          key={plant.id}
+          href={`/plants/${plant.id}`}
+          style={{
+            textDecoration: "none",
+            maxWidth: "22rem",
+            width: "100%",
+          }}
+        >
+          <div
+            style={{
+              background: "#2d2d2d",
+              borderRadius: "2px",
+              overflow: "hidden",
+              borderBottom: "2px solid #5a9a5c",
+            }}
+          >
+            <div
+              style={{
+                height: "240px",
+                background: "#2a3d2b",
+                overflow: "hidden",
+              }}
+            >
+              {plant.image_url ? (
+                <PlantImage
+                  src={plant.local_image_url ?? plant.image_url}
+                  alt={plant.japanese_name}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "2rem",
+                  }}
+                >
+                  🌿
+                </div>
+              )}
+            </div>
+            <div style={{ padding: "0.75rem" }}>
+              <div
+                style={{
+                  color: "#7cbe8c",
+                  fontWeight: "bold",
+                  fontSize: "1rem",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                {plant.japanese_name}
+              </div>
+              <div
+                style={{
+                  color: "#999",
+                  fontSize: "0.8rem",
+                  fontStyle: "italic",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                {plant.scientific_name}
+              </div>
+              <Tag>{family?.name ?? "—"}</Tag>
+            </div>
+          </div>
+        </Link>
+      )
+    })}
+  </div>
+)
+
 const PlantsContent: FC = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -142,7 +141,9 @@ const PlantsContent: FC = () => {
     (searchParams.get("tags") ?? "").split(",").filter(Boolean) as PlantTag[]
   )
   const selectedFlowerColors = new Set<FlowerColor>(
-    (searchParams.get("colors") ?? "").split(",").filter(Boolean) as FlowerColor[]
+    (searchParams.get("colors") ?? "")
+      .split(",")
+      .filter(Boolean) as FlowerColor[]
   )
 
   const updateParams = (updates: Record<string, string | null>) => {
@@ -194,7 +195,9 @@ const PlantsContent: FC = () => {
       return false
     if (selectedFlowerColors.size > 0) {
       const flowerColors = flowerColorsFromPlant(p)
-      if (![...selectedFlowerColors].some((color) => flowerColors.includes(color))) {
+      if (
+        ![...selectedFlowerColors].some((color) => flowerColors.includes(color))
+      ) {
         return false
       }
     }
@@ -285,7 +288,9 @@ const PlantsContent: FC = () => {
             flexWrap: "wrap",
           }}
         >
-          <span style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}>
+          <span
+            style={{ color: "#999", fontSize: "0.75rem", minWidth: "2.5rem" }}
+          >
             花色
           </span>
           {FLOWER_COLORS.map((color) => {
@@ -349,7 +354,14 @@ const PlantsContent: FC = () => {
           </div>
         ))}
         {(selectedTags.size > 0 || selectedFlowerColors.size > 0) && (
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.25rem" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "0.75rem",
+              flexWrap: "wrap",
+              marginTop: "0.25rem",
+            }}
+          >
             {selectedFlowerColors.size > 0 && (
               <button
                 onClick={() => updateParams({ colors: null })}
@@ -389,96 +401,20 @@ const PlantsContent: FC = () => {
       >
         {filteredPlants.length}件
       </div>
-
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "1rem",
-          justifyContent: "center",
-        }}
-      >
-        {filteredPlants.map((plant) => {
-          const family = families.find((f) => f.id === plant.family_id)
-          return (
-            <Link
-              key={plant.id}
-              href={`/plants/${plant.id}`}
-              style={{
-                textDecoration: "none",
-                maxWidth: "22rem",
-                width: "100%",
-              }}
-            >
-              <div
-                style={{
-                  background: "#2d2d2d",
-                  borderRadius: "2px",
-                  overflow: "hidden",
-                  borderBottom: "2px solid #5a9a5c",
-                }}
-              >
-                <div
-                  style={{
-                    height: "240px",
-                    background: "#2a3d2b",
-                    overflow: "hidden",
-                  }}
-                >
-                  {plant.image_url ? (
-                    <PlantImage
-                      src={plant.local_image_url ?? plant.image_url}
-                      alt={plant.japanese_name}
-                    />
-                  ) : (
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "2rem",
-                      }}
-                    >
-                      🌿
-                    </div>
-                  )}
-                </div>
-                <div style={{ padding: "0.75rem" }}>
-                  <div
-                    style={{
-                      color: "#7cbe8c",
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                      marginBottom: "0.25rem",
-                    }}
-                  >
-                    {plant.japanese_name}
-                  </div>
-                  <div
-                    style={{
-                      color: "#999",
-                      fontSize: "0.8rem",
-                      fontStyle: "italic",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    {plant.scientific_name}
-                  </div>
-                  <Tag>{family?.name ?? "—"}</Tag>
-                </div>
-              </div>
-            </Link>
-          )
-        })}
-      </div>
+      <PlantCards plants={filteredPlants} />
     </div>
   )
 }
 
 const PlantsClient: FC = () => (
-  <Suspense fallback={<PlantsSkeleton />}>
+  <Suspense
+    fallback={
+      <div style={{ margin: "0 auto" }}>
+        <PageHeader backHref="/" backLabel="トップ" title="植物一覧" />
+        <PlantCards plants={plants} />
+      </div>
+    }
+  >
     <PlantsContent />
   </Suspense>
 )

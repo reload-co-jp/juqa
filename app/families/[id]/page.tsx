@@ -3,7 +3,12 @@ import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
-import { PageHeader, SectionCard, Tag } from "components/elements/layout"
+import {
+  Breadcrumbs,
+  PageHeader,
+  SectionCard,
+  Tag,
+} from "components/elements/layout"
 import { familyAioSummaryText, publisher, siteUrl } from "lib/seo"
 
 export function generateStaticParams() {
@@ -88,9 +93,21 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
         url: pageUrl,
         taxonRank: "https://www.wikidata.org/entity/Q35409",
         additionalProperty: [
-          { "@type": "PropertyValue", name: "分類", value: family.classification },
-          { "@type": "PropertyValue", name: "特徴", value: family.characteristics.join(" ") },
-          { "@type": "PropertyValue", name: "収録植物数", value: String(familyPlants.length) },
+          {
+            "@type": "PropertyValue",
+            name: "分類",
+            value: family.classification,
+          },
+          {
+            "@type": "PropertyValue",
+            name: "特徴",
+            value: family.characteristics.join(" "),
+          },
+          {
+            "@type": "PropertyValue",
+            name: "収録植物数",
+            value: String(familyPlants.length),
+          },
         ],
         hasPart: familyPlants.map((p) => ({
           "@type": "Taxon",
@@ -109,7 +126,12 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
             name: "科一覧",
             item: `${siteUrl}/families/`,
           },
-          { "@type": "ListItem", position: 3, name: family.name, item: pageUrl },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: family.name,
+            item: pageUrl,
+          },
         ],
       },
       {
@@ -136,7 +158,13 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHeader backHref="/families" backLabel="科一覧" />
+      <Breadcrumbs
+        items={[
+          { href: "/", label: "ホーム" },
+          { href: "/families", label: "科一覧" },
+          { label: family.name },
+        ]}
+      />
 
       <div
         style={{
@@ -163,7 +191,14 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
       </p>
 
       <SectionCard title="要点">
-        <p style={{ margin: 0, color: "#e0e0e0", fontSize: "0.95rem", lineHeight: "1.8" }}>
+        <p
+          style={{
+            margin: 0,
+            color: "#e0e0e0",
+            fontSize: "0.95rem",
+            lineHeight: "1.8",
+          }}
+        >
           {aioSummary}
         </p>
       </SectionCard>
@@ -209,7 +244,10 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
                 >
                   {plant.image_url ? (
                     <img
-                      src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 80)}
+                      src={
+                        plant.local_image_url ??
+                        wikimediaThumb(plant.image_url, 80)
+                      }
                       alt={plant.japanese_name}
                       loading="lazy"
                       style={{
@@ -252,7 +290,13 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
                       {plant.scientific_name}
                     </div>
                   </div>
-                  <span style={{ color: "#7cbe8c", fontSize: "0.8rem", flexShrink: 0 }}>
+                  <span
+                    style={{
+                      color: "#7cbe8c",
+                      fontSize: "0.8rem",
+                      flexShrink: 0,
+                    }}
+                  >
                     →
                   </span>
                 </div>

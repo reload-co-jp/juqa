@@ -115,7 +115,8 @@ const PlantPhotoGallery: FC<Props> = ({ images, plantName }) => {
             >
               <img
                 src={img.local_url ?? wikimediaThumb(img.url, 160)}
-                alt={img.caption}
+                alt={`${plantName} - ${img.caption}`}
+                loading="lazy"
                 style={{
                   width: "100%",
                   height: "100%",

@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 import { plants } from "lib/data/plant"
 import { publisher, siteUrl } from "lib/seo"
+import { Breadcrumbs } from "components/elements/layout"
 
 export const columnSiteUrl = siteUrl
 
@@ -44,7 +45,9 @@ export const createColumnMetadata = ({
       description,
       url: pageUrl,
       type: "article",
-      ...(ogImage ? { images: [{ url: ogImage, alt: ogImageAlt ?? title }] } : {}),
+      ...(ogImage
+        ? { images: [{ url: ogImage, alt: ogImageAlt ?? title }] }
+        : {}),
     },
     twitter: {
       card: twitterCard,
@@ -65,16 +68,38 @@ export const createColumnJsonLd = ({
 
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": pageUrl,
-    url: pageUrl,
-    mainEntityOfPage: pageUrl,
-    headline: title,
-    description,
-    ...(ogImage ? { image: ogImage } : {}),
-    inLanguage: "ja",
-    isPartOf: { "@id": `${columnSiteUrl}/columns/` },
-    publisher,
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": pageUrl,
+        url: pageUrl,
+        mainEntityOfPage: pageUrl,
+        headline: title,
+        description,
+        ...(ogImage ? { image: ogImage } : {}),
+        inLanguage: "ja",
+        isPartOf: { "@id": `${columnSiteUrl}/columns/` },
+        publisher,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: columnSiteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "コラム",
+            item: `${columnSiteUrl}/columns/`,
+          },
+          { "@type": "ListItem", position: 3, name: title, item: pageUrl },
+        ],
+      },
+    ],
   }
 }
 
@@ -87,8 +112,6 @@ export const ColumnArticle = ({
   heroImage,
   heroAlt,
   heroCredit = "Photo: Wikimedia Commons",
-  backHref = "/columns",
-  backLabel = "コラム一覧へ",
   children,
 }: {
   emoji: string
@@ -99,8 +122,6 @@ export const ColumnArticle = ({
   heroImage?: string
   heroAlt?: string
   heroCredit?: string
-  backHref?: string
-  backLabel?: string
   children: React.ReactNode
 }) => (
   <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
@@ -110,14 +131,13 @@ export const ColumnArticle = ({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     )}
-    <div style={{ marginBottom: "1.5rem" }}>
-      <Link
-        href={backHref}
-        style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-      >
-        ← {backLabel}
-      </Link>
-    </div>
+    <Breadcrumbs
+      items={[
+        { href: "/", label: "ホーム" },
+        { href: "/columns", label: "コラム" },
+        { label: title },
+      ]}
+    />
 
     <div style={{ marginBottom: "2rem" }}>
       <div
@@ -145,17 +165,35 @@ export const ColumnArticle = ({
       >
         {title}
       </h1>
-      <p style={{ color: "#999", fontSize: "0.9rem", margin: 0, lineHeight: 1.8 }}>
+      <p
+        style={{
+          color: "#999",
+          fontSize: "0.9rem",
+          margin: 0,
+          lineHeight: 1.8,
+        }}
+      >
         {subtitle}
       </p>
     </div>
 
     {heroImage && (
-      <div style={{ marginBottom: "2rem", borderRadius: "12px", overflow: "hidden" }}>
+      <div
+        style={{
+          marginBottom: "2rem",
+          borderRadius: "12px",
+          overflow: "hidden",
+        }}
+      >
         <img
           src={heroImage}
           alt={heroAlt ?? title}
-          style={{ width: "100%", height: "240px", objectFit: "cover", display: "block" }}
+          style={{
+            width: "100%",
+            height: "240px",
+            objectFit: "cover",
+            display: "block",
+          }}
         />
         <div
           style={{
@@ -174,11 +212,7 @@ export const ColumnArticle = ({
   </div>
 )
 
-export const ColumnIntro = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => (
+export const ColumnIntro = ({ children }: { children: React.ReactNode }) => (
   <div
     style={{
       borderLeft: "3px solid #5a9a5c",
@@ -254,7 +288,12 @@ export const PlantCard = ({
         <img
           src={`/images/plants/${plant.id}-0.webp`}
           alt={plant.japanese_name}
-          style={{ width: "80px", height: "80px", objectFit: "cover", borderRadius: "4px" }}
+          style={{
+            width: "80px",
+            height: "80px",
+            objectFit: "cover",
+            borderRadius: "4px",
+          }}
         />
         <Link
           href={`/plants/${plant.id}`}

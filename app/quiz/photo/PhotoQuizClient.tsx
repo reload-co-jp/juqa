@@ -441,7 +441,7 @@ const PhotoQuizClient: FC = () => {
 
   return (
     <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-      <PageHeader backHref="/quiz" backLabel="クイズへ" title="写真クイズ" />
+      <PageHeader backHref="/" backLabel="トップ" title="写真クイズ" />
 
       <div
         style={{

@@ -147,7 +147,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           }}
         >
           <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <Title>ジュカ！ (JuQa)</Title>
+            <Title style={{ whiteSpace: "nowrap" }}>ジュカ！ (JuQa)</Title>
           </Link>
           <Suspense fallback={null}>
             <HeaderSearch />

@@ -1,14 +1,23 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, useSyncExternalStore } from "react"
 import Link from "next/link"
 import { plants } from "lib/data"
 import { wikimediaThumb } from "lib/utils"
 
+const randomIndex = Math.floor(Math.random() * plants.length)
+const noopSubscribe = () => () => {}
+
 const RandomPlant: FC = () => {
-  const [plant] = useState<Plant>(
-    () => plants[Math.floor(Math.random() * plants.length)]
-  )
+  // SSR は先頭、hydration 後にランダムへ切り替える（hydration エラー回避）
+  const plant =
+    plants[
+      useSyncExternalStore(
+        noopSubscribe,
+        () => randomIndex,
+        () => 0
+      )
+    ]
 
   return (
     <Link
