@@ -996,10 +996,22 @@ export const plants: Plant[] = [
         local_url: "/images/plants/24-2.webp",
         caption: "花",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_UMFS_1.jpg",
+
+        local_url: "/images/plants/99-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_(flower).jpg",
+
+        local_url: "/images/plants/99-2.webp",
+        caption: "花",
+      },
     ],
     tags: ["春開花", "草本", "小花集合", "雑草", "公園"],
     flower_colors: ["白","ピンク"],
-    similar_plant_ids: [11],
+    similar_plant_ids: [11, 93],
   },
   {
     id: 25,
@@ -2696,9 +2708,21 @@ export const plants: Plant[] = [
         local_url: "/images/plants/67-2.webp",
         caption: "花",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_01.jpg",
+
+        local_url: "/images/plants/268-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_(bud).jpg",
+
+        local_url: "/images/plants/268-2.webp",
+        caption: "つぼみ",
+      },
     ],
-    tags: ["春開花", "草本", "山"],
-    flower_colors: ["紫"],
+    tags: ["春開花", "草本", "山", "常緑"],
+    flower_colors: ["ピンク", "紫"],
     similar_plant_ids: [],
   },
   {
@@ -2974,8 +2998,20 @@ export const plants: Plant[] = [
         local_url: "/images/plants/74-2.webp",
         caption: "実",
       },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamadoflower.JPG",
+
+        local_url: "/images/plants/266-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamado_rowanberry.jpg",
+
+        local_url: "/images/plants/266-2.webp",
+        caption: "実",
+      },
     ],
-    tags: ["夏開花", "落葉", "高木", "山", "街路樹"],
+    tags: ["夏開花", "落葉", "高木", "山", "街路樹", "小花集合"],
     flower_colors: ["白"],
     similar_plant_ids: [178, 183],
   },
@@ -3762,7 +3798,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "小花集合", "公園"],
     flower_colors: ["白","黄","赤"],
-    similar_plant_ids: [99],
+    similar_plant_ids: [24],
   },
   {
     id: 94,
@@ -3960,45 +3996,6 @@ export const plants: Plant[] = [
     similar_plant_ids: [],
   },
   {
-    id: 99,
-    japanese_name: "ハルジオン",
-    scientific_name: "Erigeron philadelphicus",
-    family_id: 9,
-    genus: "ムカシヨモギ属",
-    description: [
-      "北米原産の越年草・多年草で、春に白〜淡紅色の頭花を多数咲かせる帰化植物。",
-      "茎は中空で、つぼみが下向きに垂れるのが特徴。葉は茎を抱いてつく。",
-      "よく似たヒメジョオンとの区別では、ハルジオンは春に咲き、つぼみが垂れ、茎が中空な点で識別できる。",
-    ],
-    identification: [
-      "つぼみが下向きに垂れる（ヒメジョオンは垂れない）",
-      "茎が中空（ヒメジョオンは充実）",
-      "葉が茎を抱く（耳状の基部）",
-      "春（4〜6月）に開花",
-    ],
-    distribution: "日本全国の道端・草地・空き地（帰化植物）",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_UMFS_1.jpg",
-    local_image_url: "/images/plants/99-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_UMFS_1.jpg",
-
-        local_url: "/images/plants/99-1.webp",
-        caption: "全体",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_philadelphicus_(flower).jpg",
-
-        local_url: "/images/plants/99-2.webp",
-        caption: "花",
-      },
-    ],
-    tags: ["春開花", "草本", "雑草", "小花集合"],
-    flower_colors: ["白","赤"],
-    similar_plant_ids: [93],
-  },
-  {
     id: 100,
     japanese_name: "ゴゼンタチバナ",
     scientific_name: "Cornus canadensis",
@@ -4031,6 +4028,18 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/100-2.webp",
         caption: "花（白い苞片）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(1).jpg",
+
+        local_url: "/images/plants/257-1.webp",
+        caption: "花と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(2).jpg",
+
+        local_url: "/images/plants/257-2.webp",
+        caption: "全体",
       },
     ],
     tags: ["夏開花", "落葉", "草本", "山"],
@@ -5339,7 +5348,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "花弁5枚", "山"],
     flower_colors: ["白"],
-    similar_plant_ids: [66],
+    similar_plant_ids: [66, 272],
   },
   {
     id: 136,
@@ -5575,6 +5584,18 @@ export const plants: Plant[] = [
 
         local_url: "/images/plants/141-3.webp",
         caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower).JPG",
+
+        local_url: "/images/plants/256-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_01.jpg",
+
+        local_url: "/images/plants/256-2.webp",
+        caption: "全体",
       },
     ],
     tags: ["春開花", "夏開花", "草本", "山"],
@@ -9777,45 +9798,6 @@ export const plants: Plant[] = [
     similar_plant_ids: [],
   },
   {
-    id: 251,
-    japanese_name: "イチリンソウ",
-    scientific_name: "Anemone nikoensis",
-    family_id: 25,
-    genus: "イチリンソウ属",
-    description: [
-      "春の山野に生える多年草。茎の先に大きな白い花を1輪だけつけることが名前の由来。",
-      "花弁に見えるのは萼片で5〜6枚。ニリンソウよりひとまわり大きい。",
-      "葉は2〜3回羽状複葉で深く切れ込み、茎葉が花の下で輪生状につく。",
-    ],
-    identification: [
-      "茎の先に白い大きな花を1輪だけつける",
-      "花弁に見えるのは萼片で5〜6枚（表が白、裏がやや紫）",
-      "茎葉が3枚輪生し、深く羽状に切れ込む",
-      "ニリンソウより花が大きく、1輪のみ",
-    ],
-    distribution: "本州〜九州の山地の林縁・草地",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
-    local_image_url: "/images/plants/251-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(1_flower).JPG",
-
-        local_url: "/images/plants/251-1.webp",
-        caption: "全体",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Anemone_nikoensis_(flower).JPG",
-
-        local_url: "/images/plants/251-2.webp",
-        caption: "花のアップ",
-      },
-    ],
-    tags: ["春開花", "草本", "山", "花弁5枚"],
-    flower_colors: ["白"],
-    similar_plant_ids: [272],
-  },
-  {
     id: 252,
     japanese_name: "ウド",
     scientific_name: "Aralia cordata",
@@ -9962,84 +9944,6 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "草本", "山", "小花集合", "光沢"],
-    flower_colors: ["白"],
-    similar_plant_ids: [],
-  },
-  {
-    id: 256,
-    japanese_name: "ギンリョウソウ",
-    scientific_name: "Monotropastrum humile",
-    family_id: 44,
-    genus: "ギンリョウソウ属",
-    description: [
-      "山地の湿った林床に生える腐生植物。葉緑素を持たず、菌類を介して有機物を得る。",
-      "全体が白く半透明で、銀竜草の名の通り銀白色のユニークな姿。",
-      "初夏に白い花を1輪下向きに咲かせ、果実は白い液果になる。",
-    ],
-    identification: [
-      "全体が白〜半透明で葉緑素を持たない（腐生植物）",
-      "葉は白い鱗片状に退化している",
-      "花は1輪が茎の先端に下向きに咲く",
-      "ユリオプシスに似た白い植物体が林床に直立する",
-    ],
-    distribution: "北海道〜九州の山地の湿った林床",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower).JPG",
-    local_image_url: "/images/plants/256-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_(flower).JPG",
-
-        local_url: "/images/plants/256-1.webp",
-        caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Monotropastrum_humile_01.jpg",
-
-        local_url: "/images/plants/256-2.webp",
-        caption: "全体",
-      },
-    ],
-    tags: ["夏開花", "草本", "山"],
-    flower_colors: ["白"],
-    similar_plant_ids: [],
-  },
-  {
-    id: 257,
-    japanese_name: "ゴゼンタチバナ",
-    scientific_name: "Cornus canadensis",
-    family_id: 24,
-    genus: "ゴゼンタチバナ属",
-    description: [
-      "亜高山帯〜高山帯の林床に生える常緑の矮小低木。4枚の白い総苞片が花弁のように見える。",
-      "名前は白山の主峰・御前峰（ゴゼンガタケ）に多いことに由来。",
-      "秋に赤く熟す実が6個まとまってつき、食べられる。",
-    ],
-    identification: [
-      "4枚の大きな白い総苞片が花弁状に広がる",
-      "葉は6枚が輪生状につく（実際は対生＋苞葉）",
-      "秋に鮮やかな赤い実が6個まとまってつく",
-      "亜高山帯の林床を群生して覆う",
-    ],
-    distribution: "北海道〜中部・東北地方の亜高山帯・高山帯",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(1).jpg",
-    local_image_url: "/images/plants/257-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(1).jpg",
-
-        local_url: "/images/plants/257-1.webp",
-        caption: "花と葉",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Bunchberry_(Cornus_canadensis)_-_Flickr_-_wackybadger_(2).jpg",
-
-        local_url: "/images/plants/257-2.webp",
-        caption: "全体",
-      },
-    ],
-    tags: ["夏開花", "低木", "山", "常緑"],
     flower_colors: ["白"],
     similar_plant_ids: [],
   },
@@ -10338,45 +10242,6 @@ export const plants: Plant[] = [
     similar_plant_ids: [],
   },
   {
-    id: 266,
-    japanese_name: "ナナカマド",
-    scientific_name: "Sorbus commixta",
-    family_id: 1,
-    genus: "ナナカマド属",
-    description: [
-      "山地〜亜高山帯に生える落葉高木。初夏に白い小花の散房花序を咲かせ、秋に真っ赤な実と紅葉で山を彩る。",
-      "名前は「七回かまどに入れても燃え残る」ほど木が硬いことに由来する。",
-      "高山帯の紅葉の代表種で、カエデと並ぶ美しい紅葉が楽しめる。",
-    ],
-    identification: [
-      "羽状複葉で小葉は7〜15枚、縁に細かい鋸歯がある",
-      "初夏に白い小花が散房花序に密集して咲く",
-      "秋に鮮やかな赤い実が房状につく",
-      "秋に美しく紅葉する",
-    ],
-    distribution: "北海道〜九州の山地・亜高山帯",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamadoflower.JPG",
-    local_image_url: "/images/plants/266-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamadoflower.JPG",
-
-        local_url: "/images/plants/266-1.webp",
-        caption: "花",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Nanakamado_rowanberry.jpg",
-
-        local_url: "/images/plants/266-2.webp",
-        caption: "実",
-      },
-    ],
-    tags: ["夏開花", "高木", "山", "落葉", "小花集合"],
-    flower_colors: ["白"],
-    similar_plant_ids: [],
-  },
-  {
     id: 267,
     japanese_name: "タカネヤハズハハコ",
     scientific_name: "Anaphalis margaritacea",
@@ -10413,45 +10278,6 @@ export const plants: Plant[] = [
     ],
     tags: ["夏開花", "秋開花", "草本", "山", "小花集合"],
     flower_colors: ["白"],
-    similar_plant_ids: [],
-  },
-  {
-    id: 268,
-    japanese_name: "ショウジョウバカマ",
-    scientific_name: "Heloniopsis orientalis",
-    family_id: 26,
-    genus: "ショウジョウバカマ属",
-    description: [
-      "山地〜高山帯の湿地や林床に生える常緑の多年草。早春に淡紅色〜紫色の花を咲かせる。",
-      "「猩々袴」の名は、赤い花（猩々＝赤い顔の伝説の霊獣）と下部の葉（袴のイメージ）に由来。",
-      "ロゼット状の根生葉は冬も緑を保ち、葉先に珠芽（むかご）をつけて増える。",
-    ],
-    identification: [
-      "早春（残雪期）に淡紅色〜紫色の花を穂状につける",
-      "根生葉はロゼット状で常緑、倒披針形〜へら形",
-      "葉先に珠芽（むかご）をつけて栄養繁殖する",
-      "湿地・渓流沿い・高山の雪解け後の草地に生える",
-    ],
-    distribution: "北海道〜九州の山地〜高山帯の湿地・林床",
-    image_url:
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_01.jpg",
-    local_image_url: "/images/plants/268-1.webp",
-    images: [
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_01.jpg",
-
-        local_url: "/images/plants/268-1.webp",
-        caption: "全体",
-      },
-      {
-        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Heloniopsis_orientalis_(bud).jpg",
-
-        local_url: "/images/plants/268-2.webp",
-        caption: "つぼみ",
-      },
-    ],
-    tags: ["春開花", "草本", "山", "常緑"],
-    flower_colors: ["ピンク", "紫"],
     similar_plant_ids: [],
   },
   {
@@ -10608,7 +10434,7 @@ export const plants: Plant[] = [
     ],
     tags: ["夏開花", "草本", "山", "花弁5枚"],
     flower_colors: ["白"],
-    similar_plant_ids: [251],
+    similar_plant_ids: [135],
   },
   {
     id: 273,
@@ -10650,3 +10476,13 @@ export const plants: Plant[] = [
     similar_plant_ids: [261],
   },
 ]
+
+// 重複していた種の統合先（旧ID → 統合先ID）。旧URLはリダイレクトページとして残す
+export const mergedPlantIds: Record<number, number> = {
+  99: 24,
+  266: 74,
+  257: 100,
+  268: 67,
+  251: 135,
+  256: 141,
+}
