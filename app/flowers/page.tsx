@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import FlowersClient from "./FlowersClient"
+import { Breadcrumbs, PageIntro } from "components/elements/layout"
 
 export const metadata: Metadata = {
   title: "開花カレンダー",
@@ -24,5 +25,18 @@ export const metadata: Metadata = {
 }
 
 export default function FlowersPage() {
-  return <FlowersClient />
+  return (
+    <div>
+      <Breadcrumbs
+        items={[{ href: "/", label: "ホーム" }, { href: "/seasons", label: "季節の植物" }, { label: "開花カレンダー" }]}
+        currentUrl="https://juqa.reload.co.jp/flowers/"
+      />
+      <PageIntro
+        eyebrow="CALENDAR"
+        title="開花カレンダー"
+        lead="季節を切り替えて、その時期に花を咲かせる植物を写真で確認できます。最初は今月の季節を表示します。開花時期のデータは季節単位で、実際の開花は地域や年によって前後します。"
+      />
+      <FlowersClient />
+    </div>
+  )
 }

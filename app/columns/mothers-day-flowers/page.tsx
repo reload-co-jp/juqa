@@ -38,17 +38,17 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
 }
 
 const noteStyle: React.CSSProperties = {
-  background: "#1e3d1f",
-  border: "1px solid #5a9a5c",
+  background: "var(--c-primary-soft)",
+  border: "1px solid var(--c-primary)",
   borderRadius: "8px",
-  color: "#a0d0a2",
+  color: "var(--c-primary-strong)",
   fontSize: "0.82rem",
   lineHeight: 1.75,
   margin: "1rem 0 0",
@@ -75,7 +75,7 @@ export default function Page() {
             key={text}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -108,7 +108,7 @@ export default function Page() {
         </p>
         <p style={body}>
           植物として見ると、カーネーションは
-          <Link href="/columns/petal-counts" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/columns/petal-counts" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             花びらの枚数や形
           </Link>
           が人の手で豊かに変化してきた園芸植物でもあります。野の花をそのまま贈るというより、感謝を飾るために育てられてきた花、という見方もできます。
@@ -133,13 +133,13 @@ export default function Page() {
           {[
             { color: "#7a1f2a", label: "赤", text: "まっすぐな感謝や愛情を伝えやすい定番色。" },
             { color: "#8a3d5c", label: "ピンク", text: "やわらかく、親しみやすい印象で贈りやすい色。" },
-            { color: "#d8d8c8", label: "白", text: "母の日の由来に近い色。追悼の意味も意識されます。" },
+            { color: "var(--c-ink-soft)", label: "白", text: "母の日の由来に近い色。追悼の意味も意識されます。" },
           ].map((item) => (
             <div
               key={item.label}
               style={{
-                background: "#242424",
-                border: "1px solid #444",
+                background: "var(--c-surface-alt)",
+                border: "1px solid var(--c-border-strong)",
                 borderRadius: "8px",
                 padding: "0.85rem",
               }}
@@ -147,7 +147,7 @@ export default function Page() {
               <div
                 style={{
                   alignItems: "center",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   display: "flex",
                   fontSize: "0.9rem",
                   fontWeight: "bold",
@@ -158,7 +158,7 @@ export default function Page() {
                 <span
                   style={{
                     background: item.color,
-                    border: "1px solid rgba(255,255,255,0.25)",
+                    border: "1px solid rgba(0,0,0,0.25)",
                     borderRadius: "999px",
                     display: "inline-block",
                     height: "0.9rem",
@@ -167,7 +167,7 @@ export default function Page() {
                 />
                 {item.label}
               </div>
-              <div style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7 }}>
+              <div style={{ color: "var(--c-muted)", fontSize: "0.8rem", lineHeight: 1.7 }}>
                 {item.text}
               </div>
             </div>
@@ -181,11 +181,11 @@ export default function Page() {
         </p>
         <p style={body}>
           カーネーションだけでなく、
-          <Link href="/plants/196" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/196" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             バラ
           </Link>
           や
-          <Link href="/plants/31" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/31" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アジサイ
           </Link>
           、鉢植えの花を選ぶ人も増えています。とくにアジサイは、初夏に向かう季節感があり、長く楽しめる贈り物として人気があります。
@@ -217,10 +217,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/petal-counts" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/petal-counts" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：花びらの枚数で見る植物の分類 →
         </Link>
       </div>

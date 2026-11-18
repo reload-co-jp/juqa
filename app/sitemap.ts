@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next"
 import { plants, families } from "lib/data"
 import { columns } from "lib/columns"
+import { activeFeatureCollections, comparisons } from "lib/collections"
+import { SEASONS } from "lib/plants"
 
 export const dynamic = "force-static"
 
@@ -17,6 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/quiz/photo/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/guide/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
     { url: `${siteUrl}/columns/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/explore/`, priority: 0.7, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/seasons/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/features/`, priority: 0.8, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/compare/`, priority: 0.7, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/gallery/`, priority: 0.6, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/quiz/`, priority: 0.6, lastModified, changeFrequency: "monthly" },
+    { url: `${siteUrl}/privacy/`, priority: 0.2, lastModified, changeFrequency: "yearly" },
+    { url: `${siteUrl}/credits/`, priority: 0.3, lastModified, changeFrequency: "yearly" },
     { url: `${siteUrl}/about/`, priority: 0.5, lastModified, changeFrequency: "yearly" },
     { url: `${siteUrl}/contact/`, priority: 0.3, lastModified, changeFrequency: "yearly" },
     { url: `${siteUrl}/llms.txt`, priority: 0.4, lastModified, changeFrequency: "weekly" },
@@ -42,5 +52,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
   }))
 
-  return [...staticRoutes, ...columnRoutes, ...plantRoutes, ...familyRoutes]
+  const collectionRoutes: MetadataRoute.Sitemap = [
+    ...SEASONS.map((s) => `${siteUrl}/seasons/${s.key}/`),
+    ...activeFeatureCollections.map((c) => `${siteUrl}/features/${c.slug}/`),
+    ...comparisons.map((c) => `${siteUrl}/compare/${c.slug}/`),
+  ].map((url) => ({ url, priority: 0.7, lastModified, changeFrequency: "monthly" }))
+
+  return [...staticRoutes, ...columnRoutes, ...plantRoutes, ...familyRoutes, ...collectionRoutes]
 }

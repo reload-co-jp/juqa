@@ -31,8 +31,8 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   <Link
     href={href}
     style={{
-      background: "#1e3d1f",
-      color: "#7cbe8c",
+      background: "var(--c-primary-soft)",
+      color: "var(--c-primary)",
       borderRadius: "4px",
       padding: "0.1rem 0.5rem",
       fontSize: "0.75rem",
@@ -56,16 +56,16 @@ const GroupCard = ({
 }) => (
   <div
     style={{
-      background: "#242424",
+      background: "var(--c-surface-alt)",
       borderRadius: "8px",
       padding: "1rem",
       marginBottom: "0.75rem",
     }}
   >
-    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: "0.4rem" }}>
+    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "var(--c-ink)", marginBottom: "0.4rem" }}>
       {cardTitle}
     </div>
-    <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
+    <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
       {feature}
     </p>
     <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
@@ -75,10 +75,10 @@ const GroupCard = ({
     </div>
     <div
       style={{
-        background: "#1e3d1f",
+        background: "var(--c-primary-soft)",
         borderRadius: "6px",
         padding: "0.4rem 0.75rem",
-        color: "#a0d0a2",
+        color: "var(--c-primary-strong)",
         fontSize: "0.78rem",
       }}
     >
@@ -101,27 +101,27 @@ const Page = () => {
           "双子葉類の系統を整理するうえで最も重要な分岐は「花弁が離れているか（離弁花）、くっついているか（合弁花）」だ。この違いは進化の段階を反映していて、合弁花類のほうが比較的新しいグループとされる。さらに、これらの「真正双子葉類」よりも前に分岐した「原始的な双子葉類」も存在する。",
           "このコラムでは、双子葉類の中の主要な系統分岐を、原始的グループ→離弁花類→合弁花類という流れで辿る。",
         ].map((text, i) => (
-          <p key={i} style={{ margin: 0, color: "#bbb", fontSize: "0.9rem", lineHeight: 1.9 }}>
+          <p key={i} style={{ margin: 0, color: "var(--c-ink-soft)", fontSize: "0.9rem", lineHeight: 1.9 }}>
             {text}
           </p>
         ))}
       </ColumnIntro>
 
       <Section title="双子葉類の系統——大きな3つの流れ">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           双子葉類の系統樹では、大きく3つのグループへの分岐が重要だ。下の図は簡略化した系統の流れで、上ほど「古くに分岐したグループ」を示す。
         </p>
         <PhylogeneticFlow
           variant="dicot"
           caption="APG分類の正式分類群ではなく、野外観察で使いやすい特徴のまとまりとして簡略化。"
         />
-        <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
+        <p style={{ color: "var(--c-muted)", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ 現代のAPG分類では「離弁花類」「合弁花類」という区分は正式な分類群ではなく、系統の傾向として理解する。実際は複数の目（Order）にまたがる。
         </p>
       </Section>
 
       <Section title="原始的な双子葉類——花びらが「多数・螺旋状」のグループ">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           被子植物の系統樹の根元近くに位置するグループは、花の構造が「整然としていない」特徴を持つ。花弁と萼の区別が曖昧で、花被片が螺旋状に多数並ぶ。これは被子植物が進化した初期の形に近いと考えられている。
         </p>
         <GroupCard
@@ -147,7 +147,7 @@ const Page = () => {
       </Section>
 
       <Section title="離弁花グループ——花弁が1枚ずつ独立">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           花弁が基部まで完全に独立して並ぶグループ。「花びらをつまんで1枚ずつ取れる」かどうかが確認しやすい目安になる。バラ科・マメ科・アブラナ科などが代表的。
         </p>
         <GroupCard
@@ -190,7 +190,7 @@ const Page = () => {
       </Section>
 
       <Section title="合弁花グループ——花弁の基部がくっつく">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           花弁が根もとで合着して筒状・壺状・唇形などの形になるグループ。「花びらが1枚ずつ取れない」のが目安になる。キク科・シソ科・リンドウ科など多くの重要な科が含まれる。
         </p>
         <GroupCard
@@ -258,7 +258,7 @@ const Page = () => {
             <div key={item.step} style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
               <div
                 style={{
-                  background: "#5a9a5c",
+                  background: "var(--c-primary)",
                   color: "#fff",
                   borderRadius: "50%",
                   width: "1.75rem",
@@ -274,10 +274,10 @@ const Page = () => {
                 {item.step}
               </div>
               <div>
-                <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "#e0e0e0", marginBottom: "0.25rem" }}>
+                <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "var(--c-ink)", marginBottom: "0.25rem" }}>
                   {item.title}
                 </div>
-                <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+                <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
                   {item.desc}
                 </div>
               </div>
@@ -296,19 +296,19 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           植物一覧を見る →
         </Link>
-        <Link href="/columns/phylogenetic-tree" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：植物を系統樹で覚えやすく →
         </Link>
-        <Link href="/columns/phylogenetic-tree-monocot" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree-monocot" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：単子葉類の系統を辿る →
         </Link>
-        <Link href="/columns/rosaceae-plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/rosaceae-plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：バラ科の植物たち →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

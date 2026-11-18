@@ -26,10 +26,10 @@ const RandomPlant: FC = () => {
     >
       <div
         style={{
-          background: "#2d2d2d",
+          background: "var(--c-surface)",
           borderRadius: "12px",
           padding: "1.25rem",
-          borderLeft: "4px solid #7cbe8c",
+          borderLeft: "4px solid var(--c-primary)",
           display: "flex",
           gap: "1rem",
           alignItems: "center",
@@ -44,14 +44,14 @@ const RandomPlant: FC = () => {
             objectFit: "cover",
             borderRadius: "8px",
             flexShrink: 0,
-            background: "#1e1e1e",
+            background: "var(--c-bg)",
           }}
         />
         <div style={{ minWidth: 0 }}>
           <div
             style={{
               fontSize: "0.75rem",
-              color: "#7cbe8c",
+              color: "var(--c-primary)",
               marginBottom: "0.25rem",
               letterSpacing: "0.05em",
             }}
@@ -60,7 +60,7 @@ const RandomPlant: FC = () => {
           </div>
           <div
             style={{
-              color: "#fff",
+              color: "var(--c-ink)",
               fontWeight: "bold",
               fontSize: "1.1rem",
               marginBottom: "0.25rem",
@@ -70,7 +70,7 @@ const RandomPlant: FC = () => {
           </div>
           <div
             style={{
-              color: "#888",
+              color: "var(--c-subtle)",
               fontSize: "0.8rem",
               fontStyle: "italic",
               marginBottom: "0.5rem",
@@ -80,7 +80,7 @@ const RandomPlant: FC = () => {
           </div>
           <div
             style={{
-              color: "#aaa",
+              color: "var(--c-muted)",
               fontSize: "0.85rem",
               overflow: "hidden",
               textOverflow: "ellipsis",

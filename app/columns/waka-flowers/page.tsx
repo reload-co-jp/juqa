@@ -31,7 +31,7 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -95,7 +95,7 @@ export default function Page() {
             key={text}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -123,8 +123,8 @@ export default function Page() {
             <div
               key={flower.name}
               style={{
-                background: "#242424",
-                border: "1px solid #3a3a3a",
+                background: "var(--c-surface-alt)",
+                border: "1px solid var(--c-border)",
                 borderRadius: "8px",
                 padding: "0.9rem",
               }}
@@ -141,7 +141,7 @@ export default function Page() {
                 <Link
                   href={flower.href}
                   style={{
-                    color: "#7cbe8c",
+                    color: "var(--c-primary)",
                     fontSize: "0.95rem",
                     fontWeight: "bold",
                     textDecoration: "none",
@@ -149,11 +149,11 @@ export default function Page() {
                 >
                   {flower.name} →
                 </Link>
-                <span style={{ color: "#e0e0e0", fontSize: "0.8rem" }}>
+                <span style={{ color: "var(--c-ink)", fontSize: "0.8rem" }}>
                   {flower.season} / {flower.key}
                 </span>
               </div>
-              <div style={{ color: "#aaa", fontSize: "0.82rem", lineHeight: 1.7 }}>
+              <div style={{ color: "var(--c-muted)", fontSize: "0.82rem", lineHeight: 1.7 }}>
                 {flower.note}
               </div>
             </div>
@@ -163,7 +163,7 @@ export default function Page() {
 
       <Section title="梅は、春を待つ心とよく結びつく">
         <p style={body}>
-          <Link href="/plants/16" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/16" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ウメ
           </Link>
           は、まだ寒さが残るうちに咲き、香りが先に春を知らせる花です。そのため和歌では、見た目だけでなく香りや、春を待つ心と一緒に詠まれることが多くなります。
@@ -175,7 +175,7 @@ export default function Page() {
 
       <Section title="桜は、咲くことと散ることの両方が歌になる">
         <p style={body}>
-          <Link href="/plants/1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ソメイヨシノ
           </Link>
           に代表される桜は、和歌では春の中心に置かれる花です。ただし、そこで大切なのは「きれいに咲いている」ことだけではありません。
@@ -187,18 +187,18 @@ export default function Page() {
 
       <Section title="藤や菖蒲は、景色の中で映える花">
         <p style={body}>
-          <Link href="/plants/25" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/25" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             フジ
           </Link>
           は、房のように垂れる姿が大きな特徴です。風に揺れる様子や、長く下がる形が、衣や髪、たおやかな動きと重ねられやすく、晩春のやさしい景色をつくります。
         </p>
         <p style={body}>
           一方、
-          <Link href="/plants/95" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/95" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アヤメ
           </Link>
           や
-          <Link href="/plants/94" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/94" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             カキツバタ
           </Link>
           のような菖蒲の仲間は、水辺や湿地と結びついた景色の中で印象づけられます。和歌では花だけを切り出すより、橋や水面、初夏の空気と一緒に読まれることが多い植物です。
@@ -208,7 +208,7 @@ export default function Page() {
       <Section title="秋の歌では、芒（すすき）や萩が風や月を呼び込む">
         <p style={body}>
           秋の和歌では、花そのものの色よりも、風に揺れる姿や月との取り合わせが大切になります。
-          <Link href="/plants/41" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/41" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ススキ
           </Link>
           はその代表で、穂が風を受けてなびくことで、目に見えない秋の気配を見せてくれます。
@@ -227,10 +227,10 @@ export default function Page() {
         </p>
         <div
           style={{
-            background: "#1e3d1f",
-            border: "1px solid #5a9a5c",
+            background: "var(--c-primary-soft)",
+            border: "1px solid var(--c-primary)",
             borderRadius: "8px",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.82rem",
             lineHeight: 1.75,
             marginTop: "1rem",
@@ -251,10 +251,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/hanafuda-plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/hanafuda-plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：花札に描かれている植物 →
         </Link>
       </div>

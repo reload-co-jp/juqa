@@ -51,13 +51,27 @@ Next.js App Router の静的エクスポート（`output: "export"`）。外部 
 | `/families/[id]` | 科詳細 |
 | `/quiz` | クイズ（`"use client"`） |
 | `/guide` | 見分け方ガイド（`"use client"`） |
+| `/explore` | 植物を探す（入口一覧） |
+| `/seasons`, `/seasons/[season]` | 季節別一覧（spring/summer/autumn/winter） |
+| `/features`, `/features/[slug]` | 特徴別一覧（定義は `lib/collections.ts`） |
+| `/compare`, `/compare/[slug]` | 植物比較（定義は `lib/collections.ts`） |
+| `/gallery` | フォトギャラリー |
+| `/flowers` | 開花カレンダー |
+| `/privacy`, `/credits` | プライバシーポリシー、写真の出典 |
 
 `/plants` のフィルタ状態（検索ワード・科・タグ）は URL の `q` / `family` / `tags` クエリパラメータで管理する。
 
 ### スタイリング
 
-CSS フレームワークなし。すべてインライン `style` で記述。ダークテーマ（背景 `#1e1e1e`）、緑系アクセント（`#7cbe8c`）。
+CSS フレームワークなし（Tailwind 不使用）。インライン `style` が基本。
+
+- デザイントークン（色・余白・角丸）は `lib/theme.ts` に CSS カスタムプロパティとして定義し、`color.primary` のように参照する
+- レスポンシブ・hover・focus など インライン `style` で書けないものは `lib/theme.ts` の `globalCss` 内のクラス（`.grid-cards` `.card-link` `.chip` `.btn` など）で定義し、`app/layout.tsx` で注入
+- ライトテーマ（背景アイボリー `#f7f5ee`）、メインカラーはフォレストグリーン（`#2f5d3a`）。見出しは `className="serif"`（Noto Serif JP）
+- 一覧用サムネイルは `pnpm build` / `pnpm dev` 時に `scripts/generate-thumbnails.mjs` が `public/images/plants/thumbs/` に生成する（git 管理外）
 
 ### コンポーネント
 
-`components/elements/layout.tsx` に `Title`・`PageHeader`・`Tag` などの共通 UI 部品を定義。
+`components/elements/layout.tsx` に `Breadcrumbs`（BreadcrumbList 構造化データも出力）・`PageIntro`・`SectionHeading`・`LinkCard`・`Tag` などの共通 UI 部品を定義。植物カードは `components/elements/PlantCard.tsx`。
+
+植物データの補助関数（画像パス・開花季節・関連植物など）は `lib/plants.ts`。GA4 イベントは `lib/analytics.ts` の `trackEvent`、またはリンクに `data-track` 属性を付ける（`components/Analytics.tsx`）。

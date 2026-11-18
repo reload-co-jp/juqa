@@ -38,7 +38,7 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -64,7 +64,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -77,7 +77,7 @@ const Page = () => {
       {/* 一番の違い */}
       <Section title="いちばんの違いは「茎が残るか」">
         <p style={body}>
-          木と草の根本的なちがいは、<strong style={{ color: "#e0e0e0" }}>茎が木質化（もくしつか）するかどうか</strong>です。
+          木と草の根本的なちがいは、<strong style={{ color: "var(--c-ink)" }}>茎が木質化（もくしつか）するかどうか</strong>です。
         </p>
         <p style={body}>
           木質化とは、茎の細胞壁にリグニンという物質が蓄積されて硬くなること。
@@ -96,15 +96,15 @@ const Page = () => {
             {
               label: "木（木本植物）",
               points: ["茎が木質化して硬くなる", "幹・枝が冬を越す", "年輪が形成される", "高木・低木・つる木"],
-              color: "#1e2d1e",
-              border: "#5a9a5c",
+              color: "#e9f2e9",
+              border: "var(--c-primary)",
               example: { name: "ソメイヨシノ", href: "/plants/1" },
             },
             {
               label: "草（草本植物）",
               points: ["茎は柔らかいまま", "多くは地上部が枯れて冬越し", "年輪はできない", "一年草・二年草・多年草"],
-              color: "#2a1e1e",
-              border: "#9a5c5c",
+              color: "#f2e9e9",
+              border: "var(--c-error)",
               example: { name: "タンポポ", href: "/plants/11" },
             },
           ].map((g) => (
@@ -121,7 +121,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.5rem",
                 }}
               >
@@ -131,18 +131,18 @@ const Page = () => {
                 style={{
                   margin: "0 0 0.75rem",
                   paddingLeft: "1.1rem",
-                  color: "#aaa",
+                  color: "var(--c-muted)",
                   fontSize: "0.8rem",
                   lineHeight: 1.8,
                 }}
               >
                 {g.points.map((p) => <li key={p}>{p}</li>)}
               </ul>
-              <div style={{ fontSize: "0.75rem", color: "#777" }}>
+              <div style={{ fontSize: "0.75rem", color: "var(--c-subtle)" }}>
                 例：
                 <Link
                   href={g.example.href}
-                  style={{ color: "#7cbe8c", textDecoration: "none", marginLeft: "0.3rem" }}
+                  style={{ color: "var(--c-primary)", textDecoration: "none", marginLeft: "0.3rem" }}
                 >
                   {g.example.name} →
                 </Link>
@@ -189,7 +189,7 @@ const Page = () => {
                 flexShrink: 0,
                 width: "1.75rem",
                 height: "1.75rem",
-                background: "#5a9a5c",
+                background: "var(--c-primary)",
                 borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
@@ -206,7 +206,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.25rem",
                 }}
               >
@@ -224,7 +224,7 @@ const Page = () => {
           日常の感覚と植物学上の分類がずれることがあります。思わず「へえ」となる例をいくつか紹介します。
         </p>
 
-        <h3 style={{ fontSize: "0.9rem", color: "#e0e0e0", margin: "0 0 0.75rem" }}>
+        <h3 style={{ fontSize: "0.9rem", color: "var(--c-ink)", margin: "0 0 0.75rem" }}>
           🌿 実は「草」なもの
         </h3>
         {[
@@ -247,14 +247,14 @@ const Page = () => {
           <div
             key={item.name}
             style={{
-              borderLeft: "3px solid #9a5c5c",
+              borderLeft: "3px solid var(--c-error)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
           >
-            <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "#e0e0e0", marginBottom: "0.25rem" }}>
+            <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "var(--c-ink)", marginBottom: "0.25rem" }}>
               {item.href ? (
-                <Link href={item.href} style={{ color: "#7cbe8c", textDecoration: "none" }}>
+                <Link href={item.href} style={{ color: "var(--c-primary)", textDecoration: "none" }}>
                   {item.name} →
                 </Link>
               ) : item.name}
@@ -263,7 +263,7 @@ const Page = () => {
           </div>
         ))}
 
-        <h3 style={{ fontSize: "0.9rem", color: "#e0e0e0", margin: "1rem 0 0.75rem" }}>
+        <h3 style={{ fontSize: "0.9rem", color: "var(--c-ink)", margin: "1rem 0 0.75rem" }}>
           🌳 実は「木」なもの
         </h3>
         {[
@@ -286,14 +286,14 @@ const Page = () => {
           <div
             key={item.name}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
           >
-            <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "#e0e0e0", marginBottom: "0.25rem" }}>
+            <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "var(--c-ink)", marginBottom: "0.25rem" }}>
               {item.href ? (
-                <Link href={item.href} style={{ color: "#7cbe8c", textDecoration: "none" }}>
+                <Link href={item.href} style={{ color: "var(--c-primary)", textDecoration: "none" }}>
                   {item.name} →
                 </Link>
               ) : item.name}
@@ -332,7 +332,7 @@ const Page = () => {
             <div
               key={t.label}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "0.875rem",
                 display: "flex",
@@ -343,12 +343,12 @@ const Page = () => {
               <div style={{ flexShrink: 0 }}>
                 <div
                   style={{
-                    background: "#1e3d1f",
+                    background: "var(--c-primary-soft)",
                     borderRadius: "6px",
                     padding: "0.25rem 0.6rem",
                     fontSize: "0.8rem",
                     fontWeight: "bold",
-                    color: "#7cbe8c",
+                    color: "var(--c-primary)",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -356,15 +356,15 @@ const Page = () => {
                 </div>
               </div>
               <div>
-                <div style={{ fontSize: "0.75rem", color: "#777", marginBottom: "0.2rem" }}>
+                <div style={{ fontSize: "0.75rem", color: "var(--c-subtle)", marginBottom: "0.2rem" }}>
                   {t.height}
                 </div>
-                <div style={{ fontSize: "0.8rem", color: "#ccc", lineHeight: 1.7, marginBottom: "0.3rem" }}>
+                <div style={{ fontSize: "0.8rem", color: "var(--c-ink-soft)", lineHeight: 1.7, marginBottom: "0.3rem" }}>
                   {t.desc}
                 </div>
                 <Link
                   href={t.example.href}
-                  style={{ fontSize: "0.75rem", color: "#7cbe8c", textDecoration: "none" }}
+                  style={{ fontSize: "0.75rem", color: "var(--c-primary)", textDecoration: "none" }}
                 >
                   例：{t.example.name} →
                 </Link>
@@ -385,7 +385,7 @@ const Page = () => {
               width: "100%",
               borderCollapse: "collapse",
               fontSize: "0.8rem",
-              color: "#ccc",
+              color: "var(--c-ink-soft)",
             }}
           >
             <thead>
@@ -396,8 +396,8 @@ const Page = () => {
                     style={{
                       padding: "0.5rem 0.75rem",
                       textAlign: "left",
-                      borderBottom: "1px solid #444",
-                      color: "#7cbe8c",
+                      borderBottom: "1px solid var(--c-border-strong)",
+                      color: "var(--c-primary)",
                       fontWeight: "bold",
                       whiteSpace: "nowrap",
                     }}
@@ -431,19 +431,19 @@ const Page = () => {
                   href: "/plants/11",
                 },
               ].map((row, i) => (
-                <tr key={row.type} style={{ background: i % 2 === 0 ? "#262626" : "#222" }}>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333", fontWeight: "bold", color: "#e0e0e0" }}>
+                <tr key={row.type} style={{ background: i % 2 === 0 ? "var(--c-surface-alt)" : "var(--c-surface-alt)" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)", fontWeight: "bold", color: "var(--c-ink)" }}>
                     {row.type}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333", whiteSpace: "nowrap" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)", whiteSpace: "nowrap" }}>
                     {row.cycle}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.desc}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.href ? (
-                      <Link href={row.href} style={{ color: "#7cbe8c", textDecoration: "none" }}>
+                      <Link href={row.href} style={{ color: "var(--c-primary)", textDecoration: "none" }}>
                         {row.ex} →
                       </Link>
                     ) : row.ex}
@@ -458,26 +458,26 @@ const Page = () => {
       {/* まとめ */}
       <div
         style={{
-          background: "#1e3d1f",
-          border: "1px solid #5a9a5c",
+          background: "var(--c-primary-soft)",
+          border: "1px solid var(--c-primary)",
           borderRadius: "12px",
           padding: "1.5rem",
           marginBottom: "1.5rem",
         }}
       >
-        <h2 style={{ fontSize: "1rem", fontWeight: "bold", color: "#7cbe8c", margin: "0 0 0.75rem" }}>
+        <h2 style={{ fontSize: "1rem", fontWeight: "bold", color: "var(--c-primary)", margin: "0 0 0.75rem" }}>
           まとめ
         </h2>
         <ul
           style={{
             margin: 0,
             paddingLeft: "1.2rem",
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 2,
           }}
         >
-          <li>木と草のちがいは<strong style={{ color: "#e0e0e0" }}>茎が木質化するかどうか</strong></li>
+          <li>木と草のちがいは<strong style={{ color: "var(--c-ink)" }}>茎が木質化するかどうか</strong></li>
           <li>木は冬でも幹・枝が残り、草の地上部は多くが枯れる</li>
           <li>タケ・バナナは「草」、アジサイ・フジは「木」</li>
           <li>木は高木・低木・つる性木本の3種、草は寿命で一年草・二年草・多年草に分かれる</li>
@@ -487,7 +487,7 @@ const Page = () => {
       <div style={{ textAlign: "center", padding: "1rem 0 1.5rem", fontSize: "0.8rem" }}>
         <Link
           href="/columns/conifer"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：針葉樹林の簡単な見分け方 →
         </Link>

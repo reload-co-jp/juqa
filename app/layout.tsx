@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next"
-import { Title } from "components/elements/layout"
 import { HeaderSearch } from "components/elements/HeaderSearch"
+import { SiteNav } from "components/elements/SiteNav"
+import { ClickTracker } from "components/Analytics"
 import Link from "next/link"
 import { Suspense } from "react"
-import { columns } from "lib/columns"
 import { families, plants } from "lib/data"
 import { publisher, siteDescription, siteName, siteUrl } from "lib/seo"
+import { globalCss } from "lib/theme"
 import "./reset.css"
 import "@xyflow/react/dist/style.css"
 
 const basePath = ""
 
 export const viewport: Viewport = {
-  themeColor: "#7cbe8c",
+  themeColor: "#2f5d3a",
 }
 
 export const metadata: Metadata = {
@@ -86,6 +87,38 @@ const websiteJsonLd = {
   ],
 }
 
+const footerLinks: { title: string; links: { href: string; label: string }[] }[] = [
+  {
+    title: "植物図鑑",
+    links: [
+      { href: "/plants", label: "植物一覧" },
+      { href: "/families", label: "科から探す" },
+      { href: "/seasons", label: "季節の植物" },
+      { href: "/features", label: "特徴から探す" },
+      { href: "/compare", label: "植物を比較する" },
+      { href: "/gallery", label: "フォトギャラリー" },
+    ],
+  },
+  {
+    title: "学ぶ",
+    links: [
+      { href: "/columns", label: "植物コラム" },
+      { href: "/guide", label: "見分け方ガイド" },
+      { href: "/quiz/photo", label: "写真クイズ" },
+      { href: "/flowers", label: "開花カレンダー" },
+    ],
+  },
+  {
+    title: "このサイトについて",
+    links: [
+      { href: "/about", label: "サイト概要" },
+      { href: "/contact", label: "お問い合わせ" },
+      { href: "/privacy", label: "プライバシーポリシー" },
+      { href: "/credits", label: "著作権・写真の出典について" },
+    ],
+  },
+]
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
@@ -94,6 +127,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <style dangerouslySetInnerHTML={{ __html: globalCss }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -101,7 +135,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"
           rel="stylesheet"
         />
         {process.env.NODE_ENV === "production" && (
@@ -135,119 +169,90 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body>
-        <header
-          style={{
-            backgroundColor: "#7cbe8c",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            padding: ".5rem 1rem",
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <Title style={{ whiteSpace: "nowrap" }}>ジュカ！ (JuQa)</Title>
-          </Link>
-          <Suspense fallback={null}>
-            <HeaderSearch />
-          </Suspense>
-        </header>
-        <div style={{ backgroundColor: "#1e1e1e" }}>
-          <main
-            style={{
-              padding: "1rem",
-              maxWidth: "72rem",
-              margin: "0 auto",
-              width: "100%",
-            }}
-          >
-            {children}
-          </main>
-        </div>
-        <footer
-          style={{
-            backgroundColor: "#333",
-            boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
-            fontSize: ".75rem",
-            padding: "1.25rem 1rem",
-          }}
-        >
-          <div
-            style={{
-              maxWidth: "72rem",
-              margin: "0 auto",
-              width: "100%",
-              display: "grid",
-              gridTemplateColumns: "minmax(0, 1.2fr) minmax(0, 2fr)",
-              gap: "1.5rem",
-            }}
-          >
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              <p style={{ margin: 0 }}>
-                <a href="//reload.co.jp" target="_blank" rel="noreferrer">
-                  &copy; Reload, Inc.
-                </a>
-              </p>
-              <div style={{ display: "flex", gap: "1rem", alignItems: "center", flexWrap: "wrap" }}>
-                <Link
-                  href="/about"
-                  style={{ color: "#aaa", textDecoration: "none" }}
+        <a href="#main" className="skip-link">
+          本文へ移動
+        </a>
+        <header className="site-header">
+          <div className="container site-header__inner">
+            <div className="site-header__bar">
+              <Link href="/" className="site-header__logo" aria-label="ジュカ！ (JuQa) ホーム">
+                <span
+                  className="serif"
+                  style={{ fontSize: "1.35rem", fontWeight: 700, letterSpacing: "0.02em" }}
                 >
-                  このサイトについて
-                </Link>
-                <Link
-                  href="/contact"
-                  style={{ color: "#aaa", textDecoration: "none" }}
-                >
-                  お問い合わせ
-                </Link>
-                <a
-                  href="https://github.com/reload-co-jp/juqa"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#aaa", textDecoration: "none" }}
-                >
-                  GitHub
-                </a>
+                  JuQa!
+                </span>
+                <small style={{ fontSize: "0.72rem", color: "#5c655d" }}>
+                  ジュカ！植物図鑑
+                </small>
+              </Link>
+              <div className="site-header__search">
+                <Suspense fallback={null}>
+                  <HeaderSearch />
+                </Suspense>
               </div>
             </div>
-
-            <div>
-              <div
-                style={{
-                  color: "#d0d0d0",
-                  fontWeight: "bold",
-                  marginBottom: "0.6rem",
-                  fontSize: "0.8rem",
-                }}
-              >
-                すべてのコラム
+            <SiteNav />
+          </div>
+        </header>
+        <main id="main" className="container" style={{ minHeight: "60vh" }}>
+          {children}
+        </main>
+        <footer className="site-footer">
+          <div className="container">
+            <div className="footer-grid">
+              <div>
+                <p className="serif" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", margin: 0 }}>
+                  JuQa!
+                </p>
+                <p style={{ fontSize: "0.85rem", lineHeight: 1.9, margin: "0.5rem 0 0", color: "#c5d1c2" }}>
+                  植物を知る、散歩が変わる。
+                  <br />
+                  街路樹や公園、山で出会う植物を探して、見分けて、学ぶ植物図鑑。
+                  {plants.length}種・{families.length}科を収録。
+                </p>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "0.5rem 0.75rem",
-                }}
-              >
-                {columns.map((column) => (
-                  <Link
-                    key={column.href}
-                    href={column.href}
-                    style={{
-                      color: "#aaa",
-                      textDecoration: "none",
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    {column.emoji} {column.title}
-                  </Link>
-                ))}
-              </div>
+              {footerLinks.map((group) => (
+                <nav key={group.title} aria-label={group.title}>
+                  <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#fff", margin: "0 0 0.6rem", letterSpacing: "0.08em" }}>
+                    {group.title}
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.35rem", fontSize: "0.85rem" }}>
+                    {group.links.map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href}>{link.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              ))}
+            </div>
+            <div
+              style={{
+                borderTop: "1px solid rgba(255,255,255,0.15)",
+                padding: "1.25rem 0 2rem",
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "0.5rem 1.5rem",
+                fontSize: "0.78rem",
+                color: "#b5c2b2",
+              }}
+            >
+              <span>
+                運営:{" "}
+                <a href="https://reload.co.jp" target="_blank" rel="noreferrer">
+                  Reload, Inc.
+                </a>
+              </span>
+              <span>植物写真: Wikimedia Commons（各写真の出典は詳細ページに記載）</span>
+              <a href="https://github.com/reload-co-jp/juqa" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+              <span style={{ marginLeft: "auto" }}>&copy; Reload, Inc.</span>
             </div>
           </div>
         </footer>
+        <ClickTracker />
       </body>
     </html>
   )

@@ -34,7 +34,7 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -93,7 +93,7 @@ export default function Page() {
             key={text}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -124,8 +124,8 @@ export default function Page() {
               <div
                 key={item.month}
                 style={{
-                  background: "#242424",
-                  border: "1px solid #3a3a3a",
+                  background: "var(--c-surface-alt)",
+                  border: "1px solid var(--c-border)",
                   borderRadius: "8px",
                   overflow: "hidden",
                 }}
@@ -145,15 +145,15 @@ export default function Page() {
                   </Link>
                 ) : null}
                 <div style={{ padding: "0.85rem" }}>
-                  <div style={{ color: "#7cbe8c", fontSize: "0.78rem", marginBottom: "0.25rem" }}>
+                  <div style={{ color: "var(--c-primary)", fontSize: "0.78rem", marginBottom: "0.25rem" }}>
                     {item.month}
                   </div>
-                  <div style={{ color: "#e0e0e0", fontSize: "0.95rem", fontWeight: "bold" }}>
-                    <Link href={item.href} style={{ color: "#e0e0e0", textDecoration: "none" }}>
+                  <div style={{ color: "var(--c-ink)", fontSize: "0.95rem", fontWeight: "bold" }}>
+                    <Link href={item.href} style={{ color: "var(--c-ink)", textDecoration: "none" }}>
                       {item.plant} →
                     </Link>
                   </div>
-                  <div style={{ color: "#999", fontSize: "0.78rem", lineHeight: 1.6 }}>
+                  <div style={{ color: "var(--c-muted)", fontSize: "0.78rem", lineHeight: 1.6 }}>
                     {item.motif}
                   </div>
                 </div>
@@ -167,26 +167,26 @@ export default function Page() {
         <p style={body}>
           1月の松は、冬でも青々とした葉を保つ常緑樹です。花札では鶴と組み合わされ、新年のめでたさや長寿のイメージを担っています。
           松としては
-          <Link href="/plants/22" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/22" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アカマツ
           </Link>
           や
-          <Link href="/plants/10" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/10" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             クロマツ
           </Link>
           のような針葉樹を思い浮かべるとわかりやすいです。
         </p>
         <p style={body}>
           2月は
-          <Link href="/plants/16" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/16" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ウメ
           </Link>
           、3月は
-          <Link href="/plants/1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             サクラ
           </Link>
           、4月は
-          <Link href="/plants/25" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/25" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             フジ
           </Link>
           です。まだ寒い時期に咲く梅、春本番の桜、初夏に向かって垂れ下がる藤の花房へと、季節がなめらかに進んでいきます。
@@ -196,30 +196,30 @@ export default function Page() {
       <Section title="初夏から秋は、水辺と草原の植物が目立つ">
         <p style={body}>
           5月の菖蒲は、端午の節句とも結びつく植物です。札では「菖蒲に八橋」として描かれますが、植物としては
-          <Link href="/plants/95" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/95" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アヤメ
           </Link>
           や
-          <Link href="/plants/94" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/94" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             カキツバタ
           </Link>
           の仲間を見分ける入口にもなります。
         </p>
         <p style={body}>
           6月は
-          <Link href="/plants/245" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/245" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ボタン
           </Link>
           、7月は
-          <Link href="/plants/238" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/238" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ヤマハギ
           </Link>
           、8月は
-          <Link href="/plants/41" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/41" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ススキ
           </Link>
           、9月は
-          <Link href="/plants/244" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/244" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             キク
           </Link>
           です。花札の月名は現在の花の見頃と少しずれることもありますが、旧暦の季節感や和歌・絵画の題材としての印象を重ねて見ると理解しやすくなります。
@@ -232,21 +232,21 @@ export default function Page() {
       <Section title="秋の終わりには、紅葉・柳・桐が並ぶ">
         <p style={body}>
           10月は紅葉です。花札では鹿と一緒に描かれ、秋の山を象徴する組み合わせになっています。身近な紅葉としては
-          <Link href="/plants/2" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/2" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             イロハモミジ
           </Link>
           が代表的です。
         </p>
         <p style={body}>
           11月は柳で、小野道風と蛙の絵柄がよく知られています。柳は水辺の木としての印象が強く、
-          <Link href="/plants/75" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/75" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             シダレヤナギ
           </Link>
           の枝が垂れる姿を思い浮かべると、札の雰囲気がつかみやすくなります。
         </p>
         <p style={body}>
           12月は
-          <Link href="/plants/242" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/242" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             キリ
           </Link>
           です。桐に鳳凰という絵柄は、年の終わりを華やかに締めくくる特別な札として扱われます。桐は植物としてだけでなく、家紋や意匠にもよく使われるため、花札の中でも装飾的な意味が強い植物です。
@@ -262,10 +262,10 @@ export default function Page() {
         </p>
         <div
           style={{
-            background: "#1e3d1f",
-            border: "1px solid #5a9a5c",
+            background: "var(--c-primary-soft)",
+            border: "1px solid var(--c-primary)",
             borderRadius: "8px",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.82rem",
             lineHeight: 1.75,
             marginTop: "1rem",
@@ -282,14 +282,14 @@ export default function Page() {
             <div
               key={group.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "0.9rem",
               }}
             >
               <div
                 style={{
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   fontSize: "0.9rem",
                   fontWeight: "bold",
                   marginBottom: "0.35rem",
@@ -297,10 +297,10 @@ export default function Page() {
               >
                 {group.title}
               </div>
-              <div style={{ color: "#7cbe8c", fontSize: "0.78rem", marginBottom: "0.35rem" }}>
+              <div style={{ color: "var(--c-primary)", fontSize: "0.78rem", marginBottom: "0.35rem" }}>
                 {group.months.join(" / ")}
               </div>
-              <div style={{ color: "#aaa", fontSize: "0.82rem", lineHeight: 1.7 }}>
+              <div style={{ color: "var(--c-muted)", fontSize: "0.82rem", lineHeight: 1.7 }}>
                 {group.note}
               </div>
             </div>
@@ -318,10 +318,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/plant-trivia-notes" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/plant-trivia-notes" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：植物の特徴と豆知識メモ →
         </Link>
       </div>

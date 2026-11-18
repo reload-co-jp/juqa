@@ -1,200 +1,120 @@
 "use client"
 
-import { FC } from "react"
+import { FC, Suspense, useSyncExternalStore } from "react"
 import Link from "next/link"
 import { useRouter, useSearchParams } from "next/navigation"
-import { Suspense } from "react"
 import { plants } from "lib/data"
-import { wikimediaThumb } from "lib/utils"
-import { PageHeader } from "components/elements/layout"
+import { SEASONS, seasonOfMonth } from "lib/plants"
+import { color, seasonColor } from "lib/theme"
+import { PlantGrid } from "components/elements/PlantCard"
 
-const SEASONS: { tag: PlantTag; label: string; color: string; bg: string }[] = [
-  { tag: "春開花", label: "春", color: "#f4a7b9", bg: "#3d1f2a" },
-  { tag: "夏開花", label: "夏", color: "#7ecdc8", bg: "#1a3535" },
-  { tag: "秋開花", label: "秋", color: "#e8a04a", bg: "#3d2a10" },
-  { tag: "冬開花", label: "冬", color: "#8ab4d8", bg: "#1a2535" },
-]
+const noop = () => () => {}
+const MONTHS = Array.from({ length: 12 }, (_, i) => i + 1)
 
-const getCurrentSeasonTag = (): PlantTag => {
-  const month = new Date().getMonth() + 1
-  if (month >= 3 && month <= 5) return "春開花"
-  if (month >= 6 && month <= 8) return "夏開花"
-  if (month >= 9 && month <= 11) return "秋開花"
-  return "冬開花"
-}
-
-const SeasonGrid: FC<{ plants: Plant[]; color: string }> = ({
-  plants,
-  color,
-}) => (
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-      gap: "0.75rem",
-    }}
-  >
-    {plants.map((plant) => (
-      <Link
-        key={plant.id}
-        href={`/plants/${plant.id}`}
-        style={{ textDecoration: "none" }}
-      >
-        <div
-          style={{
-            background: "#2d2d2d",
-            borderRadius: "6px",
-            overflow: "hidden",
-            borderBottom: `2px solid ${color}`,
-          }}
-        >
-          <div
-            style={{
-              height: "120px",
-              background: "#2a3d2b",
-              overflow: "hidden",
-            }}
-          >
-            {plant.image_url ? (
-              <img
-                src={
-                  plant.local_image_url ?? wikimediaThumb(plant.image_url, 400)
-                }
-                alt={plant.japanese_name}
-                loading="lazy"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            ) : (
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "1.5rem",
-                }}
-              >
-                🌸
-              </div>
-            )}
-          </div>
-          <div style={{ padding: "0.5rem 0.6rem" }}>
-            <div
-              style={{
-                color: "#e0e0e0",
-                fontSize: "0.85rem",
-                fontWeight: "bold",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
-            >
-              {plant.japanese_name}
-            </div>
-          </div>
-        </div>
-      </Link>
-    ))}
-  </div>
-)
-
-const FlowersContent: FC = () => {
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const selectedTag =
-    (searchParams.get("season") as PlantTag) ?? getCurrentSeasonTag()
-  const selected = SEASONS.find((s) => s.tag === selectedTag) ?? null
-
-  const selectSeason = (tag: PlantTag) => {
-    router.replace(`?season=${encodeURIComponent(tag)}`, { scroll: false })
-  }
-
-  const seasonPlants = selected
-    ? plants.filter((p) => p.tags.includes(selected.tag))
-    : []
-
+const CalendarView: FC<{ seasonKey: string; month: number | null; onSelect: (key: string) => void }> = ({
+  seasonKey,
+  month,
+  onSelect,
+}) => {
+  const season = SEASONS.find((s) => s.key === seasonKey) ?? SEASONS[0]
+  const list = plants.filter((p) => p.tags.includes(season.tag))
   return (
     <div>
-      <PageHeader backHref="/" backLabel="トップ" title="開花カレンダー" />
-
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "0.75rem",
-          marginBottom: "1.5rem",
-        }}
+        role="tablist"
+        aria-label="季節を選ぶ"
+        style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: "0.5rem", marginBottom: "0.75rem" }}
       >
-        {SEASONS.map(({ tag, label, color, bg }) => {
-          const active = selectedTag === tag
-          const count = plants.filter((p) => p.tags.includes(tag)).length
+        {SEASONS.map((s) => {
+          const active = s.key === season.key
+          const sc = seasonColor[s.label]
           return (
             <button
-              key={tag}
-              onClick={() => selectSeason(tag)}
+              key={s.key}
+              type="button"
+              role="tab"
+              aria-selected={active}
+              aria-controls="calendar-panel"
+              onClick={() => onSelect(s.key)}
               style={{
-                background: active ? bg : "#2d2d2d",
-                border: `2px solid ${active ? color : "#444"}`,
-                borderRadius: "8px",
-                padding: "0.75rem 0.5rem",
+                padding: "0.8rem 0.25rem",
+                borderRadius: "12px",
+                border: `2px solid ${active ? sc.fg : color.border}`,
+                background: active ? sc.bg : color.surface,
                 cursor: "pointer",
+                font: "inherit",
                 textAlign: "center",
               }}
             >
-              <div
-                style={{
-                  color: active ? color : "#aaa",
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                }}
-              >
-                {label}
-              </div>
-              <div
-                style={{
-                  color: "#777",
-                  fontSize: "0.75rem",
-                  marginTop: "0.2rem",
-                }}
-              >
-                {count}種
-              </div>
+              <span className="serif" style={{ display: "block", fontSize: "1.3rem", fontWeight: 700, color: active ? sc.fg : color.ink }}>
+                {s.label}
+              </span>
+              <span style={{ display: "block", fontSize: "0.72rem", color: color.muted }}>
+                {s.months}・{plants.filter((p) => p.tags.includes(s.tag)).length}種
+              </span>
             </button>
           )
         })}
       </div>
-
-      {selected ? (
-        <SeasonGrid plants={seasonPlants} color={selected.color} />
-      ) : null}
+      <ol
+        aria-label="月と季節の対応"
+        style={{ listStyle: "none", padding: 0, margin: "0 0 1.5rem", display: "grid", gridTemplateColumns: "repeat(12, minmax(0, 1fr))", gap: "2px", fontSize: "0.7rem", textAlign: "center" }}
+      >
+        {MONTHS.map((m) => {
+          const s = seasonOfMonth(m)
+          const sc = seasonColor[s.label]
+          const inSeason = s.key === season.key
+          return (
+            <li
+              key={m}
+              aria-current={m === month ? "date" : undefined}
+              style={{
+                padding: "0.3rem 0",
+                background: inSeason ? sc.bg : color.surfaceAlt,
+                color: inSeason ? sc.fg : color.subtle,
+                fontWeight: m === month ? 700 : 400,
+                outline: m === month ? `2px solid ${sc.fg}` : undefined,
+                outlineOffset: "-2px",
+                borderRadius: "4px",
+              }}
+            >
+              {m}月
+            </li>
+          )
+        })}
+      </ol>
+      <div id="calendar-panel" role="tabpanel">
+        <h2 className="serif" style={{ fontSize: "1.3rem", margin: "0 0 0.25rem" }}>
+          {season.label}（{season.months}）に咲く植物
+        </h2>
+        <p style={{ margin: "0 0 1rem", fontSize: "0.85rem", color: color.muted }}>
+          {list.length}種 ・ <Link href={`/seasons/${season.key}`}>樹木・草花に分けた一覧ページ</Link>
+        </p>
+        <PlantGrid plants={list} listName={`calendar_${season.key}`} small />
+      </div>
     </div>
   )
 }
 
+const FlowersContent: FC = () => {
+  const router = useRouter()
+  const params = useSearchParams()
+  const month = useSyncExternalStore(noop, () => new Date().getMonth() + 1, () => null)
+  const param = params.get("season")
+  // 旧URL（?season=春開花）と新しいキー（?season=spring）の両方に対応
+  const fromParam = SEASONS.find((s) => s.key === param || s.tag === param)
+  const key = fromParam?.key ?? (month ? seasonOfMonth(month).key : SEASONS[0].key)
+  return (
+    <CalendarView
+      seasonKey={key}
+      month={month}
+      onSelect={(k) => router.replace(`?season=${k}`, { scroll: false })}
+    />
+  )
+}
+
 const FlowersClient: FC = () => (
-  <Suspense
-    fallback={
-      <div>
-        <PageHeader backHref="/" backLabel="トップ" title="開花カレンダー" />
-        {SEASONS.map(({ tag, label, color }) => (
-          <section key={tag} style={{ marginBottom: "1.5rem" }}>
-            <h2 style={{ color, fontSize: "1.1rem", margin: "0 0 0.75rem" }}>
-              {label}に咲く植物
-            </h2>
-            <SeasonGrid
-              plants={plants.filter((p) => p.tags.includes(tag))}
-              color={color}
-            />
-          </section>
-        ))}
-      </div>
-    }
-  >
+  <Suspense fallback={<CalendarView seasonKey={SEASONS[0].key} month={null} onSelect={() => {}} />}>
     <FlowersContent />
   </Suspense>
 )

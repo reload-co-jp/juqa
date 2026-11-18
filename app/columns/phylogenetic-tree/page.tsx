@@ -50,7 +50,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -64,7 +64,7 @@ const Page = () => {
       <Section title="系統樹とは——植物の「家系図」">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -74,16 +74,16 @@ const Page = () => {
         </p>
         <div
           style={{
-            background: "#1e2a1e",
-            border: "1px solid #3a5a3a",
+            background: "var(--c-primary-tint)",
+            border: "1px solid var(--c-primary-soft)",
             borderRadius: "8px",
             padding: "1rem",
             fontSize: "0.8rem",
-            color: "#aaa",
+            color: "var(--c-muted)",
             lineHeight: 1.8,
           }}
         >
-          <div style={{ color: "#7cbe8c", fontWeight: "bold", marginBottom: "0.5rem" }}>
+          <div style={{ color: "var(--c-primary)", fontWeight: "bold", marginBottom: "0.5rem" }}>
             覚え方のコツ
           </div>
           系統樹を「植物の家系図」として読む。同じ科（例：バラ科）に属する植物は、同じ枝から分かれた「いとこ同士」。科が近いほど、花の作りや葉の形など、どこかに共通点が見つかりやすい。
@@ -94,7 +94,7 @@ const Page = () => {
       <Section title="植物界の大きな4ステップ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1.25rem",
@@ -108,7 +108,7 @@ const Page = () => {
         />
         <p
           style={{
-            color: "#aaa",
+            color: "var(--c-muted)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
             margin: "1rem 0 0",
@@ -122,7 +122,7 @@ const Page = () => {
       <Section title="裸子植物——種子はあるが花弁がない">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -163,7 +163,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -172,7 +172,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
@@ -189,8 +189,8 @@ const Page = () => {
                 <Link
                   href={item.href1}
                   style={{
-                    background: "#1e3d1f",
-                    color: "#7cbe8c",
+                    background: "var(--c-primary-soft)",
+                    color: "var(--c-primary)",
                     borderRadius: "4px",
                     padding: "0.1rem 0.5rem",
                     fontSize: "0.75rem",
@@ -203,8 +203,8 @@ const Page = () => {
                   <Link
                     href={item.href2}
                     style={{
-                      background: "#1e3d1f",
-                      color: "#7cbe8c",
+                      background: "var(--c-primary-soft)",
+                      color: "var(--c-primary)",
                       borderRadius: "4px",
                       padding: "0.1rem 0.5rem",
                       fontSize: "0.75rem",
@@ -217,7 +217,7 @@ const Page = () => {
               </div>
               <p
                 style={{
-                  color: "#ccc",
+                  color: "var(--c-ink-soft)",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
                   margin: "0 0 0.5rem",
@@ -227,10 +227,10 @@ const Page = () => {
               </p>
               <div
                 style={{
-                  background: "#1e3d1f",
+                  background: "var(--c-primary-soft)",
                   borderRadius: "6px",
                   padding: "0.4rem 0.75rem",
-                  color: "#a0d0a2",
+                  color: "var(--c-primary-strong)",
                   fontSize: "0.78rem",
                 }}
               >
@@ -245,7 +245,7 @@ const Page = () => {
       <Section title="被子植物の中の大きな分かれ目——双子葉類と単子葉類">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -270,7 +270,7 @@ const Page = () => {
                 { name: "タンポポ", href: "/plants/11" },
                 { name: "ハクモクレン", href: "/plants/27" },
               ],
-              color: "#1e2a1e",
+              color: "var(--c-primary-tint)",
               border: "#3a6a3a",
             },
             {
@@ -280,7 +280,7 @@ const Page = () => {
                 { name: "ヤマユリ", href: "/plants/54" },
                 { name: "ツユクサ", href: "/plants/15" },
               ],
-              color: "#1a2a2a",
+              color: "#e9f2f2",
               border: "#3a5a6a",
             },
           ].map((col) => (
@@ -297,7 +297,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.5rem",
                 }}
               >
@@ -307,7 +307,7 @@ const Page = () => {
                 style={{
                   margin: "0 0 0.5rem",
                   paddingLeft: "1.1rem",
-                  color: "#bbb",
+                  color: "var(--c-ink-soft)",
                   fontSize: "0.78rem",
                   lineHeight: 1.8,
                 }}
@@ -322,8 +322,8 @@ const Page = () => {
                     key={e.href}
                     href={e.href}
                     style={{
-                      background: "#1e3d1f",
-                      color: "#7cbe8c",
+                      background: "var(--c-primary-soft)",
+                      color: "var(--c-primary)",
                       borderRadius: "4px",
                       padding: "0.1rem 0.4rem",
                       fontSize: "0.7rem",
@@ -339,10 +339,10 @@ const Page = () => {
         </div>
         <div
           style={{
-            background: "#1e3d1f",
+            background: "var(--c-primary-soft)",
             borderRadius: "6px",
             padding: "0.75rem 1rem",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
           }}
@@ -355,7 +355,7 @@ const Page = () => {
       <Section title="被子植物の中でも「古いグループ」を知る">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -380,7 +380,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              background: "#242424",
+              background: "var(--c-surface-alt)",
               borderRadius: "8px",
               padding: "1rem",
               marginBottom: "0.75rem",
@@ -390,7 +390,7 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.4rem",
               }}
             >
@@ -400,8 +400,8 @@ const Page = () => {
               href={item.href1}
               style={{
                 display: "inline-block",
-                background: "#1e3d1f",
-                color: "#7cbe8c",
+                background: "var(--c-primary-soft)",
+                color: "var(--c-primary)",
                 borderRadius: "4px",
                 padding: "0.1rem 0.5rem",
                 fontSize: "0.75rem",
@@ -413,7 +413,7 @@ const Page = () => {
             </Link>
             <p
               style={{
-                color: "#ccc",
+                color: "var(--c-ink-soft)",
                 fontSize: "0.8rem",
                 lineHeight: 1.7,
                 margin: 0,
@@ -429,7 +429,7 @@ const Page = () => {
       <Section title="現代の分類——APG体系とは">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -454,7 +454,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
@@ -463,13 +463,13 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.3rem",
               }}
             >
               {item.title}
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+            <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
               {item.body}
             </div>
           </div>
@@ -480,7 +480,7 @@ const Page = () => {
       <Section title="系統樹を使った植物の覚え方・実践編">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -521,7 +521,7 @@ const Page = () => {
             >
               <div
                 style={{
-                  background: "#5a9a5c",
+                  background: "var(--c-primary)",
                   color: "#fff",
                   borderRadius: "50%",
                   width: "1.75rem",
@@ -541,13 +541,13 @@ const Page = () => {
                   style={{
                     fontWeight: "bold",
                     fontSize: "0.875rem",
-                    color: "#e0e0e0",
+                    color: "var(--c-ink)",
                     marginBottom: "0.25rem",
                   }}
                 >
                   {item.title}
                 </div>
-                <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+                <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
                   {item.desc}
                 </div>
               </div>
@@ -569,23 +569,23 @@ const Page = () => {
       >
         <Link
           href="/plants"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           植物一覧を見る →
         </Link>
         <Link
           href="/columns/rosaceae-plants"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：バラ科の植物たち →
         </Link>
         <Link
           href="/columns/tree-vs-herb"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：木と草のちがい →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

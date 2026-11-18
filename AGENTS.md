@@ -105,7 +105,8 @@ pnpm textlint:columns:fix  # コラム文章の textlint 自動修正
 - 大半の UI はインライン `style` で実装されている。
 - 全体リセットとベースタイポグラフィは `app/reset.css` にある。
 - ベースフォントは `Noto Sans JP`。
-- 配色はダークテーマ基調で、背景 `#1e1e1e`、アクセント `#7cbe8c` が中心。
+- 配色はライトテーマ（背景 `#f7f5ee`、メイン `#2f5d3a`）。トークンとグローバルクラスは `lib/theme.ts`。
+- 一覧用サムネイルは build/dev 時に `scripts/generate-thumbnails.mjs` が生成（`public/images/plants/thumbs/`、git 管理外）。
 
 ## Components
 

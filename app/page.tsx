@@ -1,546 +1,427 @@
 import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
-import { plants, families } from "lib/data"
-import { wikimediaThumb } from "lib/utils"
+import { Suspense } from "react"
+import { plants, families, mergedPlantIds } from "lib/data"
 import { columns } from "lib/columns"
-import { TAG_GROUPS } from "lib/tags"
-import RandomPlant from "components/RandomPlant"
+import { columnImage } from "lib/column-meta"
+import {
+  activeFeatureCollections,
+  comparisons,
+  comparisonTitle,
+  featurePlants,
+} from "lib/collections"
+import { SEASONS, plantById, plantThumb, seasonOfMonth } from "lib/plants"
+import { siteDescription, siteName, siteUrl } from "lib/seo"
+import { color, radius } from "lib/theme"
+import { HeaderSearch } from "components/elements/HeaderSearch"
+import { LinkCard, Section, SectionHeading } from "components/elements/layout"
+import { PlantGrid } from "components/elements/PlantCard"
+import { SeasonalPicks } from "components/SeasonalPicks"
 
 export const metadata: Metadata = {
-  title: "ジュカ！ (JuQa) — 植物学習アプリ",
-  description:
-    "街路樹や山で見かける植物を体系的に覚えるための学習サイト。植物図鑑・クイズ・見分けガイド・開花カレンダーを収録。",
-  alternates: {
-    canonical: "https://juqa.reload.co.jp/",
+  title: { absolute: `${siteName} — 植物を知る、散歩が変わる。植物図鑑` },
+  description: `いつもの景色に、植物の名前を。街路樹や公園、山で出会う植物${plants.length}種を写真・科・季節・特徴から探して、見分けて、学べる植物図鑑です。`,
+  alternates: { canonical: `${siteUrl}/` },
+  openGraph: {
+    title: `${siteName} — 植物を知る、散歩が変わる。`,
+    description: siteDescription,
+    url: `${siteUrl}/`,
+    type: "website",
+    images: [{ url: `${siteUrl}/images/plants/4-0.webp`, alt: "ケヤキの大木" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} — 植物を知る、散歩が変わる。`,
+    description: siteDescription,
+    images: [`${siteUrl}/images/plants/4-0.webp`],
   },
 }
 
-const month = new Date().getMonth() + 1
-const seasonTag: PlantTag =
-  month >= 3 && month <= 5
-    ? "春開花"
-    : month >= 6 && month <= 8
-      ? "夏開花"
-      : month >= 9 && month <= 11
-        ? "秋開花"
-        : "冬開花"
-const heroPlants = plants
-  .filter((p) => p.tags.includes(seasonTag))
-  .sort(() => Math.random() - 0.5)
-  .slice(0, 4)
+const buildSeason = seasonOfMonth(new Date().getMonth() + 1)
 
-const gridPlants = [...plants].reverse().slice(0, 12)
-const seasonPlants = plants
-  .filter((p) => p.tags.includes(seasonTag) && !heroPlants.includes(p))
-  .slice(0, 8)
-const latestColumns = columns.slice(0, 4)
-const featureGroups = TAG_GROUPS.filter((g) =>
-  ["葉", "花", "実", "樹形"].includes(g.label)
+const seasonPicks = Object.fromEntries(
+  SEASONS.map((s) => [
+    s.key,
+    plants
+      .filter((p) => p.tags.includes(s.tag) && (p.flower_colors?.length ?? 0) > 0)
+      .map((p) => ({
+        p,
+        n: p.tags.filter((t) => t.endsWith("開花")).length,
+      }))
+      .sort((a, b) => a.n - b.n || a.p.id - b.p.id)
+      .slice(0, 8)
+      .map((x) => x.p),
+  ])
+)
+const seasonCounts = Object.fromEntries(
+  SEASONS.map((s) => [s.key, plants.filter((p) => p.tags.includes(s.tag)).length])
 )
 
-const purposes = [
+/** 比較ページで取り上げている、身近で代表的な植物 */
+const featuredPlants = [
+  ...new Set(comparisons.flatMap((c) => [c.a, c.b])),
+]
+  .slice(0, 8)
+  .map((id) => plantById.get(id))
+  .filter((p): p is Plant => Boolean(p))
+
+const mergedIds = new Set(Object.keys(mergedPlantIds).map(Number))
+const recentPlants = [...plants]
+  .filter((p) => !mergedIds.has(p.id))
+  .sort((a, b) => b.id - a.id)
+  .slice(0, 8)
+
+const heroPhotos = [
+  { id: 4, src: "/images/plants/4-0.webp", alt: "ケヤキの大木" },
+  { id: 17, src: "/images/plants/thumbs/17-0.webp", alt: "ヤマザクラの花" },
+  { id: 29, src: "/images/plants/thumbs/29-0.webp", alt: "ヤブツバキの花" },
+]
+
+const findWays = [
   {
-    title: "探す",
-    lead: "名前・科・季節から植物を調べる",
-    links: [
-      { href: "/plants", label: "植物図鑑", note: `${plants.length}種` },
-      { href: "/families", label: "科から探す", note: `${families.length}科` },
-      { href: "/flowers", label: "開花時期から探す", note: "季節別" },
-    ],
+    href: "/plants",
+    icon: "🔤",
+    title: "名前から探す",
+    description: "和名・学名・属名・科名で検索。ひらがな入力にも対応。",
   },
   {
-    title: "見分ける",
-    lead: "特徴をたどって名前にたどり着く",
-    links: [
-      { href: "/guide", label: "見分け方ガイド", note: "質問に答えて絞り込み" },
-      { href: "/quiz/photo", label: "写真クイズ", note: "写真で名前を当てる" },
-    ],
+    href: "/features",
+    icon: "🍂",
+    title: "特徴から探す",
+    description: "花の色、どんぐり、紅葉、常緑樹など特徴別に一覧できます。",
   },
   {
-    title: "学ぶ",
-    lead: "分類や名前の由来を読み物で",
-    links: [
-      { href: "/columns", label: "植物コラム", note: `${columns.length}本` },
-      { href: "/families", label: "分類の基礎", note: "科の特徴" },
-    ],
+    href: "/families",
+    icon: "🌳",
+    title: "科から探す",
+    description: `${families.length}科を系統順に整理。仲間の共通点がわかります。`,
+  },
+  {
+    href: "/seasons",
+    icon: "🌸",
+    title: "季節から探す",
+    description: "春・夏・秋・冬、それぞれの季節に花を咲かせる植物。",
+  },
+  {
+    href: "/gallery",
+    icon: "📷",
+    title: "写真から探す",
+    description: "花・葉・実などの写真を眺めて、気になる植物を見つける。",
+  },
+  {
+    href: "/guide",
+    icon: "🧭",
+    title: "質問に答えて見分ける",
+    description: "葉や実の特徴に「はい・いいえ」で答えて科を絞り込む。",
   },
 ]
 
-const sectionTitle: React.CSSProperties = {
-  margin: 0,
-  fontSize: "1.05rem",
-  fontWeight: "bold",
-  color: "#e0e0e0",
-  letterSpacing: "0.05em",
-}
-const moreLink: React.CSSProperties = {
-  fontSize: "0.85rem",
-  color: "#7cbe8c",
-  textDecoration: "none",
-}
-const card: React.CSSProperties = {
-  background: "#242424",
-  borderRadius: "10px",
-  border: "1px solid #333",
-}
+const learnLinks = [
+  {
+    href: "/guide",
+    title: "見分け方ガイド",
+    description: "目の前の植物を、葉・実・花の特徴から段階的に絞り込みます。",
+    image: "/images/plants/thumbs/2-2.webp",
+    imageAlt: "イロハモミジの葉",
+  },
+  {
+    href: "/quiz/photo",
+    title: "写真クイズ",
+    description: "写真を見て名前を当てる4択クイズ。季節・科・テーマ別に出題します。",
+    image: "/images/plants/thumbs/133-0.webp",
+    imageAlt: "ハナミズキの花",
+  },
+  {
+    href: "/flowers",
+    title: "開花カレンダー",
+    description: "季節ごとに花を咲かせる植物を、写真つきで見られます。",
+    image: "/images/plants/thumbs/31-0.webp",
+    imageAlt: "ガクアジサイの花",
+  },
+  {
+    href: "/gallery",
+    title: "フォトギャラリー",
+    description: "収録植物の写真を一覧。花・葉・実の写真から図鑑へ移動できます。",
+    image: "/images/plants/thumbs/6-0.webp",
+    imageAlt: "コナラの葉とどんぐり",
+  },
+]
 
-const SectionHeader: FC<{ title: string; href?: string; more?: string }> = ({
-  title,
-  href,
-  more = "すべて見る →",
-}) => (
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      marginBottom: "0.75rem",
-    }}
-  >
-    <h2 style={sectionTitle}>{title}</h2>
-    {href && (
-      <Link href={href} style={moreLink}>
-        {more}
-      </Link>
-    )}
+const Stat: FC<{ value: string | number; label: string }> = ({ value, label }) => (
+  <div>
+    <div
+      className="serif"
+      style={{ fontSize: "1.6rem", fontWeight: 700, color: color.primaryStrong, lineHeight: 1.2 }}
+    >
+      {value}
+    </div>
+    <div style={{ fontSize: "0.75rem", color: color.muted }}>{label}</div>
   </div>
 )
 
-const PlantTile: FC<{ plant: Plant }> = ({ plant }) => (
-  <Link
-    href={`/plants/${plant.id}`}
-    style={{
-      position: "relative",
-      display: "block",
-      borderRadius: "10px",
-      overflow: "hidden",
-      aspectRatio: "1",
-      background: "#1e1e1e",
-      textDecoration: "none",
-    }}
-  >
-    <img
-      src={plant.local_image_url ?? wikimediaThumb(plant.image_url, 320)}
-      alt={`${plant.japanese_name}の写真`}
-      width={240}
-      height={240}
-      loading="lazy"
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-        filter: "brightness(0.85)",
-      }}
-    />
-    <div
-      style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        background:
-          "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)",
-        padding: "1.5rem 0.5rem 0.5rem",
-      }}
-    >
-      <div
-        style={{
-          color: "#fff",
-          fontSize: "0.8rem",
-          fontWeight: "bold",
-          lineHeight: 1.2,
-        }}
-      >
-        {plant.japanese_name}
-      </div>
-      <div
-        style={{
-          color: "#bbb",
-          fontSize: "0.65rem",
-          fontStyle: "italic",
-          marginTop: "0.1rem",
-        }}
-      >
-        {plant.scientific_name}
-      </div>
-    </div>
-  </Link>
-)
-
 const Page: FC = () => {
+  const latestColumns = columns.slice(0, 3)
   return (
-    <div style={{ margin: "0 auto" }}>
-      <style>{`
-        .hero-photos {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-        }
-        .purposes {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.75rem;
-        }
-        .plant-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 0.5rem;
-        }
-        .column-grid {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 0.5rem;
-        }
-        @media (max-width: 50rem) {
-          .hero-photos {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: 1fr;
-          }
-          .purposes,
-          .column-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-        @media (max-width: 30rem) {
-          .plant-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-      `}</style>
-      {/* Hero */}
+    <>
+      {/* ---------- Hero ---------- */}
       <section
-        style={{
-          background:
-            "linear-gradient(135deg, #0f2a10 0%, #1a3d1c 60%, #1e4a3a 100%)",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "right",
-          borderRadius: "16px",
-          overflow: "hidden",
-          marginBottom: "2rem",
-        }}
+        aria-labelledby="hero-title"
+        className="split"
+        style={{ alignItems: "center", padding: "2.5rem 0 1rem" }}
       >
+        <div>
+          <p
+            style={{
+              margin: "0 0 0.75rem",
+              color: color.primary,
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              fontSize: "0.8rem",
+            }}
+          >
+            JuQa! 植物図鑑 ─ 植物を知る、散歩が変わる。
+          </p>
+          <h1
+            id="hero-title"
+            className="serif"
+            style={{
+              margin: 0,
+              fontSize: "clamp(2rem, 6vw, 3.4rem)",
+              lineHeight: 1.3,
+              color: color.ink,
+              letterSpacing: "0.02em",
+            }}
+          >
+            いつもの景色に、
+            <br />
+            植物の名前を。
+          </h1>
+          <p
+            style={{
+              margin: "1rem 0 1.5rem",
+              color: color.inkSoft,
+              fontSize: "1rem",
+              lineHeight: 1.9,
+            }}
+          >
+            街路樹や公園、山で出会う植物を
+            <br className="sp-hide" />
+            探して、見分けて、学ぶ。
+          </p>
+          <div
+            style={{
+              background: color.surface,
+              border: `1px solid ${color.border}`,
+              borderRadius: "999px",
+              padding: "0.35rem",
+              maxWidth: "32rem",
+            }}
+          >
+            <Suspense fallback={null}>
+              <HeaderSearch variant="hero" placeholder="例：さくら、モミジ、Quercus" />
+            </Suspense>
+          </div>
+          <p style={{ margin: "0.75rem 0 0", fontSize: "0.82rem", color: color.muted }}>
+            たとえば：
+            {[1, 2, 5, 29].map((id, i) => {
+              const p = plantById.get(id)
+              if (!p) return null
+              return (
+                <span key={id}>
+                  {i > 0 && "、"}
+                  <Link href={`/plants/${p.id}`}>{p.japanese_name}</Link>
+                </span>
+              )
+            })}
+          </p>
+          <div style={{ display: "flex", gap: "2rem", marginTop: "1.75rem" }}>
+            <Stat value={plants.length} label="収録植物" />
+            <Stat value={families.length} label="科" />
+            <Stat value={columns.length} label="コラム" />
+          </div>
+        </div>
         <div
           style={{
-            padding: "2rem 1.5rem",
-            display: "flex",
-            flexGrow: 1,
-            flexBasis: "20rem",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "1rem",
+            display: "grid",
+            gridTemplateColumns: "2fr 1fr",
+            gridTemplateRows: "1fr 1fr",
+            gap: "0.6rem",
+            aspectRatio: "4 / 3.3",
           }}
         >
-          <div>
-            <h1
-              style={{
-                margin: "0 0 0.4rem",
-                fontSize: "2.2rem",
-                fontWeight: "900",
-                color: "#fff",
-                letterSpacing: "0.04em",
-                lineHeight: 1.1,
-              }}
-            >
-              ジュカ！
-            </h1>
-            <p
-              style={{
-                margin: 0,
-                color: "#a0d0a2",
-                fontSize: "0.95rem",
-                lineHeight: 1.7,
-              }}
-            >
-              街路樹や山の植物を、探して・見分けて・学ぶ植物図鑑
-            </p>
-          </div>
-          <div style={{ display: "flex", gap: "1.5rem" }}>
-            {[
-              { value: plants.length, label: "種を収録" },
-              { value: families.length, label: "科" },
-              { value: columns.length, label: "本のコラム" },
-            ].map(({ value, label }) => (
-              <div key={label}>
-                <span
-                  style={{
-                    fontSize: "1.6rem",
-                    fontWeight: "bold",
-                    color: "#7cbe8c",
-                  }}
-                >
-                  {value}
-                </span>
-                <span
-                  style={{
-                    color: "#8cbf8e",
-                    fontSize: "0.8rem",
-                    marginLeft: "0.2rem",
-                  }}
-                >
-                  {label}
-                </span>
-              </div>
-            ))}
-          </div>
-          <form
-            action="/plants/"
-            method="get"
-            role="search"
-            style={{ display: "flex", gap: "0.5rem", maxWidth: "28rem" }}
-          >
-            <label
-              htmlFor="hero-search"
-              style={{ position: "absolute", left: "-9999px" }}
-            >
-              植物名・学名で検索
-            </label>
-            <input
-              id="hero-search"
-              type="search"
-              name="q"
-              placeholder="植物名・学名で検索"
-              style={{
-                flex: 1,
-                minWidth: 0,
-                padding: "0.7rem 0.9rem",
-                borderRadius: "8px",
-                border: "1px solid #5a9a5c",
-                background: "#10200f",
-                color: "#fff",
-                fontSize: "1rem",
-              }}
-            />
-            <button
-              type="submit"
-              style={{
-                padding: "0.7rem 1.1rem",
-                borderRadius: "8px",
-                border: "none",
-                background: "#7cbe8c",
-                color: "#10200f",
-                fontWeight: "bold",
-                fontSize: "0.95rem",
-                cursor: "pointer",
-              }}
-            >
-              検索
-            </button>
-          </form>
-        </div>
-
-        <div className="hero-photos" style={{ minWidth: 0, flexGrow: 0 }}>
-          {heroPlants.map((plant) => (
+          {heroPhotos.map((photo, i) => (
             <Link
-              key={plant.id}
-              href={`/plants/${plant.id}`}
+              key={photo.id}
+              href={`/plants/${photo.id}`}
               style={{
-                position: "relative",
+                gridRow: i === 0 ? "1 / 3" : undefined,
+                borderRadius: i === 0 ? "20px 6px 6px 20px" : i === 1 ? "6px 20px 6px 6px" : "6px 6px 20px 6px",
                 overflow: "hidden",
-                minWidth: 0,
-                maxHeight: "12rem",
-                maxWidth: "12rem",
-                aspectRatio: "1",
-                display: "block",
+                position: "relative",
+                background: color.surfaceAlt,
               }}
             >
               <img
-                src={
-                  plant.images.find((i) => i.caption == "花")?.local_url ??
-                  plant.images.find((i) => i.caption == "花")?.url ??
-                  plant.local_image_url ??
-                  wikimediaThumb(plant.image_url, 320)
-                }
-                alt={`${plant.japanese_name}の写真`}
-                width={192}
-                height={192}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  filter: "brightness(0.8) saturate(1.1)",
-                }}
+                src={photo.src}
+                alt={photo.alt}
+                width={i === 0 ? 800 : 480}
+                height={i === 0 ? 1066 : 480}
+                fetchPriority={i === 0 ? "high" : undefined}
+                style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
               />
               <span
                 style={{
                   position: "absolute",
-                  left: "0.4rem",
-                  bottom: "0.3rem",
-                  color: "#fff",
-                  fontSize: "0.7rem",
-                  fontWeight: "bold",
-                  textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+                  left: "0.6rem",
+                  bottom: "0.6rem",
+                  background: "rgba(255,255,255,0.9)",
+                  color: color.ink,
+                  fontSize: "0.72rem",
+                  padding: "0.1rem 0.55rem",
+                  borderRadius: "999px",
                 }}
               >
-                {plant.japanese_name}
+                {plantById.get(photo.id)?.japanese_name}
               </span>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Purposes */}
-      <section style={{ marginBottom: "2rem" }}>
-        <div className="purposes">
-          {purposes.map((purpose) => (
-            <div key={purpose.title} style={{ ...card, padding: "1rem" }}>
-              <h2 style={{ ...sectionTitle, color: "#7cbe8c" }}>
-                {purpose.title}
-              </h2>
-              <p
-                style={{
-                  margin: "0.25rem 0 0.75rem",
-                  color: "#999",
-                  fontSize: "0.8rem",
-                }}
-              >
-                {purpose.lead}
-              </p>
-              <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-                {purpose.links.map((link) => (
-                  <li key={link.label} style={{ borderTop: "1px solid #333" }}>
-                    <Link
-                      href={link.href}
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                        padding: "0.65rem 0",
-                        textDecoration: "none",
-                        color: "#e0e0e0",
-                        fontSize: "0.95rem",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {link.label}
-                      <span
-                        style={{
-                          color: "#888",
-                          fontSize: "0.75rem",
-                          fontWeight: "normal",
-                        }}
-                      >
-                        {link.note} →
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* ---------- Season ---------- */}
+      <Section labelledBy="season-title">
+        <SectionHeading
+          id="season-title"
+          eyebrow="SEASON"
+          title="今の季節に見られる植物"
+          lead="開花時期のデータ（季節単位）から、いまの季節に花を咲かせる植物を選んでいます。"
+        />
+        <SeasonalPicks picks={seasonPicks} counts={seasonCounts} fallbackKey={buildSeason.key} />
+      </Section>
+
+      {/* ---------- Find ---------- */}
+      <Section labelledBy="find-title">
+        <SectionHeading id="find-title" eyebrow="FIND" title="植物を探す" href="/explore" more="探し方の一覧" />
+        <ul className="grid-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          {findWays.map((w) => (
+            <li key={w.href}>
+              <LinkCard {...w} track="home_find" />
+            </li>
+          ))}
+        </ul>
+        <div style={{ marginTop: "1.25rem", display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+          {activeFeatureCollections.slice(0, 10).map((c) => (
+            <Link key={c.slug} href={`/features/${c.slug}`} className="chip">
+              {c.heading}
+              <span style={{ fontSize: "0.72rem", color: color.muted }}>{featurePlants(c).length}</span>
+            </Link>
           ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Season */}
-      <section style={{ marginBottom: "2rem" }}>
-        <SectionHeader
-          title={`${seasonTag.replace("開花", "")}に咲く植物`}
-          href={`/flowers?season=${encodeURIComponent(seasonTag)}`}
-          more="開花カレンダー →"
+      {/* ---------- Encyclopedia ---------- */}
+      <Section labelledBy="featured-title">
+        <SectionHeading
+          id="featured-title"
+          eyebrow="PICK UP"
+          title="まず覚えたい身近な植物"
+          lead="街や公園でよく出会い、似た仲間との見分けを比較ページで解説している植物です。"
+          href="/plants"
+          more={`図鑑の全${plants.length}種`}
         />
-        <div className="plant-grid">
-          {seasonPlants.map((plant) => (
-            <PlantTile key={plant.id} plant={plant} />
-          ))}
-        </div>
-      </section>
+        <PlantGrid plants={featuredPlants} listName="home_featured" />
+      </Section>
 
-      {/* Features */}
-      <section style={{ marginBottom: "2rem" }}>
-        <SectionHeader
-          title="特徴から探す"
-          href="/guide"
-          more="見分け方ガイド →"
+      <Section labelledBy="recent-title">
+        <SectionHeading
+          id="recent-title"
+          eyebrow="NEW"
+          title="新しく収録した植物"
+          href="/plants?sort=new"
+          more="新着順で見る"
         />
-        <div style={{ ...card, padding: "0.75rem 1rem" }}>
-          {featureGroups.map((group) => (
-            <div
-              key={group.label}
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                gap: "0.4rem",
-                padding: "0.4rem 0",
-              }}
-            >
-              <span
-                style={{ color: "#999", fontSize: "0.8rem", width: "2.5rem" }}
-              >
-                {group.label}
-              </span>
-              {group.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/plants?tags=${encodeURIComponent(tag)}`}
-                  style={{
-                    padding: "0.35rem 0.75rem",
-                    borderRadius: "999px",
-                    border: "1px solid #5a9a5c",
-                    color: "#cfe8d1",
-                    fontSize: "0.85rem",
-                    textDecoration: "none",
-                  }}
-                >
-                  {tag}
+        <PlantGrid plants={recentPlants} listName="home_recent" small />
+      </Section>
+
+      {/* ---------- Compare ---------- */}
+      <Section labelledBy="compare-title">
+        <SectionHeading
+          id="compare-title"
+          eyebrow="COMPARE"
+          title="似ている植物を比べる"
+          href="/compare"
+          more="比較ページ一覧"
+        />
+        <ul className="grid-4" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          {comparisons.slice(0, 4).map((c) => {
+            const a = plantById.get(c.a)!
+            const b = plantById.get(c.b)!
+            return (
+              <li key={c.slug}>
+                <Link href={`/compare/${c.slug}`} className="card-link">
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px" }}>
+                    {[a, b].map((p) => (
+                      <div key={p.id} className="card-photo card-photo--square">
+                        <img src={plantThumb(p)} alt={`${p.japanese_name}の写真`} loading="lazy" width={240} height={240} />
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ padding: "0.8rem 0.9rem 1rem" }}>
+                    <p style={{ margin: 0, fontWeight: 700, color: color.ink, fontSize: "0.95rem", lineHeight: 1.5 }}>
+                      {comparisonTitle(c)}
+                    </p>
+                  </div>
                 </Link>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
+              </li>
+            )
+          })}
+        </ul>
+      </Section>
 
-      {/* Pickup */}
-      <RandomPlant />
-
-      {/* Columns */}
-      <section style={{ marginBottom: "2rem" }}>
-        <SectionHeader title="植物コラム" href="/columns" />
-        <div className="column-grid">
-          {latestColumns.map((col) => (
-            <Link
-              key={col.href}
-              href={col.href}
-              style={{
-                ...card,
-                padding: "0.85rem 1rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                textDecoration: "none",
-              }}
-            >
-              <span style={{ fontSize: "1.25rem" }}>{col.emoji}</span>
-              <span
-                style={{
-                  color: "#e0e0e0",
-                  fontSize: "0.9rem",
-                  fontWeight: "bold",
-                  lineHeight: 1.4,
-                  flex: 1,
-                }}
-              >
-                {col.title}
-              </span>
-            </Link>
+      {/* ---------- Learn ---------- */}
+      <Section
+        labelledBy="learn-title"
+        style={{
+          background: color.primaryTint,
+          borderRadius: radius.lg,
+          padding: "2rem clamp(1rem, 3vw, 2rem)",
+        }}
+      >
+        <SectionHeading id="learn-title" eyebrow="LEARN" title="植物をもっと知る" />
+        <h3 style={{ fontSize: "1rem", margin: "0 0 0.75rem", color: color.inkSoft }}>植物コラム</h3>
+        <ul className="grid-3" style={{ listStyle: "none", padding: 0, margin: "0 0 0.75rem" }}>
+          {latestColumns.map((c) => {
+            const img = columnImage(c.href)
+            return (
+              <li key={c.href}>
+                <LinkCard
+                  href={c.href}
+                  title={c.title}
+                  description={c.description}
+                  image={img?.src}
+                  imageAlt={img?.alt}
+                  meta={c.tags.join("・")}
+                />
+              </li>
+            )
+          })}
+        </ul>
+        <p style={{ textAlign: "right", margin: "0 0 2rem" }}>
+          <Link href="/columns" className="text-link">
+            コラムをすべて読む（{columns.length}本） →
+          </Link>
+        </p>
+        <h3 style={{ fontSize: "1rem", margin: "0 0 0.75rem", color: color.inkSoft }}>見分ける・遊ぶ・眺める</h3>
+        <ul className="grid-4" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+          {learnLinks.map((l) => (
+            <li key={l.href}>
+              <LinkCard {...l} track="home_learn" />
+            </li>
           ))}
-        </div>
-      </section>
-
-      {/* Photo gallery */}
-      <section style={{ marginBottom: "2rem" }}>
-        <SectionHeader title="植物フォトギャラリー" href="/plants" />
-        <div className="plant-grid">
-          {gridPlants.map((plant) => (
-            <PlantTile key={plant.id} plant={plant} />
-          ))}
-        </div>
-      </section>
-    </div>
+        </ul>
+      </Section>
+    </>
   )
 }
 

@@ -5,9 +5,9 @@ type Props = {
   regions: Region[]
 }
 
-const ACTIVE_COLOR = "#7cbe8c"
-const INACTIVE_COLOR = "#3a3a3a"
-const STROKE_COLOR = "#555"
+const ACTIVE_COLOR = "var(--c-primary)"
+const INACTIVE_COLOR = "var(--c-border)"
+const STROKE_COLOR = "var(--c-subtle)"
 
 // Simplified SVG paths for Japan's 5 major regions
 // viewBox: 0 0 200 220
@@ -70,7 +70,7 @@ const JapanMap: FC<Props> = ({ regions }) => {
               textAnchor="middle"
               dominantBaseline="middle"
               fontSize="9"
-              fill={active ? "#fff" : "#888"}
+              fill={active ? "var(--c-ink)" : "var(--c-subtle)"}
               fontWeight={active ? "bold" : "normal"}
             >
               {region}

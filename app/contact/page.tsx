@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import ContactClient from "./ContactClient"
+import { Breadcrumbs } from "components/elements/layout"
 
 const siteUrl = "https://juqa.reload.co.jp"
 
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
-  return <ContactClient />
+  return (
+    <div style={{ maxWidth: "48rem", margin: "0 auto" }}>
+      <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { label: "お問い合わせ" }]} currentUrl={`${siteUrl}/contact/`} />
+      <ContactClient />
+    </div>
+  )
 }
