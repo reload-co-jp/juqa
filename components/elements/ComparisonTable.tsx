@@ -71,7 +71,7 @@ const rows: { label: string; render: (p: Plant) => ReactNode }[] = [
 ]
 
 /** 2種の植物を横並びで比較する表。データがない項目は「情報なし」と表示する */
-export const ComparisonTable: FC<{ a: Plant; b: Plant }> = ({ a, b }) => (
+export const ComparisonTable: FC<{ a: Plant; b: Plant; photos?: boolean }> = ({ a, b, photos = true }) => (
   <div style={{ overflowX: "auto" }}>
     <table className="compare-table">
       <caption className="sr-only">
@@ -83,13 +83,15 @@ export const ComparisonTable: FC<{ a: Plant; b: Plant }> = ({ a, b }) => (
           {[a, b].map((p) => (
             <th key={p.id} scope="col">
               <Link href={`/plants/${p.id}`} style={{ textDecoration: "none", color: color.ink, display: "block" }}>
-                <img
-                  src={plantThumb(p)}
-                  alt={`${p.japanese_name}の写真`}
-                  width={320}
-                  height={240}
-                  style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: "10px", display: "block" }}
-                />
+                {photos && (
+                  <img
+                    src={plantThumb(p)}
+                    alt={`${p.japanese_name}の写真`}
+                    width={320}
+                    height={240}
+                    style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", borderRadius: "10px", display: "block" }}
+                  />
+                )}
                 <span className="serif" style={{ display: "block", fontSize: "1.2rem", marginTop: "0.5rem" }}>
                   {p.japanese_name}
                 </span>

@@ -58,9 +58,19 @@ const seasonCounts = Object.fromEntries(
   SEASONS.map((s) => [s.key, plants.filter((p) => p.tags.includes(s.tag)).length])
 )
 
+/** トップで紹介する比較ページ（身近で検索されやすい組み合わせ） */
+const homeComparisons = [
+  "yabutsubaki-sazanka",
+  "ume-someiyoshino",
+  "irohamomiji-toukaede",
+  "akamatsu-kuromatsu",
+]
+  .map((slug) => comparisons.find((c) => c.slug === slug))
+  .filter((c): c is (typeof comparisons)[number] => Boolean(c))
+
 /** 比較ページで取り上げている、身近で代表的な植物 */
 const featuredPlants = [
-  ...new Set(comparisons.flatMap((c) => [c.a, c.b])),
+  ...new Set(homeComparisons.flatMap((c) => [c.a, c.b])),
 ]
   .slice(0, 8)
   .map((id) => plantById.get(id))
@@ -354,7 +364,7 @@ const Page: FC = () => {
           more="比較ページ一覧"
         />
         <ul className="grid-4" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-          {comparisons.slice(0, 4).map((c) => {
+          {homeComparisons.map((c) => {
             const a = plantById.get(c.a)!
             const b = plantById.get(c.b)!
             return (

@@ -1,15 +1,14 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import { Suspense } from "react"
 import { Breadcrumbs, JsonLd, PageIntro, Section, SectionHeading } from "components/elements/layout"
-import { comparisons, comparisonTitle } from "lib/collections"
-import { plantById, plantThumb } from "lib/plants"
+import { ComparisonCard } from "components/elements/ComparisonCard"
+import { COMPARISON_CATEGORIES, comparisons, comparisonTitle } from "lib/collections"
 import { siteUrl } from "lib/seo"
 import CompareClient from "./CompareClient"
 
 const pageUrl = `${siteUrl}/compare/`
 const description =
-  "ヤブツバキとサザンカ、ソメイヨシノとヤマザクラなど、よく似た植物の違いを写真と表で比較します。好きな2種を選んで比べることもできます。"
+  `梅と桜、ツバキとサザンカ、アヤメとカキツバタなど、よく似た植物${comparisons.length}組の違いと見分け方を、写真とポイント表で解説します。好きな2種を選んで比べることもできます。`
 
 export const metadata: Metadata = {
   title: "似ている植物の違いを比較",
@@ -18,6 +17,10 @@ export const metadata: Metadata = {
   openGraph: { title: "似ている植物の違いを比較", description, url: pageUrl, type: "website" },
   twitter: { card: "summary", title: "似ている植物の違いを比較", description },
 }
+
+const groups = COMPARISON_CATEGORIES.map((g) => ({ ...g, items: comparisons.filter((c) => c.category === g.id) })).filter(
+  (g) => g.items.length > 0
+)
 
 export default function CompareIndexPage() {
   return (
@@ -38,32 +41,26 @@ export default function CompareIndexPage() {
       <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { label: "植物を比較する" }]} currentUrl={pageUrl} />
       <PageIntro eyebrow="COMPARE" title="似ている植物を比較する" lead={description} />
 
-      <Section labelledBy="pairs" style={{ marginTop: 0 }}>
-        <SectionHeading id="pairs" title="よく比べられる組み合わせ" />
-        <ul className="grid-4" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-          {comparisons.map((c) => {
-            const a = plantById.get(c.a)!
-            const b = plantById.get(c.b)!
-            return (
+      <nav aria-label="カテゴリ" style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "1rem" }}>
+        {groups.map((g) => (
+          <a key={g.id} href={`#${g.id}`} className="chip">
+            {g.label}（{g.items.length}）
+          </a>
+        ))}
+      </nav>
+
+      {groups.map((g, i) => (
+        <Section key={g.id} labelledBy={`${g.id}-h`} id={g.id} style={i === 0 ? { marginTop: "1.5rem" } : undefined}>
+          <SectionHeading id={`${g.id}-h`} title={`${g.label}の違い`} />
+          <ul className="grid-4" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+            {g.items.map((c) => (
               <li key={c.slug}>
-                <Link href={`/compare/${c.slug}`} className="card-link">
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2px" }}>
-                    {[a, b].map((p) => (
-                      <div key={p.id} className="card-photo card-photo--square">
-                        <img src={plantThumb(p)} alt="" loading="lazy" width={200} height={200} />
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{ padding: "0.7rem 0.9rem 0.95rem" }}>
-                    <p style={{ margin: 0, fontWeight: 700, fontSize: "0.92rem", lineHeight: 1.5 }}>{comparisonTitle(c)}</p>
-                    <p style={{ margin: "0.25rem 0 0", fontSize: "0.78rem", color: "var(--c-muted)", lineHeight: 1.6 }}>{c.lead}</p>
-                  </div>
-                </Link>
+                <ComparisonCard c={c} />
               </li>
-            )
-          })}
-        </ul>
-      </Section>
+            ))}
+          </ul>
+        </Section>
+      ))}
 
       <Section labelledBy="free-compare">
         <SectionHeading id="free-compare" title="好きな2種を選んで比べる" lead="収録しているすべての植物から2種を選んで比較できます。" />
