@@ -108,6 +108,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <>
             <script
               async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6542845006087970"
+              crossOrigin="anonymous"
+            />
+            <script
+              async
               src="https://www.googletagmanager.com/gtag/js?id=G-JMJYKDGGNC"
             />
             <script
