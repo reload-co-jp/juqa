@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
-import { wikimediaThumb } from "lib/utils"
-import { PageHeader, Tag } from "components/elements/layout"
+import { plantThumb } from "lib/plants"
+import { color } from "lib/theme"
+import { Breadcrumbs, JsonLd, PageIntro } from "components/elements/layout"
 import { siteUrl } from "lib/seo"
 
 const pageUrl = `${siteUrl}/families/`
@@ -43,7 +44,7 @@ const jsonLd = {
 }
 
 export const metadata: Metadata = {
-  title: "科一覧",
+  title: "科から探す — 植物の科一覧",
   description,
   keywords: ["科一覧", "植物の科", "バラ科", "キク科", "植物分類", "植物図鑑"],
   alternates: { canonical: pageUrl },
@@ -138,231 +139,95 @@ const phylogeneticGroups = [
   },
 ]
 
+const groupedIds = new Set(phylogeneticGroups.flatMap((g) => g.familyIds))
+const ungrouped = families.filter((f) => !groupedIds.has(f.id)).map((f) => f.id)
+const allGroups = [
+  ...phylogeneticGroups,
+  ...(ungrouped.length
+    ? [
+        {
+          id: "others",
+          name: "その他の科",
+          label: "Others",
+          description: "上記のグループに未整理の科です。",
+          accent: "#6b6b5a",
+          bg: "",
+          familyIds: ungrouped,
+        },
+      ]
+    : []),
+]
+
 const FamiliesPage: FC = () => {
   return (
-    <div style={{ margin: "0 auto" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    <div>
+      <JsonLd data={jsonLd} />
+      <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { label: "科から探す" }]} currentUrl={pageUrl} />
+      <PageIntro
+        eyebrow="FAMILIES"
+        title="科から探す"
+        lead={`収録している${families.length}科を、APG IV 分類体系の系統順にグループ分けしました。同じ科の植物は花や実のつくりに共通点があります。`}
       />
-      <PageHeader backHref="/" backLabel="トップ" title="科一覧" />
 
-      {/* 目次 */}
-      <nav
-        style={{
-          background: "#2a2a2a",
-          borderRadius: "10px",
-          padding: "1rem 1.25rem",
-          marginBottom: "2rem",
-        }}
-      >
-        <div
-          style={{
-            fontSize: "0.72rem",
-            color: "#666",
-            marginBottom: "0.6rem",
-            letterSpacing: "0.05em",
-          }}
-        >
-          グループ
-        </div>
-        <ol
-          style={{
-            margin: 0,
-            padding: 0,
-            listStyle: "none",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.35rem",
-          }}
-        >
-          {phylogeneticGroups.map((group, i) => {
-            const count = group.familyIds.length
-            return (
-              <li key={group.id}>
-                <a
-                  href={`#${group.id}`}
-                  style={{ textDecoration: "none", display: "flex", alignItems: "baseline", gap: "0.5rem" }}
-                >
-                  <span style={{ fontSize: "0.7rem", color: "#555", minWidth: "1rem" }}>
-                    {i + 1}.
-                  </span>
-                  <span style={{ fontSize: "0.875rem", color: group.accent, fontWeight: "bold" }}>
-                    {group.name}
-                  </span>
-                  <span style={{ fontSize: "0.7rem", color: "#666" }}>
-                    {group.label}
-                  </span>
-                  <span style={{ fontSize: "0.7rem", color: "#555", marginLeft: "auto" }}>
-                    {count}科
-                  </span>
-                </a>
-              </li>
-            )
-          })}
-        </ol>
+      <nav aria-label="グループ" style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "2.5rem" }}>
+        {allGroups.map((group) => (
+          <a key={group.id} href={`#${group.id}`} className="chip">
+            <span aria-hidden="true" style={{ width: "0.6rem", height: "0.6rem", borderRadius: "50%", background: group.accent }} />
+            {group.name}
+            <span style={{ fontSize: "0.72rem", color: color.muted }}>{group.familyIds.length}科</span>
+          </a>
+        ))}
       </nav>
 
-      <div>
-        {phylogeneticGroups.map((group) => {
-          const groupFamilies = group.familyIds
-            .map((id) => families.find((f) => f.id === id))
-            .filter((f): f is Family => f !== undefined)
-
-          return (
-            <div key={group.name} style={{ marginBottom: "2rem" }}>
-              {/* グループヘッダー */}
-              <div
-                id={group.id}
-                style={{
-                  background: group.bg,
-                  border: `1px solid ${group.accent}`,
-                  borderRadius: "10px",
-                  padding: "0.875rem 1.25rem",
-                  marginBottom: "0.75rem",
-                  scrollMarginTop: "1rem",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "baseline",
-                    gap: "0.75rem",
-                    marginBottom: "0.35rem",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "0.95rem",
-                      color: group.accent,
-                    }}
-                  >
-                    {group.name}
-                  </span>
-                  <span style={{ fontSize: "0.72rem", color: "#666" }}>
-                    {group.label}
-                  </span>
-                  <span
-                    style={{
-                      marginLeft: "auto",
-                      fontSize: "0.75rem",
-                      color: "#777",
-                    }}
-                  >
-                    {groupFamilies.length}科
-                  </span>
-                </div>
-                <p
-                  style={{
-                    margin: 0,
-                    fontSize: "0.75rem",
-                    color: "#888",
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {group.description}
-                </p>
-              </div>
-
-              {/* 科カード一覧 */}
+      {allGroups.map((group) => {
+        const groupFamilies = group.familyIds
+          .map((id) => families.find((f) => f.id === id))
+          .filter((f): f is Family => f !== undefined)
+        return (
+          <section key={group.id} id={group.id} aria-labelledby={`${group.id}-title`} style={{ marginBottom: "3rem", scrollMarginTop: "7rem" }}>
+            <div style={{ borderLeft: `4px solid ${group.accent}`, paddingLeft: "1rem", marginBottom: "1.25rem" }}>
+              <h2 id={`${group.id}-title`} className="serif" style={{ margin: 0, fontSize: "1.35rem" }}>
+                {group.name}
+                <span style={{ fontSize: "0.8rem", color: color.muted, fontFamily: "var(--font-sans)", marginLeft: "0.6rem", fontWeight: 400 }}>
+                  {group.label}・{groupFamilies.length}科
+                </span>
+              </h2>
+              <p style={{ margin: "0.35rem 0 0", fontSize: "0.88rem", color: color.muted, maxWidth: "48rem" }}>{group.description}</p>
+            </div>
+            <ul className="grid-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {groupFamilies.map((family) => {
-                const familyPlants = plants.filter(
-                  (p) => p.family_id === family.id,
-                )
+                const familyPlants = plants.filter((p) => p.family_id === family.id)
                 return (
-                  <Link
-                    key={family.id}
-                    href={`/families/${family.id}`}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <div
-                      style={{
-                        background: "#2d2d2d",
-                        borderRadius: "8px",
-                        padding: "1rem",
-                        marginBottom: "0.75rem",
-                        borderLeft: `3px solid ${group.accent}`,
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          alignItems: "center",
-                          marginBottom: "0.75rem",
-                        }}
-                      >
-                        <div>
-                          <div
-                            style={{
-                              color: group.accent,
-                              fontWeight: "bold",
-                              fontSize: "1rem",
-                              marginBottom: "0.25rem",
-                            }}
-                          >
-                            {family.name}
-                          </div>
-                          <div style={{ color: "#999", fontSize: "0.8rem" }}>
-                            {family.description.slice(0, 120)}
-                            {family.description.length > 120 ? "..." : ""}
-                          </div>
-                        </div>
-                        <div
-                          style={{
-                            display: "flex",
-                            gap: "0.5rem",
-                            alignItems: "center",
-                            marginLeft: "0.75rem",
-                          }}
-                        >
-                          <Tag variant="muted" style={{ whiteSpace: "nowrap" }}>
-                            {family.classification}
-                          </Tag>
-                          <Tag style={{ whiteSpace: "nowrap" }}>
-                            {familyPlants.length}種
-                          </Tag>
-                        </div>
-                      </div>
-                      <div
-                        style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}
-                      >
-                        {familyPlants.map((plant) => (
-                          <div
-                            key={plant.id}
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              alignItems: "center",
-                              gap: "0.25rem",
-                            }}
-                          >
-                            <img
-                              src={plant.local_image_url ?? wikimediaThumb(plant.image_url ?? "", 160)}
-                              alt={plant.japanese_name}
-                              loading="lazy"
-                              style={{
-                                width: "80px",
-                                height: "80px",
-                                objectFit: "cover",
-                                borderRadius: "6px",
-                              }}
-                            />
-                            <span style={{ color: "#ccc", fontSize: "0.5rem" }}>
-                              {plant.japanese_name}
-                            </span>
+                  <li key={family.id}>
+                    <Link href={`/families/${family.id}`} className="card-link">
+                      <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(4, Math.max(1, familyPlants.length))}, 1fr)`, gap: "2px", background: color.surfaceAlt, aspectRatio: "4 / 1", overflow: "hidden" }}>
+                        {familyPlants.slice(0, 4).map((plant) => (
+                          <div key={plant.id} className="card-photo" style={{ aspectRatio: "auto", height: "100%" }}>
+                            <img src={plantThumb(plant)} alt="" loading="lazy" width={120} height={120} />
                           </div>
                         ))}
                       </div>
-                    </div>
-                  </Link>
+                      <div style={{ padding: "0.85rem 1rem 1rem" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem" }}>
+                          <h3 style={{ margin: 0, fontSize: "1.05rem", color: color.ink }}>{family.name}</h3>
+                          <span style={{ fontSize: "0.78rem", color: color.primary, fontWeight: 700, whiteSpace: "nowrap" }}>{familyPlants.length}種</span>
+                        </div>
+                        <p style={{ margin: "0.35rem 0 0", fontSize: "0.8rem", color: color.muted, lineHeight: 1.7, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                          {family.description}
+                        </p>
+                        <p style={{ margin: "0.4rem 0 0", fontSize: "0.75rem", color: color.inkSoft }}>
+                          {familyPlants.slice(0, 4).map((p) => p.japanese_name).join("・")}
+                          {familyPlants.length > 4 && " など"}
+                        </p>
+                      </div>
+                    </Link>
+                  </li>
                 )
               })}
-            </div>
-          )
-        })}
-      </div>
+            </ul>
+          </section>
+        )
+      })}
     </div>
   )
 }

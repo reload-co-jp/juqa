@@ -32,7 +32,7 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -103,7 +103,7 @@ export default function Page() {
             key={text}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -131,8 +131,8 @@ export default function Page() {
             <div
               key={flower.name}
               style={{
-                background: "#242424",
-                border: "1px solid #3a3a3a",
+                background: "var(--c-surface-alt)",
+                border: "1px solid var(--c-border)",
                 borderRadius: "8px",
                 padding: "0.9rem",
               }}
@@ -149,7 +149,7 @@ export default function Page() {
                 <Link
                   href={flower.href}
                   style={{
-                    color: "#7cbe8c",
+                    color: "var(--c-primary)",
                     fontSize: "0.95rem",
                     fontWeight: "bold",
                     textDecoration: "none",
@@ -157,11 +157,11 @@ export default function Page() {
                 >
                   {flower.name} →
                 </Link>
-                <span style={{ color: "#e0e0e0", fontSize: "0.82rem" }}>
+                <span style={{ color: "var(--c-ink)", fontSize: "0.82rem" }}>
                   {flower.meaning}
                 </span>
               </div>
-              <div style={{ color: "#aaa", fontSize: "0.82rem", lineHeight: 1.7 }}>
+              <div style={{ color: "var(--c-muted)", fontSize: "0.82rem", lineHeight: 1.7 }}>
                 {flower.note}
               </div>
             </div>
@@ -171,14 +171,14 @@ export default function Page() {
 
       <Section title="桜と梅は、春の始まり方が違う">
         <p style={body}>
-          <Link href="/plants/16" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/16" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ウメ
           </Link>
           は、まだ寒さが残る時期に香り高い花を咲かせます。そのため「高潔」や「忍耐」のように、寒さの中で咲く強さを感じさせる言葉がよく似合います。
         </p>
         <p style={body}>
           一方、
-          <Link href="/plants/1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ソメイヨシノ
           </Link>
           に代表される桜は、春本番を一気に知らせる花です。満開の華やかさと散る早さが重なり、「精神の美」や「優美」といった、はかなさを含む言葉につながっています。
@@ -187,13 +187,13 @@ export default function Page() {
 
       <Section title="足元の花には、控えめな言葉が多い">
         <p style={body}>
-          <Link href="/plants/14" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/14" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             スミレ
           </Link>
           は、道端や草地の低い場所に咲く小さな花です。派手に目立つより、気づいた人にだけ見つかるような姿から、「謙虚」や「小さな幸せ」といった花言葉がしっくりきます。
         </p>
         <p style={body}>
-          <Link href="/plants/11" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/11" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             タンポポ
           </Link>
           は明るい黄色の花が印象的ですが、花のあとには綿毛になって風で飛んでいきます。そのため、前向きな愛情だけでなく「別離」のような意味も重ねられます。
@@ -203,7 +203,7 @@ export default function Page() {
       <Section title="山の春の花は、短い季節を映す">
         <p style={body}>
           山で出会う
-          <Link href="/plants/42" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/42" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             カタクリ
           </Link>
           は、春の短い間だけ花を咲かせ、初夏には地上部が目立たなくなります。このような植物はスプリングエフェメラルとも呼ばれ、短い季節にだけ姿を見せるはかなさがあります。
@@ -211,7 +211,7 @@ export default function Page() {
         <p style={body}>
           花言葉の「初恋」や「寂しさに耐える」は、うつむき気味に咲く姿や、短い春にだけ出会える特別感とよく重なります。
           春の山野草については
-          <Link href="/columns/spring-mountain-flowers" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/columns/spring-mountain-flowers" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             春の登山で見られる花特集
           </Link>
           でも紹介しています。
@@ -227,10 +227,10 @@ export default function Page() {
         </p>
         <div
           style={{
-            background: "#1e3d1f",
-            border: "1px solid #5a9a5c",
+            background: "var(--c-primary-soft)",
+            border: "1px solid var(--c-primary)",
             borderRadius: "8px",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.82rem",
             lineHeight: 1.75,
             marginTop: "1rem",
@@ -251,10 +251,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/mothers-day-flowers" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/mothers-day-flowers" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：母の日に花を贈るのはなぜ →
         </Link>
       </div>

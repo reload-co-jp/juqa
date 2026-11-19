@@ -29,11 +29,11 @@ type PhyloNodeData = {
 type FlowVariant = "plant" | "dicot" | "monocot" | "gymno"
 
 const toneStyles: Record<PhyloNodeData["tone"], { background: string; border: string }> = {
-  root: { background: "#233024", border: "#5a9a5c" },
-  early: { background: "#24302b", border: "#759b61" },
-  seed: { background: "#223039", border: "#5f93a3" },
-  flower: { background: "#20332b", border: "#64a979" },
-  group: { background: "#2c2c32", border: "#6d7386" },
+  root: { background: "#e9f2e9", border: "var(--c-primary)" },
+  early: { background: "#e9f2ee", border: "#759b61" },
+  seed: { background: "#e9eef2", border: "#476f7b" },
+  flower: { background: "#e9f2ee", border: "#457d56" },
+  group: { background: "#e9e9f2", border: "#6d7386" },
 }
 
 const PhyloNode = ({ data }: NodeProps<Node<PhyloNodeData>>) => {
@@ -47,7 +47,7 @@ const PhyloNode = ({ data }: NodeProps<Node<PhyloNodeData>>) => {
         borderRadius: 8,
         background: style.background,
         boxShadow: "0 10px 22px rgba(0,0,0,0.25)",
-        color: "#e8efe8",
+        color: "var(--c-ink)",
         padding: "0.75rem",
       }}
     >
@@ -55,7 +55,7 @@ const PhyloNode = ({ data }: NodeProps<Node<PhyloNodeData>>) => {
       <div style={{ fontSize: "0.88rem", fontWeight: 700, lineHeight: 1.45 }}>
         {data.label}
       </div>
-      <div style={{ color: "#b7c2b7", fontSize: "0.72rem", lineHeight: 1.55, marginTop: "0.35rem" }}>
+      <div style={{ color: "var(--c-muted)", fontSize: "0.72rem", lineHeight: 1.55, marginTop: "0.35rem" }}>
         {data.note}
       </div>
       {data.examples && data.examples.length > 0 && (
@@ -65,9 +65,9 @@ const PhyloNode = ({ data }: NodeProps<Node<PhyloNodeData>>) => {
               key={example.href}
               href={example.href}
               style={{
-                background: "rgba(124,190,140,0.15)",
-                color: "#9fdbad",
-                border: "1px solid rgba(124,190,140,0.35)",
+                background: "rgba(47,93,58,0.15)",
+                color: "var(--c-primary-strong)",
+                border: "1px solid rgba(47,93,58,0.35)",
                 borderRadius: 4,
                 padding: "0.12rem 0.38rem",
                 fontSize: "0.68rem",
@@ -89,7 +89,7 @@ const nodeTypes = { phylo: PhyloNode }
 const baseEdge = {
   type: "smoothstep",
   animated: false,
-  style: { stroke: "#7cbe8c", strokeWidth: 2 },
+  style: { stroke: "var(--c-primary)", strokeWidth: 2 },
 }
 
 const edge = (id: string, source: string, target: string, label?: string): Edge => ({
@@ -97,8 +97,8 @@ const edge = (id: string, source: string, target: string, label?: string): Edge 
   source,
   target,
   label,
-  labelStyle: { fill: "#cbd5cb", fontSize: 11, fontWeight: 700 },
-  labelBgStyle: { fill: "#222", fillOpacity: 0.86 },
+  labelStyle: { fill: "var(--c-ink-soft)", fontSize: 11, fontWeight: 700 },
+  labelBgStyle: { fill: "var(--c-surface-alt)", fillOpacity: 0.86 },
   labelBgPadding: [6, 3],
   ...baseEdge,
 })
@@ -455,10 +455,10 @@ export const PhylogeneticFlow = ({
         style={{
           height: displayFlow.height,
           minHeight: 360,
-          border: "1px solid #3c4a3d",
+          border: "1px solid var(--c-primary-soft)",
           borderRadius: 8,
           overflow: "hidden",
-          background: "#1f241f",
+          background: "#e9f2e9",
         }}
       >
         <ReactFlow
@@ -477,16 +477,16 @@ export const PhylogeneticFlow = ({
           preventScrolling={false}
           proOptions={{ hideAttribution: true }}
         >
-          <Background color="#3a463a" gap={20} />
-          <Controls showInteractive={false} style={{ background: "#263026", border: "1px solid #3c4a3d" }} />
+          <Background color="#e9f2e9" gap={20} />
+          <Controls showInteractive={false} style={{ background: "#e9f2e9", border: "1px solid var(--c-primary-soft)" }} />
           <MiniMap
             nodeColor={(node) => toneStyles[(node.data as PhyloNodeData).tone].border}
-            maskColor="rgba(0,0,0,0.45)"
-            style={{ background: "#232923", border: "1px solid #3c4a3d" }}
+            maskColor="rgba(47,93,58,0.08)"
+            style={{ background: "#e9f2e9", border: "1px solid var(--c-primary-soft)" }}
           />
         </ReactFlow>
       </div>
-      <figcaption style={{ color: "#9aa89a", fontSize: "0.76rem", lineHeight: 1.6, marginTop: "0.55rem" }}>
+      <figcaption style={{ color: "var(--c-muted)", fontSize: "0.76rem", lineHeight: 1.6, marginTop: "0.55rem" }}>
         {caption}
       </figcaption>
     </figure>

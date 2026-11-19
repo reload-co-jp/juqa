@@ -31,7 +31,7 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -84,7 +84,7 @@ export default function Page() {
             key={text}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -118,8 +118,8 @@ export default function Page() {
             <div
               key={flower.name}
               style={{
-                background: "#242424",
-                border: "1px solid #3a3a3a",
+                background: "var(--c-surface-alt)",
+                border: "1px solid var(--c-border)",
                 borderRadius: "8px",
                 padding: "0.9rem",
               }}
@@ -127,7 +127,7 @@ export default function Page() {
               <Link
                 href={flower.href}
                 style={{
-                  color: "#7cbe8c",
+                  color: "var(--c-primary)",
                   fontSize: "0.95rem",
                   fontWeight: "bold",
                   textDecoration: "none",
@@ -135,10 +135,10 @@ export default function Page() {
               >
                 {flower.name} →
               </Link>
-              <div style={{ color: "#e0e0e0", fontSize: "0.82rem", marginTop: "0.35rem" }}>
+              <div style={{ color: "var(--c-ink)", fontSize: "0.82rem", marginTop: "0.35rem" }}>
                 {flower.role}
               </div>
-              <div style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, marginTop: "0.35rem" }}>
+              <div style={{ color: "var(--c-muted)", fontSize: "0.8rem", lineHeight: 1.7, marginTop: "0.35rem" }}>
                 {flower.text}
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function Page() {
 
       <Section title="バラは、色と形で雰囲気を変えられる">
         <p style={body}>
-          <Link href="/plants/196" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/196" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             バラ
           </Link>
           は、結婚式の花としてもっとも選ばれやすい花のひとつです。白なら清らかで上品に、ピンクならやわらかく、赤なら印象的で華やかになります。
@@ -158,7 +158,7 @@ export default function Page() {
         </p>
         <p style={body}>
           バラ科の特徴については
-          <Link href="/columns/rosaceae-plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/columns/rosaceae-plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             バラ科の植物たち
           </Link>
           でも紹介しています。
@@ -168,23 +168,23 @@ export default function Page() {
       <Section title="白い花は、清楚さと祝福を表しやすい">
         <p style={body}>
           結婚式では白い花がよく使われます。白はドレスと合わせやすく、空間を明るく見せ、清楚な印象をつくりやすい色です。
-          <Link href="/plants/54" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/54" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ヤマユリ
           </Link>
           のようなユリの仲間は、大きな花と香りで存在感があります。
         </p>
         <p style={body}>
-          <Link href="/plants/123" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/123" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             スズラン
           </Link>
           は小さな鐘形の花が連なり、控えめで上品な印象です。ブーケに入ると主張しすぎず、近くで見たときにかわいらしさが伝わります。
         </p>
         <div
           style={{
-            background: "#1e3d1f",
-            border: "1px solid #5a9a5c",
+            background: "var(--c-primary-soft)",
+            border: "1px solid var(--c-primary)",
             borderRadius: "8px",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.82rem",
             lineHeight: 1.75,
             marginTop: "1rem",
@@ -198,14 +198,14 @@ export default function Page() {
       <Section title="季節感を出すなら、アジサイや桜も候補になる">
         <p style={body}>
           春の結婚式では
-          <Link href="/plants/1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ソメイヨシノ
           </Link>
           のような桜のイメージを取り入れると、季節がはっきり伝わります。会場装花やペーパーアイテムのモチーフとしても使いやすい植物です。
         </p>
         <p style={body}>
           初夏には
-          <Link href="/plants/31" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/31" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アジサイ
           </Link>
           がよく合います。小さな花が集まったように見える丸い形は、ブーケにボリュームを出しやすく、青や紫、白、淡いピンクなど色の幅もあります。
@@ -230,7 +230,7 @@ export default function Page() {
         </p>
         <p style={body}>
           花言葉が気になる場合は、
-          <Link href="/columns/spring-flower-meanings" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/columns/spring-flower-meanings" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             春の花の花言葉
           </Link>
           のように意味を調べながら、最終的には「ふたりがどう見せたいか」で選ぶと自然です。
@@ -250,10 +250,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/mothers-day-flowers" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/mothers-day-flowers" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：母の日に花を贈るのはなぜ →
         </Link>
       </div>

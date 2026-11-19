@@ -33,12 +33,12 @@ const ContactClient = () => {
   }
 
   return (
-    <div style={{ maxWidth: "40rem", margin: "0 auto", color: "#e0e0e0" }}>
+    <div style={{ maxWidth: "40rem", margin: "0 auto", color: "var(--c-ink)" }}>
       <h1
         style={{
           fontSize: "1.5rem",
           fontWeight: "bold",
-          color: "#7cbe8c",
+          color: "var(--c-primary)",
           marginBottom: "2rem",
         }}
       >
@@ -48,12 +48,12 @@ const ContactClient = () => {
       {status === "done" ? (
         <div
           style={{
-            background: "#1e3d1f",
-            border: "1px solid #4a8a4c",
+            background: "var(--c-primary-soft)",
+            border: "1px solid var(--c-primary)",
             borderRadius: "12px",
             padding: "2rem",
             textAlign: "center",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
           }}
         >
           <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>✅</div>
@@ -65,9 +65,9 @@ const ContactClient = () => {
             style={{
               marginTop: "1.5rem",
               background: "transparent",
-              border: "1px solid #4a8a4c",
+              border: "1px solid var(--c-primary)",
               borderRadius: "8px",
-              color: "#7cbe8c",
+              color: "var(--c-primary)",
               padding: "0.5rem 1.5rem",
               cursor: "pointer",
               fontSize: "0.85rem",
@@ -84,7 +84,7 @@ const ContactClient = () => {
               style={{
                 display: "block",
                 fontSize: "0.85rem",
-                color: "#aaa",
+                color: "var(--c-muted)",
                 marginBottom: "0.4rem",
               }}
             >
@@ -99,11 +99,11 @@ const ContactClient = () => {
               placeholder="山田 太郎"
               style={{
                 width: "100%",
-                background: "#2d2d2d",
-                border: "1px solid #444",
+                background: "var(--c-surface)",
+                border: "1px solid var(--c-border-strong)",
                 borderRadius: "8px",
                 padding: "0.75rem 1rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 fontSize: "0.95rem",
                 outline: "none",
                 boxSizing: "border-box",
@@ -117,7 +117,7 @@ const ContactClient = () => {
               style={{
                 display: "block",
                 fontSize: "0.85rem",
-                color: "#aaa",
+                color: "var(--c-muted)",
                 marginBottom: "0.4rem",
               }}
             >
@@ -132,11 +132,11 @@ const ContactClient = () => {
               placeholder="ご質問・ご要望などをご記入ください"
               style={{
                 width: "100%",
-                background: "#2d2d2d",
-                border: "1px solid #444",
+                background: "var(--c-surface)",
+                border: "1px solid var(--c-border-strong)",
                 borderRadius: "8px",
                 padding: "0.75rem 1rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 fontSize: "0.95rem",
                 outline: "none",
                 resize: "vertical",
@@ -149,7 +149,7 @@ const ContactClient = () => {
           {status === "error" && (
             <p
               style={{
-                color: "#e07070",
+                color: "var(--c-error)",
                 fontSize: "0.85rem",
                 marginBottom: "1rem",
               }}
@@ -163,7 +163,7 @@ const ContactClient = () => {
             disabled={status === "sending"}
             style={{
               width: "100%",
-              background: status === "sending" ? "#3a6a3c" : "#5a9a5c",
+              background: status === "sending" ? "#3a6a3c" : "var(--c-primary)",
               color: "#fff",
               border: "none",
               borderRadius: "8px",

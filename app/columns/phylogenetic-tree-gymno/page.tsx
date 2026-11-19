@@ -31,8 +31,8 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   <Link
     href={href}
     style={{
-      background: "#1e3d1f",
-      color: "#7cbe8c",
+      background: "var(--c-primary-soft)",
+      color: "var(--c-primary)",
       borderRadius: "4px",
       padding: "0.1rem 0.5rem",
       fontSize: "0.75rem",
@@ -56,16 +56,16 @@ const GroupCard = ({
 }) => (
   <div
     style={{
-      background: "#242424",
+      background: "var(--c-surface-alt)",
       borderRadius: "8px",
       padding: "1rem",
       marginBottom: "0.75rem",
     }}
   >
-    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: "0.4rem" }}>
+    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "var(--c-ink)", marginBottom: "0.4rem" }}>
       {cardTitle}
     </div>
-    <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
+    <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
       {feature}
     </p>
     <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
@@ -75,10 +75,10 @@ const GroupCard = ({
     </div>
     <div
       style={{
-        background: "#1e3d1f",
+        background: "var(--c-primary-soft)",
         borderRadius: "6px",
         padding: "0.4rem 0.75rem",
-        color: "#a0d0a2",
+        color: "var(--c-primary-strong)",
         fontSize: "0.78rem",
       }}
     >
@@ -107,10 +107,10 @@ const CompareRow = ({
       fontSize: "0.78rem",
     }}
   >
-    <div style={{ color: "#aaa", fontWeight: "bold" }}>{item}</div>
-    <div style={{ color: "#ccc" }}>{matuGroup}</div>
-    <div style={{ color: "#ccc" }}>{icho}</div>
-    <div style={{ color: "#ccc" }}>{ichii}</div>
+    <div style={{ color: "var(--c-muted)", fontWeight: "bold" }}>{item}</div>
+    <div style={{ color: "var(--c-ink-soft)" }}>{matuGroup}</div>
+    <div style={{ color: "var(--c-ink-soft)" }}>{icho}</div>
+    <div style={{ color: "var(--c-ink-soft)" }}>{ichii}</div>
   </div>
 )
 
@@ -128,27 +128,27 @@ const Page = () => {
           "裸子植物の最も大きな特徴は「種子が果実に包まれない（裸のまま）」点だが、そのなかでも種子の包まれ方・葉の形・球果の有無によってグループが分かれる。",
           "このコラムでは裸子植物を「球果植物（マツ科・ヒノキ科）」「イチョウ科」「イチイ科・マキ科」の大きな流れで整理し、それぞれの見分け方を解説する。",
         ].map((text, i) => (
-          <p key={i} style={{ margin: 0, color: "#bbb", fontSize: "0.9rem", lineHeight: 1.9 }}>
+          <p key={i} style={{ margin: 0, color: "var(--c-ink-soft)", fontSize: "0.9rem", lineHeight: 1.9 }}>
             {text}
           </p>
         ))}
       </ColumnIntro>
 
       <Section title="裸子植物の系統——4つの大グループ">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           現生の裸子植物は大きく4つのグループに分けられる。球果植物（マツ目・ヒノキ目など）が最も種類が多く、残りはそれぞれ独立した古い系統だ。
         </p>
         <PhylogeneticFlow
           variant="gymno"
           caption="球果を作る枝と作らない枝を分けると、マツ・ヒノキ・イチイ・イチョウの違いが見やすい。"
         />
-        <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
+        <p style={{ color: "var(--c-muted)", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ ソテツ目・グネツム目など他のグループも存在するが、日本の山野・街路で見かける裸子植物の大部分はこの3グループに属する。
         </p>
       </Section>
 
       <Section title="球果植物——まつぼっくり型の種子容器を持つグループ">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           球果植物は「球果（きゅうか）」という木質化した鱗片状の器官に種子がつくグループだ。いわゆる「まつぼっくり」が球果の代表例。葉は針状・鱗片状・線形など種によって異なり、そこで科を区別できる。
         </p>
         <GroupCard
@@ -172,7 +172,7 @@ const Page = () => {
       </Section>
 
       <Section title="イチョウ科——2億年以上変わらない「生きた化石」">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           イチョウ科は現在も生きている種がイチョウ1種のみという、極めて小さな科だ。最古の化石記録は約2億7000万年前に遡り、現在のイチョウと形がほとんど変わっていないことから「生きた化石」と呼ばれる。裸子植物の他グループとも離れた独立した系統に位置する。
         </p>
         <GroupCard
@@ -184,7 +184,7 @@ const Page = () => {
       </Section>
 
       <Section title="イチイ科・マキ科——球果を持たない裸子植物">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           「裸子植物＝まつぼっくり」というイメージを壊すのがこのグループだ。イチイ科とマキ科は球果を作らず、種子が肉質の「仮種皮」や「花托」に包まれる独特の形をとる。見た目が球果植物と大きく異なるため、裸子植物と気づかれにくい。
         </p>
         <GroupCard
@@ -212,10 +212,10 @@ const Page = () => {
               fontSize: "0.78rem",
             }}
           >
-            <div style={{ color: "#7cbe8c", fontWeight: "bold" }}>確認ポイント</div>
-            <div style={{ color: "#7cbe8c", fontWeight: "bold" }}>球果植物</div>
-            <div style={{ color: "#7cbe8c", fontWeight: "bold" }}>イチョウ</div>
-            <div style={{ color: "#7cbe8c", fontWeight: "bold" }}>イチイ・マキ</div>
+            <div style={{ color: "var(--c-primary)", fontWeight: "bold" }}>確認ポイント</div>
+            <div style={{ color: "var(--c-primary)", fontWeight: "bold" }}>球果植物</div>
+            <div style={{ color: "var(--c-primary)", fontWeight: "bold" }}>イチョウ</div>
+            <div style={{ color: "var(--c-primary)", fontWeight: "bold" }}>イチイ・マキ</div>
           </div>
           <CompareRow item="球果の有無" matuGroup="あり（まつぼっくり型）" icho="なし" ichii="なし" />
           <CompareRow item="葉の形" matuGroup="針状・鱗片状" icho="扇形" ichii="平らな針状・線形" />
@@ -225,10 +225,10 @@ const Page = () => {
         </div>
         <div
           style={{
-            background: "#1e3d1f",
+            background: "var(--c-primary-soft)",
             borderRadius: "6px",
             padding: "0.75rem 1rem",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
           }}
@@ -247,19 +247,19 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           植物一覧を見る →
         </Link>
-        <Link href="/columns/phylogenetic-tree" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：植物を系統樹で覚えやすく →
         </Link>
-        <Link href="/columns/conifer" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/conifer" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：針葉樹林の簡単な見分け方 →
         </Link>
-        <Link href="/columns/phylogenetic-tree-dicot" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree-dicot" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：双子葉類の系統を辿る →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

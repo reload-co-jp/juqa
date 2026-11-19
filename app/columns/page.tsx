@@ -1,165 +1,73 @@
 import type { Metadata } from "next"
-import Link from "next/link"
+import { Breadcrumbs, JsonLd, LinkCard, PageIntro } from "components/elements/layout"
 import { columns } from "lib/columns"
+import { columnImage } from "lib/column-meta"
+import { siteUrl } from "lib/seo"
 
-const siteUrl = "https://juqa.reload.co.jp"
 const pageUrl = `${siteUrl}/columns/`
+const description =
+  "植物の見分け方、分類の基礎、季節の花、植物と文化など、植物をもっと楽しむための読み物コラムの一覧です。"
 
 export const metadata: Metadata = {
-  title: "コラム",
-  description:
-    "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
+  title: "植物コラム",
+  description,
   keywords: ["植物コラム", "植物の豆知識", "植物の見分け方", "植物解説"],
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    title: "コラム | ジュカ！",
-    description:
-      "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
-    url: pageUrl,
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "コラム | ジュカ！",
-    description: "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
-  },
+  alternates: { canonical: pageUrl },
+  openGraph: { title: "植物コラム | ジュカ！", description, url: pageUrl, type: "website" },
+  twitter: { card: "summary", title: "植物コラム | ジュカ！", description },
 }
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": pageUrl,
-  url: pageUrl,
-  name: "コラム",
-  description: "植物の見分け方や豆知識をやさしく解説するコラム一覧です。",
-  inLanguage: "ja",
-  isPartOf: { "@id": `${siteUrl}/#website` },
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": pageUrl,
+      url: pageUrl,
+      name: "植物コラム",
+      description,
+      inLanguage: "ja",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${pageUrl}#itemlist` },
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#itemlist`,
+      numberOfItems: columns.length,
+      itemListElement: columns.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${siteUrl}${c.href}/`,
+        name: c.title,
+      })),
+    },
+  ],
 }
 
-const Page = () => {
-  return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div style={{ marginBottom: "1.5rem" }}>
-        <Link
-          href="/"
-          style={{ color: "#7cbe8c", fontSize: "0.85rem", textDecoration: "none" }}
-        >
-          ← トップへ
-        </Link>
-      </div>
-
-      <div style={{ marginBottom: "2rem" }}>
-        <h1
-          style={{
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            color: "#fff",
-            margin: "0 0 0.5rem",
-          }}
-        >
-          コラム
-        </h1>
-        <p style={{ color: "#999", fontSize: "0.85rem", margin: 0 }}>
-          植物の見分け方や豆知識を解説します
-        </p>
-      </div>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-        {columns.map((col) => (
-          <Link
-            key={col.href}
-            href={col.href}
-            style={{ textDecoration: "none" }}
-          >
-            <div
-              style={{
-                background: "#2d2d2d",
-                borderRadius: "12px",
-                padding: "1.25rem 1.5rem",
-                border: "1px solid #333",
-                transition: "border-color 0.15s",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: "0.875rem",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    lineHeight: 1,
-                    flexShrink: 0,
-                    marginTop: "0.1rem",
-                  }}
-                >
-                  {col.emoji}
-                </div>
-                <div style={{ minWidth: 0 }}>
-                  <div
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                      color: "#e0e0e0",
-                      marginBottom: "0.4rem",
-                      lineHeight: 1.4,
-                    }}
-                  >
-                    {col.title}
-                  </div>
-                  <p
-                    style={{
-                      color: "#aaa",
-                      fontSize: "0.8rem",
-                      lineHeight: 1.7,
-                      margin: "0 0 0.75rem",
-                    }}
-                  >
-                    {col.description}
-                  </p>
-                  <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-                    {col.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        style={{
-                          background: "#1e3d1f",
-                          color: "#7cbe8c",
-                          borderRadius: "4px",
-                          padding: "0.15rem 0.5rem",
-                          fontSize: "0.72rem",
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div
-                  style={{
-                    color: "#555",
-                    fontSize: "1rem",
-                    flexShrink: 0,
-                    marginLeft: "auto",
-                    alignSelf: "center",
-                  }}
-                >
-                  →
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  )
-}
+const Page = () => (
+  <div>
+    <JsonLd data={jsonLd} />
+    <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { label: "植物コラム" }]} currentUrl={pageUrl} />
+    <PageIntro eyebrow="COLUMNS" title="植物コラム" lead={description} />
+    <ul className="grid-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+      {columns.map((col) => {
+        const img = columnImage(col.href)
+        return (
+          <li key={col.href}>
+            <LinkCard
+              href={col.href}
+              title={col.title}
+              description={col.description}
+              image={img?.src}
+              imageAlt={img?.alt}
+              icon={img ? undefined : col.emoji}
+              meta={col.tags.join("・")}
+            />
+          </li>
+        )
+      })}
+    </ul>
+  </div>
+)
 
 export default Page

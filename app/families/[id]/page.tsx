@@ -2,13 +2,18 @@ import type { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { families, plants } from "lib/data"
-import { wikimediaThumb } from "lib/utils"
 import {
   Breadcrumbs,
+  JsonLd,
   PageHeader,
-  SectionCard,
-  Tag,
+  PageIntro,
+  Section,
+  SectionHeading,
 } from "components/elements/layout"
+import { PlantGrid } from "components/elements/PlantCard"
+import { columns } from "lib/columns"
+import { SEASONS } from "lib/plants"
+import { color, radius } from "lib/theme"
 import { familyAioSummaryText, publisher, siteUrl } from "lib/seo"
 
 export function generateStaticParams() {
@@ -59,8 +64,8 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
 
   if (!family) {
     return (
-      <div style={{ color: "#e0e0e0", margin: "0 auto" }}>
-        <PageHeader backHref="/families" backLabel="科一覧" />
+      <div>
+        <PageHeader backHref="/families" backLabel="科から探す" />
         <p style={{ marginTop: "1rem" }}>科が見つかりませんでした。</p>
       </div>
     )
@@ -109,30 +114,12 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
             value: String(familyPlants.length),
           },
         ],
-        hasPart: familyPlants.map((p) => ({
+        childTaxon: familyPlants.map((p) => ({
           "@type": "Taxon",
           name: p.japanese_name,
           scientificName: p.scientific_name,
           url: `${siteUrl}/plants/${p.id}/`,
         })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "ホーム", item: siteUrl },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "科一覧",
-            item: `${siteUrl}/families/`,
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: family.name,
-            item: pageUrl,
-          },
-        ],
       },
       {
         "@type": "FAQPage",
@@ -151,160 +138,66 @@ const FamilyDetailPage: FC<Props> = async ({ params }) => {
     ],
   }
 
-  return (
-    <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+  const forms = (["高木", "低木", "草本"] as PlantTag[])
+    .map((t) => ({ t, n: familyPlants.filter((p) => p.tags.includes(t)).length }))
+    .filter((x) => x.n > 0)
+  const seasonsCount = SEASONS.map((x) => ({
+    ...x,
+    n: familyPlants.filter((p) => p.tags.includes(x.tag)).length,
+  })).filter((x) => x.n > 0)
+  const relatedColumns = columns.filter((c) => c.title.includes(family.name) || (c.tags as readonly string[]).includes(family.name))
 
+  return (
+    <div>
+      <JsonLd data={jsonLd} />
       <Breadcrumbs
         items={[
           { href: "/", label: "ホーム" },
-          { href: "/families", label: "科一覧" },
+          { href: "/families", label: "科から探す" },
           { label: family.name },
         ]}
+        currentUrl={pageUrl}
       />
+      <PageIntro eyebrow={`${family.classification} ・ FAMILY`} title={`${family.name}の特徴と植物一覧`} lead={family.description} />
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "0.75rem",
-          marginBottom: "0.5rem",
-        }}
-      >
-        <h1 style={{ margin: 0, fontSize: "1.4rem", color: "#7cbe8c" }}>
-          {family.name}
-        </h1>
-        <Tag variant="muted">{family.classification}</Tag>
-      </div>
-      <p
-        style={{
-          margin: "0 0 1.25rem",
-          color: "#999",
-          fontSize: "0.9rem",
-          lineHeight: "1.6",
-        }}
-      >
-        {family.description}
-      </p>
-
-      <SectionCard title="要点">
-        <p
-          style={{
-            margin: 0,
-            color: "#e0e0e0",
-            fontSize: "0.95rem",
-            lineHeight: "1.8",
-          }}
-        >
-          {aioSummary}
-        </p>
-      </SectionCard>
-
-      <SectionCard title="主な特徴">
-        <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: "1.7" }}>
-          {family.characteristics.map((c, i) => (
-            <li
-              key={i}
-              style={{
-                color: "#e0e0e0",
-                fontSize: "0.9rem",
-                marginBottom: "0.4rem",
-              }}
-            >
-              {c}
-            </li>
-          ))}
-        </ul>
-      </SectionCard>
-
-      <SectionCard title={`この科の植物（${familyPlants.length}種）`}>
-        {familyPlants.length === 0 ? (
-          <p style={{ margin: 0, color: "#999", fontSize: "0.9rem" }}>
-            データがありません。
-          </p>
-        ) : (
-          <div>
-            {familyPlants.map((plant) => (
-              <Link
-                key={plant.id}
-                href={`/plants/${plant.id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <div
-                  style={{
-                    padding: "0.6rem 0",
-                    borderBottom: "1px solid #3a3a3a",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.75rem",
-                  }}
-                >
-                  {plant.image_url ? (
-                    <img
-                      src={
-                        plant.local_image_url ??
-                        wikimediaThumb(plant.image_url, 80)
-                      }
-                      alt={plant.japanese_name}
-                      loading="lazy"
-                      style={{
-                        width: "48px",
-                        height: "48px",
-                        objectFit: "cover",
-                        borderRadius: "6px",
-                        flexShrink: 0,
-                        background: "#2a3d2b",
-                      }}
-                    />
-                  ) : (
-                    <div
-                      style={{
-                        width: "48px",
-                        height: "48px",
-                        borderRadius: "6px",
-                        flexShrink: 0,
-                        background: "#2a3d2b",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "1.25rem",
-                      }}
-                    >
-                      🌿
-                    </div>
-                  )}
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ color: "#7cbe8c", fontSize: "0.95rem" }}>
-                      {plant.japanese_name}
-                    </div>
-                    <div
-                      style={{
-                        color: "#999",
-                        fontSize: "0.78rem",
-                        fontStyle: "italic",
-                      }}
-                    >
-                      {plant.scientific_name}
-                    </div>
-                  </div>
-                  <span
-                    style={{
-                      color: "#7cbe8c",
-                      fontSize: "0.8rem",
-                      flexShrink: 0,
-                    }}
-                  >
-                    →
-                  </span>
-                </div>
-              </Link>
+      <div className="split split--wide" style={{ marginBottom: "1rem" }}>
+        <div style={{ background: color.surface, border: `1px solid ${color.border}`, borderRadius: radius.lg, padding: "1.5rem" }}>
+          <h2 className="serif" style={{ fontSize: "1.2rem", margin: "0 0 0.75rem" }}>主な特徴</h2>
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", lineHeight: 1.9 }}>
+            {family.characteristics.map((c, i) => (
+              <li key={i}>{c}</li>
             ))}
-          </div>
+          </ul>
+          <p style={{ margin: "1rem 0 0", fontSize: "0.88rem", color: color.muted, lineHeight: 1.9 }}>{aioSummary}</p>
+        </div>
+        <div style={{ background: color.primaryTint, borderRadius: radius.lg, padding: "1.25rem", fontSize: "0.88rem" }}>
+          <h2 style={{ fontSize: "0.95rem", margin: "0 0 0.6rem" }}>収録データの内訳</h2>
+          <p style={{ margin: 0 }}>
+            収録植物 <strong style={{ fontSize: "1.2rem" }}>{familyPlants.length}</strong> 種
+          </p>
+          {forms.length > 0 && <p style={{ margin: "0.4rem 0 0" }}>形態：{forms.map((f) => `${f.t} ${f.n}種`).join("・")}</p>}
+          {seasonsCount.length > 0 && <p style={{ margin: "0.4rem 0 0" }}>開花：{seasonsCount.map((f) => `${f.label} ${f.n}種`).join("・")}</p>}
+          <p style={{ margin: "0.8rem 0 0", display: "grid", gap: "0.3rem" }}>
+            <Link href={`/plants?family=${family.id}`}>図鑑で{family.name}を絞り込む →</Link>
+            <Link href={`/gallery?family=${family.id}`}>{family.name}の写真ギャラリー →</Link>
+            {relatedColumns.map((c) => (
+              <Link key={c.href} href={c.href}>コラム：{c.title} →</Link>
+            ))}
+          </p>
+        </div>
+      </div>
+
+      <Section labelledBy="family-plants">
+        <SectionHeading id="family-plants" title={`${family.name}の植物（${familyPlants.length}種）`} />
+        {familyPlants.length === 0 ? (
+          <p style={{ color: color.muted }}>データがありません。</p>
+        ) : (
+          <PlantGrid plants={familyPlants} showFeature listName={`family_${family.id}`} />
         )}
-      </SectionCard>
+      </Section>
+      <p style={{ fontSize: "0.85rem" }}>
+        <Link href="/families">← 科の一覧へ戻る</Link>
+      </p>
     </div>
   )
 }

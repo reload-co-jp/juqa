@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 
 export const dynamic = "force-static"
 
-const basePath = process.env.NODE_ENV === "production" ? "/juqa" : ""
+const basePath = ""
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -13,8 +13,8 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: basePath + "/",
     scope: basePath + "/",
     display: "standalone",
-    background_color: "#1e1e1e",
-    theme_color: "#7cbe8c",
+    background_color: "#f7f5ee",
+    theme_color: "#2f5d3a",
     icons: [
       {
         src: basePath + "/icons/icon-192.png",

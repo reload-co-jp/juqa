@@ -1,691 +1,378 @@
 "use client"
 
-import { FC, useState, useRef } from "react"
+import { FC, useState } from "react"
 import Link from "next/link"
-import { plants } from "lib/data"
-import { shuffle, wikimediaThumb } from "lib/utils"
-import {
-  PageHeader,
-  SectionCard,
-  Button,
-  Tag,
-} from "components/elements/layout"
+import { families, plants } from "lib/data"
+import { shuffle } from "lib/utils"
+import { SEASONS, getFamily, imagePhoto, imageThumb, plantImages } from "lib/plants"
+import { trackEvent } from "lib/analytics"
+import { color, radius } from "lib/theme"
+import { Breadcrumbs, PageIntro, Tag } from "components/elements/layout"
 
 type PhotoQuiz = {
-  id: number
-  plant_id: number
-  question: string
-  answer: string
-  shuffledChoices: string[]
+  plant: Plant
+  choices: string[]
 }
 
-type PhotoQuizGenre = {
+type Genre = {
   id: string
+  group: string
   label: string
   description: string
   filter: (plant: Plant) => boolean
 }
 
-const QUIZ_COUNT = 4
+const QUIZ_COUNT = 5
 
-const photoQuizGenres: PhotoQuizGenre[] = [
-  {
-    id: "spring-flowers",
-    label: "春の花",
-    description: "春に花を咲かせる植物から出題",
-    filter: (plant) => plant.tags.includes("春開花"),
-  },
-  {
-    id: "summer-flowers",
-    label: "夏の花",
-    description: "夏に見かける花や樹木から出題",
-    filter: (plant) => plant.tags.includes("夏開花"),
-  },
-  {
-    id: "mountain-plants",
-    label: "山の植物",
-    description: "山地で見かけやすい植物を中心に出題",
-    filter: (plant) => plant.tags.includes("山"),
-  },
-  {
-    id: "street-trees",
-    label: "街路樹",
-    description: "街や公園で見かける木を見分ける",
-    filter: (plant) => plant.tags.includes("街路樹"),
-  },
-  {
-    id: "conifers",
-    label: "針葉樹",
-    description: "針葉を持つ樹木だけで挑戦",
-    filter: (plant) => plant.tags.includes("針葉"),
-  },
-  {
-    id: "acorns",
-    label: "どんぐり",
-    description: "どんぐりをつける仲間を集中的に出題",
-    filter: (plant) => plant.tags.includes("どんぐり"),
-  },
-]
+const familyGenres: Genre[] = families
+  .map((f) => ({ f, n: plants.filter((p) => p.family_id === f.id).length }))
+  .filter((x) => x.n >= 8)
+  .sort((a, b) => b.n - a.n)
+  .slice(0, 6)
+  .map(({ f }) => ({
+    id: `family-${f.id}`,
+    group: "科別",
+    label: f.name,
+    description: `${f.name}の仲間どうしで見分ける上級編`,
+    filter: (p: Plant) => p.family_id === f.id,
+  }))
 
-function generatePhotoQuizzes(pool: Plant[], count: number): PhotoQuiz[] {
-  const shuffled = shuffle(pool)
-  const selected = shuffled.slice(0, count)
-  const others = shuffled.slice(count)
-  return selected.map((plant, i) => {
-    const distractors = others
-      .slice(i * 3, i * 3 + 3)
-      .map((p) => p.japanese_name)
-    return {
-      id: plant.id,
-      plant_id: plant.id,
-      question: "この植物は何？",
-      answer: plant.japanese_name,
-      shuffledChoices: shuffle([plant.japanese_name, ...distractors]),
-    }
+const genres: Genre[] = [
+  { id: "all", group: "おまかせ", label: "すべての植物", description: "収録しているすべての植物から出題", filter: () => true },
+  ...SEASONS.map((s) => ({
+    id: `season-${s.key}`,
+    group: "季節別",
+    label: `${s.label}の花`,
+    description: `${s.label}（${s.months}）に花を咲かせる植物から出題`,
+    filter: (p: Plant) => p.tags.includes(s.tag),
+  })),
+  ...familyGenres,
+  { id: "mountain-plants", group: "テーマ別", label: "山の植物", description: "山地で見かけやすい植物を中心に出題", filter: (p) => p.tags.includes("山") },
+  { id: "street-trees", group: "テーマ別", label: "街路樹", description: "街や公園で見かける木を見分ける", filter: (p) => p.tags.includes("街路樹") },
+  { id: "weeds", group: "テーマ別", label: "身近な雑草", description: "道ばたや空き地の草花から出題", filter: (p) => p.tags.includes("雑草") },
+  { id: "conifers", group: "テーマ別", label: "針葉樹", description: "針葉を持つ樹木だけで挑戦", filter: (p) => p.tags.includes("針葉") },
+  { id: "acorns", group: "テーマ別", label: "どんぐり", description: "どんぐりをつける仲間を集中的に出題", filter: (p) => p.tags.includes("どんぐり") },
+].filter((g) => plants.filter(g.filter).length >= QUIZ_COUNT)
+
+const groups = [...new Set(genres.map((g) => g.group))]
+
+function generate(pool: Plant[]): PhotoQuiz[] {
+  const withPhoto = shuffle(pool.filter((p) => plantImages(p).length > 0))
+  const selected = withPhoto.slice(0, QUIZ_COUNT)
+  return selected.map((plant) => {
+    // まず同じプールから、足りなければ全植物から誤答を選ぶ
+    const others = shuffle(withPhoto.filter((p) => p.id !== plant.id))
+    const extra = shuffle(plants.filter((p) => p.id !== plant.id && !others.includes(p)))
+    const distractors = [...others, ...extra].slice(0, 3).map((p) => p.japanese_name)
+    return { plant, choices: shuffle([plant.japanese_name, ...distractors]) }
   })
 }
 
 const PhotoQuizClient: FC = () => {
-  const [selectedGenreId, setSelectedGenreId] = useState<string | null>(null)
-  const [shuffledQuizzes, setShuffledQuizzes] = useState<PhotoQuiz[]>([])
+  const [genre, setGenre] = useState<Genre | null>(null)
+  const [quizzes, setQuizzes] = useState<PhotoQuiz[]>([])
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [answers, setAnswers] = useState<string[]>([])
-  const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
-  const [imageLoaded, setImageLoaded] = useState(false)
-  const loadedCountRef = useRef(0)
+  const [photoIndex, setPhotoIndex] = useState(0)
 
-  const selectedGenre =
-    photoQuizGenres.find((genre) => genre.id === selectedGenreId) ?? null
-
-  const startGenreQuiz = (genreId: string) => {
-    const genre = photoQuizGenres.find((item) => item.id === genreId)
-    if (!genre) return
-    const pool = plants.filter(genre.filter)
-    if (pool.length < QUIZ_COUNT) return
-
-    setSelectedGenreId(genreId)
-    setShuffledQuizzes(generatePhotoQuizzes(pool, QUIZ_COUNT))
+  const start = (g: Genre) => {
+    setGenre(g)
+    setQuizzes(generate(plants.filter(g.filter)))
     setCurrent(0)
     setSelected(null)
     setAnswers([])
-    setScore(0)
     setFinished(false)
-    setImageLoaded(false)
-    loadedCountRef.current = 0
+    setPhotoIndex(0)
+    trackEvent("quiz_start", { quiz_type: "photo", quiz_genre: g.id })
+    window.scrollTo({ top: 0 })
   }
 
-  const handleSelect = (choice: string) => {
+  const backToGenres = () => {
+    setGenre(null)
+    setQuizzes([])
+  }
+
+  const score = answers.filter((a, i) => quizzes[i] && a === quizzes[i].plant.japanese_name).length
+
+  /* ---------- ジャンル選択 ---------- */
+  if (!genre || quizzes.length === 0) {
+    return (
+      <div>
+        <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { href: "/quiz", label: "学ぶ・クイズ" }, { label: "写真クイズ" }]} />
+        <PageIntro
+          eyebrow="PHOTO QUIZ"
+          title="写真クイズ"
+          lead={`写真を見て植物の名前を4つの選択肢から当てる、全${QUIZ_COUNT}問のクイズです。答えたあとに見分け方のポイントも確認できます。テーマを選んでスタートしてください。`}
+        />
+        {groups.map((group) => (
+          <section key={group} aria-labelledby={`g-${group}`} style={{ marginBottom: "2rem" }}>
+            <h2 id={`g-${group}`} className="serif" style={{ fontSize: "1.15rem", margin: "0 0 0.75rem" }}>
+              {group}
+            </h2>
+            <ul className="grid-3" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {genres
+                .filter((g) => g.group === group)
+                .map((g) => (
+                  <li key={g.id}>
+                    <button
+                      type="button"
+                      onClick={() => start(g)}
+                      className="card-link"
+                      style={{ width: "100%", textAlign: "left", padding: "1rem 1.1rem", cursor: "pointer", font: "inherit" }}
+                    >
+                      <span style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", alignItems: "center" }}>
+                        <span style={{ fontWeight: 700, fontSize: "1rem", color: color.ink }}>{g.label}</span>
+                        <Tag variant="muted">{plants.filter(g.filter).length}種</Tag>
+                      </span>
+                      <span style={{ display: "block", marginTop: "0.35rem", fontSize: "0.83rem", color: color.muted, lineHeight: 1.7 }}>
+                        {g.description}
+                      </span>
+                    </button>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    )
+  }
+
+  /* ---------- 結果 ---------- */
+  if (finished) {
+    const percent = Math.round((score / quizzes.length) * 100)
+    return (
+      <div className="container-narrow" style={{ paddingTop: "1.5rem" }}>
+        <section
+          aria-labelledby="result-title"
+          style={{ background: color.surface, border: `1px solid ${color.border}`, borderRadius: radius.lg, padding: "2rem 1.25rem", textAlign: "center" }}
+        >
+          <Tag>{genre.label}</Tag>
+          <h1 id="result-title" className="serif" style={{ fontSize: "1.4rem", margin: "0.75rem 0 0" }}>
+            結果
+          </h1>
+          <p className="serif" style={{ fontSize: "3rem", fontWeight: 700, color: color.primary, margin: "0.25rem 0 0", lineHeight: 1.2 }}>
+            {score} / {quizzes.length}
+          </p>
+          <p style={{ color: color.muted, margin: "0.25rem 0 0.75rem" }}>正解率 {percent}%</p>
+          <p style={{ margin: 0 }}>
+            {percent >= 80
+              ? "すばらしい！写真で植物を見分ける力がありますね。"
+              : percent >= 50
+                ? "まずまずです。間違えた植物の見分け方を確認してみましょう。"
+                : "見分けるポイントを確認して、もう一度挑戦してみましょう。"}
+          </p>
+        </section>
+
+        <h2 className="serif" style={{ fontSize: "1.15rem", margin: "2rem 0 0.75rem" }}>
+          ふりかえり
+        </h2>
+        <ol style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.6rem" }}>
+          {quizzes.map((q, i) => {
+            const correct = answers[i] === q.plant.japanese_name
+            const img = plantImages(q.plant)[0]
+            return (
+              <li
+                key={q.plant.id}
+                style={{ display: "flex", gap: "0.85rem", alignItems: "center", background: color.surface, border: `1px solid ${color.border}`, borderLeft: `4px solid ${correct ? color.primary : color.error}`, borderRadius: radius.md, padding: "0.6rem" }}
+              >
+                <img src={imageThumb(img)} alt="" width={72} height={72} style={{ width: "4.5rem", height: "4.5rem", objectFit: "cover", borderRadius: "8px", flexShrink: 0 }} />
+                <div style={{ fontSize: "0.88rem", minWidth: 0 }}>
+                  <p style={{ margin: 0, fontWeight: 700, color: correct ? color.primary : color.error }}>
+                    {correct ? "○ 正解" : "× 不正解"}
+                    <span style={{ color: color.ink, marginLeft: "0.5rem" }}>{q.plant.japanese_name}</span>
+                  </p>
+                  {!correct && <p style={{ margin: 0, color: color.muted, fontSize: "0.8rem" }}>あなたの回答：{answers[i]}</p>}
+                  <Link href={`/plants/${q.plant.id}`} style={{ fontSize: "0.8rem" }}>
+                    見分け方を確認する →
+                  </Link>
+                </div>
+              </li>
+            )
+          })}
+        </ol>
+
+        <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "1.5rem" }}>
+          <button type="button" className="btn" onClick={() => start(genre)} style={{ flex: 1 }}>
+            同じテーマでもう一度
+          </button>
+          <button type="button" className="btn btn--secondary" onClick={backToGenres} style={{ flex: 1 }}>
+            テーマを選び直す
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  /* ---------- 出題 ---------- */
+  const quiz = quizzes[current]
+  const plant = quiz.plant
+  const images = plantImages(plant)
+  const photo = images[Math.min(photoIndex, images.length - 1)]
+  const answer = plant.japanese_name
+  const isCorrect = selected === answer
+  const family = getFamily(plant)
+
+  const choose = (choice: string) => {
     if (selected !== null) return
     setSelected(choice)
-    if (choice === quiz.answer) {
-      setScore((s) => s + 1)
-    }
+    trackEvent("quiz_answer", { quiz_type: "photo", quiz_genre: genre.id, correct: choice === answer ? 1 : 0, item_id: plant.id })
   }
 
-  const handleNext = () => {
+  const next = () => {
     const newAnswers = [...answers, selected!]
-    if (current + 1 >= shuffledQuizzes.length) {
-      setAnswers(newAnswers)
+    setAnswers(newAnswers)
+    if (current + 1 >= quizzes.length) {
+      const s = newAnswers.filter((a, i) => a === quizzes[i].plant.japanese_name).length
+      trackEvent("quiz_complete", { quiz_type: "photo", quiz_genre: genre.id, score: s, total: quizzes.length })
       setFinished(true)
     } else {
-      setAnswers(newAnswers)
       setCurrent((c) => c + 1)
       setSelected(null)
-      setImageLoaded(false)
-      loadedCountRef.current = 0
+      setPhotoIndex(0)
     }
-  }
-
-  const handleReset = () => {
-    if (!selectedGenre) {
-      setSelectedGenreId(null)
-      setShuffledQuizzes([])
-      return
-    }
-    startGenreQuiz(selectedGenre.id)
-  }
-
-  const handleBackToGenres = () => {
-    setSelectedGenreId(null)
-    setShuffledQuizzes([])
-    setCurrent(0)
-    setSelected(null)
-    setAnswers([])
-    setScore(0)
-    setFinished(false)
-    setImageLoaded(false)
-    loadedCountRef.current = 0
-  }
-
-  const handleImageLoad = (total: number) => {
-    loadedCountRef.current += 1
-    if (loadedCountRef.current >= total) {
-      setImageLoaded(true)
-    }
-  }
-
-  if (!selectedGenre || shuffledQuizzes.length === 0) {
-    return (
-      <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-        <PageHeader backHref="/" backLabel="トップ" title="写真クイズ" />
-
-        <SectionCard style={{ marginBottom: "1rem" }}>
-          <p
-            style={{
-              margin: "0 0 0.5rem",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              color: "#e0e0e0",
-            }}
-          >
-            ジャンルを選んでスタート
-          </p>
-          <p style={{ margin: 0, color: "#999", fontSize: "0.9rem" }}>
-            4問の写真クイズに挑戦できます。気になるテーマから選んでください。
-          </p>
-        </SectionCard>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "0.75rem",
-          }}
-        >
-          {photoQuizGenres.map((genre) => {
-            const count = plants.filter(genre.filter).length
-            const disabled = count < QUIZ_COUNT
-
-            return (
-              <button
-                key={genre.id}
-                onClick={() => startGenreQuiz(genre.id)}
-                disabled={disabled}
-                style={{
-                  background: disabled ? "#262626" : "#2d2d2d",
-                  color: disabled ? "#777" : "#e0e0e0",
-                  border: `1px solid ${disabled ? "#333" : "#444"}`,
-                  borderRadius: "10px",
-                  padding: "1rem",
-                  textAlign: "left",
-                  cursor: disabled ? "not-allowed" : "pointer",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  <div style={{ fontSize: "1rem", fontWeight: "bold" }}>
-                    {genre.label}
-                  </div>
-                  <Tag variant="muted">{count}種</Tag>
-                </div>
-                <div style={{ fontSize: "0.85rem", lineHeight: "1.6" }}>
-                  {genre.description}
-                </div>
-              </button>
-            )
-          })}
-        </div>
-      </div>
-    )
-  }
-
-  const quiz = shuffledQuizzes[current]
-  const isCorrect = selected === quiz.answer
-  const plant =
-    quiz.plant_id !== null ? plants.find((p) => p.id === quiz.plant_id) : null
-
-  if (finished) {
-    const percent = Math.round((score / shuffledQuizzes.length) * 100)
-    return (
-      <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-        <PageHeader backHref="/" backLabel="トップ" title="写真クイズ結果" />
-
-        <SectionCard style={{ padding: "2rem 1rem", textAlign: "center" }}>
-          <div style={{ marginBottom: "0.75rem" }}>
-            <Tag>{selectedGenre.label}</Tag>
-          </div>
-          <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>
-            {percent >= 80 ? "🌟" : percent >= 50 ? "🌿" : "📚"}
-          </div>
-          <div
-            style={{
-              fontSize: "2rem",
-              fontWeight: "bold",
-              color: "#7cbe8c",
-              marginBottom: "0.25rem",
-            }}
-          >
-            {score} / {shuffledQuizzes.length}
-          </div>
-          <div
-            style={{ color: "#999", fontSize: "0.9rem", marginBottom: "1rem" }}
-          >
-            正解率 {percent}%
-          </div>
-          <div style={{ color: "#e0e0e0", fontSize: "0.9rem" }}>
-            {percent >= 80
-              ? "素晴らしい！写真で植物を見分ける力がありますね。"
-              : percent >= 50
-                ? "まずまずです。もっと植物の写真を観察してみましょう。"
-                : "実際に植物を観察して、もう一度挑戦してみよう！"}
-          </div>
-        </SectionCard>
-
-        {/* Review */}
-        <div style={{ marginBottom: "1rem" }}>
-          <div
-            style={{
-              fontSize: "0.85rem",
-              color: "#999",
-              marginBottom: "0.5rem",
-            }}
-          >
-            問題の振り返り
-          </div>
-          {shuffledQuizzes.map((q, i) => {
-            const userAnswer = answers[i]
-            const correct = userAnswer === q.answer
-            const reviewPlant =
-              q.plant_id !== null
-                ? plants.find((p) => p.id === q.plant_id)
-                : null
-            return (
-              <SectionCard
-                key={q.id}
-                style={{
-                  padding: "0.875rem 1rem",
-                  marginBottom: "0.5rem",
-                  borderLeft: `4px solid ${correct ? "#5a9a5c" : "#8a4a4a"}`,
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "0.5rem",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: "0.8rem",
-                      fontWeight: "bold",
-                      color: correct ? "#7cbe8c" : "#e07070",
-                      flexShrink: 0,
-                      marginTop: "0.1rem",
-                    }}
-                  >
-                    {correct ? "○" : "✕"}
-                  </span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div
-                      style={{
-                        fontSize: "0.75rem",
-                        color: "#999",
-                        marginBottom: "0.3rem",
-                      }}
-                    >
-                      問題 {i + 1}
-                    </div>
-                    {reviewPlant &&
-                      (reviewPlant.images.length > 1 ? (
-                        <div
-                          style={{
-                            display: "grid",
-                            gridTemplateColumns: "repeat(2, 1fr)",
-                            gap: "0.3rem",
-                            marginBottom: "0.4rem",
-                          }}
-                        >
-                          {reviewPlant.images.map((img, idx) => (
-                            <img
-                              key={idx}
-                              src={img.url}
-                              alt={img.caption}
-                              style={{
-                                width: "100%",
-                                maxHeight: "400px",
-                                aspectRatio: "1",
-                                objectFit: "cover",
-                                borderRadius: "4px",
-                                display: "block",
-                              }}
-                            />
-                          ))}
-                        </div>
-                      ) : (
-                        <img
-                          src={reviewPlant.local_image_url ?? wikimediaThumb(reviewPlant.image_url ?? "", 160)}
-                          alt="植物の写真"
-                          style={{
-                            width: "100%",
-                            maxHeight: "120px",
-                            objectFit: "cover",
-                            borderRadius: "6px",
-                            display: "block",
-                            marginBottom: "0.4rem",
-                          }}
-                        />
-                      ))}
-                    <div style={{ fontSize: "0.82rem", color: "#999" }}>
-                      正解：
-                      <span style={{ color: "#7cbe8c", marginLeft: "0.25rem" }}>
-                        {q.answer}
-                      </span>
-                      {!correct && (
-                        <span style={{ marginLeft: "0.75rem" }}>
-                          あなたの回答：
-                          <span
-                            style={{ color: "#e07070", marginLeft: "0.25rem" }}
-                          >
-                            {userAnswer}
-                          </span>
-                        </span>
-                      )}
-                    </div>
-                    {reviewPlant && (
-                      <div style={{ marginTop: "0.3rem", fontSize: "0.78rem" }}>
-                        <Link
-                          href={`/plants/${reviewPlant.id}`}
-                          style={{ color: "#5a9a5c", textDecoration: "none" }}
-                        >
-                          {reviewPlant.japanese_name} の詳細 →
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </SectionCard>
-            )
-          })}
-        </div>
-
-        <div style={{ display: "flex", gap: "0.75rem" }}>
-          <Button onClick={handleReset} style={{ flex: 1 }}>
-            同じジャンルでもう一度
-          </Button>
-          <Button onClick={handleBackToGenres} variant="secondary" style={{ flex: 1 }}>
-            ジャンルを選び直す
-          </Button>
-          <Link
-            href="/"
-            style={{
-              flex: 1,
-              background: "#2d2d2d",
-              color: "#e0e0e0",
-              border: "1px solid #444",
-              borderRadius: "8px",
-              padding: "0.875rem",
-              fontSize: "0.95rem",
-              textDecoration: "none",
-              textAlign: "center",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            トップへ戻る
-          </Link>
-        </div>
-      </div>
-    )
+    window.scrollTo({ top: 0 })
   }
 
   return (
-    <div style={{ margin: "0 auto", color: "#e0e0e0" }}>
-      <PageHeader backHref="/" backLabel="トップ" title="写真クイズ" />
-
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "0.75rem",
-          marginBottom: "0.75rem",
-          flexWrap: "wrap",
-        }}
-      >
-        <Tag>{selectedGenre.label}</Tag>
-        <button
-          onClick={handleBackToGenres}
-          style={{
-            background: "transparent",
-            color: "#7cbe8c",
-            border: "none",
-            padding: 0,
-            cursor: "pointer",
-            fontSize: "0.85rem",
-          }}
-        >
-          ジャンルを変更
+    <div style={{ paddingTop: "1.25rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem", flexWrap: "wrap" }}>
+        <Tag>写真クイズ：{genre.label}</Tag>
+        <button type="button" onClick={backToGenres} className="text-link" style={{ background: "none", border: "none", cursor: "pointer" }}>
+          テーマを変更
         </button>
       </div>
-
-      {/* Progress */}
-      <div style={{ marginBottom: "0.75rem" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "0.35rem",
-            fontSize: "0.8rem",
-            color: "#999",
-          }}
-        >
+      <div style={{ marginBottom: "1rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.82rem", color: color.muted, marginBottom: "0.3rem" }}>
           <span>
-            問題 {current + 1} / {shuffledQuizzes.length}
+            第{current + 1}問 / 全{quizzes.length}問
           </span>
-          <span style={{ color: "#7cbe8c" }}>正解: {score}</span>
+          <span>正解 {score + (selected && isCorrect ? 1 : 0)}</span>
         </div>
         <div
-          style={{ background: "#3a3a3a", borderRadius: "4px", height: "4px" }}
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={quizzes.length}
+          aria-valuenow={current + (selected ? 1 : 0)}
+          aria-label="進行状況"
+          style={{ background: color.surfaceAlt, borderRadius: "999px", height: "6px" }}
         >
-          <div
-            style={{
-              background: "#5a9a5c",
-              height: "4px",
-              borderRadius: "4px",
-              width: `${((current + (selected ? 1 : 0)) / shuffledQuizzes.length) * 100}%`,
-              transition: "width 0.3s",
-            }}
-          />
+          <div style={{ background: color.primary, height: "6px", borderRadius: "999px", width: `${((current + (selected ? 1 : 0)) / quizzes.length) * 100}%`, transition: "width .3s" }} />
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: ".5rem",
-          justifyContent: "center",
-        }}
-      >
-        {/* Question card */}
-        <SectionCard style={{ padding: "1rem" }}>
-          {plant && (
-            <div key={current} style={{ position: "relative" }}>
-              {!imageLoaded && (
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "#3a3a3a",
-                    borderRadius: "8px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 1,
-                  }}
+
+      <div className="split" style={{ gap: "1.5rem" }}>
+        <div>
+          <div style={{ borderRadius: radius.lg, overflow: "hidden", background: color.surfaceAlt, aspectRatio: "4 / 3" }}>
+            <img
+              key={`${plant.id}-${photoIndex}`}
+              src={imagePhoto(photo)}
+              alt="出題の植物の写真"
+              width={800}
+              height={600}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          </div>
+          {images.length > 1 && (
+            <div role="group" aria-label="ほかの写真" style={{ display: "flex", gap: "0.4rem", marginTop: "0.5rem", overflowX: "auto" }}>
+              {images.map((img, i) => (
+                <button
+                  key={img.url + i}
+                  type="button"
+                  onClick={() => setPhotoIndex(i)}
+                  aria-pressed={i === photoIndex}
+                  aria-label={`写真${i + 1}（${img.caption}）`}
+                  style={{ padding: 0, border: `2px solid ${i === photoIndex ? "var(--c-primary)" : "transparent"}`, borderRadius: "8px", overflow: "hidden", background: "none", cursor: "pointer", flexShrink: 0 }}
                 >
-                  <div
-                    style={{
-                      width: "2rem",
-                      height: "2rem",
-                      border: "3px solid #555",
-                      borderTop: "3px solid #7cbe8c",
-                      borderRadius: "50%",
-                      animation: "spin 0.8s linear infinite",
-                    }}
-                  />
-                  <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-                </div>
-              )}
-              {plant.images.length > 1 ? (
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "0.5rem",
-                    opacity: imageLoaded ? 1 : 0,
-                    transition: "opacity 0.3s",
-                  }}
-                >
-                  {plant.images.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img.url}
-                      alt={img.caption}
-                      onLoad={() => handleImageLoad(plant.images.length)}
-                      style={{
-                        width: "100%",
-                        maxHeight: "400px",
-                        aspectRatio: "1",
-                        objectFit: "cover",
-                        borderRadius: "6px",
-                        display: "block",
-                      }}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <img
-                  src={plant.local_image_url ?? wikimediaThumb(plant.image_url ?? "", 600)}
-                  alt="植物の写真"
-                  onLoad={() => handleImageLoad(1)}
-                  style={{
-                    width: "100%",
-                    maxHeight: "400px",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                    display: "block",
-                    opacity: imageLoaded ? 1 : 0,
-                    transition: "opacity 0.3s",
-                  }}
-                />
-              )}
+                  <img src={imageThumb(img)} alt="" width={64} height={48} style={{ width: "4rem", height: "3rem", objectFit: "cover", display: "block" }} />
+                </button>
+              ))}
             </div>
           )}
-          <p
-            style={{
-              color: "#e0e0e0",
-              fontSize: "1rem",
-              margin: 0,
-              lineHeight: "1.6",
-              fontWeight: "bold",
-            }}
-          >
-            {quiz.question}
-          </p>
-        </SectionCard>
+        </div>
 
-        {/* Choices */}
-        <div style={{ marginBottom: "1rem", flexGrow: 1 }}>
-          {quiz.shuffledChoices.map((choice) => {
-            let bg = "#2d2d2d"
-            let border = "1px solid #444"
-            let color = "#e0e0e0"
+        <div>
+          <h1 className="serif" style={{ fontSize: "1.4rem", margin: "0 0 1rem" }}>
+            この植物の名前は？
+          </h1>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "0.5rem" }}>
+            {quiz.choices.map((choice, i) => {
+              const state =
+                selected === null ? "idle" : choice === answer ? "correct" : choice === selected ? "wrong" : "dim"
+              return (
+                <li key={choice}>
+                  <button
+                    type="button"
+                    onClick={() => choose(choice)}
+                    disabled={selected !== null}
+                    aria-describedby={selected ? "quiz-feedback" : undefined}
+                    style={{
+                      width: "100%",
+                      minHeight: "3.25rem",
+                      textAlign: "left",
+                      padding: "0.75rem 1rem",
+                      borderRadius: radius.md,
+                      fontSize: "1rem",
+                      font: "inherit",
+                      cursor: selected === null ? "pointer" : "default",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.75rem",
+                      border: `2px solid ${state === "correct" ? color.primary : state === "wrong" ? color.error : color.border}`,
+                      background: state === "correct" ? color.primarySoft : state === "wrong" ? color.errorSoft : color.surface,
+                      color: state === "dim" ? color.subtle : color.ink,
+                      fontWeight: state === "correct" ? 700 : 400,
+                    }}
+                  >
+                    <span aria-hidden="true" style={{ width: "1.6rem", height: "1.6rem", borderRadius: "50%", background: color.surfaceAlt, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: "0.8rem", flexShrink: 0 }}>
+                      {state === "correct" ? "○" : state === "wrong" ? "×" : "ABCD"[i]}
+                    </span>
+                    {choice}
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
 
-            if (selected !== null) {
-              if (choice === quiz.answer) {
-                bg = "#1e3d1f"
-                border = "1px solid #5a9a5c"
-                color = "#7cbe8c"
-              } else if (choice === selected) {
-                bg = "#3d1e1e"
-                border = "1px solid #8a4a4a"
-                color = "#e07070"
-              }
-            }
+          {selected !== null && (
+            <div
+              id="quiz-feedback"
+              role="status"
+              style={{ marginTop: "1rem", padding: "1rem 1.1rem", borderRadius: radius.md, background: isCorrect ? color.primaryTint : color.errorSoft, border: `1px solid ${isCorrect ? color.primarySoft : color.errorSoft}` }}
+            >
+              <p style={{ margin: 0, fontWeight: 700, fontSize: "1.05rem", color: isCorrect ? color.primary : color.error }}>
+                {isCorrect ? "正解！" : `不正解… 正解は「${answer}」`}
+              </p>
+              <p style={{ margin: "0.4rem 0 0", fontSize: "0.85rem", color: color.muted }}>
+                {family?.name} ・ {plant.genus} ・ <i lang="la">{plant.scientific_name}</i>
+              </p>
+              <p style={{ margin: "0.5rem 0 0", fontSize: "0.9rem", lineHeight: 1.8 }}>{plant.description[0]}</p>
+              {plant.identification.length > 0 && (
+                <>
+                  <p style={{ margin: "0.6rem 0 0.2rem", fontSize: "0.8rem", fontWeight: 700, color: color.inkSoft }}>見分けるポイント</p>
+                  <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "0.88rem", lineHeight: 1.75 }}>
+                    {plant.identification.slice(0, 3).map((x) => (
+                      <li key={x}>{x}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              <p style={{ margin: "0.6rem 0 0", fontSize: "0.85rem" }}>
+                <Link href={`/plants/${plant.id}`} target="_blank">
+                  {plant.japanese_name}の詳細を見る（新しいタブ）→
+                </Link>
+              </p>
+            </div>
+          )}
 
-            return (
-              <button
-                key={choice}
-                onClick={() => handleSelect(choice)}
-                style={{
-                  width: "100%",
-                  background: bg,
-                  color,
-                  border,
-                  borderRadius: "8px",
-                  padding: "0.875rem 1rem",
-                  fontSize: "0.95rem",
-                  cursor: selected !== null ? "default" : "pointer",
-                  textAlign: "left",
-                  marginBottom: "0.5rem",
-                  display: "block",
-                  transition: "background 0.15s",
-                }}
-              >
-                {choice}
-              </button>
-            )
-          })}
+          {selected !== null && (
+            <button type="button" className="btn" onClick={next} style={{ width: "100%", marginTop: "1rem" }}>
+              {current + 1 >= quizzes.length ? "結果を見る" : "次の問題へ →"}
+            </button>
+          )}
         </div>
       </div>
-
-      {/* Answer feedback */}
-      {selected !== null && (
-        <div>
-          <div
-            style={{
-              background: isCorrect ? "#1e3d1f" : "#3d1e1e",
-              borderRadius: "8px",
-              padding: "0.875rem 1rem",
-              marginBottom: "1rem",
-              borderLeft: `4px solid ${isCorrect ? "#5a9a5c" : "#8a4a4a"}`,
-            }}
-          >
-            <div
-              style={{
-                color: isCorrect ? "#7cbe8c" : "#e07070",
-                fontWeight: "bold",
-                marginBottom: "0.25rem",
-                fontSize: "0.95rem",
-              }}
-            >
-              {isCorrect ? "正解！" : `不正解。正解は「${quiz.answer}」です。`}
-            </div>
-            {plant && (
-              <div style={{ fontSize: "0.82rem", color: "#999" }}>
-                詳しく見る：
-                <Link
-                  href={`/plants/${plant.id}`}
-                  style={{
-                    color: "#7cbe8c",
-                    textDecoration: "none",
-                    marginLeft: "0.25rem",
-                  }}
-                >
-                  {plant.japanese_name} →
-                </Link>
-              </div>
-            )}
-          </div>
-
-          <Button onClick={handleNext} style={{ width: "100%" }}>
-            {current + 1 >= shuffledQuizzes.length
-              ? "結果を見る"
-              : "次の問題へ →"}
-          </Button>
-        </div>
-      )}
     </div>
   )
 }
