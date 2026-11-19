@@ -1,5 +1,9 @@
 import { plants } from "lib/data"
 import { SEASONS, hasAutumnColor, plantById } from "lib/plants"
+import { comparisonDefs, type Comparison } from "lib/comparisons"
+
+export type { Comparison } from "lib/comparisons"
+export { COMPARISON_CATEGORIES } from "lib/comparisons"
 
 /**
  * 特徴別ページの定義。抽出条件はすべて既存の植物データ
@@ -180,99 +184,7 @@ export const seasonPlants = (key: string) => {
   return s ? plants.filter((p) => p.tags.includes(s.tag)) : []
 }
 
-/* ---------- 比較ページ ---------- */
-
-export type Comparison = {
-  slug: string
-  a: number
-  b: number
-  lead: string
-}
-
-/**
- * 代表的な「似ている植物」の組み合わせ。
- * どちらも収録済みで、互いに similar_plant_ids に登録されているペアに限定する。
- */
-const comparisonDefs: Comparison[] = [
-  {
-    slug: "yabutsubaki-sazanka",
-    a: 29,
-    b: 30,
-    lead: "冬から春に赤い花を咲かせる、よく似た2種の違いです。",
-  },
-  {
-    slug: "someiyoshino-yamazakura",
-    a: 1,
-    b: 17,
-    lead: "お花見の主役のソメイヨシノと、山に自生するヤマザクラの違いです。",
-  },
-  {
-    slug: "irohamomiji-toukaede",
-    a: 2,
-    b: 19,
-    lead: "手のひら形の葉をもつ、モミジ・カエデの仲間の違いです。",
-  },
-  {
-    slug: "akamatsu-kuromatsu",
-    a: 22,
-    b: 10,
-    lead: "2本の針葉が束になる、身近なマツ2種の違いです。",
-  },
-  {
-    slug: "sugi-hinoki",
-    a: 9,
-    b: 8,
-    lead: "植林地でよく見る代表的な針葉樹2種の違いです。",
-  },
-  {
-    slug: "hinoki-sawara",
-    a: 8,
-    b: 142,
-    lead: "鱗片状の葉がそっくりな、ヒノキの仲間の違いです。",
-  },
-  {
-    slug: "konara-kunugi",
-    a: 6,
-    b: 7,
-    lead: "雑木林の代表的などんぐりの木2種の違いです。",
-  },
-  {
-    slug: "ume-momo",
-    a: 16,
-    b: 169,
-    lead: "早春に花を咲かせるバラ科の花木2種の違いです。",
-  },
-  {
-    slug: "ajisai-gakuajisai",
-    a: 31,
-    b: 32,
-    lead: "梅雨の花、アジサイとその原種ガクアジサイの違いです。",
-  },
-  {
-    slug: "hanamizuki-yamaboushi",
-    a: 133,
-    b: 76,
-    lead: "白い苞が目立つミズキ科の花木2種の違いです。",
-  },
-  {
-    slug: "ayame-kakitsubata",
-    a: 95,
-    b: 94,
-    lead: "「いずれアヤメかカキツバタ」と言われる2種の違いです。",
-  },
-  {
-    slug: "kakitsubata-hanashoubu",
-    a: 94,
-    b: 227,
-    lead: "水辺に咲くアヤメ科の花2種の違いです。",
-  },
-  {
-    slug: "tsutsuji-satsuki",
-    a: 198,
-    b: 153,
-    lead: "庭や公園でよく見るツツジの仲間の違いです。",
-  },
-]
+/* ---------- 比較ページ（定義は lib/comparisons.ts） ---------- */
 
 export const comparisons: Comparison[] = comparisonDefs.filter((c) => plantById.has(c.a) && plantById.has(c.b))
 

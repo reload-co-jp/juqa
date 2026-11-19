@@ -214,6 +214,7 @@ select.input { appearance: auto; }
 .info-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
 .info-table th, .info-table td { text-align: left; padding: 0.7rem 0.25rem; border-bottom: 1px solid var(--c-border); vertical-align: top; }
 .info-table th { width: 7.5rem; color: var(--c-muted); font-weight: 500; white-space: nowrap; }
+section[id] { scroll-margin-top: 5rem; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; table-layout: fixed; }
 .compare-table th, .compare-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--c-border); vertical-align: top; text-align: left; }
 .compare-table thead th { border-bottom: 2px solid var(--c-border-strong); }
