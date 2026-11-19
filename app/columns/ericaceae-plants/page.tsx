@@ -59,7 +59,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -73,7 +73,7 @@ const Page = () => {
       <Section title="ツツジ科に共通する特徴">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -86,19 +86,19 @@ const Page = () => {
             {
               label: "漏斗形（ろうとがた）または釣鐘形の花",
               desc: "花びらが合わさって筒状になる「合弁花」が多く、先端が5つに分かれます。ラッパ状に広がるものや、釣り下がった小さな壺形のものなど形はさまざまですが、花びらが独立しているバラ科とは区別できます。",
-              color: "#2a1e3d",
+              color: "#ece7f3",
               border: "#6a4a9a",
             },
             {
               label: "おしべは10本（花弁の数の2倍）",
               desc: "花弁が5枚なら、おしべは通常10本あります。おしべの先端（葯・やく）に穴が開いていて、そこから花粉が出る「孔開裂」という仕組みをもつ種が多いのも特徴です。",
-              color: "#1e3d1f",
-              border: "#5a9a5c",
+              color: "var(--c-primary-soft)",
+              border: "var(--c-primary)",
             },
             {
               label: "酸性土壌を好む木本（もくほん）が多い",
               desc: "ツツジ科の多くは酸性の土壌でよく育ちます。火山地帯の山や、腐葉土が積もった林床に多いのはこのためです。また、常緑のものは葉が厚くて革質（かわ質）になる傾向があります。",
-              color: "#2a2a1a",
+              color: "#f2f2e9",
               border: "#7a7a4a",
             },
           ].map((f) => (
@@ -115,13 +115,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.3rem",
                 }}
               >
                 {f.label}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}>
+              <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.6 }}>
                 {f.desc}
               </div>
             </div>
@@ -133,7 +133,7 @@ const Page = () => {
       <Section title="ツツジ属の代表たち — ヤマツツジ・ミツバツツジ・サツキ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -163,7 +163,7 @@ const Page = () => {
       <Section title="シャクナゲの仲間 — 山岳を彩る大型花">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -197,7 +197,7 @@ const Page = () => {
       <Section title="壺形の花を咲かせる仲間 — アセビ・ドウダンツツジ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -241,7 +241,7 @@ const Page = () => {
       <Section title="食べられるツツジ科 — スノキ・コケモモ・ブルーベリー">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -261,7 +261,7 @@ const Page = () => {
         />
         <div
           style={{
-            background: "#242424",
+            background: "var(--c-surface-alt)",
             borderRadius: "8px",
             padding: "1rem",
             marginBottom: "0.75rem",
@@ -270,22 +270,22 @@ const Page = () => {
           <div
             style={{
               fontWeight: "bold",
-              color: "#7cbe8c",
+              color: "var(--c-primary)",
               fontSize: "1rem",
               marginBottom: "0.5rem",
             }}
           >
             ブルーベリー（栽培種）
           </div>
-          <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 0.5rem" }}>
+          <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 0.5rem" }}>
             スーパーでおなじみのブルーベリーもツツジ科スノキ属の植物です。北アメリカ原産で、日本では長野・群馬などで広く栽培されています。白い壺形の小花を咲かせ、夏に青紫色の実をつけます。アントシアニンが豊富で、目の健康によいとされています。
           </p>
           <div
             style={{
-              background: "#1e3d1f",
+              background: "var(--c-primary-soft)",
               borderRadius: "6px",
               padding: "0.5rem 0.75rem",
-              color: "#a0d0a2",
+              color: "var(--c-primary-strong)",
               fontSize: "0.8rem",
             }}
           >
@@ -317,7 +317,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
@@ -326,13 +326,13 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.3rem",
               }}
             >
               {item.title}
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+            <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
               {item.body}
             </div>
           </div>
@@ -347,7 +347,7 @@ const Page = () => {
               width: "100%",
               borderCollapse: "collapse",
               fontSize: "0.8rem",
-              color: "#ccc",
+              color: "var(--c-ink-soft)",
             }}
           >
             <thead>
@@ -358,8 +358,8 @@ const Page = () => {
                     style={{
                       padding: "0.5rem 0.75rem",
                       textAlign: "left",
-                      borderBottom: "1px solid #444",
-                      color: "#7cbe8c",
+                      borderBottom: "1px solid var(--c-border-strong)",
+                      color: "var(--c-primary)",
                       fontWeight: "bold",
                       whiteSpace: "nowrap",
                     }}
@@ -384,30 +384,30 @@ const Page = () => {
               ].map((row, i) => (
                 <tr
                   key={row.name}
-                  style={{ background: i % 2 === 0 ? "#262626" : "#222" }}
+                  style={{ background: i % 2 === 0 ? "var(--c-surface-alt)" : "var(--c-surface-alt)" }}
                 >
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     <img
                       src={`/images/plants/${row.id}-0.webp`}
                       alt={row.name}
                       style={{ width: "60px", height: "60px", objectFit: "cover", borderRadius: "4px" }}
                     />
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     <Link
                       href={row.href}
-                      style={{ color: "#7cbe8c", textDecoration: "none" }}
+                      style={{ color: "var(--c-primary)", textDecoration: "none" }}
                     >
                       {row.name}
                     </Link>
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.flower}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333", whiteSpace: "nowrap" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)", whiteSpace: "nowrap" }}>
                     {row.season}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.point}
                   </td>
                 </tr>
@@ -430,23 +430,23 @@ const Page = () => {
       >
         <Link
           href="/families/44"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           ツツジ科の植物一覧を見る →
         </Link>
         <Link
           href="/columns/rosaceae-plants"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：バラ科の植物たち →
         </Link>
         <Link
           href="/columns/spring-mountain-flowers"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：春の登山で見られる花特集 →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

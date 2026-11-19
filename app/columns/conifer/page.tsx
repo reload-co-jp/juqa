@@ -52,7 +52,7 @@ const TreeCard = ({
 }) => (
   <div
     style={{
-      background: "#242424",
+      background: "var(--c-surface-alt)",
       borderRadius: "8px",
       padding: "1rem",
       marginBottom: "0.75rem",
@@ -70,7 +70,7 @@ const TreeCard = ({
         href={href}
         style={{
           fontWeight: "bold",
-          color: "#7cbe8c",
+          color: "var(--c-primary)",
           fontSize: "1rem",
           textDecoration: "none",
         }}
@@ -82,7 +82,7 @@ const TreeCard = ({
       style={{
         margin: "0 0 0.5rem",
         paddingLeft: "1.2rem",
-        color: "#ccc",
+        color: "var(--c-ink-soft)",
         fontSize: "0.875rem",
         lineHeight: 1.8,
       }}
@@ -93,10 +93,10 @@ const TreeCard = ({
     </ul>
     <div
       style={{
-        background: "#1e3d1f",
+        background: "var(--c-primary-soft)",
         borderRadius: "6px",
         padding: "0.5rem 0.75rem",
-        color: "#a0d0a2",
+        color: "var(--c-primary-strong)",
         fontSize: "0.8rem",
       }}
     >
@@ -125,7 +125,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -138,7 +138,7 @@ const Page = () => {
       <Section title="まず「葉の形」で2グループに分ける">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -157,13 +157,13 @@ const Page = () => {
             {
               label: "針状の葉",
               desc: "細くとがった葉が枝に直接つく。マツ・スギ・モミ・ツガなど。",
-              color: "#1e3d1f",
-              border: "#5a9a5c",
+              color: "var(--c-primary-soft)",
+              border: "var(--c-primary)",
             },
             {
               label: "鱗片状の葉",
               desc: "魚のうろこ状の葉が枝をびっしり覆う。ヒノキ・サワラなど。",
-              color: "#1a2d3a",
+              color: "#e6eef4",
               border: "#4a7a9c",
             },
           ].map((g) => (
@@ -180,13 +180,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
                 {g.label}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}>
+              <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.6 }}>
                 {g.desc}
               </div>
             </div>
@@ -197,7 +197,7 @@ const Page = () => {
       <Section title="スギとヒノキ — 最もよく見る2種">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -229,15 +229,15 @@ const Page = () => {
         />
         <div
           style={{
-            background: "#2a2a2a",
+            background: "var(--c-surface-alt)",
             borderRadius: "8px",
             padding: "1rem",
             fontSize: "0.8rem",
-            color: "#aaa",
+            color: "var(--c-muted)",
             lineHeight: 1.7,
           }}
         >
-          <strong style={{ color: "#e0e0e0" }}>まとめて覚えるなら：</strong>
+          <strong style={{ color: "var(--c-ink)" }}>まとめて覚えるなら：</strong>
           葉が「針っぽい → スギ」、葉が「うろこっぽい → ヒノキ」と覚えるのが簡単。
           遠目には両者は似ていますが、樹皮もスギの方がやや赤くてザラザラ感があります。
         </div>
@@ -246,7 +246,7 @@ const Page = () => {
       <Section title="マツ類 — 「葉の束の数」で判別">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -263,9 +263,9 @@ const Page = () => {
           }}
         >
           {[
-            { num: "2本束", species: "アカマツ・クロマツ", color: "#3a2a1e", border: "#7a5a3a" },
-            { num: "5本束", species: "ゴヨウマツ・ハイマツ", color: "#1e2a3a", border: "#3a5a7a" },
-            { num: "多数束", species: "カラマツ（落葉）", color: "#2a1e3a", border: "#5a3a7a" },
+            { num: "2本束", species: "アカマツ・クロマツ", color: "#f3ece7", border: "#7a5a3a" },
+            { num: "5本束", species: "ゴヨウマツ・ハイマツ", color: "#e7ecf3", border: "#3a5a7a" },
+            { num: "多数束", species: "カラマツ（落葉）", color: "#ece7f3", border: "#5a3a7a" },
           ].map((b) => (
             <div
               key={b.num}
@@ -277,10 +277,10 @@ const Page = () => {
                 textAlign: "center",
               }}
             >
-              <div style={{ fontWeight: "bold", fontSize: "1rem", color: "#e0e0e0", marginBottom: "0.3rem" }}>
+              <div style={{ fontWeight: "bold", fontSize: "1rem", color: "var(--c-ink)", marginBottom: "0.3rem" }}>
                 {b.num}
               </div>
-              <div style={{ fontSize: "0.75rem", color: "#aaa" }}>{b.species}</div>
+              <div style={{ fontSize: "0.75rem", color: "var(--c-muted)" }}>{b.species}</div>
             </div>
           ))}
         </div>
@@ -323,7 +323,7 @@ const Page = () => {
               width: "100%",
               borderCollapse: "collapse",
               fontSize: "0.8rem",
-              color: "#ccc",
+              color: "var(--c-ink-soft)",
             }}
           >
             <thead>
@@ -334,8 +334,8 @@ const Page = () => {
                     style={{
                       padding: "0.5rem 0.75rem",
                       textAlign: "left",
-                      borderBottom: "1px solid #444",
-                      color: "#7cbe8c",
+                      borderBottom: "1px solid var(--c-border-strong)",
+                      color: "var(--c-primary)",
                       fontWeight: "bold",
                       whiteSpace: "nowrap",
                     }}
@@ -385,28 +385,28 @@ const Page = () => {
               ].map((row, i) => (
                 <tr
                   key={row.name}
-                  style={{ background: i % 2 === 0 ? "#262626" : "#222" }}
+                  style={{ background: i % 2 === 0 ? "var(--c-surface-alt)" : "var(--c-surface-alt)" }}
                 >
                   <td
                     style={{
                       padding: "0.6rem 0.75rem",
-                      borderBottom: "1px solid #333",
+                      borderBottom: "1px solid var(--c-border)",
                     }}
                   >
                     <Link
                       href={row.href}
-                      style={{ color: "#7cbe8c", textDecoration: "none" }}
+                      style={{ color: "var(--c-primary)", textDecoration: "none" }}
                     >
                       {row.name}
                     </Link>
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.leaf}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.point}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.place}
                   </td>
                 </tr>
@@ -434,7 +434,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
@@ -443,13 +443,13 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.3rem",
               }}
             >
               {item.title}
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+            <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
               {item.body}
             </div>
           </div>
@@ -466,10 +466,10 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants?tags=%E9%87%9D%E8%91%89" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants?tags=%E9%87%9D%E8%91%89" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           針葉タグの植物を一覧で見る →
         </Link>
-        <Link href="/columns/tree-vs-herb" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/tree-vs-herb" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：木と草のちがい →
         </Link>
       </div>

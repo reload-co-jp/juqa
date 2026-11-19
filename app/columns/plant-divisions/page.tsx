@@ -49,7 +49,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -63,7 +63,7 @@ const Page = () => {
       <Section title="「門」とは——界の次に大きい分類階級">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -73,16 +73,16 @@ const Page = () => {
         </p>
         <div
           style={{
-            background: "#1e2a1e",
-            border: "1px solid #3a5a3a",
+            background: "var(--c-primary-tint)",
+            border: "1px solid var(--c-primary-soft)",
             borderRadius: "8px",
             padding: "1rem",
             fontSize: "0.8rem",
-            color: "#aaa",
+            color: "var(--c-muted)",
             lineHeight: 1.8,
           }}
         >
-          <div style={{ color: "#7cbe8c", fontWeight: "bold", marginBottom: "0.5rem" }}>
+          <div style={{ color: "var(--c-primary)", fontWeight: "bold", marginBottom: "0.5rem" }}>
             覚え方のコツ
           </div>
           植物の門には「〜植物門」という名前がつく（例：シダ植物門）。英語では動物と違い伝統的に division と呼ばれることが多いが、意味は動物界の「門（phylum）」とほぼ同じ階級と考えてよい。
@@ -93,7 +93,7 @@ const Page = () => {
       <Section title="コケ植物——3つの門に分かれる">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -119,7 +119,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -128,13 +128,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
                 {item.title}
               </div>
-              <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
                 {item.desc}
               </p>
             </div>
@@ -146,7 +146,7 @@ const Page = () => {
       <Section title="シダ植物——維管束を獲得した3つの門">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -172,7 +172,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -181,13 +181,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
                 {item.title}
               </div>
-              <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
                 {item.desc}
               </p>
             </div>
@@ -199,7 +199,7 @@ const Page = () => {
       <Section title="裸子植物——種子を獲得した4つの門">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -237,7 +237,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -246,7 +246,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
@@ -257,8 +257,8 @@ const Page = () => {
                   href={item.href}
                   style={{
                     display: "inline-block",
-                    background: "#1e3d1f",
-                    color: "#7cbe8c",
+                    background: "var(--c-primary-soft)",
+                    color: "var(--c-primary)",
                     borderRadius: "4px",
                     padding: "0.1rem 0.5rem",
                     fontSize: "0.75rem",
@@ -269,7 +269,7 @@ const Page = () => {
                   {item.name} →
                 </Link>
               )}
-              <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
+              <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
                 {item.desc}
               </p>
             </div>
@@ -281,7 +281,7 @@ const Page = () => {
       <Section title="被子植物——現在は1つの門にまとめるのが主流">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -291,7 +291,7 @@ const Page = () => {
         </p>
         <div
           style={{
-            background: "#242424",
+            background: "var(--c-surface-alt)",
             borderRadius: "8px",
             padding: "1rem",
           }}
@@ -300,7 +300,7 @@ const Page = () => {
             style={{
               fontWeight: "bold",
               fontSize: "0.875rem",
-              color: "#e0e0e0",
+              color: "var(--c-ink)",
               marginBottom: "0.4rem",
             }}
           >
@@ -310,8 +310,8 @@ const Page = () => {
             href="/plants/1"
             style={{
               display: "inline-block",
-              background: "#1e3d1f",
-              color: "#7cbe8c",
+              background: "var(--c-primary-soft)",
+              color: "var(--c-primary)",
               borderRadius: "4px",
               padding: "0.1rem 0.5rem",
               fontSize: "0.75rem",
@@ -321,7 +321,7 @@ const Page = () => {
           >
             ソメイヨシノ →
           </Link>
-          <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
+          <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: 0 }}>
             サクラ・タンポポ・イネ・ユリなど、身の回りで見かける草花や樹木のほとんどが被子植物門に属する。門より下の「綱」「科」レベルで見分けるほうが実用的なため、詳しくは関連コラムで解説している。
           </p>
         </div>
@@ -333,7 +333,7 @@ const Page = () => {
           style={{
             margin: 0,
             paddingLeft: "1.2rem",
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.85rem",
             lineHeight: 2,
           }}
@@ -345,7 +345,7 @@ const Page = () => {
         </ul>
         <p
           style={{
-            color: "#aaa",
+            color: "var(--c-muted)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
             margin: "1rem 0 0",
@@ -366,22 +366,22 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           植物一覧を見る →
         </Link>
         <Link
           href="/columns/plant-kingdom"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：植物界とは何か →
         </Link>
         <Link
           href="/columns/phylogenetic-tree"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：植物を系統樹で覚えやすく →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

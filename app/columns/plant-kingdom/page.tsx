@@ -50,7 +50,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -64,7 +64,7 @@ const Page = () => {
       <Section title="「界」とは——生物を分ける最も大きなグループ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -74,16 +74,16 @@ const Page = () => {
         </p>
         <div
           style={{
-            background: "#1e2a1e",
-            border: "1px solid #3a5a3a",
+            background: "var(--c-primary-tint)",
+            border: "1px solid var(--c-primary-soft)",
             borderRadius: "8px",
             padding: "1rem",
             fontSize: "0.8rem",
-            color: "#aaa",
+            color: "var(--c-muted)",
             lineHeight: 1.8,
           }}
         >
-          <div style={{ color: "#7cbe8c", fontWeight: "bold", marginBottom: "0.5rem" }}>
+          <div style={{ color: "var(--c-primary)", fontWeight: "bold", marginBottom: "0.5rem" }}>
             覚え方のコツ
           </div>
           現在の生物学では、真核生物（核を持つ細胞からなる生物）の中に「動物界」「植物界」「菌界」「原生生物界」などいくつもの界がある。同じ界に属する生き物は、体の作り方や栄養の取り方の基本方針が共通している。
@@ -94,7 +94,7 @@ const Page = () => {
       <Section title="植物界の条件——4つの特徴">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1.25rem",
@@ -124,7 +124,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -133,7 +133,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
@@ -141,7 +141,7 @@ const Page = () => {
               </div>
               <p
                 style={{
-                  color: "#ccc",
+                  color: "var(--c-ink-soft)",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
                   margin: 0,
@@ -158,7 +158,7 @@ const Page = () => {
       <Section title="「植物っぽい」のに植物ではない仲間たち">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -188,7 +188,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                borderLeft: "3px solid #5a9a5c",
+                borderLeft: "3px solid var(--c-primary)",
                 paddingLeft: "0.875rem",
               }}
             >
@@ -196,13 +196,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.3rem",
                 }}
               >
                 {item.title}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+              <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
                 {item.desc}
               </div>
             </div>
@@ -210,10 +210,10 @@ const Page = () => {
         </div>
         <div
           style={{
-            background: "#1e3d1f",
+            background: "var(--c-primary-soft)",
             borderRadius: "6px",
             padding: "0.75rem 1rem",
-            color: "#a0d0a2",
+            color: "var(--c-primary-strong)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
             marginTop: "1rem",
@@ -227,7 +227,7 @@ const Page = () => {
       <Section title="植物界の中身——4大グループ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -253,7 +253,7 @@ const Page = () => {
             <div
               key={item.title}
               style={{
-                background: "#242424",
+                background: "var(--c-surface-alt)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
@@ -262,7 +262,7 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.875rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
@@ -272,8 +272,8 @@ const Page = () => {
                 href={item.href}
                 style={{
                   display: "inline-block",
-                  background: "#1e3d1f",
-                  color: "#7cbe8c",
+                  background: "var(--c-primary-soft)",
+                  color: "var(--c-primary)",
                   borderRadius: "4px",
                   padding: "0.1rem 0.5rem",
                   fontSize: "0.75rem",
@@ -285,7 +285,7 @@ const Page = () => {
               </Link>
               <p
                 style={{
-                  color: "#ccc",
+                  color: "var(--c-ink-soft)",
                   fontSize: "0.8rem",
                   lineHeight: 1.7,
                   margin: 0,
@@ -298,7 +298,7 @@ const Page = () => {
         </div>
         <p
           style={{
-            color: "#aaa",
+            color: "var(--c-muted)",
             fontSize: "0.8rem",
             lineHeight: 1.7,
             margin: "1rem 0 0",
@@ -319,22 +319,22 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           植物一覧を見る →
         </Link>
         <Link
           href="/columns/phylogenetic-tree"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：植物を系統樹で覚えやすく →
         </Link>
         <Link
           href="/columns/tree-vs-herb"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：木と草のちがい →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

@@ -63,7 +63,7 @@ const FlowerCard = ({
   return (
   <div
     style={{
-      background: "#242424",
+      background: "var(--c-surface-alt)",
       borderRadius: "8px",
       overflow: "hidden",
       marginBottom: "0.75rem",
@@ -97,7 +97,7 @@ const FlowerCard = ({
         href={href}
         style={{
           fontWeight: "bold",
-          color: "#7cbe8c",
+          color: "var(--c-primary)",
           fontSize: "1rem",
           textDecoration: "none",
         }}
@@ -107,8 +107,8 @@ const FlowerCard = ({
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
         <span
           style={{
-            background: "#1e3d1f",
-            color: "#a0d0a2",
+            background: "var(--c-primary-soft)",
+            color: "var(--c-primary-strong)",
             borderRadius: "4px",
             padding: "0.1rem 0.5rem",
             fontSize: "0.72rem",
@@ -118,8 +118,8 @@ const FlowerCard = ({
         </span>
         <span
           style={{
-            background: "#2a2a3a",
-            color: "#9090c0",
+            background: "#e9e9f2",
+            color: "#46467c",
             borderRadius: "4px",
             padding: "0.1rem 0.5rem",
             fontSize: "0.72rem",
@@ -133,7 +133,7 @@ const FlowerCard = ({
       style={{
         margin: "0 0 0.5rem",
         paddingLeft: "1.2rem",
-        color: "#ccc",
+        color: "var(--c-ink-soft)",
         fontSize: "0.875rem",
         lineHeight: 1.8,
       }}
@@ -144,10 +144,10 @@ const FlowerCard = ({
     </ul>
     <div
       style={{
-        background: "#1e3d1f",
+        background: "var(--c-primary-soft)",
         borderRadius: "6px",
         padding: "0.5rem 0.75rem",
-        color: "#a0d0a2",
+        color: "var(--c-primary-strong)",
         fontSize: "0.8rem",
       }}
     >
@@ -178,7 +178,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -192,7 +192,7 @@ const Page = () => {
       <Section title="スプリング・エフェメラルとは">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -212,13 +212,13 @@ const Page = () => {
             {
               label: "なぜ春だけ？",
               desc: "落葉樹の葉が茂る前の短い期間、林床に光が差し込む。その光を最大限に利用して一気に花を咲かせ、種を作る。",
-              color: "#1e3a1e",
-              border: "#4a8a4a",
+              color: "#e7f3e7",
+              border: "var(--c-primary)",
             },
             {
               label: "夏に消えるのは？",
               desc: "葉が生い茂ると林床が暗くなる。光合成できなくなる前に地上部を枯らし、栄養を球根や地下茎に蓄えて翌春に備える。",
-              color: "#1a2d3a",
+              color: "#e6eef4",
               border: "#3a6a8a",
             },
           ].map((g) => (
@@ -235,13 +235,13 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.4rem",
                 }}
               >
                 {g.label}
               </div>
-              <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}>
+              <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.6 }}>
                 {g.desc}
               </div>
             </div>
@@ -249,7 +249,7 @@ const Page = () => {
         </div>
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: 0,
@@ -263,7 +263,7 @@ const Page = () => {
       <Section title="低山・里山（〜500m）で出会える花">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -329,7 +329,7 @@ const Page = () => {
       <Section title="中山帯（500〜1500m）で出会える花">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -421,7 +421,7 @@ const Page = () => {
       <Section title="亜高山帯・高山（1500m〜）で出会える花">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -491,7 +491,7 @@ const Page = () => {
               width: "100%",
               borderCollapse: "collapse",
               fontSize: "0.8rem",
-              color: "#ccc",
+              color: "var(--c-ink-soft)",
             }}
           >
             <thead>
@@ -502,8 +502,8 @@ const Page = () => {
                     style={{
                       padding: "0.5rem 0.75rem",
                       textAlign: "left",
-                      borderBottom: "1px solid #444",
-                      color: "#7cbe8c",
+                      borderBottom: "1px solid var(--c-border-strong)",
+                      color: "var(--c-primary)",
                       fontWeight: "bold",
                       whiteSpace: "nowrap",
                     }}
@@ -532,20 +532,20 @@ const Page = () => {
               ].map((row, i) => (
                 <tr
                   key={row.name}
-                  style={{ background: i % 2 === 0 ? "#262626" : "#222" }}
+                  style={{ background: i % 2 === 0 ? "var(--c-surface-alt)" : "var(--c-surface-alt)" }}
                 >
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
-                    <Link href={row.href} style={{ color: "#7cbe8c", textDecoration: "none" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
+                    <Link href={row.href} style={{ color: "var(--c-primary)", textDecoration: "none" }}>
                       {row.name}
                     </Link>
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.alt}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.time}
                   </td>
-                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid #333" }}>
+                  <td style={{ padding: "0.6rem 0.75rem", borderBottom: "1px solid var(--c-border)" }}>
                     {row.env}
                   </td>
                 </tr>
@@ -574,7 +574,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
@@ -583,13 +583,13 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.3rem",
               }}
             >
               {item.title}
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+            <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
               {item.body}
             </div>
           </div>
@@ -607,13 +607,13 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants?tags=%E6%98%A5%E9%96%8B%E8%8A%B1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants?tags=%E6%98%A5%E9%96%8B%E8%8A%B1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           春開花タグの植物を一覧で見る →
         </Link>
-        <Link href="/plants?tags=%E5%B1%B1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants?tags=%E5%B1%B1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           山タグの植物を一覧で見る →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

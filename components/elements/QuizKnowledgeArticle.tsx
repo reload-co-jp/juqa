@@ -45,7 +45,7 @@ export const QuizKnowledgeArticle = ({
         {intro.map((text) => (
           <p
             key={text}
-            style={{ margin: 0, color: "#bbb", fontSize: "0.9rem", lineHeight: 1.9 }}
+            style={{ margin: 0, color: "var(--c-ink-soft)", fontSize: "0.9rem", lineHeight: 1.9 }}
           >
             {text}
           </p>
@@ -61,7 +61,7 @@ export const QuizKnowledgeArticle = ({
           <div
             key={section.title}
             style={{
-              background: "#2d2d2d",
+              background: "var(--c-surface)",
               borderRadius: "12px",
               padding: "1.5rem",
               marginBottom: "1.5rem",
@@ -71,7 +71,7 @@ export const QuizKnowledgeArticle = ({
               style={{
                 fontSize: "1rem",
                 fontWeight: "bold",
-                color: "#7cbe8c",
+                color: "var(--c-primary)",
                 margin: "0 0 0.75rem",
               }}
             >
@@ -80,7 +80,7 @@ export const QuizKnowledgeArticle = ({
             <p
               style={{
                 margin: "0 0 1rem",
-                color: "#aaa",
+                color: "var(--c-muted)",
                 fontSize: "0.88rem",
                 lineHeight: 1.8,
               }}
@@ -99,10 +99,10 @@ export const QuizKnowledgeArticle = ({
                   <div
                     key={quiz.id}
                     style={{
-                      background: "#242424",
+                      background: "var(--c-surface-alt)",
                       borderRadius: "10px",
                       padding: "1rem 1.1rem",
-                      borderLeft: "4px solid #5a9a5c",
+                      borderLeft: "4px solid var(--c-primary)",
                     }}
                   >
                     <div
@@ -116,8 +116,8 @@ export const QuizKnowledgeArticle = ({
                     >
                       <span
                         style={{
-                          background: "#1e3d1f",
-                          color: "#7cbe8c",
+                          background: "var(--c-primary-soft)",
+                          color: "var(--c-primary)",
                           borderRadius: "999px",
                           padding: "0.12rem 0.5rem",
                           fontSize: "0.72rem",
@@ -129,7 +129,7 @@ export const QuizKnowledgeArticle = ({
                         <Link
                           href={`/plants/${plant.id}`}
                           style={{
-                            color: "#93c99e",
+                            color: "var(--c-primary-strong)",
                             textDecoration: "none",
                             fontSize: "0.78rem",
                           }}
@@ -142,7 +142,7 @@ export const QuizKnowledgeArticle = ({
                     <div
                       style={{
                         fontSize: "0.95rem",
-                        color: "#eaeaea",
+                        color: "var(--c-ink)",
                         fontWeight: "bold",
                         lineHeight: 1.6,
                         marginBottom: "0.45rem",
@@ -153,7 +153,7 @@ export const QuizKnowledgeArticle = ({
 
                     <div
                       style={{
-                        color: "#7cbe8c",
+                        color: "var(--c-primary)",
                         fontSize: "0.92rem",
                         fontWeight: "bold",
                         marginBottom: "0.5rem",
@@ -165,7 +165,7 @@ export const QuizKnowledgeArticle = ({
                     <p
                       style={{
                         margin: 0,
-                        color: "#b8b8b8",
+                        color: "var(--c-ink-soft)",
                         fontSize: "0.84rem",
                         lineHeight: 1.8,
                       }}
@@ -192,11 +192,11 @@ export const QuizKnowledgeArticle = ({
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
         {relatedLinks?.map((link) => (
-          <Link key={link.href} href={link.href} style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link key={link.href} href={link.href} style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             {link.label} →
           </Link>
         ))}

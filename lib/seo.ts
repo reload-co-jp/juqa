@@ -53,6 +53,10 @@ export const llmsTxt = () => {
 - [クイズ](${siteUrl}/quiz/): 植物の知識を試すクイズ
 - [写真クイズ](${siteUrl}/quiz/photo/): 写真から植物を当てるクイズ
 - [開花カレンダー](${siteUrl}/flowers/): 季節ごとの開花植物一覧
+- [季節の植物](${siteUrl}/seasons/): 春・夏・秋・冬に咲く植物の一覧
+- [特徴から探す](${siteUrl}/features/): 花の色・どんぐり・紅葉・常緑樹などの特徴別一覧
+- [植物の比較](${siteUrl}/compare/): 似ている植物の違いを表で比較
+- [フォトギャラリー](${siteUrl}/gallery/): 収録植物の写真一覧
 - [コラム](${siteUrl}/columns/): 植物の見分け方・豆知識の解説記事
 - [AI向け全文要約](${siteUrl}/llms-full.txt): 収録植物・科・コラムの機械可読サマリー
 

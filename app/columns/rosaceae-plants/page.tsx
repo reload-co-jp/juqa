@@ -60,7 +60,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -74,7 +74,7 @@ const Page = () => {
       <Section title="バラ科に共通する3つの特徴">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -93,19 +93,19 @@ const Page = () => {
             {
               label: "花弁は5枚（または5の倍数）",
               desc: "サクラもバラもウメも、花びらの数は基本5枚。八重咲き品種は5の倍数に変化していることが多い。",
-              color: "#3d1f2a",
+              color: "#f3e7ec",
               border: "#7a4a5a",
             },
             {
               label: "おしべが多数ある",
               desc: "花の中心をよく見ると、おしべが20〜100本と非常に多い。これもバラ科の大きな特徴。",
-              color: "#1e3d1f",
-              border: "#5a9a5c",
+              color: "var(--c-primary-soft)",
+              border: "var(--c-primary)",
             },
             {
               label: "葉にギザギザ（鋸歯）がある",
               desc: "葉の縁が細かくギザギザしているものが多い。葉柄のつけ根に「托葉」と呼ばれる小さな付属物があることも多い。",
-              color: "#2a2a1a",
+              color: "#f2f2e9",
               border: "#7a7a4a",
             },
           ].map((f) => (
@@ -122,14 +122,14 @@ const Page = () => {
                 style={{
                   fontWeight: "bold",
                   fontSize: "0.9rem",
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   marginBottom: "0.3rem",
                 }}
               >
                 {f.label}
               </div>
               <div
-                style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.6 }}
+                style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.6 }}
               >
                 {f.desc}
               </div>
@@ -142,7 +142,7 @@ const Page = () => {
       <Section title="花木の代表たち — サクラ・ウメ・モモ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -196,7 +196,7 @@ const Page = () => {
       <Section title="食卓に並ぶ果樹 — リンゴ・ナシ・ビワ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -234,7 +234,7 @@ const Page = () => {
       <Section title="野山で出会う仲間 — ノイバラ・ハマナス・ヤマブキ">
         <p
           style={{
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.875rem",
             lineHeight: 1.8,
             margin: "0 0 1rem",
@@ -284,7 +284,7 @@ const Page = () => {
               width: "100%",
               borderCollapse: "collapse",
               fontSize: "0.8rem",
-              color: "#ccc",
+              color: "var(--c-ink-soft)",
             }}
           >
             <thead>
@@ -296,8 +296,8 @@ const Page = () => {
                       style={{
                         padding: "0.5rem 0.75rem",
                         textAlign: "left",
-                        borderBottom: "1px solid #444",
-                        color: "#7cbe8c",
+                        borderBottom: "1px solid var(--c-border-strong)",
+                        color: "var(--c-primary)",
                         fontWeight: "bold",
                         whiteSpace: "nowrap",
                       }}
@@ -390,17 +390,17 @@ const Page = () => {
               ].map((row, i) => (
                 <tr
                   key={row.name}
-                  style={{ background: i % 2 === 0 ? "#262626" : "#222" }}
+                  style={{ background: i % 2 === 0 ? "var(--c-surface-alt)" : "var(--c-surface-alt)" }}
                 >
                   <td
                     style={{
                       padding: "0.6rem 0.75rem",
-                      borderBottom: "1px solid #333",
+                      borderBottom: "1px solid var(--c-border)",
                     }}
                   >
                     <Link
                       href={row.href}
-                      style={{ color: "#7cbe8c", textDecoration: "none" }}
+                      style={{ color: "var(--c-primary)", textDecoration: "none" }}
                     >
                       {row.name}
                     </Link>
@@ -408,7 +408,7 @@ const Page = () => {
                   <td
                     style={{
                       padding: "0.6rem 0.75rem",
-                      borderBottom: "1px solid #333",
+                      borderBottom: "1px solid var(--c-border)",
                     }}
                   >
                     {row.group}
@@ -416,7 +416,7 @@ const Page = () => {
                   <td
                     style={{
                       padding: "0.6rem 0.75rem",
-                      borderBottom: "1px solid #333",
+                      borderBottom: "1px solid var(--c-border)",
                       whiteSpace: "nowrap",
                     }}
                   >
@@ -425,7 +425,7 @@ const Page = () => {
                   <td
                     style={{
                       padding: "0.6rem 0.75rem",
-                      borderBottom: "1px solid #333",
+                      borderBottom: "1px solid var(--c-border)",
                     }}
                   >
                     {row.point}
@@ -460,7 +460,7 @@ const Page = () => {
           <div
             key={item.title}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               paddingLeft: "0.875rem",
               marginBottom: "1rem",
             }}
@@ -469,13 +469,13 @@ const Page = () => {
               style={{
                 fontWeight: "bold",
                 fontSize: "0.875rem",
-                color: "#e0e0e0",
+                color: "var(--c-ink)",
                 marginBottom: "0.3rem",
               }}
             >
               {item.title}
             </div>
-            <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+            <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
               {item.body}
             </div>
           </div>
@@ -495,19 +495,19 @@ const Page = () => {
       >
         <Link
           href="/families/1"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           バラ科の植物一覧を見る →
         </Link>
         <Link
           href="/columns/spring-mountain-flowers"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           関連コラム：春の登山で見られる花特集 →
         </Link>
         <Link
           href="/columns"
-          style={{ color: "#7cbe8c", textDecoration: "none" }}
+          style={{ color: "var(--c-primary)", textDecoration: "none" }}
         >
           コラム一覧へ →
         </Link>

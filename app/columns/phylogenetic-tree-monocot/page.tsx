@@ -31,8 +31,8 @@ const PlantLink = ({ href, name }: { href: string; name: string }) => (
   <Link
     href={href}
     style={{
-      background: "#1e3d1f",
-      color: "#7cbe8c",
+      background: "var(--c-primary-soft)",
+      color: "var(--c-primary)",
       borderRadius: "4px",
       padding: "0.1rem 0.5rem",
       fontSize: "0.75rem",
@@ -56,16 +56,16 @@ const GroupCard = ({
 }) => (
   <div
     style={{
-      background: "#242424",
+      background: "var(--c-surface-alt)",
       borderRadius: "8px",
       padding: "1rem",
       marginBottom: "0.75rem",
     }}
   >
-    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "#e0e0e0", marginBottom: "0.4rem" }}>
+    <div style={{ fontWeight: "bold", fontSize: "0.9rem", color: "var(--c-ink)", marginBottom: "0.4rem" }}>
       {cardTitle}
     </div>
-    <p style={{ color: "#ccc", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
+    <p style={{ color: "var(--c-ink-soft)", fontSize: "0.8rem", lineHeight: 1.7, margin: "0 0 0.5rem" }}>
       {feature}
     </p>
     <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
@@ -75,10 +75,10 @@ const GroupCard = ({
     </div>
     <div
       style={{
-        background: "#1e3d1f",
+        background: "var(--c-primary-soft)",
         borderRadius: "6px",
         padding: "0.4rem 0.75rem",
-        color: "#a0d0a2",
+        color: "var(--c-primary-strong)",
         fontSize: "0.78rem",
       }}
     >
@@ -101,27 +101,27 @@ const Page = () => {
           "単子葉類の系統樹を眺めると、「サトイモ科が古いグループ」「イネ科とツユクサ科は比較的近縁」「ユリ科・アヤメ科・ヒガンバナ科はユリ目という同じ大グループ」など、見た目だけではわからない関係が浮かびあがる。",
           "このコラムでは、単子葉類の主要グループを系統の分岐に沿って整理し、野外での見分け方のポイントを解説する。",
         ].map((text, i) => (
-          <p key={i} style={{ margin: 0, color: "#bbb", fontSize: "0.9rem", lineHeight: 1.9 }}>
+          <p key={i} style={{ margin: 0, color: "var(--c-ink-soft)", fontSize: "0.9rem", lineHeight: 1.9 }}>
             {text}
           </p>
         ))}
       </ColumnIntro>
 
       <Section title="単子葉類の系統——主要グループの分岐">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1.25rem" }}>
           単子葉類はひとつの単系統群（共通の祖先から派生した閉じたグループ）だが、内部でいくつかの大きな分岐がある。最も基底的（古くに分岐）なグループにサトイモ科があり、そこから多様なグループに分かれていった。
         </p>
         <PhylogeneticFlow
           variant="monocot"
           caption="葉脈だけでなく、花被片・葉鞘・仏炎苞・球根の有無を枝ごとに見る。"
         />
-        <p style={{ color: "#aaa", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
+        <p style={{ color: "var(--c-muted)", fontSize: "0.8rem", lineHeight: 1.7, margin: "1rem 0 0" }}>
           ※ 単子葉類の共通特徴は「子葉1枚・葉脈平行・花被片3の倍数・茎の維管束が散在・根が須根系」。ただし例外もあるため複数の特徴で判断する。
         </p>
       </Section>
 
       <Section title="基底的グループ——サトイモ科">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           単子葉類の系統樹の根元近くに位置するのがサトイモ科だ。「仏炎苞（ぶつえんほう）」と呼ばれる大きな苞葉が花序を包む独特の構造を持ち、見た目は他の単子葉類と大きく異なる。
         </p>
         <GroupCard
@@ -136,7 +136,7 @@ const Page = () => {
       </Section>
 
       <Section title="コメリナ類——ツユクサ科とイネ科">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           コメリナ類は単子葉類の中でも多様なグループで、ツユクサ科・イネ科・カヤツリグサ科などを含む。葉の基部が茎を包む「葉鞘」が発達することが共通点の一つだ。
         </p>
         <GroupCard
@@ -160,7 +160,7 @@ const Page = () => {
       </Section>
 
       <Section title="ユリ目——花被片6枚の美しい花たち">
-        <p style={{ color: "#ccc", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
+        <p style={{ color: "var(--c-ink-soft)", fontSize: "0.875rem", lineHeight: 1.8, margin: "0 0 1rem" }}>
           ユリ目はユリ科・アヤメ科・ヒガンバナ科などを含む大グループ。花被片が6枚（3枚の内花被片＋3枚の外花被片）という特徴を共有することが多く、球根または根茎をもつ種が多い。観賞植物として利用される種が豊富。
         </p>
         <GroupCard
@@ -226,7 +226,7 @@ const Page = () => {
             <div key={item.step} style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
               <div
                 style={{
-                  background: "#5a9a5c",
+                  background: "var(--c-primary)",
                   color: "#fff",
                   borderRadius: "50%",
                   width: "1.75rem",
@@ -242,10 +242,10 @@ const Page = () => {
                 {item.step}
               </div>
               <div>
-                <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "#e0e0e0", marginBottom: "0.25rem" }}>
+                <div style={{ fontWeight: "bold", fontSize: "0.875rem", color: "var(--c-ink)", marginBottom: "0.25rem" }}>
                   {item.title}
                 </div>
-                <div style={{ fontSize: "0.8rem", color: "#aaa", lineHeight: 1.7 }}>
+                <div style={{ fontSize: "0.8rem", color: "var(--c-muted)", lineHeight: 1.7 }}>
                   {item.desc}
                 </div>
               </div>
@@ -264,19 +264,19 @@ const Page = () => {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           植物一覧を見る →
         </Link>
-        <Link href="/columns/phylogenetic-tree" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：植物を系統樹で覚えやすく →
         </Link>
-        <Link href="/columns/phylogenetic-tree-dicot" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree-dicot" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：双子葉類の系統を辿る →
         </Link>
-        <Link href="/columns/phylogenetic-tree-gymno" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/phylogenetic-tree-gymno" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           関連コラム：裸子植物4グループを系統で整理する →
         </Link>
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { plants, families } from "lib/data"
+import { Breadcrumbs } from "components/elements/layout"
 
 const siteUrl = "https://juqa.reload.co.jp"
 
@@ -21,12 +22,13 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
+    <div style={{ maxWidth: "48rem", margin: "0 auto", color: "var(--c-ink)" }}>
+      <Breadcrumbs items={[{ href: "/", label: "ホーム" }, { label: "このサイトについて" }]} currentUrl={`${siteUrl}/about/`} />
       <h1
         style={{
           fontSize: "1.5rem",
           fontWeight: "bold",
-          color: "#7cbe8c",
+          color: "var(--c-primary)",
           marginBottom: "2rem",
         }}
       >
@@ -35,7 +37,7 @@ const Page = () => {
 
       <div
         style={{
-          background: "#2d2d2d",
+          background: "var(--c-surface)",
           borderRadius: "12px",
           padding: "1.5rem",
           marginBottom: "1.5rem",
@@ -45,7 +47,7 @@ const Page = () => {
           style={{
             fontSize: "1rem",
             fontWeight: "bold",
-            color: "#7cbe8c",
+            color: "var(--c-primary)",
             marginBottom: "0.75rem",
           }}
         >
@@ -57,7 +59,7 @@ const Page = () => {
             flexDirection: "column",
             gap: "1rem",
             lineHeight: 1.8,
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.9rem",
             margin: 0,
           }}
@@ -78,7 +80,7 @@ const Page = () => {
 
       <div
         style={{
-          background: "#2d2d2d",
+          background: "var(--c-surface)",
           borderRadius: "12px",
           padding: "1.5rem",
           marginBottom: "1.5rem",
@@ -88,7 +90,7 @@ const Page = () => {
           style={{
             fontSize: "1rem",
             fontWeight: "bold",
-            color: "#7cbe8c",
+            color: "var(--c-primary)",
             marginBottom: "0.75rem",
           }}
         >
@@ -97,7 +99,7 @@ const Page = () => {
         <p
           style={{
             lineHeight: 1.8,
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.9rem",
             margin: 0,
           }}
@@ -107,18 +109,18 @@ const Page = () => {
             href="https://commons.wikimedia.org/"
             target="_blank"
             rel="noreferrer"
-            style={{ color: "#7cbe8c" }}
+            style={{ color: "var(--c-primary)" }}
           >
             Wikimedia Commons
           </a>{" "}
           のパブリックドメイン・CC
-          ライセンス画像を使用しています。各植物の詳細ページに出典情報を掲載しています。
+          ライセンス画像を使用しています。各植物の詳細ページと<a href="/credits/">著作権・写真の出典について</a>に出典情報を掲載しています。
         </p>
       </div>
 
       <div
         style={{
-          background: "#2d2d2d",
+          background: "var(--c-surface)",
           borderRadius: "12px",
           padding: "1.5rem",
           marginBottom: "1.5rem",
@@ -128,7 +130,7 @@ const Page = () => {
           style={{
             fontSize: "1rem",
             fontWeight: "bold",
-            color: "#7cbe8c",
+            color: "var(--c-primary)",
             marginBottom: "0.75rem",
           }}
         >
@@ -137,7 +139,7 @@ const Page = () => {
         <p
           style={{
             lineHeight: 1.8,
-            color: "#ccc",
+            color: "var(--c-ink-soft)",
             fontSize: "0.9rem",
             margin: 0,
           }}
@@ -146,7 +148,7 @@ const Page = () => {
             href="//reload.co.jp"
             target="_blank"
             rel="noreferrer"
-            style={{ color: "#7cbe8c" }}
+            style={{ color: "var(--c-primary)" }}
           >
             Reload, Inc.
           </a>{" "}
@@ -155,7 +157,7 @@ const Page = () => {
             href="https://github.com/reload-co-jp/juqa"
             target="_blank"
             rel="noreferrer"
-            style={{ color: "#7cbe8c" }}
+            style={{ color: "var(--c-primary)" }}
           >
             GitHub
           </a>{" "}

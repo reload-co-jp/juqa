@@ -40,17 +40,17 @@ const jsonLd = createColumnJsonLd({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
 }
 
 const note: React.CSSProperties = {
-  background: "#242424",
-  borderLeft: "3px solid #5a9a5c",
+  background: "var(--c-surface-alt)",
+  borderLeft: "3px solid var(--c-primary)",
   borderRadius: "8px",
-  color: "#aaa",
+  color: "var(--c-muted)",
   fontSize: "0.82rem",
   lineHeight: 1.8,
   margin: "0.75rem 0 0",
@@ -77,7 +77,7 @@ const Page = () => {
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -94,7 +94,7 @@ const Page = () => {
         </p>
         <p style={body}>
           たとえば
-          <Link href="/plants/18" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/18" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ノイバラ
           </Link>
           は、日本に自生する野生のバラです。花は白く小さめで、花びらも基本は5枚。
@@ -132,15 +132,15 @@ const Page = () => {
             <div
               key={group.label}
               style={{
-                background: "#242424",
-                border: "1px solid #3a3a3a",
+                background: "var(--c-surface-alt)",
+                border: "1px solid var(--c-border)",
                 borderRadius: "8px",
                 padding: "1rem",
               }}
             >
               <div
                 style={{
-                  color: "#e0e0e0",
+                  color: "var(--c-ink)",
                   fontSize: "0.9rem",
                   fontWeight: "bold",
                   marginBottom: "0.5rem",
@@ -150,7 +150,7 @@ const Page = () => {
               </div>
               <ul
                 style={{
-                  color: "#aaa",
+                  color: "var(--c-muted)",
                   fontSize: "0.8rem",
                   lineHeight: 1.8,
                   margin: 0,
@@ -203,7 +203,7 @@ const Page = () => {
           <div
             key={item.name}
             style={{
-              borderLeft: "3px solid #5a9a5c",
+              borderLeft: "3px solid var(--c-primary)",
               marginBottom: "1rem",
               paddingLeft: "0.875rem",
             }}
@@ -211,7 +211,7 @@ const Page = () => {
             <Link
               href={item.href}
               style={{
-                color: "#7cbe8c",
+                color: "var(--c-primary)",
                 fontSize: "0.9rem",
                 fontWeight: "bold",
                 textDecoration: "none",

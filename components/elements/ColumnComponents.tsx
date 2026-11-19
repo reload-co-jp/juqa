@@ -81,24 +81,6 @@ export const createColumnJsonLd = ({
         isPartOf: { "@id": `${columnSiteUrl}/columns/` },
         publisher,
       },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "ホーム",
-            item: columnSiteUrl,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "コラム",
-            item: `${columnSiteUrl}/columns/`,
-          },
-          { "@type": "ListItem", position: 3, name: title, item: pageUrl },
-        ],
-      },
     ],
   }
 }
@@ -124,7 +106,7 @@ export const ColumnArticle = ({
   heroCredit?: string
   children: React.ReactNode
 }) => (
-  <div style={{ maxWidth: "48rem", margin: "0 auto", color: "#e0e0e0" }}>
+  <article style={{ maxWidth: "48rem", margin: "0 auto", color: "var(--c-ink)", fontSize: "1.02rem" }}>
     {jsonLd && (
       <script
         type="application/ld+json"
@@ -143,22 +125,23 @@ export const ColumnArticle = ({
       <div
         style={{
           display: "inline-block",
-          background: "rgba(90,154,92,0.2)",
-          border: "1px solid #5a9a5c",
+          background: "rgba(47,93,58,0.2)",
+          border: "1px solid var(--c-primary)",
           borderRadius: "20px",
           padding: "0.2rem 0.75rem",
           fontSize: "0.7rem",
-          color: "#a0d0a2",
+          color: "var(--c-primary-strong)",
           marginBottom: "0.75rem",
         }}
       >
         {emoji} {label}
       </div>
       <h1
+        className="serif"
         style={{
-          fontSize: "1.5rem",
+          fontSize: "clamp(1.6rem, 4.5vw, 2.2rem)",
           fontWeight: "bold",
-          color: "#fff",
+          color: "var(--c-ink)",
           margin: "0 0 0.5rem",
           lineHeight: 1.35,
         }}
@@ -167,7 +150,7 @@ export const ColumnArticle = ({
       </h1>
       <p
         style={{
-          color: "#999",
+          color: "var(--c-muted)",
           fontSize: "0.9rem",
           margin: 0,
           lineHeight: 1.8,
@@ -190,17 +173,17 @@ export const ColumnArticle = ({
           alt={heroAlt ?? title}
           style={{
             width: "100%",
-            height: "240px",
+            height: "clamp(220px, 40vw, 380px)",
             objectFit: "cover",
             display: "block",
           }}
         />
         <div
           style={{
-            background: "#2a2a2a",
+            background: "var(--c-surface-alt)",
             padding: "0.4rem 0.75rem",
             fontSize: "0.7rem",
-            color: "#666",
+            color: "var(--c-subtle)",
           }}
         >
           {heroCredit}
@@ -209,13 +192,13 @@ export const ColumnArticle = ({
     )}
 
     {children}
-  </div>
+  </article>
 )
 
 export const ColumnIntro = ({ children }: { children: React.ReactNode }) => (
   <div
     style={{
-      borderLeft: "3px solid #5a9a5c",
+      borderLeft: "3px solid var(--c-primary)",
       paddingLeft: "1.25rem",
       marginBottom: "2rem",
       display: "flex",
@@ -236,17 +219,19 @@ export const Section = ({
 }) => (
   <div
     style={{
-      background: "#2d2d2d",
-      borderRadius: "12px",
-      padding: "1.5rem",
+      background: "var(--c-surface)",
+      border: "1px solid var(--c-border)",
+      borderRadius: "16px",
+      padding: "clamp(1.1rem, 3vw, 1.75rem)",
       marginBottom: "1.5rem",
     }}
   >
     <h2
+      className="serif"
       style={{
-        fontSize: "1rem",
+        fontSize: "1.25rem",
         fontWeight: "bold",
-        color: "#7cbe8c",
+        color: "var(--c-ink)",
         margin: "0 0 1rem",
       }}
     >
@@ -271,7 +256,7 @@ export const PlantCard = ({
   return (
     <div
       style={{
-        background: "#242424",
+        background: "var(--c-surface-alt)",
         borderRadius: "8px",
         padding: "1rem",
         marginBottom: "0.75rem",
@@ -286,7 +271,10 @@ export const PlantCard = ({
         }}
       >
         <img
-          src={`/images/plants/${plant.id}-0.webp`}
+          src={`/images/plants/thumbs/${plant.id}-0.webp`}
+          loading="lazy"
+          width={80}
+          height={80}
           alt={plant.japanese_name}
           style={{
             width: "80px",
@@ -299,7 +287,7 @@ export const PlantCard = ({
           href={`/plants/${plant.id}`}
           style={{
             fontWeight: "bold",
-            color: "#7cbe8c",
+            color: "var(--c-primary)",
             fontSize: "1.1rem",
             textDecoration: "none",
           }}
@@ -311,7 +299,7 @@ export const PlantCard = ({
         style={{
           margin: "0 0 0.5rem",
           paddingLeft: "1.2rem",
-          color: "#ccc",
+          color: "var(--c-ink-soft)",
           fontSize: "0.875rem",
           lineHeight: 1.8,
         }}
@@ -322,10 +310,10 @@ export const PlantCard = ({
       </ul>
       <div
         style={{
-          background: "#1e3d1f",
+          background: "var(--c-primary-soft)",
           borderRadius: "6px",
           padding: "0.5rem 0.75rem",
-          color: "#a0d0a2",
+          color: "var(--c-primary-strong)",
           fontSize: "0.8rem",
         }}
       >

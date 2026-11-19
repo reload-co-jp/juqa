@@ -23,7 +23,7 @@ export const metadata = createColumnMetadata({
 })
 
 const body: React.CSSProperties = {
-  color: "#ccc",
+  color: "var(--c-ink-soft)",
   fontSize: "0.875rem",
   lineHeight: 1.85,
   margin: "0 0 0.875rem",
@@ -49,14 +49,14 @@ export default function Page() {
       <ColumnIntro>
         {[
           "花を見たとき、多くの人はまず色や大きさに目がいきます。でも、落ち着いて数えてみると、花びらの枚数には案外はっきりした傾向があります。",
-          "たとえば<Link href=\"/plants/1\" style=\"color:#7cbe8c;text-decoration:none;\">ソメイヨシノ</Link>や<Link href=\"/plants/16\" style=\"color:#7cbe8c;text-decoration:none;\">ウメ</Link>、<Link href=\"/plants/18\" style=\"color:#7cbe8c;text-decoration:none;\">ノイバラ</Link>は5枚、<Link href=\"/plants/15\" style=\"color:#7cbe8c;text-decoration:none;\">ツユクサ</Link>や<Link href=\"/plants/54\" style=\"color:#7cbe8c;text-decoration:none;\">ヤマユリ</Link>は3の倍数に見える花を持っています。",
+          "たとえば<Link href=\"/plants/1\" style=\"color:var(--c-primary);text-decoration:none;\">ソメイヨシノ</Link>や<Link href=\"/plants/16\" style=\"color:var(--c-primary);text-decoration:none;\">ウメ</Link>、<Link href=\"/plants/18\" style=\"color:var(--c-primary);text-decoration:none;\">ノイバラ</Link>は5枚、<Link href=\"/plants/15\" style=\"color:var(--c-primary);text-decoration:none;\">ツユクサ</Link>や<Link href=\"/plants/54\" style=\"color:var(--c-primary);text-decoration:none;\">ヤマユリ</Link>は3の倍数に見える花を持っています。",
           "もちろん例外もあります。ですが『この花は何枚が基本なんだろう』と考える癖がつくと、見分け方だけでなく分類の感覚まで少しずつ育っていきます。",
         ].map((text, i) => (
           <p
             key={i}
             style={{
               margin: 0,
-              color: "#bbb",
+              color: "var(--c-ink-soft)",
               fontSize: "0.9rem",
               lineHeight: 1.9,
             }}
@@ -68,15 +68,15 @@ export default function Page() {
       <Section title="5枚花はとても多い">
         <p style={body}>
           双子葉類の花では、5枚を基本にした構造がとてもよく見られます。
-          <Link href="/plants/1" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/1" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ソメイヨシノ
           </Link>
           や
-          <Link href="/plants/16" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/16" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ウメ
           </Link>
           、
-          <Link href="/plants/18" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/18" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ノイバラ
           </Link>
           のようなバラ科の花を見ると、その典型がわかりやすいです。
@@ -90,7 +90,7 @@ export default function Page() {
       <Section title="4枚花は『十字』に見えることがある">
         <p style={body}>
           4枚花も珍しくありません。たとえば
-          <Link href="/plants/50" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/50" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             クサノオウ
           </Link>
           は4枚の花弁を持ち、横からではなく正面から見ると十字形のように広がって見えます。
@@ -104,15 +104,15 @@ export default function Page() {
       <Section title="3の倍数なら単子葉類を疑う">
         <p style={body}>
           単子葉類の花は、3枚または6枚のように3の倍数でまとまることが多いです。
-          <Link href="/plants/15" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/15" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ツユクサ
           </Link>
           は3枚、
-          <Link href="/plants/42" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/42" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             カタクリ
           </Link>
           や
-          <Link href="/plants/54" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/54" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ヤマユリ
           </Link>
           は6枚に見える花を持っています。
@@ -126,12 +126,12 @@ export default function Page() {
       <Section title="花びらに見えて、花びらではないこともある">
         <p style={body}>
           花を数えるときに、いちばん引っかかりやすいのがここです。
-          <Link href="/plants/31" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/31" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             アジサイ
           </Link>
           の大きく目立つ部分は、実際には萼が花びらのように見えているものです。
           また
-          <Link href="/plants/40" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/40" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             ドクダミ
           </Link>
           の白い4枚も花弁ではなく、総苞片です。
@@ -145,7 +145,7 @@ export default function Page() {
       <Section title="枚数だけで決めつけず、ほかの特徴と組み合わせる">
         <p style={body}>
           花びらの枚数はとても便利な入口ですが、それだけで答えが出るわけではありません。八重咲きの
-          <Link href="/plants/196" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+          <Link href="/plants/196" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
             バラ
           </Link>
           のように、人の手で花弁数が増えている園芸植物もあります。
@@ -165,10 +165,10 @@ export default function Page() {
           fontSize: "0.8rem",
         }}
       >
-        <Link href="/columns" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           コラム一覧へ →
         </Link>
-        <Link href="/columns/rosaceae-plants" style={{ color: "#7cbe8c", textDecoration: "none" }}>
+        <Link href="/columns/rosaceae-plants" style={{ color: "var(--c-primary)", textDecoration: "none" }}>
           バラ科の植物たち →
         </Link>
       </div>

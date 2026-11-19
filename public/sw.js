@@ -1,4 +1,4 @@
-const CACHE_NAME = "juqa-v1"
+const CACHE_NAME = "juqa-v2"
 
 self.addEventListener("install", (event) => {
   self.skipWaiting()
