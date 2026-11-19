@@ -81,7 +81,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "山", "公園"],
     flower_colors: ["赤"],
-    similar_plant_ids: [19],
+    similar_plant_ids: [19, 276, 277],
   },
   {
     id: 3,
@@ -125,7 +125,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "高木", "公園", "街路樹"],
-    similar_plant_ids: [],
+    similar_plant_ids: [278],
   },
   {
     id: 4,
@@ -390,7 +390,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
     flower_colors: ["赤"],
-    similar_plant_ids: [8],
+    similar_plant_ids: [8, 282],
   },
   {
     id: 10,
@@ -434,7 +434,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
-    similar_plant_ids: [22, 101],
+    similar_plant_ids: [22, 101, 274],
   },
   {
     id: 11,
@@ -789,7 +789,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "街路樹"],
-    similar_plant_ids: [2],
+    similar_plant_ids: [2, 280],
   },
   {
     id: 20,
@@ -833,7 +833,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "光沢", "ギザギザ", "どんぐり", "高木", "街路樹"],
-    similar_plant_ids: [6, 7, 143],
+    similar_plant_ids: [6, 7, 143, 279],
   },
   {
     id: 21,
@@ -921,7 +921,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
-    similar_plant_ids: [10, 101],
+    similar_plant_ids: [10, 101, 274],
   },
   {
     id: 23,
@@ -1869,7 +1869,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["夏開花", "常緑", "光沢", "厚い葉", "高木", "山"],
-    similar_plant_ids: [3],
+    similar_plant_ids: [3, 278],
   },
   {
     id: 47,
@@ -2556,7 +2556,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "落葉", "手のひら葉", "高木", "山"],
-    similar_plant_ids: [2, 19],
+    similar_plant_ids: [2, 19, 276],
   },
   {
     id: 64,
@@ -4127,7 +4127,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "常緑", "針葉", "松ぼっくり", "低木", "山"],
-    similar_plant_ids: [10, 22],
+    similar_plant_ids: [10, 22, 274],
   },
   {
     id: 102,
@@ -5714,7 +5714,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["常緑", "光沢", "どんぐり", "高木", "街路樹", "山"],
-    similar_plant_ids: [20, 21],
+    similar_plant_ids: [20, 21, 279],
   },
   {
     id: 145,
@@ -5913,7 +5913,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
-    similar_plant_ids: [],
+    similar_plant_ids: [275],
   },
   {
     id: 150,
@@ -10474,6 +10474,373 @@ export const plants: Plant[] = [
     tags: ["春開花", "夏開花", "草本", "山"],
     flower_colors: ["青", "紫"],
     similar_plant_ids: [261],
+  },
+  {
+    id: 274,
+    japanese_name: "ゴヨウマツ",
+    scientific_name: "Pinus parviflora",
+    family_id: 8,
+    genus: "マツ属",
+    description: [
+      "山地の尾根や岩場に生える常緑高木。葉が5本ずつ束になってつくことから「五葉松」と呼ばれる。",
+      "葉は長さ3〜6cmほどと短く、白っぽい気孔線があるため、木全体がやや青みがかって見える。",
+      "樹形が整いやすく、庭木や盆栽として古くから親しまれている。",
+    ],
+    identification: [
+      "針葉が5本ずつ束になる（クロマツ・アカマツは2本）",
+      "葉が短く、白っぽい筋があって青緑色に見える",
+      "球果は卵形で、熟すと鱗片が開く",
+      "樹皮は灰色で、若い木ではなめらか",
+    ],
+    distribution: "北海道南部〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_White_Pine_Pinus_parviflora_Miyagi_Prefecture_(crop).jpg",
+    local_image_url: "/images/plants/274-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_White_Pine_Pinus_parviflora_Miyagi_Prefecture_(crop).jpg",
+        local_url: "/images/plants/274-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_parviflora_PAN_male_cones.jpg",
+        local_url: "/images/plants/274-2.webp",
+        caption: "葉と雄花",
+      },
+    ],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山", "公園"],
+    similar_plant_ids: [10, 22, 101],
+  },
+  {
+    id: 275,
+    japanese_name: "ツガ",
+    scientific_name: "Tsuga sieboldii",
+    family_id: 8,
+    genus: "ツガ属",
+    description: [
+      "暖温帯から山地の尾根などに生える日本固有の常緑高木。",
+      "葉は長さ1〜2cmの平たい線形で、先端が少しくぼみ、枝の左右に2列に並んでつく。",
+      "球果は長さ2〜3cmと小さく、枝先に下向きにぶら下がる。",
+    ],
+    identification: [
+      "葉は短い線形で、長さがふぞろいなまま2列に並ぶ",
+      "葉の先端がわずかにへこむ",
+      "葉の裏に2本の白い気孔帯がある",
+      "小さな球果が枝先から下向きにつく",
+    ],
+    distribution: "本州（福島県以南）〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuga_sieboldii%E2%80%94mature_tree_at_the_Morris_Arboretum.jpg",
+    local_image_url: "/images/plants/275-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuga_sieboldii%E2%80%94mature_tree_at_the_Morris_Arboretum.jpg",
+        local_url: "/images/plants/275-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Tsuga_sieboldii%E2%80%94mature_cones_and_foliage.jpg",
+        local_url: "/images/plants/275-2.webp",
+        caption: "葉と球果",
+      },
+    ],
+    tags: ["春開花", "常緑", "針葉", "松ぼっくり", "高木", "山"],
+    similar_plant_ids: [149],
+  },
+  {
+    id: 276,
+    japanese_name: "ヤマモミジ",
+    scientific_name: "Acer amoenum var. matsumurae",
+    family_id: 2,
+    genus: "カエデ属",
+    description: [
+      "日本海側の多雪地の山地に多い落葉高木。オオモミジの変種とされる。",
+      "葉はイロハモミジよりひと回り大きく、7〜9つに裂け、縁に大小ふぞろいの鋸歯がある。",
+      "秋には赤や橙に紅葉し、庭木や公園樹としても植えられる。",
+    ],
+    identification: [
+      "葉は7〜9裂の手のひら形で、イロハモミジより大きい",
+      "葉の縁の鋸歯が大小ふぞろい（重鋸歯）",
+      "葉は枝に対生する",
+      "プロペラ形の翼果をつける",
+    ],
+    distribution: "北海道南部〜本州の日本海側の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_amoenum_var_matsumurae1.jpg",
+    local_image_url: "/images/plants/276-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_amoenum_var_matsumurae1.jpg",
+        local_url: "/images/plants/276-1.webp",
+        caption: "紅葉した葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_amoenum_var_matsumurae2.jpg",
+        local_url: "/images/plants/276-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "落葉", "手のひら葉", "ギザギザ", "高木", "山", "公園"],
+    similar_plant_ids: [2, 63],
+  },
+  {
+    id: 277,
+    japanese_name: "ウリカエデ",
+    scientific_name: "Acer crataegifolium",
+    family_id: 2,
+    genus: "カエデ属",
+    description: [
+      "山地の林縁などに生える日本固有の落葉小高木。",
+      "緑色の樹皮に黒っぽい縦すじが入り、マクワウリの皮に似ることが名前の由来。",
+      "葉は卵形で裂けないか浅く3裂し、春には黄色い小花を房状に垂らす。",
+    ],
+    identification: [
+      "樹皮が緑色で、黒っぽい縦すじがある",
+      "葉は卵形で、カエデの仲間としては切れ込みが浅い",
+      "葉は枝に対生する",
+      "春に黄色い小花が房状に垂れ下がる",
+    ],
+    distribution: "本州（福島県以南）〜九州の山地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_crataegifolium_1.JPG",
+    local_image_url: "/images/plants/277-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_crataegifolium_1.JPG",
+        local_url: "/images/plants/277-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_crataegifolium_kz1.jpg",
+        local_url: "/images/plants/277-2.webp",
+        caption: "実と葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "ギザギザ", "高木", "山"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [2],
+  },
+  {
+    id: 278,
+    japanese_name: "ヤブニッケイ",
+    scientific_name: "Cinnamomum yabunikkei",
+    family_id: 3,
+    genus: "ニッケイ属",
+    description: [
+      "暖地の海岸近くや低地の林に生える常緑高木。",
+      "葉には光沢があり、主脈と基部から伸びる2本の脈が目立つ三行脈になる。葉をもむとニッケイに似た香りがする。",
+      "初夏に淡黄緑色の小花を咲かせ、秋に黒紫色の実が熟す。",
+    ],
+    identification: [
+      "葉に目立つ3本の脈（三行脈）がある",
+      "葉をもむとシナモンのような香りがする",
+      "葉は光沢があり、枝先に近接してつく",
+      "秋〜冬に黒紫色の丸い実が熟す",
+    ],
+    distribution: "本州（福島県以南）〜沖縄の暖地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnamomum_japonicum_kz1.jpg",
+    local_image_url: "/images/plants/278-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Cinnamomum_japonicum_kz1.jpg",
+        local_url: "/images/plants/278-1.webp",
+        caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Cinnamon_(Cinnamomum_japonicum)_(22792381081).jpg",
+        local_url: "/images/plants/278-2.webp",
+        caption: "実と葉",
+      },
+    ],
+    tags: ["夏開花", "常緑", "光沢", "厚い葉", "小花集合", "高木", "山"],
+    similar_plant_ids: [3, 46],
+  },
+  {
+    id: 279,
+    japanese_name: "アラカシ",
+    scientific_name: "Quercus glauca",
+    family_id: 6,
+    genus: "コナラ属",
+    description: [
+      "西日本の里山や社寺林に多い常緑高木。生垣や庭木としてもよく植えられる。",
+      "葉は幅のある楕円形で、上半分にだけ粗い鋸歯がある。葉の裏は灰白色を帯びる。",
+      "秋に熟すどんぐりは、殻斗（帽子）に横縞の輪が重なる。",
+    ],
+    identification: [
+      "葉の上半分にだけ粗い鋸歯がある",
+      "葉の裏が灰白色",
+      "シラカシより葉の幅が広く、鋸歯が粗い",
+      "どんぐりの殻斗に輪状の横縞がある",
+    ],
+    distribution: "本州（宮城県・石川県以西）〜九州・沖縄",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_glauca_kz01.jpg",
+    local_image_url: "/images/plants/279-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_glauca_kz01.jpg",
+        local_url: "/images/plants/279-1.webp",
+        caption: "葉と枝",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_glauca1.jpg",
+        local_url: "/images/plants/279-2.webp",
+        caption: "全体",
+      },
+    ],
+    tags: ["春開花", "常緑", "光沢", "ギザギザ", "どんぐり", "高木", "山", "公園"],
+    similar_plant_ids: [20, 143],
+  },
+  {
+    id: 280,
+    japanese_name: "モミジバスズカケノキ",
+    scientific_name: "Platanus × acerifolia",
+    family_id: 29,
+    genus: "スズカケノキ属",
+    description: [
+      "スズカケノキとアメリカスズカケノキの雑種とされる落葉高木。「プラタナス」と呼ばれる街路樹の多くがこの木である。",
+      "樹皮が大きくはがれ落ち、緑・灰・白のまだら模様になる。",
+      "葉は手のひら形に3〜5裂して大きく、秋には球形の実が長い柄でぶら下がる。",
+    ],
+    identification: [
+      "樹皮がはがれて迷彩のようなまだら模様になる",
+      "葉は手のひら形に浅く裂け、カエデと違って互生する",
+      "球形の実が1本の柄に1〜3個ぶら下がる",
+      "葉が大きく、長さ10〜20cmほどになる",
+    ],
+    distribution: "全国（植栽）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/PlatanusAcerifoliaTrunk.jpg",
+    local_image_url: "/images/plants/280-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/PlatanusAcerifoliaTrunk.jpg",
+        local_url: "/images/plants/280-1.webp",
+        caption: "全体（並木）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Platanus_acerifolia_leaves_(2).jpg",
+        local_url: "/images/plants/280-2.webp",
+        caption: "葉と樹皮",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Platanus_x_acerifolia_Basel.jpg",
+        local_url: "/images/plants/280-3.webp",
+        caption: "樹皮",
+      },
+    ],
+    tags: ["春開花", "落葉", "手のひら葉", "高木", "街路樹", "公園"],
+    similar_plant_ids: [19],
+  },
+  {
+    id: 281,
+    japanese_name: "カラマツ",
+    scientific_name: "Larix kaempferi",
+    family_id: 8,
+    genus: "カラマツ属",
+    description: [
+      "本州中部の山地に自生する日本固有の落葉針葉樹。日本の自生の針葉樹で、冬に葉を落とすのはカラマツだけである。",
+      "秋には葉が黄金色に黄葉し、山々を彩る。",
+      "成長が早く、北海道や東北・中部地方の山地で広く植林されている。",
+    ],
+    identification: [
+      "針葉樹なのに秋に黄葉し、冬は葉を落とす",
+      "葉は短い枝の先に20〜40本ほどまとまって束生する",
+      "球果は上向きにつき、鱗片の先が反り返ってバラの花のように見える",
+      "樹形は円錐形で、植林地では整然と並ぶ",
+    ],
+    distribution: "本州中部（宮城県〜長野県など）の山地に自生。北海道・東北などで植林",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Larix_kaempferi_(Mount_Toyoguchi).jpg",
+    local_image_url: "/images/plants/281-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Larix_kaempferi_(Mount_Toyoguchi).jpg",
+        local_url: "/images/plants/281-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Japanese_Larch_Larix_kaempferi_Cone_and_Needles_3008px.jpg",
+        local_url: "/images/plants/281-2.webp",
+        caption: "球果と葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "針葉", "松ぼっくり", "高木", "山"],
+    similar_plant_ids: [282],
+  },
+  {
+    id: 282,
+    japanese_name: "メタセコイア",
+    scientific_name: "Metasequoia glyptostroboides",
+    family_id: 7,
+    genus: "メタセコイア属",
+    description: [
+      "化石として知られていたが、1940年代に中国で生きた木が見つかった「生きた化石」と呼ばれる落葉高木。",
+      "やわらかい線形の葉が羽のように並び、秋にはレンガ色に紅葉して、葉は小枝ごと落ちる。",
+      "まっすぐな幹ときれいな円錐形の樹形をもち、公園や並木に植えられる。",
+    ],
+    identification: [
+      "針葉樹だが秋に紅葉し、冬は葉を落とす",
+      "羽状に並ぶ葉が枝に対生する",
+      "葉は小枝ごと落ちる",
+      "樹形がきれいな円錐形になる",
+    ],
+    distribution: "全国（植栽）。原産は中国",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Metasequoia_glyptostroboides_at_Nagai_Botanical_Garden,_January_2024_-_0001.jpg",
+    local_image_url: "/images/plants/282-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Metasequoia_glyptostroboides_at_Nagai_Botanical_Garden,_January_2024_-_0001.jpg",
+        local_url: "/images/plants/282-1.webp",
+        caption: "全体（紅葉）",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Metasequoia_glyptostroboides_leafs.jpg",
+        local_url: "/images/plants/282-2.webp",
+        caption: "葉",
+      },
+    ],
+    tags: ["春開花", "落葉", "針葉", "松ぼっくり", "高木", "公園", "街路樹"],
+    similar_plant_ids: [9, 281],
+  },
+  {
+    id: 283,
+    japanese_name: "ヒガンバナ",
+    scientific_name: "Lycoris radiata",
+    family_id: 38,
+    genus: "ヒガンバナ属",
+    description: [
+      "秋の彼岸のころ、田んぼのあぜや土手、墓地などで真っ赤な花を咲かせる多年草。",
+      "葉のない花茎の先に、花びらが強く反り返った花を輪状に数個つける。花が終わると葉が出て冬を越す。",
+      "鱗茎（球根）には毒がある。古い時代に中国から伝わったとされ、日本のものは種子をつくらない。",
+    ],
+    identification: [
+      "9月ごろ、葉のない茎の先に赤い花が輪状に咲く",
+      "花びらが細く反り返り、長い雄しべが突き出る",
+      "花のあとに細長い葉が出て、冬に緑の葉が見られる",
+      "田のあぜや土手に列になって咲くことが多い",
+    ],
+    distribution: "本州〜九州（人里）",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoris_radiata_20150923.JPG",
+    local_image_url: "/images/plants/283-0.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoris_radiata_20150923.JPG",
+        local_url: "/images/plants/283-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Lycoris_radiata_at_Shigaraki_town.jpg",
+        local_url: "/images/plants/283-2.webp",
+        caption: "群生",
+      },
+    ],
+    tags: ["秋開花", "草本", "公園"],
+    flower_colors: ["赤"],
+    similar_plant_ids: [],
   },
 ]
 
