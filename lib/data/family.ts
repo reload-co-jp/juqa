@@ -830,4 +830,16 @@ export const families: Family[] = [
     ],
     classification: "被子植物",
   },
+  {
+    id: 73,
+    name: "カタバミ科",
+    description:
+      "熱帯から温帯に広く分布する草本・木本の科。3枚の小葉からなる複葉をもつ種が多く、カタバミのほかスターフルーツ（ゴレンシ）も含む。",
+    characteristics: [
+      "ハート形の小葉3枚からなる葉が多い",
+      "5枚の花弁をもつ花",
+      "夜や曇天時に葉を閉じる就眠運動",
+    ],
+    classification: "被子植物",
+  },
 ]

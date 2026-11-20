@@ -512,7 +512,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "小花集合", "豆", "雑草", "公園"],
     flower_colors: ["白"],
-    similar_plant_ids: [131, 91],
+    similar_plant_ids: [131, 91, 286],
   },
   {
     id: 13,
@@ -1011,7 +1011,7 @@ export const plants: Plant[] = [
     ],
     tags: ["春開花", "草本", "小花集合", "雑草", "公園"],
     flower_colors: ["白","ピンク"],
-    similar_plant_ids: [11, 93],
+    similar_plant_ids: [11, 93, 284],
   },
   {
     id: 25,
@@ -1787,7 +1787,7 @@ export const plants: Plant[] = [
       },
     ],
     tags: ["春開花", "草本", "山"],
-    similar_plant_ids: [],
+    similar_plant_ids: [287],
   },
   {
     id: 45,
@@ -10841,6 +10841,162 @@ export const plants: Plant[] = [
     tags: ["秋開花", "草本", "公園"],
     flower_colors: ["赤"],
     similar_plant_ids: [],
+  },
+  {
+    id: 284,
+    japanese_name: "ヒメジョオン",
+    scientific_name: "Erigeron annuus",
+    family_id: 9,
+    genus: "ムカシヨモギ属",
+    description: [
+      "北米原産の帰化植物で、初夏から秋にかけて道端や空き地で白い小さな花を咲かせる一〜二年草。",
+      "ハルジオンとよく似ているが、花期が遅く、蕾が垂れず、茎の中が白い髄で詰まっている点で区別できる。",
+      "明治時代に観賞用として持ち込まれたものが全国に広がった。",
+    ],
+    identification: [
+      "白い頭状花で、中心の黄色い部分が目立つ",
+      "蕾は垂れずに上を向く（ハルジオンは垂れる）",
+      "茎を折ると中に白い髄が詰まっている（ハルジオンは中空）",
+      "茎の葉は茎を抱かない",
+    ],
+    distribution: "全国の道端・空き地",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Wild_flowers_of_Erigeron_annuus.jpg",
+    local_image_url: "/images/plants/284-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Wild_flowers_of_Erigeron_annuus.jpg",
+
+        local_url: "/images/plants/284-1.webp",
+        caption: "全体",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Erigeron_annuus_kz12.jpg",
+
+        local_url: "/images/plants/284-2.webp",
+        caption: "花と蕾",
+      },
+    ],
+    tags: ["夏開花", "秋開花", "草本", "小花集合", "雑草"],
+    flower_colors: ["白"],
+    similar_plant_ids: [24],
+  },
+  {
+    id: 285,
+    japanese_name: "ヤツデ",
+    scientific_name: "Fatsia japonica",
+    family_id: 41,
+    genus: "ヤツデ属",
+    description: [
+      "大きな手のひら形の葉をもつ常緑低木。庭木として家の北側や日陰に植えられることが多い。",
+      "葉は7〜9つに深く裂け、名前の「八つ手」は裂片の多さに由来する。",
+      "初冬に白い小さな花を球状に集めて咲かせ、翌春に黒い実が熟す。",
+    ],
+    identification: [
+      "幅30cm以上になる大きな手のひら形の葉",
+      "葉は光沢があり、7〜9裂（偶数の8裂はほとんどない）",
+      "11〜12月に白い球状の花序が枝先に集まる",
+      "日陰でもよく育ち、林の中にも自生する",
+    ],
+    distribution: "本州（関東以西）〜沖縄の海岸近くの林",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fatsia_japonica_kz02.jpg",
+    local_image_url: "/images/plants/285-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fatsia_japonica_kz02.jpg",
+
+        local_url: "/images/plants/285-1.webp",
+        caption: "葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Fatsia_japonica_flower%3B_2014.jpg",
+
+        local_url: "/images/plants/285-2.webp",
+        caption: "花",
+      },
+    ],
+    tags: ["冬開花", "常緑", "手のひら葉", "光沢", "小花集合", "低木", "公園"],
+    flower_colors: ["白"],
+    similar_plant_ids: [],
+  },
+  {
+    id: 286,
+    japanese_name: "カタバミ",
+    scientific_name: "Oxalis corniculata",
+    family_id: 73,
+    genus: "カタバミ属",
+    description: [
+      "道端や庭、舗装の割れ目などに生える小さな多年草。春から秋まで黄色い花を咲かせる。",
+      "葉はハート形の小葉が3枚集まった形で、夜や曇りの日には葉を閉じる。",
+      "熟した実は触れると種を勢いよく弾き飛ばす。家紋の図柄としても知られる。",
+    ],
+    identification: [
+      "ハート形の小葉3枚からなる葉（クローバーは小葉が丸い）",
+      "直径1cmほどの黄色い5弁花",
+      "茎は地面を這って広がる",
+      "細長い円柱形の実ができる",
+    ],
+    distribution: "全国の道端・庭・畑",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Oxalis_corniculata_9840.jpg",
+    local_image_url: "/images/plants/286-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Oxalis_corniculata_9840.jpg",
+
+        local_url: "/images/plants/286-1.webp",
+        caption: "花と葉",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Oxalis_corniculata_kz03.jpg",
+
+        local_url: "/images/plants/286-2.webp",
+        caption: "赤紫色の葉の個体",
+      },
+    ],
+    tags: ["春開花", "夏開花", "秋開花", "花弁5枚", "草本", "雑草"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [12],
+  },
+  {
+    id: 287,
+    japanese_name: "ツワブキ",
+    scientific_name: "Farfugium japonicum",
+    family_id: 9,
+    genus: "ツワブキ属",
+    description: [
+      "海岸の岩場や林の縁に生える常緑の多年草。庭や公園の日陰にもよく植えられる。",
+      "フキに似た丸い葉は厚くて光沢があり、冬でも緑を保つ。",
+      "10〜12月、花の少ない時期に長い花茎を伸ばして黄色い花を咲かせる。",
+    ],
+    identification: [
+      "腎臓形〜円形の厚く光沢のある葉",
+      "葉は一年中緑（フキは冬に枯れる）",
+      "秋〜初冬に高さ30〜70cmの花茎の先に黄色い花",
+      "若い葉には茶色い綿毛がある",
+    ],
+    distribution: "本州（福島・石川県以西）〜沖縄の海岸",
+    image_url:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Farfugium_japonicum_(Mount_Myoho).jpg",
+    local_image_url: "/images/plants/287-1.webp",
+    images: [
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Farfugium_japonicum_(Mount_Myoho).jpg",
+
+        local_url: "/images/plants/287-1.webp",
+        caption: "花",
+      },
+      {
+        url: "https://commons.wikimedia.org/wiki/Special:FilePath/Farfugium_japonicum_kz04.jpg",
+
+        local_url: "/images/plants/287-2.webp",
+        caption: "葉",
+      },
+    ],
+    tags: ["秋開花", "冬開花", "常緑", "厚い葉", "光沢", "草本", "公園"],
+    flower_colors: ["黄"],
+    similar_plant_ids: [44],
   },
 ]
 
