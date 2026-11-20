@@ -4,6 +4,7 @@ import React from "react"
 import { plants } from "lib/data/plant"
 import { publisher, siteUrl } from "lib/seo"
 import { Breadcrumbs } from "components/elements/layout"
+import { InArticleAd } from "components/elements/InArticleAd"
 
 export const columnSiteUrl = siteUrl
 
@@ -106,7 +107,14 @@ export const ColumnArticle = ({
   heroCredit?: string
   children: React.ReactNode
 }) => (
-  <article style={{ maxWidth: "48rem", margin: "0 auto", color: "var(--c-ink)", fontSize: "1.02rem" }}>
+  <article
+    style={{
+      maxWidth: "48rem",
+      margin: "0 auto",
+      color: "var(--c-ink)",
+      fontSize: "1.02rem",
+    }}
+  >
     {jsonLd && (
       <script
         type="application/ld+json"
@@ -196,18 +204,21 @@ export const ColumnArticle = ({
 )
 
 export const ColumnIntro = ({ children }: { children: React.ReactNode }) => (
-  <div
-    style={{
-      borderLeft: "3px solid var(--c-primary)",
-      paddingLeft: "1.25rem",
-      marginBottom: "2rem",
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.75rem",
-    }}
-  >
-    {children}
-  </div>
+  <>
+    <div
+      style={{
+        borderLeft: "3px solid var(--c-primary)",
+        paddingLeft: "1.25rem",
+        marginBottom: "2rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.75rem",
+      }}
+    >
+      {children}
+    </div>
+    <InArticleAd />
+  </>
 )
 
 export const Section = ({
