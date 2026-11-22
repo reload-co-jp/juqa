@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { HeaderSearch } from "components/elements/HeaderSearch"
 import { SiteNav } from "components/elements/SiteNav"
 import { ClickTracker } from "components/Analytics"
+import { DisplayAd } from "components/elements/DisplayAd"
 import Link from "next/link"
 import { Suspense } from "react"
 import { families, plants } from "lib/data"
@@ -203,6 +204,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <main id="main" className="container" style={{ minHeight: "60vh" }}>
           {children}
         </main>
+        <DisplayAd />
         <footer className="site-footer">
           <div className="container">
             <div className="footer-grid">
