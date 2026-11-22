@@ -14,6 +14,7 @@ import {
 import { PlantGrid } from "components/elements/PlantCard"
 import PlantPhotoGallery from "components/elements/PlantPhotoGallery"
 import { TrackOnMount } from "components/Analytics"
+import { InArticleAd } from "components/elements/InArticleAd"
 import { columnImage, columnsForPlant } from "lib/column-meta"
 import {
   activeFeatureCollections,
@@ -396,6 +397,8 @@ const PlantDetailPage: FC<Props> = async ({ params }) => {
               ))}
             </div>
           </Section>
+
+          <InArticleAd />
 
           <Section
             style={{
